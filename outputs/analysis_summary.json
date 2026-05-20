@@ -1,0 +1,72 @@
+{
+  "framework1_did": {
+    "framework": "did",
+    "by_gender": {
+      "W": {
+        "gender": "W",
+        "road_pre_mean": 8766.714285714286,
+        "road_post_mean": 8627.57142857143,
+        "trk_pre_mean": 1778.0,
+        "trk_post_mean": 1772.25,
+        "road_delta": -139.14285714285688,
+        "trk_delta": -5.75,
+        "road_pct": 1.5871722587058161,
+        "trk_pct": 0.3233970753655793,
+        "track_explainable_marathon_seconds": 28.351297605656438,
+        "shoe_contribution_seconds": 110.79155953720044,
+        "n_road_pre": 7,
+        "n_road_post": 7,
+        "n_trk_pre": 1,
+        "n_trk_post": 4,
+        "trk_pre_years": [
+          2016
+        ]
+      }
+    },
+    "shoe_contribution_seconds": 110.79155953720044,
+    "ci_low": 131.17625667885264,
+    "ci_high": 253.45438343644543,
+    "placebo_did_seconds": 32.0,
+    "note": "Track 10,000m pre-era coverage is sparse (W: 2016 only; M: none). Pooled estimate uses women-only DiD where pre-era track data exists, and treats men as supplementary. See writeup limitations."
+  },
+  "framework2_within_athlete": {
+    "framework": "within_athlete",
+    "n_athletes": 17,
+    "delta_method": "raw (no age data available)",
+    "mean_delta_seconds": -49.812605042016806,
+    "median_delta_seconds": -47.19999999999982,
+    "mean_raw_delta": -49.812605042016806,
+    "shoe_contribution_seconds": 47.19999999999982,
+    "ci_low": -25.181376050420276,
+    "ci_high": 137.05964869281036,
+    "paired_t": -1.1656515356023731,
+    "paired_p": 0.2608387461782197,
+    "pct_improved": 64.70588235294117
+  },
+  "framework3_cohort_survival": {
+    "framework": "cohort_survival",
+    "changepoint_year": 2020,
+    "sub_m_pre_mean": 23.285714285714285,
+    "sub_m_post_mean": 29.142857142857142,
+    "sub_w_pre_mean": 20.428571428571427,
+    "sub_w_post_mean": 28.285714285714285,
+    "raw_cohort_improvement_seconds": 105.75000000000045,
+    "raw_ci_low": 83.07118749999978,
+    "raw_ci_high": 202.08743749999974,
+    "shoe_contribution_seconds": 58.16250000000026,
+    "ci_low": 45.68915312499988,
+    "ci_high": 111.14809062499987,
+    "shoe_attribution_share": 0.55
+  },
+  "pooled": {
+    "pooled_estimate_seconds": 67.33736658040776,
+    "pooled_ci_low": 35.927768895620936,
+    "pooled_ci_high": 98.74696426519458,
+    "n_frameworks": 3,
+    "framework_estimates": {
+      "did": 110.79155953720044,
+      "within_athlete": 47.19999999999982,
+      "cohort_survival": 58.16250000000026
+    }
+  }
+}

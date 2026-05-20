@@ -1,0 +1,1909 @@
+athlete_name,gender,nationality,date,course,finish_time_seconds,year,age_at_race,known_shoe
+Patrick Makau,M,Kenya,,berlin,7508,2010,,pre_vaporfly
+Geoffrey Mutai,M,Kenya,,berlin,7510,2010,,pre_vaporfly
+Bazu Worku,M,Ethiopia,,berlin,7525,2010,,pre_vaporfly
+Yemane Tsegay,M,Ethiopia,,berlin,7672,2010,,pre_vaporfly
+Eliud Kiptanui,M,Kenya,,berlin,7685,2010,,pre_vaporfly
+Bernard Kipyego,M,Kenya,,berlin,7730,2010,,pre_vaporfly
+Tadese Abraham,M,Ethiopia,,berlin,7764,2010,,pre_vaporfly
+Gilbert Yegon,M,Kenya,,berlin,7834,2010,,pre_vaporfly
+Masakazu Fujiwara,M,Japan,,berlin,7920,2010,,pre_vaporfly
+Aberu Kebede,W,Ethiopia,,berlin,8638,2010,,pre_vaporfly
+Bezunesh Bekele,W,Ethiopia,,berlin,8698,2010,,pre_vaporfly
+Tomo Morimoto,W,Japan,,berlin,8770,2010,,pre_vaporfly
+Sabrina Mockenhaupt,W,Germany,,berlin,8781,2010,,pre_vaporfly
+Olena Burkovska,W,Ukraine,,berlin,8911,2010,,pre_vaporfly
+Adriana Pertea,W,Romania,,berlin,9015,2010,,pre_vaporfly
+Adriana Aparecida da Silva,W,Brazil,,berlin,9150,2010,,pre_vaporfly
+Tanith Maxwell,W,South Africa,,berlin,9153,2010,,pre_vaporfly
+Lisa Stublic,W,Croatia,,berlin,9222,2010,,pre_vaporfly
+Agnieszka Gortel,W,Poland,,berlin,9287,2010,,pre_vaporfly
+Eliud Kipchoge,M,Kenya,,berlin,7445,2013,,pre_vaporfly
+Geoffrey Kipsang,M,Kenya,,berlin,7586,2013,,pre_vaporfly
+Stephen Kwelio Chemlany,M,Kenya,,berlin,7664,2013,,pre_vaporfly
+Maswai Kiptanui,M,Kenya,,berlin,7732,2013,,pre_vaporfly
+Marílson Gomes dos Santos,M,Brazil,,berlin,7764,2013,,pre_vaporfly
+Suehiro Ishikawa,M,Japan,,berlin,7824,2013,,pre_vaporfly
+Koji Kobayashi,M,Japan,,berlin,7891,2013,,pre_vaporfly
+Rui Silva,M,Portugal,,berlin,7936,2013,,pre_vaporfly
+Sisay Jisa,M,Ethiopia,,berlin,7937,2013,,pre_vaporfly
+Florence Kiplagat,W,Kenya,,berlin,8473,2013,,pre_vaporfly
+Sharon Cherop,W,Kenya,,berlin,8548,2013,,pre_vaporfly
+Irina Mikitenko,W,Germany,,berlin,8694,2013,,pre_vaporfly
+Helah Kiprop,W,Kenya,,berlin,8882,2013,,pre_vaporfly
+Desiree Davila,W,United States,,berlin,8955,2013,,pre_vaporfly
+Vianey de la Rosa,W,Mexico,,berlin,9155,2013,,pre_vaporfly
+Eri Hayakawa,W,Japan,,berlin,9155,2013,,pre_vaporfly
+Nina Stöcker,W,Germany,,berlin,9466,2013,,pre_vaporfly
+Lizzi Lee,W,Ireland,,berlin,9489,2013,,pre_vaporfly
+Maria Yolanda Gutierrez,W,Spain,,berlin,9498,2013,,pre_vaporfly
+Emmanuel Mutai,M,Kenya,,berlin,7393,2014,,pre_vaporfly
+Abera Kuma,M,Ethiopia,,berlin,7556,2014,,pre_vaporfly
+Geoffrey Kamworor,M,Kenya,,berlin,7599,2014,,pre_vaporfly
+Eliud Kiptanui,M,Kenya,,berlin,7648,2014,,pre_vaporfly
+Frankline Chepkwony,M,Kenya,,berlin,7655,2014,,pre_vaporfly
+Levy Matebo,M,Kenya,,berlin,7713,2014,,pre_vaporfly
+Maswai Kiptanui,M,Kenya,,berlin,7818,2014,,pre_vaporfly
+Tsegaye Kebede,M,Ethiopia,,berlin,7827,2014,,pre_vaporfly
+Kazuki Tamaru,M,Japan,,berlin,7885,2014,,pre_vaporfly
+Fernando Cabada,M,United States,,berlin,7896,2014,,pre_vaporfly
+Abdelhadi El Hachimi,M,Belgium,,berlin,7965,2014,,pre_vaporfly
+Tirfi Tsegaye,W,Ethiopia,,berlin,8418,2014,,pre_vaporfly
+Feyse Tadese,W,Ethiopia,,berlin,8427,2014,,pre_vaporfly
+Shalane Flanagan,W,United States,,berlin,8474,2014,,pre_vaporfly
+Tadelech Bekele,W,Ethiopia,,berlin,8582,2014,,pre_vaporfly
+Abebech Afework,W,Ethiopia,,berlin,8702,2014,,pre_vaporfly
+Kayoko Fukushi,W,Japan,,berlin,8785,2014,,pre_vaporfly
+Anna Hahner,W,Germany,,berlin,8804,2014,,pre_vaporfly
+Ines Melchor,W,Peru,,berlin,8808,2014,,pre_vaporfly
+Rene Kalmer,W,South Africa,,berlin,8967,2014,,pre_vaporfly
+Adriana da Silva,W,Brazil,,berlin,9485,2014,,pre_vaporfly
+Karina Neipan,W,Argentina,,berlin,9681,2014,,pre_vaporfly
+Michele Das Chagas,W,Brazil,,berlin,9739,2014,,pre_vaporfly
+Margriet van den Broek,W,Netherlands,,berlin,7497,2014,,pre_vaporfly
+Feyisa Lilesa,M,Ethiopia,,berlin,7617,2015,,pre_vaporfly
+Emmanuel Mutai,M,Kenya,,berlin,7666,2015,,pre_vaporfly
+Geoffrey Mutai,M,Kenya,,berlin,7769,2015,,pre_vaporfly
+Yared Shegumo,M,Poland,,berlin,7847,2015,,pre_vaporfly
+Koji Gokaya,M,Japan,,berlin,7858,2015,,pre_vaporfly
+Scott Overall,M,United Kingdom,,berlin,7884,2015,,pre_vaporfly
+Aberu Kebede,W,Ethiopia,,berlin,8448,2015,,pre_vaporfly
+Meseret Hailu,W,Ethiopia,,berlin,8673,2015,,pre_vaporfly
+Tadelech Bekele,W,Ethiopia,,berlin,8701,2015,,pre_vaporfly
+Lisa Nemec,W,Croatia,,berlin,8877,2015,,pre_vaporfly
+Tomomi Tanaka,W,Japan,,berlin,8880,2015,,pre_vaporfly
+Fate Tola,W,Ethiopia,,berlin,8904,2015,,pre_vaporfly
+Kenenisa Bekele,M,Ethiopia,,berlin,7383,2016,,pre_vaporfly
+Wilson Kipsang,M,Kenya,,berlin,7393,2016,,pre_vaporfly
+Evans Chebet,M,Kenya,,berlin,7531,2016,,pre_vaporfly
+Sisay Lemma,M,Ethiopia,,berlin,7616,2016,,pre_vaporfly
+Eliud Kiptanui,M,Kenya,,berlin,7667,2016,,pre_vaporfly
+Geoffrey Ronoh,M,Kenya,,berlin,7769,2016,,pre_vaporfly
+Alfers Lagat,M,Kenya,,berlin,7786,2016,,pre_vaporfly
+Yohanes Gebregergish,M,Eritrea,,berlin,7788,2016,,pre_vaporfly
+Jacob Kendagor,M,Kenya,,berlin,7801,2016,,pre_vaporfly
+Suleiman Simotwo,M,Kenya,,berlin,7822,2016,,pre_vaporfly
+Aberu Kebede,W,Ethiopia,,berlin,8445,2016,,pre_vaporfly
+Birhane Dibaba,W,Ethiopia,,berlin,8638,2016,,pre_vaporfly
+Ruti Aga,W,Ethiopia,,berlin,8681,2016,,pre_vaporfly
+Reia Iwade,W,Japan,,berlin,8896,2016,,pre_vaporfly
+Katharina Heinig,W,Germany,,berlin,8914,2016,,pre_vaporfly
+Janet Ronoh,W,Kenya,,berlin,8975,2016,,pre_vaporfly
+Dolinin Elena,W,Israel,,berlin,9359,2016,,pre_vaporfly
+Cassie Fien,W,Australia,,berlin,9448,2016,,pre_vaporfly
+Claire McCarthy,W,Ireland,,berlin,9480,2016,,pre_vaporfly
+Gladys Ganiel,W,Ireland,,berlin,9550,2016,,pre_vaporfly
+Eliud Kipchoge,M,Kenya,,berlin,7412,2017,,vaporfly_4
+Guye Adola,M,Ethiopia,,berlin,7426,2017,,vaporfly_4
+Mosinet Geremew,M,Ethiopia,,berlin,7569,2017,,vaporfly_4
+Felix Kandie,M,Kenya,,berlin,7573,2017,,vaporfly_4
+Vincent Kipruto,M,Kenya,,berlin,7574,2017,,vaporfly_4
+Yuta Shitara,M,Japan,,berlin,7743,2017,,vaporfly_4
+Hiroaki Sano,M,Japan,,berlin,7884,2017,,vaporfly_4
+Ryan Vail,M,United States,,berlin,7960,2017,,vaporfly_4
+Liam Adams,M,Australia,,berlin,7972,2017,,vaporfly_4
+Jonathan Mellor,M,Great Britain,,berlin,7977,2017,,vaporfly_4
+Gladys Cherono,W,Kenya,,berlin,8423,2017,,vaporfly_4
+Ruti Aga,W,Ethiopia,,berlin,8441,2017,,vaporfly_4
+Valary Aiyabei,W,Kenya,,berlin,8453,2017,,vaporfly_4
+Helen Tola,W,Ethiopia,,berlin,8571,2017,,vaporfly_4
+Anna Hahner,W,Germany,,berlin,8912,2017,,vaporfly_4
+Catherine Bertone,W,Italy,,berlin,8914,2017,,vaporfly_4
+Sonia Samuels,W,United Kingdom,,berlin,8974,2017,,vaporfly_4
+Azucena Diaz,W,Spain,,berlin,9031,2017,,vaporfly_4
+Catarina Ribeiro,W,Portugal,,berlin,9193,2017,,vaporfly_4
+Kim Dillen,W,Netherlands,,berlin,9204,2017,,vaporfly_4
+Amos Kipruto,M,Kenya,,berlin,7583,2018,,vaporfly_4
+Wilson Kipsang,M,Kenya,,berlin,7608,2018,,vaporfly_4
+Shogo Nakamura,M,Japan,,berlin,7696,2018,,vaporfly_4
+Zersenay Tadese,M,Eritrea,,berlin,7726,2018,,vaporfly_4
+Yuki Sato,M,Japan,,berlin,7758,2018,,vaporfly_4
+Okubay Tsegay,M,Eritrea,,berlin,7796,2018,,vaporfly_4
+Daisuke Uekado,M,Japan,,berlin,7867,2018,,vaporfly_4
+Willy Canchanya,M,Peru,,berlin,7977,2018,,vaporfly_4
+Bart van Nunen,M,Netherlands,,berlin,7989,2018,,vaporfly_4
+Wellington Da Silva,M,Brazil,,berlin,8023,2018,,vaporfly_4
+Vagner Da Silva Noronha,M,Brazil,,berlin,8097,2018,,vaporfly_4
+Fernando Cabada,M,United States,,berlin,8100,2018,,vaporfly_4
+Nick van Peborgh,M,Belgium,,berlin,8104,2018,,vaporfly_4
+Thomas De Bock,M,Belgium,,berlin,8119,2018,,vaporfly_4
+Kenta Murayama,M,Japan,,berlin,8137,2018,,vaporfly_4
+Brendan Martin,M,United States,,berlin,8186,2018,,vaporfly_4
+Malcolm Hicks,M,New Zealand,,berlin,8188,2018,,vaporfly_4
+Paul Martelletti,M,New Zealand,,berlin,8199,2018,,vaporfly_4
+Julian Spence,M,Australia,,berlin,8249,2018,,vaporfly_4
+Luis Orta,M,Venezuela,,berlin,8268,2018,,vaporfly_4
+Gary O'Hanlon,M,Ireland,,berlin,8346,2018,,vaporfly_4
+Gerd Devos,M,Belgium,,berlin,8354,2018,,vaporfly_4
+Berihun Wuve,M,Israel,,berlin,8385,2018,,vaporfly_4
+Brady Threlfall,M,Australia,,berlin,8393,2018,,vaporfly_4
+Valentin Harwardt,M,Germany,,berlin,8394,2018,,vaporfly_4
+Antonio Cardona,M,Puerto Rico,,berlin,8418,2018,,vaporfly_4
+Jeffrey Seelaus,M,United States,,berlin,8452,2018,,vaporfly_4
+Ruben Sança,M,Cape Verde,,berlin,8461,2018,,vaporfly_4
+Dirk Hübner,M,Germany,,berlin,8461,2018,,vaporfly_4
+Gladys Cherono,W,Kenya,,berlin,8291,2018,,vaporfly_4
+Ruti Aga,W,Ethiopia,,berlin,8314,2018,,vaporfly_4
+Tirunesh Dibaba,W,Ethiopia,,berlin,8335,2018,,vaporfly_4
+Edna Kiplagat,W,Kenya,,berlin,8478,2018,,vaporfly_4
+Mizuki Matsuda,W,Japan,,berlin,8543,2018,,vaporfly_4
+Helen Tola,W,Ethiopia,,berlin,8568,2018,,vaporfly_4
+Honami Maeda,W,Japan,,berlin,8723,2018,,vaporfly_4
+Carla Salomé Rocha,W,Portugal,,berlin,8727,2018,,vaporfly_4
+Miyuki Uehara,W,Japan,,berlin,8746,2018,,vaporfly_4
+Rei Ohara,W,Japan,,berlin,8849,2018,,vaporfly_4
+Rachel Cliff,W,Canada,,berlin,8933,2018,,vaporfly_4
+Lyndsay Tessier,W,Canada,,berlin,9047,2018,,vaporfly_4
+Inés Melchor,W,Peru,,berlin,9129,2018,,vaporfly_4
+Andrea Deelstra,W,Netherlands,,berlin,9161,2018,,vaporfly_4
+Dawn Grunnagle,W,United States,,berlin,9296,2018,,vaporfly_4
+Emma Spencer,W,United States,,berlin,9425,2018,,vaporfly_4
+Cristina Jordán,W,Spain,,berlin,9434,2018,,vaporfly_4
+Teresa Montrone,W,Italy,,berlin,9455,2018,,vaporfly_4
+Caitlin Phillips,W,United States,,berlin,9468,2018,,vaporfly_4
+Matea Parlov,W,Croatia,,berlin,9485,2018,,vaporfly_4
+Arianne Raby,W,Canada,,berlin,9577,2018,,vaporfly_4
+Catherine Watkins,W,Canada,,berlin,9611,2018,,vaporfly_4
+Alexandra Cadicamo,W,United States,,berlin,9637,2018,,vaporfly_4
+Tomomi Sawahata,W,Japan,,berlin,9650,2018,,vaporfly_4
+Stephanie Davis,W,United Kingdom,,berlin,9676,2018,,vaporfly_4
+Séverine Hamel,W,France,,berlin,9694,2018,,vaporfly_4
+Amanda Nurse,W,United States,,berlin,9708,2018,,vaporfly_4
+Rachel Hannah,W,Canada,,berlin,9777,2018,,vaporfly_4
+Sarah Klein,W,Australia,,berlin,9809,2018,,vaporfly_4
+Marie Zanderson,W,United States,,berlin,9867,2018,,vaporfly_4
+Tsegaye Kebede,M,Ethiopia,,london,7519,2010,,pre_vaporfly
+Emmanuel Kipchirchir Mutai,M,Kenya,,london,7583,2010,,pre_vaporfly
+Jaouad Gharib,M,Morocco,,london,7615,2010,,pre_vaporfly
+Abderrahime Bouramdane,M,Morocco,,london,7653,2010,,pre_vaporfly
+Abel Kirui,M,Kenya,,london,7684,2010,,pre_vaporfly
+Marílson Gomes dos Santos,M,Brazil,,london,7726,2010,,pre_vaporfly
+Zersenay Tadese,M,Eritrea,,london,7923,2010,,pre_vaporfly
+Andrew Lemoncello,M,United Kingdom,,london,8020,2010,,pre_vaporfly
+Yonas Kifle,M,Eritrea,,london,8079,2010,,pre_vaporfly
+Andi Jones,M,United Kingdom,,london,8198,2010,,pre_vaporfly
+Ben Moreau,M,United Kingdom,,london,8206,2010,,pre_vaporfly
+Lee Merrien,M,United Kingdom,,london,8208,2010,,pre_vaporfly
+Clint Perrett,M,New Zealand,,london,8295,2010,,pre_vaporfly
+Neil Renault,M,United Kingdom,,london,8289,2010,,pre_vaporfly
+Dave Norman,M,United Kingdom,,london,8345,2010,,pre_vaporfly
+Satoshi Irifune,M,Japan,,london,8365,2010,,pre_vaporfly
+Steve Way,M,United Kingdom,,london,8378,2010,,pre_vaporfly
+Gareth Raven,M,United Kingdom,,london,8395,2010,,pre_vaporfly
+Kristoffer Osterlund,M,Sweden,,london,8406,2010,,pre_vaporfly
+Pieter Vermeesh,M,United Kingdom,,london,8416,2010,,pre_vaporfly
+Aselefech Mergia,W,Ethiopia,,london,8558,2010,,pre_vaporfly
+Bezunesh Bekele,W,Ethiopia,,london,8597,2010,,pre_vaporfly
+Askale Tafa,W,Ethiopia,,london,8679,2010,,pre_vaporfly
+Yukiko Akaba,W,Japan,,london,8695,2010,,pre_vaporfly
+Bai Xue,W,China,,london,8718,2010,,pre_vaporfly
+Kim Smith,W,New Zealand,,london,8721,2010,,pre_vaporfly
+Mari Ozaki,W,Japan,,london,8743,2010,,pre_vaporfly
+Mara Yamauchi,W,United Kingdom,,london,8776,2010,,pre_vaporfly
+Svetlana Zakharova,W,Russia,,london,9060,2010,,pre_vaporfly
+Atsede Habtamu,W,Ethiopia,,london,9101,2010,,pre_vaporfly
+Yoshimi Ozaki,W,Japan,,london,9146,2010,,pre_vaporfly
+Berhane Adere,W,Ethiopia,,london,9226,2010,,pre_vaporfly
+Tanith Maxwell,W,South Africa,,london,9264,2010,,pre_vaporfly
+Susan Partridge,W,United Kingdom,,london,9357,2010,,pre_vaporfly
+Deena Kastor,W,United States,,london,9380,2010,,pre_vaporfly
+Helen Decker,W,United Kingdom,,london,9416,2010,,pre_vaporfly
+Rebecca Robinson,W,United Kingdom,,london,9434,2010,,pre_vaporfly
+Jo Wilkinson,W,United Kingdom,,london,9464,2010,,pre_vaporfly
+Fiona Docherty,W,New Zealand,,london,9475,2010,,pre_vaporfly
+Holly Rush,W,United Kingdom,,london,9476,2010,,pre_vaporfly
+Susan Harrison,W,United Kingdom,,london,9533,2010,,pre_vaporfly
+Constantina Diță,W,Romania,,london,9672,2010,,pre_vaporfly
+Nicole Archer,W,United Kingdom,,london,9742,2010,,pre_vaporfly
+Alyson Dixon,W,United Kingdom,,london,9828,2010,,pre_vaporfly
+Liliya Shobukhova,W,Russia,,london,8520,2010,,pre_vaporfly
+Inga Abitova,W,Russia,,london,8539,2010,,pre_vaporfly
+Mariya Konovalova,W,Russia,,london,9321,2010,,pre_vaporfly
+Nikki Emmerson,W,United Kingdom,,london,8266,2010,,pre_vaporfly
+Sarah Piercy,W,United Kingdom,,london,9230,2010,,pre_vaporfly
+Martin Lel,M,Kenya,,london,7545,2011,,pre_vaporfly
+Patrick Makau Musyoki,M,Kenya,,london,7545,2011,,pre_vaporfly
+Marílson Gomes dos Santos,M,Brazil,,london,7594,2011,,pre_vaporfly
+Tsegaye Kebede,M,Ethiopia,,london,7668,2011,,pre_vaporfly
+Jaouad Gharib,M,Morocco,,london,7706,2011,,pre_vaporfly
+Dmitry Safronov,M,Russia,,london,7775,2011,,pre_vaporfly
+Michael Shelley,M,Australia,,london,7898,2011,,pre_vaporfly
+Viktor Röthlin,M,Switzerland,,london,7964,2011,,pre_vaporfly
+Carlos Cordero,M,Mexico,,london,7993,2011,,pre_vaporfly
+Jason Lehmkuhle,M,United States,,london,8020,2011,,pre_vaporfly
+Lee Merrien,M,United Kingdom,,london,8067,2011,,pre_vaporfly
+Andrew Lemoncello,M,United Kingdom,,london,8124,2011,,pre_vaporfly
+José Manuel Martínez,M,Spain,,london,8125,2011,,pre_vaporfly
+Jesper Faurschou,M,Denmark,,london,8175,2011,,pre_vaporfly
+Tomas Luna Dominguez,M,Mexico,,london,8218,2011,,pre_vaporfly
+David Webb,M,United Kingdom,,london,8261,2011,,pre_vaporfly
+Daniel Vargas,M,Mexico,,london,8366,2011,,pre_vaporfly
+John Gilbert,M,United Kingdom,,london,8368,2011,,pre_vaporfly
+Mary Jepkosgei Keitany,W,Kenya,,london,8359,2011,,pre_vaporfly
+Edna Kiplagat,W,Kenya,,london,8446,2011,,pre_vaporfly
+Bezunesh Bekele,W,Ethiopia,,london,8622,2011,,pre_vaporfly
+Atsede Baysa,W,Ethiopia,,london,8630,2011,,pre_vaporfly
+Yukiko Akaba,W,Japan,,london,8649,2011,,pre_vaporfly
+Irina Mikitenko,W,Germany,,london,8664,2011,,pre_vaporfly
+Jéssica Augusto,W,Portugal,,london,8673,2011,,pre_vaporfly
+Aberu Kebede,W,Ethiopia,,london,8674,2011,,pre_vaporfly
+Askale Tafa,W,Ethiopia,,london,8724,2011,,pre_vaporfly
+Azusa Nojiri,W,Japan,,london,8729,2011,,pre_vaporfly
+Yoshiko Fujinaga,W,Japan,,london,8740,2011,,pre_vaporfly
+Zhu Xiaolin,W,China,,london,8788,2011,,pre_vaporfly
+Noriko Matsuoka,W,Japan,,london,8814,2011,,pre_vaporfly
+Madaí Perez,W,Mexico,,london,8822,2011,,pre_vaporfly
+Lornah Kiplagat,W,Netherlands,,london,8877,2011,,pre_vaporfly
+Jo Pavey,W,United Kingdom,,london,8904,2011,,pre_vaporfly
+Madoka Ogi,W,Japan,,london,8992,2011,,pre_vaporfly
+Mizuho Nasukawa,W,Japan,,london,9000,2011,,pre_vaporfly
+Louise Damen,W,United Kingdom,,london,9000,2011,,pre_vaporfly
+Magdalena Lewy-Boulet,W,United States,,london,9082,2011,,pre_vaporfly
+Risa Shigetomo,W,Japan,,london,9088,2011,,pre_vaporfly
+Susan Partridge,W,United Kingdom,,london,9253,2011,,pre_vaporfly
+Zhou Chunxiu,W,China,,london,9269,2011,,pre_vaporfly
+Helen Davies,W,United Kingdom,,london,9343,2011,,pre_vaporfly
+Paula Apolonio,W,Mexico,,london,9347,2011,,pre_vaporfly
+Tanith Maxwell,W,South Africa,,london,9547,2011,,pre_vaporfly
+Kirsten Melkevik Otterbu,W,Norway,,london,9556,2011,,pre_vaporfly
+Yurika Nakamura,W,Japan,,london,9682,2011,,pre_vaporfly
+Liz Yelling,W,United Kingdom,,london,9694,2011,,pre_vaporfly
+Sarah Piercy,W,United Kingdom,,london,8713,2011,,pre_vaporfly
+Wilson Kipsang Kiprotich,M,Kenya,,london,7484,2012,,pre_vaporfly
+Martin Lel,M,Kenya,,london,7611,2012,,pre_vaporfly
+Tsegaye Kebede,M,Ethiopia,,london,7612,2012,,pre_vaporfly
+Jaouad Gharib,M,Morocco,,london,7664,2012,,pre_vaporfly
+Abel Kirui,M,Kenya,,london,7676,2012,,pre_vaporfly
+Emmanuel Kipchirchir Mutai,M,Kenya,,london,7681,2012,,pre_vaporfly
+Marílson Gomes dos Santos,M,Brazil,,london,7681,2012,,pre_vaporfly
+Samuel Tsegay,M,Eritrea,,london,7686,2012,,pre_vaporfly
+Feyisa Lilesa,M,Ethiopia,,london,7700,2012,,pre_vaporfly
+Bazu Worku,M,Ethiopia,,london,7814,2012,,pre_vaporfly
+Vincent Kipruto,M,Kenya,,london,7839,2012,,pre_vaporfly
+Zersenay Tadese,M,Eritrea,,london,7841,2012,,pre_vaporfly
+Abreham Cherkos,M,Ethiopia,,london,7966,2012,,pre_vaporfly
+Bekir Karayel,M,Turkey,,london,8001,2012,,pre_vaporfly
+Lee Merrien,M,United Kingdom,,london,8021,2012,,pre_vaporfly
+Solonei da Silva,M,Brazil,,london,8097,2012,,pre_vaporfly
+John Beattie,M,United Kingdom,,london,8198,2012,,pre_vaporfly
+Phil Anthony,M,United Kingdom,,london,8200,2012,,pre_vaporfly
+Martin Dent,M,Australia,,london,8252,2012,,pre_vaporfly
+Jesper Faurschou,M,Denmark,,london,8258,2012,,pre_vaporfly
+Anuradha Cooray,M,Sri Lanka,,london,8270,2012,,pre_vaporfly
+Andi Jones,M,United Kingdom,,london,8309,2012,,pre_vaporfly
+Mary Jepkosgei Keitany,W,Kenya,,london,8317,2012,,pre_vaporfly
+Edna Kiplagat,W,Kenya,,london,8390,2012,,pre_vaporfly
+Priscah Jeptoo,W,Kenya,,london,8414,2012,,pre_vaporfly
+Florence Kiplagat,W,Kenya,,london,8457,2012,,pre_vaporfly
+Lucy Wangui Kabuu,W,Kenya,,london,8592,2012,,pre_vaporfly
+Aberu Kebede,W,Ethiopia,,london,8644,2012,,pre_vaporfly
+Irina Mikitenko,W,Germany,,london,8693,2012,,pre_vaporfly
+Jéssica Augusto,W,Portugal,,london,8699,2012,,pre_vaporfly
+Atsede Baysa,W,Ethiopia,,london,8759,2012,,pre_vaporfly
+Jeļena Prokopčuka,W,Latvia,,london,8824,2012,,pre_vaporfly
+Claire Hallissey,W,United Kingdom,,london,8864,2012,,pre_vaporfly
+Koren Jelela,W,Ethiopia,,london,8885,2012,,pre_vaporfly
+Freya Murray,W,United Kingdom,,london,8890,2012,,pre_vaporfly
+Isabellah Andersson,W,Sweden,,london,8997,2012,,pre_vaporfly
+Louise Damen,W,United Kingdom,,london,9097,2012,,pre_vaporfly
+Constantina Diță,W,Romania,,london,9154,2012,,pre_vaporfly
+Irvette van Zyl,W,South Africa,,london,9221,2012,,pre_vaporfly
+Sonia Samuels,W,United Kingdom,,london,9221,2012,,pre_vaporfly
+Amy Whitehead,W,United Kingdom,,london,9224,2012,,pre_vaporfly
+Helen Decker,W,United Kingdom,,london,9251,2012,,pre_vaporfly
+Jessica Petersson,W,Denmark,,london,9296,2012,,pre_vaporfly
+Alyson Dixon,W,United Kingdom,,london,9346,2012,,pre_vaporfly
+Susan Partridge,W,United Kingdom,,london,9461,2012,,pre_vaporfly
+Liz Yelling,W,United Kingdom,,london,9608,2012,,pre_vaporfly
+Michelle Ross-Cope,W,United Kingdom,,london,9608,2012,,pre_vaporfly
+Tatyana McFadden,W,United States,,london,7538,2012,,pre_vaporfly
+Meggan Dawson-Farrell,W,United Kingdom,,london,8575,2012,,pre_vaporfly
+Sarah Piercy,W,United Kingdom,,london,8676,2012,,pre_vaporfly
+Tsegaye Kebede,M,Ethiopia,,london,7564,2013,,pre_vaporfly
+Emmanuel Kipchirchir Mutai,M,Kenya,,london,7593,2013,,pre_vaporfly
+Ayele Abshero,M,Ethiopia,,london,7617,2013,,pre_vaporfly
+Feyisa Lilesa,M,Ethiopia,,london,7666,2013,,pre_vaporfly
+Wilson Kipsang Kiprotich,M,Kenya,,london,7667,2013,,pre_vaporfly
+Stephen Kiprotich,M,Uganda,,london,7685,2013,,pre_vaporfly
+Yared Asmerom,M,Eritrea,,london,7702,2013,,pre_vaporfly
+Stanley Biwott,M,Kenya,,london,7719,2013,,pre_vaporfly
+Ayad Lamdassem,M,Spain,,london,7768,2013,,pre_vaporfly
+Patrick Makau Musyoki,M,Kenya,,london,8050,2013,,pre_vaporfly
+Patrick Rizzo,M,United States,,london,8165,2013,,pre_vaporfly
+Derek Hawkins,M,United Kingdom,,london,8210,2013,,pre_vaporfly
+Paul Pollock,M,Ireland,,london,8230,2013,,pre_vaporfly
+John Gilbert,M,United Kingdom,,london,8263,2013,,pre_vaporfly
+Anuradha Cooray,M,Sri Lanka,,london,8273,2013,,pre_vaporfly
+Philip Wicks,M,United Kingdom,,london,8347,2013,,pre_vaporfly
+James Kelly,M,United Kingdom,,london,8499,2013,,pre_vaporfly
+Priscah Jeptoo,W,Kenya,,london,8415,2013,,pre_vaporfly
+Edna Kiplagat,W,Kenya,,london,8492,2013,,pre_vaporfly
+Yukiko Akaba,W,Japan,,london,8683,2013,,pre_vaporfly
+Atsede Baysa,W,Ethiopia,,london,8714,2013,,pre_vaporfly
+Meselech Melkamu,W,Ethiopia,,london,8746,2013,,pre_vaporfly
+Florence Kiplagat,W,Kenya,,london,8825,2013,,pre_vaporfly
+Mai Ito,W,Japan,,london,8917,2013,,pre_vaporfly
+Alevtina Biktimirova,W,Russia,,london,9002,2013,,pre_vaporfly
+Susan Partridge,W,United Kingdom,,london,9046,2013,,pre_vaporfly
+Irvette van Zyl,W,South Africa,,london,9086,2013,,pre_vaporfly
+Adriana Aparecida da Silva,W,Brazil,,london,9104,2013,,pre_vaporfly
+Remi Sano,W,Japan,,london,9204,2013,,pre_vaporfly
+Amy Whitehead,W,United Kingdom,,london,9254,2013,,pre_vaporfly
+Chika Horie,W,Japan,,london,9330,2013,,pre_vaporfly
+Joyce Chepkirui,W,Kenya,,london,9354,2013,,pre_vaporfly
+Tiki Gelana,W,Ethiopia,,london,9415,2013,,pre_vaporfly
+Yoko Shibui,W,Japan,,london,9455,2013,,pre_vaporfly
+Diane Roy,W,Canada,,london,7439,2013,,pre_vaporfly
+Meggan Dawson-Farrell,W,United Kingdom,,london,8303,2013,,pre_vaporfly
+Wilson Kipsang Kiprotich,M,Kenya,,london,7469,2014,,pre_vaporfly
+Stanley Biwott,M,Kenya,,london,7495,2014,,pre_vaporfly
+Tsegaye Kebede,M,Ethiopia,,london,7590,2014,,pre_vaporfly
+Ayele Abshero,M,Ethiopia,,london,7591,2014,,pre_vaporfly
+Tsegaye Mekonnen,M,Ethiopia,,london,7686,2014,,pre_vaporfly
+Geoffrey Mutai,M,Kenya,,london,7698,2014,,pre_vaporfly
+Emmanuel Kipchirchir Mutai,M,Kenya,,london,7699,2014,,pre_vaporfly
+Mo Farah,M,United Kingdom,,london,7701,2014,,pre_vaporfly
+Feyisa Lilesa,M,Ethiopia,,london,7706,2014,,pre_vaporfly
+Ryan Vail,M,United States,,london,7857,2014,,pre_vaporfly
+Chris Thompson,M,United Kingdom,,london,7879,2014,,pre_vaporfly
+Stephen Kiprotich,M,Uganda,,london,7897,2014,,pre_vaporfly
+Reid Coolsaet,M,Canada,,london,8020,2014,,pre_vaporfly
+Pedro Nimo,M,Spain,,london,8055,2014,,pre_vaporfly
+Steve Way,M,United Kingdom,,london,8187,2014,,pre_vaporfly
+John Gilbert,M,United Kingdom,,london,8206,2014,,pre_vaporfly
+Ben Livesey,M,United Kingdom,,london,8264,2014,,pre_vaporfly
+Samuel Tsegay,M,Eritrea,,london,8350,2014,,pre_vaporfly
+Scott Overall,M,United Kingdom,,london,8395,2014,,pre_vaporfly
+Jon Pepper,M,United Kingdom,,london,8399,2014,,pre_vaporfly
+Edna Kiplagat,W,Kenya,,london,8421,2014,,pre_vaporfly
+Florence Kiplagat,W,Kenya,,london,8424,2014,,pre_vaporfly
+Tirunesh Dibaba,W,Ethiopia,,london,8435,2014,,pre_vaporfly
+Feyse Tadese,W,Ethiopia,,london,8502,2014,,pre_vaporfly
+Aberu Kebede,W,Ethiopia,,london,8601,2014,,pre_vaporfly
+Jéssica Augusto,W,Portugal,,london,8665,2014,,pre_vaporfly
+Ana Dulce Félix,W,Portugal,,london,8806,2014,,pre_vaporfly
+Tiki Gelana,W,Ethiopia,,london,8818,2014,,pre_vaporfly
+Lyudmyla Kovalenko,W,Ukraine,,london,9091,2014,,pre_vaporfly
+Yuko Shimizu,W,Japan,,london,9120,2014,,pre_vaporfly
+Diane Nukuri,W,Burundi,,london,9181,2014,,pre_vaporfly
+Nicola Duncan †,W,Ireland,,london,9208,2014,,pre_vaporfly
+Amy Whitehead,W,United Kingdom,,london,9260,2014,,pre_vaporfly
+Emma Stepto,W,United Kingdom,,london,9365,2014,,pre_vaporfly
+Julie Briscoe †,W,United Kingdom,,london,9583,2014,,pre_vaporfly
+Sara Bird †,W,United Kingdom,,london,9595,2014,,pre_vaporfly
+Hayley Munn †,W,United Kingdom,,london,9635,2014,,pre_vaporfly
+Shona Fletcher †,W,United Kingdom,,london,9899,2014,,pre_vaporfly
+Sarah Piercy,W,United Kingdom,,london,8848,2014,,pre_vaporfly
+Martyna Snopek,W,United Kingdom,,london,9781,2014,,pre_vaporfly
+Eliud Kipchoge,M,Kenya,,london,7482,2015,,pre_vaporfly
+Wilson Kipsang Kiprotich,M,Kenya,,london,7487,2015,,pre_vaporfly
+Dennis Kipruto Kimetto,M,Kenya,,london,7550,2015,,pre_vaporfly
+Stanley Biwott,M,Kenya,,london,7601,2015,,pre_vaporfly
+Tilahun Regassa,M,Ethiopia,,london,7636,2015,,pre_vaporfly
+Sammy Kitwara,M,Kenya,,london,7663,2015,,pre_vaporfly
+Javier Guerra,M,Spain,,london,7773,2015,,pre_vaporfly
+Ghebrezgiabhier Kibrom,M,Eritrea,,london,7776,2015,,pre_vaporfly
+Aleksey Reunkov,M,Russia,,london,7810,2015,,pre_vaporfly
+Serhiy Lebid,M,Ukraine,,london,7821,2015,,pre_vaporfly
+Emmanuel Kipchirchir Mutai,M,Kenya,,london,7854,2015,,pre_vaporfly
+Michael Shelley,M,Australia,,london,7879,2015,,pre_vaporfly
+Scott Overall,M,United Kingdom,,london,7993,2015,,pre_vaporfly
+Anuradha Cooray,M,Sri Lanka,,london,8027,2015,,pre_vaporfly
+Koen Raymaekers,M,Netherlands,,london,8065,2015,,pre_vaporfly
+Hermano Ferreira,M,Portugal,,london,8153,2015,,pre_vaporfly
+Matthew Hynes,M,United Kingdom,,london,8160,2015,,pre_vaporfly
+Bekir Karayel,M,Turkey,,london,8166,2015,,pre_vaporfly
+Christian Kreienbühl,M,Switzerland,,london,8220,2015,,pre_vaporfly
+Aaron Scott,M,United Kingdom,,london,8449,2015,,pre_vaporfly
+Tigist Tufa,W,Ethiopia,,london,8602,2015,,pre_vaporfly
+Mary Jepkosgei Keitany,W,Kenya,,london,8620,2015,,pre_vaporfly
+Tirfi Tsegaye,W,Ethiopia,,london,8621,2015,,pre_vaporfly
+Aselefech Mergia,W,Ethiopia,,london,8633,2015,,pre_vaporfly
+Florence Kiplagat,W,Kenya,,london,8655,2015,,pre_vaporfly
+Jemima Sumgong,W,Kenya,,london,8663,2015,,pre_vaporfly
+Priscah Jeptoo,W,Kenya,,london,8701,2015,,pre_vaporfly
+Ana Dulce Félix,W,Portugal,,london,8715,2015,,pre_vaporfly
+Volha Mazuronak,W,Belarus,,london,8736,2015,,pre_vaporfly
+Edna Kiplagat,W,Kenya,,london,8836,2015,,pre_vaporfly
+Iwona Lewandowska,W,Poland,,london,8867,2015,,pre_vaporfly
+Diane Nukuri,W,Burundi,,london,8870,2015,,pre_vaporfly
+Tatyana Petrova Arkhipova,W,Russia,,london,8922,2015,,pre_vaporfly
+Alessandra Aguilar,W,Spain,,london,8985,2015,,pre_vaporfly
+Sonia Samuels,W,United Kingdom,,london,9106,2015,,pre_vaporfly
+Mary Davies,W,New Zealand,,london,9262,2015,,pre_vaporfly
+Emma Stepto,W,United Kingdom,,london,9341,2015,,pre_vaporfly
+Rebecca Robinson,W,United Kingdom,,london,9411,2015,,pre_vaporfly
+Chelsea McClammer,W,United States,,london,7351,2015,,pre_vaporfly
+Sarah Piercy,W,United Kingdom,,london,8445,2015,,pre_vaporfly
+Martyna Snopek,W,United Kingdom,,london,8800,2015,,pre_vaporfly
+Eliud Kipchoge,M,Kenya,,london,7385,2016,,pre_vaporfly
+Stanley Biwott,M,Kenya,,london,7431,2016,,pre_vaporfly
+Kenenisa Bekele,M,Ethiopia,,london,7596,2016,,pre_vaporfly
+Ghirmay Ghebreslassie,M,Eritrea,,london,7666,2016,,pre_vaporfly
+Wilson Kipsang Kiprotich,M,Kenya,,london,7672,2016,,pre_vaporfly
+Tilahun Regassa,M,Ethiopia,,london,7787,2016,,pre_vaporfly
+Sisay Lemma,M,Ethiopia,,london,7845,2016,,pre_vaporfly
+Callum Hawkins,M,United Kingdom,,london,7852,2016,,pre_vaporfly
+Dennis Kipruto Kimetto,M,Kenya,,london,7904,2016,,pre_vaporfly
+Ghebrezgiabhier Kibrom,M,Eritrea,,london,7916,2016,,pre_vaporfly
+Yuki Sato,M,Japan,,london,7934,2016,,pre_vaporfly
+Tsegai Tewelde,M,United Kingdom,,london,7943,2016,,pre_vaporfly
+Vitaliy Shafar,M,Ukraine,,london,7956,2016,,pre_vaporfly
+Derek Hawkins,M,United Kingdom,,london,7977,2016,,pre_vaporfly
+Serhiy Lebid,M,Ukraine,,london,8047,2016,,pre_vaporfly
+Chris Thompson,M,United Kingdom,,london,8105,2016,,pre_vaporfly
+Matthew Bond,M,United Kingdom,,london,8132,2016,,pre_vaporfly
+Robbie Simpson,M,United Kingdom,,london,8138,2016,,pre_vaporfly
+Lee Merrien,M,Guernsey,,london,8202,2016,,pre_vaporfly
+Sean Hehir,M,Ireland,,london,8243,2016,,pre_vaporfly
+Paul Martelletti,M,United Kingdom,,london,8250,2016,,pre_vaporfly
+Andrew Davies,M,United Kingdom,,london,8265,2016,,pre_vaporfly
+Robyn Watson,M,Canada,,london,8325,2016,,pre_vaporfly
+Thomas Frazer,M,Ireland,,london,8361,2016,,pre_vaporfly
+Aaron Scott,M,United Kingdom,,london,8362,2016,,pre_vaporfly
+Ben Moreau,M,United Kingdom,,london,8383,2016,,pre_vaporfly
+José Antonio Uribe Marino,M,Mexico,,london,8421,2016,,pre_vaporfly
+Stephen Scullion,M,United Kingdom,,london,8439,2016,,pre_vaporfly
+Steve Way,M,United Kingdom,,london,8454,2016,,pre_vaporfly
+Thomas Payn,M,United Kingdom,,london,8485,2016,,pre_vaporfly
+Jemima Sumgong,W,Kenya,,london,8578,2016,,pre_vaporfly
+Tigist Tufa,W,Ethiopia,,london,8583,2016,,pre_vaporfly
+Florence Kiplagat,W,Kenya,,london,8619,2016,,pre_vaporfly
+Volha Mazuronak,W,Belarus,,london,8634,2016,,pre_vaporfly
+Aselefech Mergia,W,Ethiopia,,london,8637,2016,,pre_vaporfly
+Mare Dibaba,W,Ethiopia,,london,8649,2016,,pre_vaporfly
+Feyse Tadese,W,Ethiopia,,london,8703,2016,,pre_vaporfly
+Priscah Jeptoo,W,Kenya,,london,8847,2016,,pre_vaporfly
+Mary Jepkosgei Keitany,W,Kenya,,london,8910,2016,,pre_vaporfly
+Jéssica Augusto,W,Portugal,,london,8933,2016,,pre_vaporfly
+Katarzyna Kowalska,W,Poland,,london,8987,2016,,pre_vaporfly
+Sara Hall,W,United States,,london,9006,2016,,pre_vaporfly
+Alyson Dixon,W,United Kingdom,,london,9112,2016,,pre_vaporfly
+Sonia Samuels,W,United Kingdom,,london,9120,2016,,pre_vaporfly
+Irvette van Zyl,W,South Africa,,london,9140,2016,,pre_vaporfly
+Charlotte Purdue,W,United Kingdom,,london,9168,2016,,pre_vaporfly
+Tracy Barlow †,W,United Kingdom,,london,9205,2016,,pre_vaporfly
+Cassie Fien,W,Australia,,london,9216,2016,,pre_vaporfly
+Christina Muir †,W,United Kingdom,,london,9462,2016,,pre_vaporfly
+Freya Murray,W,United Kingdom,,london,9472,2016,,pre_vaporfly
+Hayley Munn †,W,United Kingdom,,london,9493,2016,,pre_vaporfly
+Georgie Bruinvels †,W,United Kingdom,,london,9500,2016,,pre_vaporfly
+René Kalmer,W,South Africa,,london,9584,2016,,pre_vaporfly
+Nikki Emerson,W,United Kingdom,,london,8440,2016,,pre_vaporfly
+Martyna Snopek,W,Poland,,london,9583,2016,,pre_vaporfly
+Daniel Wanjiru,M,Kenya,,london,7548,2017,,vaporfly_4
+Kenenisa Bekele,M,Ethiopia,,london,7557,2017,,vaporfly_4
+Bedan Karoki Muchiri,M,Kenya,,london,7661,2017,,vaporfly_4
+Abel Kirui,M,Kenya,,london,7665,2017,,vaporfly_4
+Alphonce Simbu,M,Tanzania,,london,7750,2017,,vaporfly_4
+Ghirmay Ghebreslassie,M,Eritrea,,london,7797,2017,,vaporfly_4
+Assefa Mengistu,M,Ethiopia,,london,7804,2017,,vaporfly_4
+Amanuel Mesel,M,Eritrea,,london,7844,2017,,vaporfly_4
+Javier Guerra,M,Spain,,london,7855,2017,,vaporfly_4
+Michael Shelley,M,Australia,,london,7898,2017,,vaporfly_4
+Ayad Lamdassem,M,Spain,,london,7950,2017,,vaporfly_4
+Feyisa Lilesa,M,Ethiopia,,london,8052,2017,,vaporfly_4
+Ghebrezgiabhier Kibrom,M,Eritrea,,london,8092,2017,,vaporfly_4
+Josh Griffiths,M,United Kingdom,,london,8094,2017,,vaporfly_4
+Abdellatif Meftah,M,France,,london,8095,2017,,vaporfly_4
+Robbie Simpson,M,United Kingdom,,london,8104,2017,,vaporfly_4
+Andrew Davies,M,United Kingdom,,london,8111,2017,,vaporfly_4
+Tesfaye Abera,M,Ethiopia,,london,8169,2017,,vaporfly_4
+Sean Hehir,M,Ireland,,london,8183,2017,,vaporfly_4
+Jesús Arturo Esparza,M,Mexico,,london,8198,2017,,vaporfly_4
+Scott Overall,M,United Kingdom,,london,8214,2017,,vaporfly_4
+Kevin Seaward,M,Ireland,,london,8228,2017,,vaporfly_4
+Matthew Sharp,M,United Kingdom,,london,8270,2017,,vaporfly_4
+Aaron Scott,M,United Kingdom,,london,8271,2017,,vaporfly_4
+Stephen Scullion,M,United Kingdom,,london,8285,2017,,vaporfly_4
+Jonathan Thewlis,M,United Kingdom,,london,8292,2017,,vaporfly_4
+Tesama Moogas,M,Israel,,london,8313,2017,,vaporfly_4
+Mick Clohisey,M,Ireland,,london,8314,2017,,vaporfly_4
+Jonathan Mellor,M,United Kingdom,,london,8328,2017,,vaporfly_4
+Tilahun Regassa,M,Ethiopia,,london,8333,2017,,vaporfly_4
+Mary Jepkosgei Keitany,W,Kenya,,london,8221,2017,,vaporfly_4
+Tirunesh Dibaba,W,Ethiopia,,london,8276,2017,,vaporfly_4
+Aselefech Mergia,W,Ethiopia,,london,8588,2017,,vaporfly_4
+Vivian Cheruiyot,W,Kenya,,london,8630,2017,,vaporfly_4
+Lisa Jane Weightman,W,Australia,,london,8715,2017,,vaporfly_4
+Laura Thweatt,W,United States,,london,8738,2017,,vaporfly_4
+Helah Kiprop,W,Kenya,,london,8739,2017,,vaporfly_4
+Tigist Tufa,W,Ethiopia,,london,8752,2017,,vaporfly_4
+Florence Kiplagat,W,Kenya,,london,8785,2017,,vaporfly_4
+Jessica Trengove,W,Australia,,london,8821,2017,,vaporfly_4
+Aberu Kebede,W,Ethiopia,,london,8847,2017,,vaporfly_4
+Diana Lobačevskė,W,Lithuania,,london,8928,2017,,vaporfly_4
+Kellyn Taylor,W,United States,,london,8931,2017,,vaporfly_4
+Alyson Dixon,W,United Kingdom,,london,8946,2017,,vaporfly_4
+Charlotte Purdue,W,United Kingdom,,london,8963,2017,,vaporfly_4
+Tracy Barlow,W,United Kingdom,,london,9042,2017,,vaporfly_4
+Andrea Deelstra,W,Netherlands,,london,9092,2017,,vaporfly_4
+Tish Jones,W,United Kingdom,,london,9236,2017,,vaporfly_4
+Melanie Panayiotou,W,Australia,,london,9325,2017,,vaporfly_4
+Hanna Vandenbussche,W,Belgium,,london,9448,2017,,vaporfly_4
+Susan Partridge,W,United Kingdom,,london,9471,2017,,vaporfly_4
+Jenny Spink,W,United Kingdom,,london,9491,2017,,vaporfly_4
+Casey Wood,W,Australia,,london,9567,2017,,vaporfly_4
+Laura Graham,W,Ireland,,london,9758,2017,,vaporfly_4
+Krista DuChene,W,Canada,,london,9811,2017,,vaporfly_4
+Diane Roy,W,Canada,,london,7205,2017,,vaporfly_4
+Martyna Snopek,W,United Kingdom,,london,9340,2017,,vaporfly_4
+Eliud Kipchoge,M,Kenya,,london,7457,2018,,vaporfly_4
+Shura Kitata Tola,M,Ethiopia,,london,7489,2018,,vaporfly_4
+Mo Farah,M,United Kingdom,,london,7581,2018,,vaporfly_4
+Abel Kirui,M,Kenya,,london,7627,2018,,vaporfly_4
+Bedan Karoki Muchiri,M,Kenya,,london,7714,2018,,vaporfly_4
+Kenenisa Bekele,M,Ethiopia,,london,7733,2018,,vaporfly_4
+Lawrence Cherono,M,Kenya,,london,7765,2018,,vaporfly_4
+Daniel Wanjiru,M,Kenya,,london,7835,2018,,vaporfly_4
+Amanuel Mesel,M,Eritrea,,london,7912,2018,,vaporfly_4
+Yohanes Ghebregergis,M,Eritrea,,london,7929,2018,,vaporfly_4
+Ihor Olefirenko,M,Ukraine,,london,8106,2018,,vaporfly_4
+Stephen Scullion,M,Ireland,,london,8155,2018,,vaporfly_4
+Fernando Cabada,M,United States,,london,8259,2018,,vaporfly_4
+Jonathan Mellor,M,United Kingdom,,london,8275,2018,,vaporfly_4
+Sam Chelanga,M,United States,,london,8477,2018,,vaporfly_4
+Tatsunori Hamasaki,M,Japan,,london,8742,2018,,vaporfly_4
+Guye Adola,M,Ethiopia,,london,9155,2018,,vaporfly_4
+Matt Clowes,M,United Kingdom,,london,9796,2018,,vaporfly_4
+Vivian Cheruiyot,W,Kenya,,london,8311,2018,,vaporfly_4
+Brigid Kosgei,W,Kenya,,london,8413,2018,,vaporfly_4
+Tadelech Bekele,W,Ethiopia,,london,8500,2018,,vaporfly_4
+Gladys Cherono Kiprono,W,Kenya,,london,8650,2018,,vaporfly_4
+Mary Jepkosgei Keitany,W,Kenya,,london,8667,2018,,vaporfly_4
+Rose Chelimo,W,Bahrain,,london,8763,2018,,vaporfly_4
+Mare Dibaba,W,Ethiopia,,london,8865,2018,,vaporfly_4
+Lily Partridge,W,United Kingdom,,london,8964,2018,,vaporfly_4
+Tracy Barlow,W,United Kingdom,,london,9129,2018,,vaporfly_4
+Stephanie Bruce,W,United States,,london,9148,2018,,vaporfly_4
+Rebecca Wade,W,United States,,london,9301,2018,,vaporfly_4
+Rebecca Murray,W,United Kingdom,,london,9577,2018,,vaporfly_4
+Liz Costello,W,United States,,london,9604,2018,,vaporfly_4
+Eliud Kipchoge,M,Kenya,,london,7357,2019,,vaporfly_next
+Mosinet Geremew,M,Ethiopia,,london,7375,2019,,vaporfly_next
+Mule Wasihun,M,Ethiopia,,london,7396,2019,,vaporfly_next
+Shura Kitata,M,Ethiopia,,london,7501,2019,,vaporfly_next
+Mo Farah,M,United Kingdom,,london,7539,2019,,vaporfly_next
+Tamirat Tola,M,Ethiopia,,london,7617,2019,,vaporfly_next
+Bashir Abdi,M,Belgium,,london,7623,2019,,vaporfly_next
+Leul Gebresilase,M,Ethiopia,,london,7635,2019,,vaporfly_next
+Yassine Rachik,M,Italy,,london,7685,2019,,vaporfly_next
+Callum Hawkins,M,United Kingdom,,london,7694,2019,,vaporfly_next
+Brigid Kosgei,W,Kenya,,london,8300,2019,,vaporfly_next
+Vivian Cheruiyot,W,Kenya,,london,8414,2019,,vaporfly_next
+Roza Dereje,W,Ethiopia,,london,8451,2019,,vaporfly_next
+Gladys Cherono Kiprono,W,Kenya,,london,8452,2019,,vaporfly_next
+Mary Jepkosgei Keitany,W,Kenya,,london,8458,2019,,vaporfly_next
+Emily Sisson,W,United States,,london,8588,2019,,vaporfly_next
+Sinead Diver,W,Australia,,london,8651,2019,,vaporfly_next
+Carla Salomé Rocha,W,Portugal,,london,8687,2019,,vaporfly_next
+Birhane Dibaba,W,Ethiopia,,london,8704,2019,,vaporfly_next
+Charlotte Purdue,W,United Kingdom,,london,8738,2019,,vaporfly_next
+Shura Kitata,M,Ethiopia,,london,7541,2020,,super_shoe_unknown_brand
+Vincent Kipchumba,M,Kenya,,london,7542,2020,,super_shoe_unknown_brand
+Sisay Lemma,M,Ethiopia,,london,7545,2020,,super_shoe_unknown_brand
+Mosinet Geremew,M,Ethiopia,,london,7564,2020,,super_shoe_unknown_brand
+Mule Wasihun,M,Ethiopia,,london,7568,2020,,super_shoe_unknown_brand
+Tamirat Tola,M,Ethiopia,,london,7601,2020,,super_shoe_unknown_brand
+Benson Kipruto,M,Kenya,,london,7602,2020,,super_shoe_unknown_brand
+Eliud Kipchoge,M,Kenya,,london,7609,2020,,super_shoe_unknown_brand
+Sondre Nordstad Moen,M,Norway,,london,7741,2020,,super_shoe_unknown_brand
+Marius Kipserem,M,Kenya,,london,7765,2020,,super_shoe_unknown_brand
+Brigid Kosgei,W,Kenya,,london,8338,2020,,super_shoe_unknown_brand
+Sara Hall,W,United States,,london,8521,2020,,super_shoe_unknown_brand
+Ruth Chepng'etich,W,Kenya,,london,8525,2020,,super_shoe_unknown_brand
+Ashete Bekere,W,Ethiopia,,london,8571,2020,,super_shoe_unknown_brand
+Alemu Megertu,W,Ethiopia,,london,8663,2020,,super_shoe_unknown_brand
+Molly Seidel,W,United States,,london,8713,2020,,super_shoe_unknown_brand
+Gerda Steyn,W,South Africa,,london,8811,2020,,super_shoe_unknown_brand
+Sinead Diver,W,Australia,,london,8827,2020,,super_shoe_unknown_brand
+Darya Mykhaylova,W,Ukraine,,london,8849,2020,,super_shoe_unknown_brand
+Valary Jemeli,W,Kenya,,london,8898,2020,,super_shoe_unknown_brand
+Patricia Eachus,W,Switzerland,,london,7358,2020,,super_shoe_unknown_brand
+Margriet van den Broek,W,Netherlands,,london,7805,2020,,super_shoe_unknown_brand
+Sisay Lemma,M,Ethiopia,,london,7441,2021,,super_shoe_unknown_brand
+Vincent Kipchumba,M,Kenya,,london,7468,2021,,super_shoe_unknown_brand
+Mosinet Geremew,M,Ethiopia,,london,7481,2021,,super_shoe_unknown_brand
+Evans Chebet,M,Kenya,,london,7543,2021,,super_shoe_unknown_brand
+Birhanu Legese,M,Ethiopia,,london,7570,2021,,super_shoe_unknown_brand
+Shura Kitata,M,Ethiopia,,london,7671,2021,,super_shoe_unknown_brand
+Philip Sesemann,M,United Kingdom,,london,7978,2021,,super_shoe_unknown_brand
+Josh Griffiths,M,United Kingdom,,london,8019,2021,,super_shoe_unknown_brand
+Matthew Leach,M,United Kingdom,,london,8131,2021,,super_shoe_unknown_brand
+Andrew Davies,M,United Kingdom,,london,8136,2021,,super_shoe_unknown_brand
+Joyciline Jepkosgei,W,Kenya,,london,8263,2021,,super_shoe_unknown_brand
+Degitu Azimeraw,W,Ethiopia,,london,8278,2021,,super_shoe_unknown_brand
+Ashete Bekere,W,Ethiopia,,london,8298,2021,,super_shoe_unknown_brand
+Brigid Kosgei,W,Kenya,,london,8320,2021,,super_shoe_unknown_brand
+Lonah Chemtai Salpeter,W,Israel,,london,8334,2021,,super_shoe_unknown_brand
+Valary Jemeli,W,Kenya,,london,8435,2021,,super_shoe_unknown_brand
+Joan Melly,W,Kenya,,london,8483,2021,,super_shoe_unknown_brand
+Zeineba Yimer,W,Ethiopia,,london,8500,2021,,super_shoe_unknown_brand
+Tigist Girma,W,Ethiopia,,london,8565,2021,,super_shoe_unknown_brand
+Charlotte Purdue,W,United Kingdom,,london,8606,2021,,super_shoe_unknown_brand
+Jenna Fesemyer,W,United States,,london,7388,2021,,super_shoe_unknown_brand
+Margriet van den Broek,W,Netherlands,,london,7560,2021,,super_shoe_unknown_brand
+Amos Kipruto,M,Kenya,,london,7479,2022,,super_shoe_unknown_brand
+Leul Gebresilase,M,Ethiopia,,london,7512,2022,,super_shoe_unknown_brand
+Bashir Abdi,M,Belgium,,london,7519,2022,,super_shoe_unknown_brand
+Kinde Atanaw,M,Ethiopia,,london,7527,2022,,super_shoe_unknown_brand
+Kenenisa Bekele,M,Ethiopia,,london,7553,2022,,super_shoe_unknown_brand
+Birhanu Legese,M,Ethiopia,,london,7571,2022,,super_shoe_unknown_brand
+Sisay Lemma,M,Ethiopia,,london,7646,2022,,super_shoe_unknown_brand
+Brett Robinson,M,Australia,,london,7792,2022,,super_shoe_unknown_brand
+Weynay Ghebresilasie,M,United Kingdom,,london,7917,2022,,super_shoe_unknown_brand
+Philip Sesemann,M,United Kingdom,,london,7930,2022,,super_shoe_unknown_brand
+Yalemzerf Yehualaw,W,Ethiopia,,london,8246,2022,,super_shoe_unknown_brand
+Joyciline Jepkosgei,W,Kenya,,london,8287,2022,,super_shoe_unknown_brand
+Alemu Megertu,W,Ethiopia,,london,8312,2022,,super_shoe_unknown_brand
+Judith Jeptum Korir,W,Kenya,,london,8323,2022,,super_shoe_unknown_brand
+Joan Chelimo Melly,W,Romania,,london,8367,2022,,super_shoe_unknown_brand
+Ashete Bekere,W,Ethiopia,,london,8370,2022,,super_shoe_unknown_brand
+Mary Ngugi,W,Kenya,,london,8422,2022,,super_shoe_unknown_brand
+Sutume Asefa Kebede,W,Ethiopia,,london,8444,2022,,super_shoe_unknown_brand
+Ai Hosoda,W,Japan,,london,8502,2022,,super_shoe_unknown_brand
+Rose Harvey,W,United Kingdom,,london,8879,2022,,super_shoe_unknown_brand
+Kelvin Kiptum,M,Kenya,,london,7285,2023,,super_shoe_unknown_brand
+Geoffrey Kamworor,M,Kenya,,london,7463,2023,,super_shoe_unknown_brand
+Tamirat Tola,M,Ethiopia,,london,7499,2023,,super_shoe_unknown_brand
+Leul Gebresilase,M,Ethiopia,,london,7545,2023,,super_shoe_unknown_brand
+Seifu Tura,M,Ethiopia,,london,7598,2023,,super_shoe_unknown_brand
+Emile Cairess,M,United Kingdom,,london,7687,2023,,super_shoe_unknown_brand
+Brett Robinson,M,Australia,,london,7819,2023,,super_shoe_unknown_brand
+Philip Sesemann,M,United Kingdom,,london,7823,2023,,super_shoe_unknown_brand
+Mo Farah,M,United Kingdom,,london,7828,2023,,super_shoe_unknown_brand
+Chris Thompson,M,United Kingdom,,london,7910,2023,,super_shoe_unknown_brand
+Sifan Hassan,W,Netherlands,,london,8313,2023,,super_shoe_unknown_brand
+Alemu Megertu,W,Ethiopia,,london,8317,2023,,super_shoe_unknown_brand
+Peres Jepchirchir,W,Kenya,,london,8318,2023,,super_shoe_unknown_brand
+Sheila Chepkirui,W,Kenya,,london,8331,2023,,super_shoe_unknown_brand
+Yalemzerf Yehualaw,W,Ethiopia,,london,8333,2023,,super_shoe_unknown_brand
+Judith Jeptum Korir,W,Kenya,,london,8441,2023,,super_shoe_unknown_brand
+Almaz Ayana,W,Ethiopia,,london,8444,2023,,super_shoe_unknown_brand
+Tadu Teshome,W,Ethiopia,,london,8491,2023,,super_shoe_unknown_brand
+Sofiia Yaremchuk,W,Italy,,london,8642,2023,,super_shoe_unknown_brand
+Susanna Sullivan,W,United States,,london,8667,2023,,super_shoe_unknown_brand
+Alexander Mutiso,M,Kenya,,london,7441,2024,,super_shoe_unknown_brand
+Kenenisa Bekele,M,Ethiopia,,london,7455,2024,,super_shoe_unknown_brand
+Emile Cairess,M,United Kingdom,,london,7606,2024,,super_shoe_unknown_brand
+Mahamed Mahamed,M,United Kingdom,,london,7625,2024,,super_shoe_unknown_brand
+Hassan Chahdi,M,France,,london,7650,2024,,super_shoe_unknown_brand
+Henok Tesfay,M,Eritrea,,london,7762,2024,,super_shoe_unknown_brand
+Hendrik Pfeiffer,M,Germany,,london,7800,2024,,super_shoe_unknown_brand
+Kinde Atanaw,M,Ethiopia,,london,7803,2024,,super_shoe_unknown_brand
+Johannes Motschmann,M,Germany,,london,7839,2024,,super_shoe_unknown_brand
+Brian Shrader,M,United States,,london,7850,2024,,super_shoe_unknown_brand
+Peres Jepchirchir,W,Kenya,,london,8176,2024,,super_shoe_unknown_brand
+Tigst Assefa,W,Ethiopia,,london,8183,2024,,super_shoe_unknown_brand
+Joyciline Jepkosgei,W,Kenya,,london,8184,2024,,super_shoe_unknown_brand
+Megertu Alemu,W,Ethiopia,,london,8194,2024,,super_shoe_unknown_brand
+Brigid Kosgei,W,Kenya,,london,8342,2024,,super_shoe_unknown_brand
+Sheila Chepkirui,W,Kenya,,london,8371,2024,,super_shoe_unknown_brand
+Tigist Ketema,W,Ethiopia,,london,8601,2024,,super_shoe_unknown_brand
+Yalemzerf Yehualaw,W,Ethiopia,,london,8606,2024,,super_shoe_unknown_brand
+Ruth Chepngetich,W,Kenya,,london,8676,2024,,super_shoe_unknown_brand
+Tsige Haileslase,W,Ethiopia,,london,8703,2024,,super_shoe_unknown_brand
+Bernard Kipyego,M,Kenya,,chicago,7600,2012,,pre_vaporfly
+Samuel Ndungu,M,Kenya,,chicago,7646,2012,,pre_vaporfly
+Dadi Yami,M,Ethiopia,,chicago,7663,2012,,pre_vaporfly
+Shami Abdulahi,M,Ethiopia,,chicago,7719,2012,,pre_vaporfly
+Lucy Wangui Kabuu,W,Kenya,,chicago,8561,2012,,pre_vaporfly
+Liliya Shobukhova,W,Russia,,chicago,8579,2012,,pre_vaporfly
+Mariya Konovalova,W,Russia,,chicago,8738,2012,,pre_vaporfly
+Dot McMahon,W,United States,,chicago,9131,2012,,pre_vaporfly
+Stephanie Pezzullo,W,United States,,chicago,9162,2012,,pre_vaporfly
+Dennis Kimetto,M,Kenya,,chicago,7425,2013,,pre_vaporfly
+Emmanuel Kipchirchir Mutai,M,Kenya,,chicago,7432,2013,,pre_vaporfly
+Sammy Kitwara,M,Kenya,,chicago,7516,2013,,pre_vaporfly
+Micah Kogo,M,Kenya,,chicago,7616,2013,,pre_vaporfly
+Dathan Ritzenhein,M,United States,,chicago,7785,2013,,pre_vaporfly
+Ayele Abshero,M,Ethiopia,,chicago,7810,2013,,pre_vaporfly
+Hiroaki Sano,M,Japan,,chicago,7829,2013,,pre_vaporfly
+Moses Mosop,M,Kenya,,chicago,7879,2013,,pre_vaporfly
+Yoshinori Oda,M,Japan,,chicago,7889,2013,,pre_vaporfly
+Matt Tegenkamp,M,United States,,chicago,7948,2013,,pre_vaporfly
+Rita Jeptoo,W,Kenya,,chicago,8397,2013,,pre_vaporfly
+Jemima Jelagat Sumgong,W,Kenya,,chicago,8448,2013,,pre_vaporfly
+Mariya Konovalova,W,Russia,,chicago,8566,2013,,pre_vaporfly
+Aliaksandra Duliba,W,Belarus,,chicago,8624,2013,,pre_vaporfly
+Atsede Baysa,W,Ethiopia,,chicago,8802,2013,,pre_vaporfly
+Ehitu Kiros Reda,W,Ethiopia,,chicago,8862,2013,,pre_vaporfly
+Yukiko Akaba,W,Japan,,chicago,8869,2013,,pre_vaporfly
+Abebech Afework,W,Ethiopia,,chicago,8918,2013,,pre_vaporfly
+Clara Santucci,W,United States,,chicago,9099,2013,,pre_vaporfly
+Melissa White,W,United States,,chicago,9157,2013,,pre_vaporfly
+Eliud Kipchoge,M,Kenya,,chicago,7451,2014,,pre_vaporfly
+Sammy Kitwara,M,Kenya,,chicago,7468,2014,,pre_vaporfly
+Dickson Chumba,M,Kenya,,chicago,7472,2014,,pre_vaporfly
+Kenenisa Bekele,M,Ethiopia,,chicago,7551,2014,,pre_vaporfly
+Bernard Koech,M,Kenya,,chicago,7710,2014,,pre_vaporfly
+Ghirmay Ghebreslassie,M,Eritrea,,chicago,7748,2014,,pre_vaporfly
+Lani Rutto,M,Kenya,,chicago,7842,2014,,pre_vaporfly
+Wesley Korir,M,Kenya,,chicago,7869,2014,,pre_vaporfly
+Bobby Curtis,M,United States,,chicago,7880,2014,,pre_vaporfly
+Koji Kobayashi,M,Japan,,chicago,7903,2014,,pre_vaporfly
+Jake Riley,M,United States,,chicago,7996,2014,,pre_vaporfly
+Gabe Proctor,M,United States,,chicago,8025,2014,,pre_vaporfly
+Mare Dibaba,W,Ethiopia,,chicago,8737,2014,,pre_vaporfly
+Florence Kiplagat,W,Kenya,,chicago,8757,2014,,pre_vaporfly
+Birhane Dibaba,W,Ethiopia,,chicago,8822,2014,,pre_vaporfly
+Amy Hastings,W,United States,,chicago,8823,2014,,pre_vaporfly
+Clara Santucci,W,United States,,chicago,9141,2014,,pre_vaporfly
+Sarah Crouch,W,United States,,chicago,9164,2014,,pre_vaporfly
+Gelete Burka,W,Ethiopia,,chicago,9257,2014,,pre_vaporfly
+Melissa White,W,United States,,chicago,9259,2014,,pre_vaporfly
+Lauren Jimison,W,United States,,chicago,9278,2014,,pre_vaporfly
+Sarah Cummings,W,United States,,chicago,9287,2014,,pre_vaporfly
+Lindsey Scherf,W,United States,,chicago,9446,2014,,pre_vaporfly
+Dickson Chumba,M,Kenya,,chicago,7765,2015,,pre_vaporfly
+Sammy Kitwara,M,Kenya,,chicago,7790,2015,,pre_vaporfly
+Sammy Ndungu,M,Kenya,,chicago,7806,2015,,pre_vaporfly
+Girmay Birhanu Gebru,M,Ethiopia,,chicago,7807,2015,,pre_vaporfly
+Luke Puskedra,M,United States,,chicago,7824,2015,,pre_vaporfly
+Wesley Korir,M,Kenya,,chicago,7839,2015,,pre_vaporfly
+Elkanah Kibet,M,United States,,chicago,7891,2015,,pre_vaporfly
+Lucas Rotich,M,Kenya,,chicago,8019,2015,,pre_vaporfly
+Abera Kuma,M,Ethiopia,,chicago,8024,2015,,pre_vaporfly
+Fernando Cabada,M,United States,,chicago,8136,2015,,pre_vaporfly
+Florence Kiplagat,W,Kenya,,chicago,8613,2015,,pre_vaporfly
+Yebrgual Melese,W,Ethiopia,,chicago,8623,2015,,pre_vaporfly
+Birhane Dibaba,W,Ethiopia,,chicago,8664,2015,,pre_vaporfly
+Kayoko Fukushi,W,Japan,,chicago,8665,2015,,pre_vaporfly
+Mulu Seboka,W,Ethiopia,,chicago,8680,2015,,pre_vaporfly
+Meskerem Assefa,W,Ethiopia,,chicago,8711,2015,,pre_vaporfly
+Deena Kastor,W,United States,,chicago,8867,2015,,pre_vaporfly
+Diane Nukuri,W,Burundi,,chicago,8953,2015,,pre_vaporfly
+Jessica Draskau-Petersson,W,Denmark,,chicago,9007,2015,,pre_vaporfly
+Sara Hall,W,United States,,chicago,9074,2015,,pre_vaporfly
+Abel Kirui,M,Kenya,,chicago,7883,2016,,pre_vaporfly
+Dickson Chumba,M,Kenya,,chicago,7886,2016,,pre_vaporfly
+Gideon Kipketer,M,Kenya,,chicago,7940,2016,,pre_vaporfly
+Paul Lonyangata,M,Kenya,,chicago,7997,2016,,pre_vaporfly
+Stephen Sambu,M,Kenya,,chicago,8015,2016,,pre_vaporfly
+Abayneh Ayele,M,Ethiopia,,chicago,8032,2016,,pre_vaporfly
+Takuya Fukatsu,M,Japan,,chicago,8033,2016,,pre_vaporfly
+Diego Estrada,M,United States,,chicago,8036,2016,,pre_vaporfly
+Koji Gokaya,M,Japan,,chicago,8074,2016,,pre_vaporfly
+Elkanah Kibet,M,United States,,chicago,8197,2016,,pre_vaporfly
+Florence Kiplagat,W,Kenya,,chicago,8492,2016,,pre_vaporfly
+Edna Kiplagat,W,Kenya,,chicago,8608,2016,,pre_vaporfly
+Valentine Kipketer,W,Kenya,,chicago,8621,2016,,pre_vaporfly
+Purity Rionoripo,W,Kenya,,chicago,8687,2016,,pre_vaporfly
+Yebrgual Melese,W,Ethiopia,,chicago,8689,2016,,pre_vaporfly
+Atsede Baysa,W,Ethiopia,,chicago,8933,2016,,pre_vaporfly
+Serena Burla,W,United States,,chicago,9040,2016,,pre_vaporfly
+Agnieszka Mierzejewska,W,Poland,,chicago,9133,2016,,pre_vaporfly
+Sarah Crouch,W,United States,,chicago,9228,2016,,pre_vaporfly
+Alia Gray,W,United States,,chicago,9240,2016,,pre_vaporfly
+Galen Rupp,M,United States,,chicago,7760,2017,,vaporfly_4
+Abel Kirui,M,Kenya,,chicago,7788,2017,,vaporfly_4
+Bernard Kipyego,M,Kenya,,chicago,7823,2017,,vaporfly_4
+Sisay Lemma,M,Ethiopia,,chicago,7861,2017,,vaporfly_4
+Stephen Sambu,M,Kenya,,chicago,7867,2017,,vaporfly_4
+Kohei Matsumura,M,Japan,,chicago,7906,2017,,vaporfly_4
+Ezekiel Kiptoo Chebii,M,Kenya,,chicago,7932,2017,,vaporfly_4
+Zersenay Tadese,M,Eritrea,,chicago,7939,2017,,vaporfly_4
+Chris Derrick,M,United States,,chicago,7970,2017,,vaporfly_4
+Michael Shelley,M,Australia,,chicago,7972,2017,,vaporfly_4
+Tirunesh Dibaba,W,Ethiopia,,chicago,8310,2017,,vaporfly_4
+Brigid Kosgei,W,Kenya,,chicago,8422,2017,,vaporfly_4
+Jordan Hasay,W,United States,,chicago,8457,2017,,vaporfly_4
+Madaí Pérez,W,Mexico,,chicago,8684,2017,,vaporfly_4
+Valentine Kipketer,W,Kenya,,chicago,8885,2017,,vaporfly_4
+Lisa Weightman,W,Australia,,chicago,8925,2017,,vaporfly_4
+Maegan Krifchin,W,United States,,chicago,9226,2017,,vaporfly_4
+Alia Gray,W,United States,,chicago,9265,2017,,vaporfly_4
+Taylor Ward,W,United States,,chicago,9327,2017,,vaporfly_4
+Becky Wade,W,United States,,chicago,9346,2017,,vaporfly_4
+Mo Farah,M,Great Britain,,chicago,7511,2018,,vaporfly_4
+Mosinet Geremew,M,Ethiopia,,chicago,7524,2018,,vaporfly_4
+Suguru Osako,M,Japan,,chicago,7550,2018,,vaporfly_4
+Kenneth Kipkemoi,M,Kenya,,chicago,7557,2018,,vaporfly_4
+Galen Rupp,M,United States,,chicago,7581,2018,,vaporfly_4
+Geoffrey Kirui,M,Kenya,,chicago,7605,2018,,vaporfly_4
+Abel Kirui,M,Kenya,,chicago,7672,2018,,vaporfly_4
+Taku Fujimoto,M,Japan,,chicago,7677,2018,,vaporfly_4
+Bedan Karoki,M,Kenya,,chicago,7679,2018,,vaporfly_4
+Birhanu Legese,M,Ethiopia,,chicago,7721,2018,,vaporfly_4
+Brigid Kosgei,W,Kenya,,chicago,8315,2018,,vaporfly_4
+Roza Dereje,W,Ethiopia,,chicago,8478,2018,,vaporfly_4
+Shure Demise,W,Ethiopia,,chicago,8535,2018,,vaporfly_4
+Florence Kiplagat,W,Kenya,,chicago,8768,2018,,vaporfly_4
+Veronicah Nyaruai,W,Kenya,,chicago,9094,2018,,vaporfly_4
+Sarah Crouch,W,United States,,chicago,9157,2018,,vaporfly_4
+Taylor Ward,W,United States,,chicago,9162,2018,,vaporfly_4
+Kate Landau,W,United States,,chicago,9204,2018,,vaporfly_4
+Melanie Myrand,W,Canada,,chicago,9248,2018,,vaporfly_4
+Marci Klimek,W,United States,,chicago,9293,2018,,vaporfly_4
+Benson Kipruto,M,Kenya,,chicago,7442,2023,,super_shoe_unknown_brand
+Bashir Abdi,M,Belgium,,chicago,7472,2023,,super_shoe_unknown_brand
+John Korir,M,Kenya,,chicago,7509,2023,,super_shoe_unknown_brand
+Seifu Tura Abdiwak,M,Ethiopia,,chicago,7529,2023,,super_shoe_unknown_brand
+Conner Mantz,M,United States,,chicago,7667,2023,,super_shoe_unknown_brand
+Clayton Young,M,United States,,chicago,7680,2023,,super_shoe_unknown_brand
+Galen Rupp,M,United States,,chicago,7728,2023,,super_shoe_unknown_brand
+Sam Chelanga,M,United States,,chicago,7730,2023,,super_shoe_unknown_brand
+Takashi Ichida,M,Japan,,chicago,7737,2023,,super_shoe_unknown_brand
+Ruth Chepngetich,W,Kenya,,chicago,8137,2023,,super_shoe_unknown_brand
+Megertu Alemu,W,Ethiopia,,chicago,8229,2023,,super_shoe_unknown_brand
+Joyciline Jepkosgei,W,Kenya,,chicago,8243,2023,,super_shoe_unknown_brand
+Tadu Teshome Nare,W,Ethiopia,,chicago,8404,2023,,super_shoe_unknown_brand
+Genzebe Dibaba Keneni,W,Ethiopia,,chicago,8507,2023,,super_shoe_unknown_brand
+Emily Sisson,W,United States,,chicago,8529,2023,,super_shoe_unknown_brand
+Molly Seidel,W,United States,,chicago,8587,2023,,super_shoe_unknown_brand
+Rose Harvey,W,United Kingdom,,chicago,8601,2023,,super_shoe_unknown_brand
+Sara Vaughn,W,United States,,chicago,8604,2023,,super_shoe_unknown_brand
+John Korir,M,Kenya,,chicago,7364,2024,,super_shoe_unknown_brand
+Mohamed Esa,M,Ethiopia,,chicago,7479,2024,,super_shoe_unknown_brand
+Amos Kipruto,M,Kenya,,chicago,7490,2024,,super_shoe_unknown_brand
+Vincent Ngeitch,M,Kenya,,chicago,7516,2024,,super_shoe_unknown_brand
+Daniel Ebenyo,M,Kenya,,chicago,7564,2024,,super_shoe_unknown_brand
+Kyohei Hosoya,M,Japan,,chicago,7640,2024,,super_shoe_unknown_brand
+CJ Albertson,M,United States,,chicago,7697,2024,,super_shoe_unknown_brand
+Toshiki Sadakata,M,Japan,,chicago,7702,2024,,super_shoe_unknown_brand
+Alex Masai,M,Kenya,,chicago,7731,2024,,super_shoe_unknown_brand
+Zach Panning,M,United States,,chicago,7756,2024,,super_shoe_unknown_brand
+Sutume Kebede,W,Ethiopia,,chicago,8252,2024,,super_shoe_unknown_brand
+Irine Cheptai,W,Kenya,,chicago,8271,2024,,super_shoe_unknown_brand
+Buze Diriba,W,Ethiopia,,chicago,8422,2024,,super_shoe_unknown_brand
+Joyciline Jepkosgei,W,Kenya,,chicago,8451,2024,,super_shoe_unknown_brand
+Degitu Azimeraw,W,Ethiopia,,chicago,8452,2024,,super_shoe_unknown_brand
+Susanna Sullivan,W,United States,,chicago,8516,2024,,super_shoe_unknown_brand
+Ashete Bekere,W,Ethiopia,,chicago,8590,2024,,super_shoe_unknown_brand
+Lindsay Flanagan,W,United States,,chicago,8611,2024,,super_shoe_unknown_brand
+Stacy Ndiwa,W,Kenya,,chicago,8622,2024,,super_shoe_unknown_brand
+Robert Kiprono Cheruiyot,M,Kenya,,boston,7552,2010,,pre_vaporfly
+Kebede Tekeste,M,Ethiopia,,boston,7643,2010,,pre_vaporfly
+Deriba Merga,M,Ethiopia,,boston,7719,2010,,pre_vaporfly
+Ryan Hall,M,United States,,boston,7721,2010,,pre_vaporfly
+Meb Keflezighi,M,United States,,boston,7766,2010,,pre_vaporfly
+Gashaw Asfaw,M,Ethiopia,,boston,7853,2010,,pre_vaporfly
+John Kipkorir Komen,M,Kenya,,boston,7908,2010,,pre_vaporfly
+Moses Kipkosgei Kigen,M,Kenya,,boston,7924,2010,,pre_vaporfly
+Jason Lehmkuhle,M,United States,,boston,7944,2010,,pre_vaporfly
+Alejandro Suárez,M,Mexico,,boston,7953,2010,,pre_vaporfly
+Teyba Erkesso,W,Ethiopia,,boston,8771,2010,,pre_vaporfly
+Tatyana Pushkareva,W,Russia,,boston,8774,2010,,pre_vaporfly
+Salina Kosgei,W,Kenya,,boston,8915,2010,,pre_vaporfly
+Woynishet Girma,W,Ethiopia,,boston,8916,2010,,pre_vaporfly
+Bruna Genovese,W,Italy,,boston,8952,2010,,pre_vaporfly
+Lidiya Grigoryeva,W,Russia,,boston,9031,2010,,pre_vaporfly
+Yurika Nakamura,W,Japan,,boston,9040,2010,,pre_vaporfly
+Sun Weiwei,W,China,,boston,9074,2010,,pre_vaporfly
+Nailiya Yulamanova,W,Russia,,boston,9108,2010,,pre_vaporfly
+Albina Mayorova,W,Russia,,boston,9115,2010,,pre_vaporfly
+Wesley Korir,M,Kenya,,boston,7960,2012,,pre_vaporfly
+Levy Matebo,M,Kenya,,boston,7986,2012,,pre_vaporfly
+Bernard Kipyego,M,Kenya,,boston,7993,2012,,pre_vaporfly
+Jason Hartmann,M,United States,,boston,8071,2012,,pre_vaporfly
+Wilson Chebet,M,Kenya,,boston,8096,2012,,pre_vaporfly
+Laban Korir,M,Kenya,,boston,8129,2012,,pre_vaporfly
+Michel Butter,M,Netherlands,,boston,8198,2012,,pre_vaporfly
+David Barmasai,M,Kenya,,boston,8236,2012,,pre_vaporfly
+Hideaki Tamura,M,Japan,,boston,8295,2012,,pre_vaporfly
+Mathew Kisorio,M,Kenya,,boston,8295,2012,,pre_vaporfly
+Sharon Cherop,W,Kenya,,boston,9110,2012,,pre_vaporfly
+Jemima Jelagat Sumgong,W,Kenya,,boston,9112,2012,,pre_vaporfly
+Georgina Rono,W,Kenya,,boston,9189,2012,,pre_vaporfly
+Firehiwot Dado,W,Ethiopia,,boston,9296,2012,,pre_vaporfly
+Diana Sigei,W,Kenya,,boston,9340,2012,,pre_vaporfly
+Rita Jeptoo,W,Kenya,,boston,9353,2012,,pre_vaporfly
+Mayumi Fujita,W,Japan,,boston,9551,2012,,pre_vaporfly
+Nadezdha Leonteva,W,Russia,,boston,9640,2012,,pre_vaporfly
+Svetlana Pretot,W,France,,boston,9650,2012,,pre_vaporfly
+Sheri Piers,W,United States,,boston,9715,2012,,pre_vaporfly
+Benson Kipruto,M,Kenya,,boston,7791,2021,,super_shoe_unknown_brand
+Lemi Berhanu,M,Ethiopia,,boston,7837,2021,,super_shoe_unknown_brand
+Jemal Yimer,M,Ethiopia,,boston,7838,2021,,super_shoe_unknown_brand
+Tsedat Ayana,M,Ethiopia,,boston,7847,2021,,super_shoe_unknown_brand
+Leonard Barsoton,M,Kenya,,boston,7871,2021,,super_shoe_unknown_brand
+Bayelign Teshager,M,Ethiopia,,boston,7876,2021,,super_shoe_unknown_brand
+Colin Bennie,M,United States,,boston,7886,2021,,super_shoe_unknown_brand
+Dejene Debela,M,Ethiopia,,boston,7898,2021,,super_shoe_unknown_brand
+Wilson Chebet,M,Kenya,,boston,7900,2021,,super_shoe_unknown_brand
+CJ Albertson,M,United States,,boston,7904,2021,,super_shoe_unknown_brand
+Edna Kiplagat,W,Kenya,,boston,8709,2021,,super_shoe_unknown_brand
+Mary Ngugi,W,Kenya,,boston,8720,2021,,super_shoe_unknown_brand
+Monicah Ngige,W,Kenya,,boston,8732,2021,,super_shoe_unknown_brand
+Netsanet Gudeta,W,Ethiopia,,boston,8769,2021,,super_shoe_unknown_brand
+Nell Rojas,W,United States,,boston,8832,2021,,super_shoe_unknown_brand
+Workenesh Edesa,W,Ethiopia,,boston,8858,2021,,super_shoe_unknown_brand
+Atsede Baysa,W,Ethiopia,,boston,8884,2021,,super_shoe_unknown_brand
+Biruktayit Eshetu,W,Ethiopia,,boston,8945,2021,,super_shoe_unknown_brand
+Tigist Abayechew,W,Kenya,,boston,8946,2021,,super_shoe_unknown_brand
+Caroline Rotich,W,Kenya,,boston,8994,2021,,super_shoe_unknown_brand
+Margriet van den Broek,W,Netherlands,,boston,7468,2021,,super_shoe_unknown_brand
+Michelle Wheeler,W,United States,,boston,7630,2021,,super_shoe_unknown_brand
+Arielle Rausin,W,United States,,boston,7652,2021,,super_shoe_unknown_brand
+Eva Houston,W,United States,,boston,9712,2021,,super_shoe_unknown_brand
+Evans Chebet,M,Kenya,,boston,7611,2022,,super_shoe_unknown_brand
+Lawrence Cherono,M,Kenya,,boston,7641,2022,,super_shoe_unknown_brand
+Benson Kipruto,M,Kenya,,boston,7647,2022,,super_shoe_unknown_brand
+Gabriel Geay,M,Tanzania,,boston,7673,2022,,super_shoe_unknown_brand
+Eric Kiptanui,M,Kenya,,boston,7727,2022,,super_shoe_unknown_brand
+Albert Korir,M,Kenya,,boston,7730,2022,,super_shoe_unknown_brand
+Scott Fauble,M,United States,,boston,7732,2022,,super_shoe_unknown_brand
+Jemal Yimer,M,Ethiopia,,boston,7738,2022,,super_shoe_unknown_brand
+Elkanah Kibet,M,United States,,boston,7747,2022,,super_shoe_unknown_brand
+Kinde Atanaw,M,Ethiopia,,boston,7756,2022,,super_shoe_unknown_brand
+Lemi Berhanu,M,Ethiopia,,boston,7783,2022,,super_shoe_unknown_brand
+Bethwel Yegon,M,Kenya,,boston,7784,2022,,super_shoe_unknown_brand
+CJ Albertson,M,United States,,boston,7823,2022,,super_shoe_unknown_brand
+Matthew McDonald,M,United States,,boston,7835,2022,,super_shoe_unknown_brand
+Trevor Hofbauer,M,Canada,,boston,7852,2022,,super_shoe_unknown_brand
+Reed Fischer,M,United States,,boston,7854,2022,,super_shoe_unknown_brand
+Mick Iacofano,M,United States,,boston,7908,2022,,super_shoe_unknown_brand
+Geoffrey Kamworor,M,Kenya,,boston,7909,2022,,super_shoe_unknown_brand
+Colin Bennie,M,United States,,boston,7928,2022,,super_shoe_unknown_brand
+Yuki Kawauchi,M,Japan,,boston,7975,2022,,super_shoe_unknown_brand
+Mike Sayenko,M,United States,,boston,8026,2022,,super_shoe_unknown_brand
+Jerrell Mock,M,United States,,boston,8050,2022,,super_shoe_unknown_brand
+Jonas Hampton,M,United States,,boston,8080,2022,,super_shoe_unknown_brand
+Ian Butler,M,United States,,boston,8088,2022,,super_shoe_unknown_brand
+Paul Hogan,M,United States,,boston,8108,2022,,super_shoe_unknown_brand
+Jared Ward,M,United States,,boston,8124,2022,,super_shoe_unknown_brand
+Matthew Llano,M,United States,,boston,8199,2022,,super_shoe_unknown_brand
+Benjamin Schneiderman,M,United States,,boston,8316,2022,,super_shoe_unknown_brand
+Nico Montanez,M,United States,,boston,8363,2022,,super_shoe_unknown_brand
+Tyler Pence,M,United States,,boston,8379,2022,,super_shoe_unknown_brand
+Peres Jepchirchir,W,Kenya,,boston,8461,2022,,super_shoe_unknown_brand
+Ababel Yeshaneh,W,Ethiopia,,boston,8465,2022,,super_shoe_unknown_brand
+Mary Ngugi,W,Kenya,,boston,8492,2022,,super_shoe_unknown_brand
+Edna Kiplagat,W,Kenya,,boston,8500,2022,,super_shoe_unknown_brand
+Monicah Ngige,W,Kenya,,boston,8533,2022,,super_shoe_unknown_brand
+Viola Cheptoo,W,Kenya,,boston,8627,2022,,super_shoe_unknown_brand
+Joyciline Jepkosgei,W,Kenya,,boston,8683,2022,,super_shoe_unknown_brand
+Degitu Azimeraw,W,Ethiopia,,boston,8723,2022,,super_shoe_unknown_brand
+Charlotte Purdue,W,United Kingdom,,boston,8726,2022,,super_shoe_unknown_brand
+Nell Rojas,W,United States,,boston,8757,2022,,super_shoe_unknown_brand
+Malindi Elmore,W,Canada,,boston,8878,2022,,super_shoe_unknown_brand
+Stephanie Rothstein-Bruce,W,United States,,boston,8882,2022,,super_shoe_unknown_brand
+Desiree Linden,W,United States,,boston,8927,2022,,super_shoe_unknown_brand
+Dakotah Lindwurm,W,United States,,boston,8995,2022,,super_shoe_unknown_brand
+Bria Wetsch,W,United States,,boston,9042,2022,,super_shoe_unknown_brand
+Elaina Tabb,W,United States,,boston,9094,2022,,super_shoe_unknown_brand
+Maegan Krifchin,W,United States,,boston,9113,2022,,super_shoe_unknown_brand
+Kathy Derks,W,United States,,boston,9294,2022,,super_shoe_unknown_brand
+Natasha Wodak,W,Canada,,boston,9308,2022,,super_shoe_unknown_brand
+Angie Orjuela,W,Colombia,,boston,9317,2022,,super_shoe_unknown_brand
+Sara Vaughn,W,United States,,boston,9387,2022,,super_shoe_unknown_brand
+Aisling Cuffe,W,United States,,boston,9443,2022,,super_shoe_unknown_brand
+Annmarie Tuxbury,W,United States,,boston,9495,2022,,super_shoe_unknown_brand
+Kate Bazeley,W,Canada,,boston,9506,2022,,super_shoe_unknown_brand
+Kayla Lampe,W,United States,,boston,9518,2022,,super_shoe_unknown_brand
+Kaylee Flanagan,W,United States,,boston,9566,2022,,super_shoe_unknown_brand
+Ashlee Powers,W,United States,,boston,9599,2022,,super_shoe_unknown_brand
+Caitlin Phillips,W,United States,,boston,9609,2022,,super_shoe_unknown_brand
+Kate Sanborn,W,United States,,boston,9616,2022,,super_shoe_unknown_brand
+Katrina Morrissey,W,United States,,boston,9619,2022,,super_shoe_unknown_brand
+Evans Chebet,M,Kenya,,boston,7554,2023,,super_shoe_unknown_brand
+Gabriel Geay,M,Tanzania,,boston,7564,2023,,super_shoe_unknown_brand
+Benson Kipruto,M,Kenya,,boston,7566,2023,,super_shoe_unknown_brand
+Albert Korir,M,Kenya,,boston,7681,2023,,super_shoe_unknown_brand
+Zouhair Talbi,M,Morocco,,boston,7715,2023,,super_shoe_unknown_brand
+Eliud Kipchoge,M,Kenya,,boston,7763,2023,,super_shoe_unknown_brand
+Scott Fauble,M,United States,,boston,7784,2023,,super_shoe_unknown_brand
+Hassan Chahdi,M,France,,boston,7786,2023,,super_shoe_unknown_brand
+John Korir,M,Kenya,,boston,7804,2023,,super_shoe_unknown_brand
+Matthew McDonald,M,United States,,boston,7817,2023,,super_shoe_unknown_brand
+Conner Mantz,M,United States,,boston,7825,2023,,super_shoe_unknown_brand
+CJ Albertson,M,United States,,boston,7833,2023,,super_shoe_unknown_brand
+Nico Montanez,M,United States,,boston,7852,2023,,super_shoe_unknown_brand
+Shura Kitata,M,Ethiopia,,boston,7886,2023,,super_shoe_unknown_brand
+Andualem Belay,M,Ethiopia,,boston,7910,2023,,super_shoe_unknown_brand
+Hendrik Pfeiffer,M,Germany,,boston,7942,2023,,super_shoe_unknown_brand
+JP Flavin,M,United States,,boston,8007,2023,,super_shoe_unknown_brand
+Turner Wiley,M,United States,,boston,8037,2023,,super_shoe_unknown_brand
+Isaac Mpofu,M,Zimbabwe,,boston,8048,2023,,super_shoe_unknown_brand
+Chad Hall,M,United States,,boston,8053,2023,,super_shoe_unknown_brand
+Colin Mickow,M,United States,,boston,8067,2023,,super_shoe_unknown_brand
+Mark Korir,M,Kenya,,boston,8077,2023,,super_shoe_unknown_brand
+Ben True,M,United States,,boston,8166,2023,,super_shoe_unknown_brand
+Connor Weaver,M,United States,,boston,8185,2023,,super_shoe_unknown_brand
+Jonas Hampton,M,United States,,boston,8225,2023,,super_shoe_unknown_brand
+Ian Butler,M,United States,,boston,8275,2023,,super_shoe_unknown_brand
+Edward Mulder,M,United States,,boston,8284,2023,,super_shoe_unknown_brand
+Joseph Whelan,M,United States,,boston,8303,2023,,super_shoe_unknown_brand
+Zachary Ornelas,M,United States,,boston,8408,2023,,super_shoe_unknown_brand
+Sam Chelanga,M,United States,,boston,8420,2023,,super_shoe_unknown_brand
+Hellen Obiri,W,Kenya,,boston,8498,2023,,super_shoe_unknown_brand
+Amane Beriso,W,Ethiopia,,boston,8510,2023,,super_shoe_unknown_brand
+Lonah Salpeter,W,Israel,,boston,8517,2023,,super_shoe_unknown_brand
+Ababel Yeshaneh,W,Ethiopia,,boston,8520,2023,,super_shoe_unknown_brand
+Emma Bates,W,United States,,boston,8530,2023,,super_shoe_unknown_brand
+Nazret Weldu,W,Eritrea,,boston,8605,2023,,super_shoe_unknown_brand
+Angela Tanui,W,Kenya,,boston,8652,2023,,super_shoe_unknown_brand
+Hiwot Gebremaryam,W,Ethiopia,,boston,8670,2023,,super_shoe_unknown_brand
+Mary Ngugi,W,Kenya,,boston,8673,2023,,super_shoe_unknown_brand
+Gotytom Gebreslase,W,Ethiopia,,boston,8674,2023,,super_shoe_unknown_brand
+Aliphine Tuliamuk,W,United States,,boston,8677,2023,,super_shoe_unknown_brand
+Joyciline Jepkosgei,W,Kenya,,boston,8684,2023,,super_shoe_unknown_brand
+Viola Cheptoo,W,Kenya,,boston,8689,2023,,super_shoe_unknown_brand
+Nell Rojas,W,United States,,boston,8691,2023,,super_shoe_unknown_brand
+Nienke Brinkman,W,Netherlands,,boston,8698,2023,,super_shoe_unknown_brand
+Celestine Chepchirchir,W,Kenya,,boston,8707,2023,,super_shoe_unknown_brand
+Sara Hall,W,United States,,boston,8748,2023,,super_shoe_unknown_brand
+Desiree Linden,W,United States,,boston,8838,2023,,super_shoe_unknown_brand
+Vibian Chepkirui,W,Kenya,,boston,8892,2023,,super_shoe_unknown_brand
+Annie Frisbie,W,United States,,boston,8925,2023,,super_shoe_unknown_brand
+Atsede Baysa,W,Ethiopia,,boston,9014,2023,,super_shoe_unknown_brand
+Anna Rohrer,W,United States,,boston,9052,2023,,super_shoe_unknown_brand
+Sydney Devore,W,United States,,boston,9068,2023,,super_shoe_unknown_brand
+Maggie Montoya,W,United States,,boston,9079,2023,,super_shoe_unknown_brand
+Anne-Marie Blaney,W,United States,,boston,9092,2023,,super_shoe_unknown_brand
+Maegan Krifchin,W,United States,,boston,9166,2023,,super_shoe_unknown_brand
+Dakotah Lindwurm,W,United States,,boston,9233,2023,,super_shoe_unknown_brand
+Erika Kemp,W,United States,,boston,9237,2023,,super_shoe_unknown_brand
+Savannah Berry,W,United States,,boston,9270,2023,,super_shoe_unknown_brand
+Laura Thweatt,W,United States,,boston,9275,2023,,super_shoe_unknown_brand
+Sisay Lemma,M,Ethiopia,,boston,7577,2024,,super_shoe_unknown_brand
+Mohamed Esa,M,Ethiopia,,boston,7618,2024,,super_shoe_unknown_brand
+Evans Chebet,M,Kenya,,boston,7642,2024,,super_shoe_unknown_brand
+John Korir,M,Kenya,,boston,7660,2024,,super_shoe_unknown_brand
+Albert Korir,M,Kenya,,boston,7667,2024,,super_shoe_unknown_brand
+Isaac Mpofu,M,Zimbabwe,,boston,7697,2024,,super_shoe_unknown_brand
+CJ Albertson,M,United States,,boston,7793,2024,,super_shoe_unknown_brand
+Yuma Morii,M,Japan,,boston,7799,2024,,super_shoe_unknown_brand
+Cyprian Kimurgor Kotut,M,Kenya,,boston,7829,2024,,super_shoe_unknown_brand
+Zouhair Talbi,M,Morocco,,boston,7845,2024,,super_shoe_unknown_brand
+Shura Kitata,M,Ethiopia,,boston,7845,2024,,super_shoe_unknown_brand
+Sondre Nordstad Moen,M,Norway,,boston,7845,2024,,super_shoe_unknown_brand
+Suguru Osako,M,Japan,,boston,7845,2024,,super_shoe_unknown_brand
+Elkanah Kibet,M,United States,,boston,7845,2024,,super_shoe_unknown_brand
+Ryan Eiler,M,United States,,boston,8062,2024,,super_shoe_unknown_brand
+Yemane Haileselassie,M,Ethiopia,,boston,8084,2024,,super_shoe_unknown_brand
+Primož Kobe,M,Slovenia,,boston,8096,2024,,super_shoe_unknown_brand
+Patrick Smyth,M,United States,,boston,8145,2024,,super_shoe_unknown_brand
+Grant O'Connor,M,United States,,boston,8177,2024,,super_shoe_unknown_brand
+Alexandru Corneschi,M,Romania,,boston,8183,2024,,super_shoe_unknown_brand
+Robert Miranda,M,United States,,boston,8188,2024,,super_shoe_unknown_brand
+Ryoma Takeuchi,M,Japan,,boston,8203,2024,,super_shoe_unknown_brand
+Lorenz Baum,M,Germany,,boston,8211,2024,,super_shoe_unknown_brand
+Jacob Shiohira,M,United States,,boston,8228,2024,,super_shoe_unknown_brand
+Kento Otsu,M,Japan,,boston,8277,2024,,super_shoe_unknown_brand
+Kristoffer Mugrage,M,Philippines,,boston,8326,2024,,super_shoe_unknown_brand
+Prescott Leach,M,United States,,boston,8390,2024,,super_shoe_unknown_brand
+Giovanni Grano,M,Italy,,boston,8396,2024,,super_shoe_unknown_brand
+Andrew McCann,M,United States,,boston,8406,2024,,super_shoe_unknown_brand
+Joel Conn,M,United States,,boston,8495,2024,,super_shoe_unknown_brand
+Hellen Obiri,W,Kenya,,boston,8557,2024,,super_shoe_unknown_brand
+Sharon Lokedi,W,Kenya,,boston,8565,2024,,super_shoe_unknown_brand
+Edna Kiplagat,W,Kenya,,boston,8601,2024,,super_shoe_unknown_brand
+Buze Diriba,W,Ethiopia,,boston,8644,2024,,super_shoe_unknown_brand
+Senbere Teferi,W,Ethiopia,,boston,8644,2024,,super_shoe_unknown_brand
+Mary Ngugi,W,Kenya,,boston,8664,2024,,super_shoe_unknown_brand
+Workenesh Edesa,W,Ethiopia,,boston,8687,2024,,super_shoe_unknown_brand
+Fatima Ezzahra Gardadi,W,Morocco,,boston,8693,2024,,super_shoe_unknown_brand
+Tiruye Mesfin,W,Ethiopia,,boston,8698,2024,,super_shoe_unknown_brand
+Dera Dida,W,Ethiopia,,boston,8716,2024,,super_shoe_unknown_brand
+Siranesh Yirga,W,Ethiopia,,boston,8791,2024,,super_shoe_unknown_brand
+Emma Bates,W,United States,,boston,8834,2024,,super_shoe_unknown_brand
+Vibian Chepkirui,W,Kenya,,boston,8843,2024,,super_shoe_unknown_brand
+Helah Kiprop,W,Kenya,,boston,8856,2024,,super_shoe_unknown_brand
+Sara Hall,W,United States,,boston,8878,2024,,super_shoe_unknown_brand
+Desiree Linden,W,United States,,boston,8907,2024,,super_shoe_unknown_brand
+Meseret Belete,W,Ethiopia,,boston,9063,2024,,super_shoe_unknown_brand
+Jenny Simpson,W,United States,,boston,9099,2024,,super_shoe_unknown_brand
+Angie Orjuela,W,Colombia,,boston,9134,2024,,super_shoe_unknown_brand
+Dominique Scott,W,South Africa,,boston,9151,2024,,super_shoe_unknown_brand
+Argentina Valdepeñas Cerna,W,Mexico,,boston,9477,2024,,super_shoe_unknown_brand
+Katie Kellner,W,United States,,boston,9499,2024,,super_shoe_unknown_brand
+Michelle Krezonoski,W,Canada,,boston,9503,2024,,super_shoe_unknown_brand
+Rachel Hyland,W,United States,,boston,9624,2024,,super_shoe_unknown_brand
+Sara Lopez,W,United States,,boston,9628,2024,,super_shoe_unknown_brand
+Kim Krezonoski,W,Canada,,boston,9650,2024,,super_shoe_unknown_brand
+Abigail Corrigan,W,United States,,boston,9774,2024,,super_shoe_unknown_brand
+Johanna Bäcklund,W,Sweden,,boston,9781,2024,,super_shoe_unknown_brand
+Emilee Risteen,W,United States,,boston,9792,2024,,super_shoe_unknown_brand
+Maura Lemon,W,United States,,boston,9879,2024,,super_shoe_unknown_brand
+Masakazu Fujiwara,M,Japan,,tokyo,7939,2010,,pre_vaporfly
+Arata Fujiwara,M,Japan,,tokyo,7954,2010,,pre_vaporfly
+Atsushi Sato,M,Japan,,tokyo,7955,2010,,pre_vaporfly
+Yuki Kawauchi,M,Japan,,tokyo,7956,2010,,pre_vaporfly
+Tomoya Adachi,M,Japan,,tokyo,7966,2010,,pre_vaporfly
+Joseph Muwaniki,M,Japan,,tokyo,7973,2010,,pre_vaporfly
+Rachid Kisri,M,Morocco,,tokyo,7979,2010,,pre_vaporfly
+Takaaki Koda,M,Japan,,tokyo,7984,2010,,pre_vaporfly
+Salim Kipsang,M,Kenya,,tokyo,7996,2010,,pre_vaporfly
+Kiyokatsu Hasegawa,M,Japan,,tokyo,8115,2010,,pre_vaporfly
+Alevtina Biktimirova,W,Russia,,tokyo,9279,2010,,pre_vaporfly
+Robe Guta,W,Ethiopia,,tokyo,9389,2010,,pre_vaporfly
+Nuța Olaru,W,Romania,,tokyo,9402,2010,,pre_vaporfly
+Maki Kouno,W,Japan,,tokyo,9541,2010,,pre_vaporfly
+Yang Jing,W,China,,tokyo,9664,2010,,pre_vaporfly
+Yumi Satō,W,Japan,,tokyo,9781,2010,,pre_vaporfly
+Wakana Hanadou,W,Japan,,tokyo,9843,2010,,pre_vaporfly
+Hailu Mekonnen,M,Ethiopia,,tokyo,7655,2011,,pre_vaporfly
+Paul Biwott,M,Kenya,,tokyo,7697,2011,,pre_vaporfly
+Yuki Kawauchi,M,Japan,,tokyo,7717,2011,,pre_vaporfly
+Yoshinori Oda,M,Japan,,tokyo,7743,2011,,pre_vaporfly
+Cyrus Njubi,M,Kenya,,tokyo,7750,2011,,pre_vaporfly
+Felix Limo,M,Kenya,,tokyo,7850,2011,,pre_vaporfly
+Takaaki Koda,M,Japan,,tokyo,7868,2011,,pre_vaporfly
+Salim Kipsang,M,Kenya,,tokyo,7885,2011,,pre_vaporfly
+Yemane Tsegay,M,Ethiopia,,tokyo,7909,2011,,pre_vaporfly
+Takashi Horiguchi,M,Japan,,tokyo,7925,2011,,pre_vaporfly
+Noriko Higuchi,W,Japan,,tokyo,8929,2011,,pre_vaporfly
+Tatyana Petrova Arkhipova,W,Russia,,tokyo,8936,2011,,pre_vaporfly
+Yoko Shibui,W,Japan,,tokyo,8943,2011,,pre_vaporfly
+Misaki Katsumata,W,Japan,,tokyo,9070,2011,,pre_vaporfly
+Sumiko Suzuki,W,Japan,,tokyo,9122,2011,,pre_vaporfly
+Rina Yamazaki,W,Japan,,tokyo,9171,2011,,pre_vaporfly
+Shoko Miyazaki,W,Japan,,tokyo,9190,2011,,pre_vaporfly
+Yumi Hirata,W,Japan,,tokyo,9194,2011,,pre_vaporfly
+Olena Burkovska,W,Ukraine,,tokyo,9210,2011,,pre_vaporfly
+Miki Ohira,W,Japan,,tokyo,9286,2011,,pre_vaporfly
+Michael Kipyego,M,Kenya,,tokyo,7657,2012,,pre_vaporfly
+Arata Fujiwara,M,Japan,,tokyo,7668,2012,,pre_vaporfly
+Stephen Kiprotich,M,Uganda,,tokyo,7670,2012,,pre_vaporfly
+Haile Gebrselassie,M,Ethiopia,,tokyo,7697,2012,,pre_vaporfly
+Viktor Röthlin,M,Switzerland,,tokyo,7712,2012,,pre_vaporfly
+Kazuhiro Maeda,M,Japan,,tokyo,7718,2012,,pre_vaporfly
+Takayuki Matsumiya,M,Japan,,tokyo,7768,2012,,pre_vaporfly
+Hailu Mekonnen,M,Ethiopia,,tokyo,7799,2012,,pre_vaporfly
+Takeshi Kumamoto,M,Japan,,tokyo,7813,2012,,pre_vaporfly
+Atsushi Ikawa,M,Japan,,tokyo,7886,2012,,pre_vaporfly
+Atsede Habtamu,W,Ethiopia,,tokyo,8728,2012,,pre_vaporfly
+Yeshi Esayias,W,Ethiopia,,tokyo,8760,2012,,pre_vaporfly
+Helena Kirop,W,Kenya,,tokyo,8762,2012,,pre_vaporfly
+Eri Okubo,W,Japan,,tokyo,8768,2012,,pre_vaporfly
+Tatyana Aryasova,W,Russia,,tokyo,8806,2012,,pre_vaporfly
+Lishan Dula,W,Bahrain,,tokyo,8902,2012,,pre_vaporfly
+Eyerusalem Kuma,W,Ethiopia,,tokyo,8916,2012,,pre_vaporfly
+Kateryna Stetsenko,W,Ukraine,,tokyo,8918,2012,,pre_vaporfly
+Adriana Aparecida da Silva,W,Brazil,,tokyo,8957,2012,,pre_vaporfly
+Sumiko Suzuki,W,Japan,,tokyo,8965,2012,,pre_vaporfly
+Michael Kipyego,M,Kenya,,tokyo,7618,2013,,pre_vaporfly
+Bernard Kipyego,M,Kenya,,tokyo,7673,2013,,pre_vaporfly
+Kazuhiro Maeda,M,Japan,,tokyo,7679,2013,,pre_vaporfly
+James Kwambai,M,Kenya,,tokyo,7682,2013,,pre_vaporfly
+Gilbert Kirwa,M,Kenya,,tokyo,7697,2013,,pre_vaporfly
+Feyisa Bekele,M,Ethiopia,,tokyo,7745,2013,,pre_vaporfly
+Dino Sefir,M,Ethiopia,,tokyo,7753,2013,,pre_vaporfly
+Takayuki Matsumiya,M,Japan,,tokyo,7754,2013,,pre_vaporfly
+Jonathan Maiyo,M,Kenya,,tokyo,7818,2013,,pre_vaporfly
+Aberu Kebede,W,Ethiopia,,tokyo,8734,2013,,pre_vaporfly
+Yeshi Esayias,W,Ethiopia,,tokyo,8761,2013,,pre_vaporfly
+Irina Mikitenko,W,Germany,,tokyo,8801,2013,,pre_vaporfly
+Albina Mayorova,W,Russia,,tokyo,8811,2013,,pre_vaporfly
+Yoshimi Ozaki,W,Japan,,tokyo,8910,2013,,pre_vaporfly
+Helalia Johannes,W,Namibia,,tokyo,8960,2013,,pre_vaporfly
+Mika Yoshikawa,W,Japan,,tokyo,9020,2013,,pre_vaporfly
+Nastassia Staravoitava,W,Bulgaria,,tokyo,9045,2013,,pre_vaporfly
+Azusa Nojiri,W,Japan,,tokyo,9075,2013,,pre_vaporfly
+Hiroko Yoshitomi,W,Japan,,tokyo,9088,2013,,pre_vaporfly
+Tadese Tola,M,Ethiopia,,tokyo,7557,2014,,pre_vaporfly
+Sammy Kitwara,M,Kenya,,tokyo,7590,2014,,pre_vaporfly
+Michael Kipyego,M,Kenya,,tokyo,7618,2014,,pre_vaporfly
+Peter Kimeli Some,M,Kenya,,tokyo,7625,2014,,pre_vaporfly
+Geoffrey Kipsang,M,Kenya,,tokyo,7657,2014,,pre_vaporfly
+Deressa Chimsa,M,Ethiopia,,tokyo,7660,2014,,pre_vaporfly
+Abel Kirui,M,Kenya,,tokyo,7744,2014,,pre_vaporfly
+Lucy Wangui Kabuu,W,Kenya,,tokyo,8656,2014,,pre_vaporfly
+Caroline Rotich,W,Kenya,,tokyo,8675,2014,,pre_vaporfly
+Albina Mayorova,W,Russia,,tokyo,8898,2014,,pre_vaporfly
+Mai Ito,W,Japan,,tokyo,8916,2014,,pre_vaporfly
+Hiroko Yoshitomi,W,Japan,,tokyo,9158,2014,,pre_vaporfly
+Azusa Nojiri,W,Japan,,tokyo,9219,2014,,pre_vaporfly
+Atsede Baysa,W,Ethiopia,,tokyo,9303,2014,,pre_vaporfly
+Kazumi Nakayama,W,Japan,,tokyo,7445,2014,,pre_vaporfly
+Koki Mizuki,W,Japan,,tokyo,7655,2014,,pre_vaporfly
+Endeshaw Negesse,M,Ethiopia,,tokyo,7560,2015,,pre_vaporfly
+Stephen Kiprotich,M,Uganda,,tokyo,7593,2015,,pre_vaporfly
+Dickson Chumba,M,Kenya,,tokyo,7594,2015,,pre_vaporfly
+Shumi Dechasa,M,Bahrain,,tokyo,7640,2015,,pre_vaporfly
+Peter Some,M,Kenya,,tokyo,7642,2015,,pre_vaporfly
+Markos Geneti,M,Ethiopia,,tokyo,7645,2015,,pre_vaporfly
+Masato Imai,M,Japan,,tokyo,7659,2015,,pre_vaporfly
+Tsegaye Kebede,M,Ethiopia,,tokyo,7678,2015,,pre_vaporfly
+Hiroaki Sano,M,Japan,,tokyo,7752,2015,,pre_vaporfly
+Benjamin Ngandu,M,Kenya,,tokyo,7759,2015,,pre_vaporfly
+Koji Gokaya,M,Japan,,tokyo,7761,2015,,pre_vaporfly
+Yared Asmerom,M,Eritrea,,tokyo,7781,2015,,pre_vaporfly
+Birhane Dibaba,W,Ethiopia,,tokyo,8595,2015,,pre_vaporfly
+Helah Kiprop,W,Kenya,,tokyo,8643,2015,,pre_vaporfly
+Tiki Gelana,W,Ethiopia,,tokyo,8666,2015,,pre_vaporfly
+Sally Chepyego Kaptich,W,Kenya,,tokyo,8803,2015,,pre_vaporfly
+Flomena Cheyech Daniel,W,Kenya,,tokyo,8814,2015,,pre_vaporfly
+Yeshi Esayias,W,Ethiopia,,tokyo,9015,2015,,pre_vaporfly
+Madoka Ogi,W,Japan,,tokyo,9025,2015,,pre_vaporfly
+Albina Mayorova,W,Russia,,tokyo,9261,2015,,pre_vaporfly
+Yukari Abe,W,Japan,,tokyo,9283,2015,,pre_vaporfly
+Yumiko Kinoshita,W,Japan,,tokyo,9349,2015,,pre_vaporfly
+Lauren Kleppin,W,United States,,tokyo,9433,2015,,pre_vaporfly
+Ayano Kondo,W,Japan,,tokyo,9486,2015,,pre_vaporfly
+Feyisa Lilesa,M,Ethiopia,,tokyo,7616,2016,,pre_vaporfly
+Bernard Kipyego,M,Kenya,,tokyo,7653,2016,,pre_vaporfly
+Dickson Chumba,M,Kenya,,tokyo,7654,2016,,pre_vaporfly
+Stephen Kiprotich,M,Uganda,,tokyo,7666,2016,,pre_vaporfly
+Abel Kirui,M,Kenya,,tokyo,7686,2016,,pre_vaporfly
+Eliud Kiptanui,M,Kenya,,tokyo,7735,2016,,pre_vaporfly
+Emmanuel Kipchirchir Mutai,M,Kenya,,tokyo,7823,2016,,pre_vaporfly
+Yuki Takamiya,M,Japan,,tokyo,7857,2016,,pre_vaporfly
+Javier Guerra,M,Spain,,tokyo,7861,2016,,pre_vaporfly
+Yuta Shimoda,M,Japan,,tokyo,7894,2016,,pre_vaporfly
+Helah Kiprop,W,Kenya,,tokyo,8487,2016,,pre_vaporfly
+Amane Gobena,W,Ethiopia,,tokyo,8511,2016,,pre_vaporfly
+Edna Kiplagat,W,Kenya,,tokyo,8556,2016,,pre_vaporfly
+Aberu Kebede,W,Ethiopia,,tokyo,8581,2016,,pre_vaporfly
+Birhane Dibaba,W,Ethiopia,,tokyo,8596,2016,,pre_vaporfly
+Shure Demise,W,Ethiopia,,tokyo,8704,2016,,pre_vaporfly
+Ashete Bekere,W,Ethiopia,,tokyo,8750,2016,,pre_vaporfly
+Maja Neuenschwander,W,Switzerland,,tokyo,8856,2016,,pre_vaporfly
+Isabellah Andersson,W,Sweden,,tokyo,9002,2016,,pre_vaporfly
+Yukiko Okuno,W,Japan,,tokyo,9077,2016,,pre_vaporfly
+Wilson Kipsang,M,Kenya,,tokyo,7438,2017,,vaporfly_4
+Gideon Kipketer,M,Kenya,,tokyo,7551,2017,,vaporfly_4
+Dickson Chumba,M,Kenya,,tokyo,7585,2017,,vaporfly_4
+Evans Chebet,M,Kenya,,tokyo,7602,2017,,vaporfly_4
+Alfers Lagat,M,Kenya,,tokyo,7659,2017,,vaporfly_4
+Bernard Kipyego,M,Kenya,,tokyo,7690,2017,,vaporfly_4
+Yohanes Ghebregergis,M,Eritrea,,tokyo,7694,2017,,vaporfly_4
+Hiroto Inoue,M,Japan,,tokyo,7702,2017,,vaporfly_4
+Tsegaye Kebede,M,Ethiopia,,tokyo,7725,2017,,vaporfly_4
+Hiroyuki Yamamoto,M,Japan,,tokyo,7752,2017,,vaporfly_4
+Sarah Chepchirchir,W,Kenya,,tokyo,8387,2017,,vaporfly_4
+Birhane Dibaba,W,Ethiopia,,tokyo,8479,2017,,vaporfly_4
+Amane Gobena,W,Ethiopia,,tokyo,8589,2017,,vaporfly_4
+Ayaka Fujimoto,W,Japan,,tokyo,8828,2017,,vaporfly_4
+Marta Lema,W,Ethiopia,,tokyo,8857,2017,,vaporfly_4
+Sara Hall,W,United States,,tokyo,8906,2017,,vaporfly_4
+Madoka Nakano,W,Japan,,tokyo,9180,2017,,vaporfly_4
+Kotomi Takayama,W,Japan,,tokyo,9284,2017,,vaporfly_4
+Hiroko Yoshimoto,W,Japan,,tokyo,9311,2017,,vaporfly_4
+Mitsuko Ino,W,Japan,,tokyo,9573,2017,,vaporfly_4
+Dickson Chumba,M,Kenya,,tokyo,7530,2018,,vaporfly_4
+Amos Kipruto,M,Kenya,,tokyo,7593,2018,,vaporfly_4
+Gideon Kipketer,M,Kenya,,tokyo,7607,2018,,vaporfly_4
+Hiroto Inoue,M,Japan,,tokyo,7614,2018,,vaporfly_4
+Feyisa Lilesa,M,Ethiopia,,tokyo,7650,2018,,vaporfly_4
+Ryo Kiname,M,Japan,,tokyo,7688,2018,,vaporfly_4
+Chihiro Miyawaki,M,Japan,,tokyo,7725,2018,,vaporfly_4
+Kenji Yamamoto,M,Japan,,tokyo,7728,2018,,vaporfly_4
+Yuki Sato,M,Japan,,tokyo,7738,2018,,vaporfly_4
+Mohamed Reda El Aaraby,M,Morocco,,tokyo,7758,2018,,vaporfly_4
+Kohei Ogino,M,Japan,,tokyo,7776,2018,,vaporfly_4
+Tadashi Isshiki,M,Japan,,tokyo,7783,2018,,vaporfly_4
+Akinobu Murasawa,M,Japan,,tokyo,7787,2018,,vaporfly_4
+Simon Kariuki,M,Kenya,,tokyo,7800,2018,,vaporfly_4
+Asuka Tanaka,M,Japan,,tokyo,7813,2018,,vaporfly_4
+Hiroki Yamagishi,M,Japan,,tokyo,7814,2018,,vaporfly_4
+Daichi Kamino,M,Japan,,tokyo,7818,2018,,vaporfly_4
+Kengo Suzuki,M,Japan,,tokyo,7821,2018,,vaporfly_4
+Tsegaye Mekonnen,M,Ethiopia,,tokyo,7826,2018,,vaporfly_4
+Birhane Dibaba,W,Ethiopia,,tokyo,8391,2018,,vaporfly_4
+Ruti Aga,W,Ethiopia,,tokyo,8479,2018,,vaporfly_4
+Amy Cragg,W,United States,,tokyo,8502,2018,,vaporfly_4
+Shure Demise,W,Ethiopia,,tokyo,8527,2018,,vaporfly_4
+Helah Kiprop,W,Kenya,,tokyo,8938,2018,,vaporfly_4
+Hiroko Yoshitomi,W,Japan,,tokyo,9016,2018,,vaporfly_4
+Madoka Nakano,W,Japan,,tokyo,9101,2018,,vaporfly_4
+Mao Uesugi,W,Japan,,tokyo,9109,2018,,vaporfly_4
+Marie Imada,W,Japan,,tokyo,9120,2018,,vaporfly_4
+Zhang Meixia,W,China,,tokyo,9182,2018,,vaporfly_4
+Asuka Yamamoto,W,Japan,,tokyo,9266,2018,,vaporfly_4
+Yoshiko Sakamoto,W,Japan,,tokyo,9340,2018,,vaporfly_4
+Nana Sato,W,Japan,,tokyo,9454,2018,,vaporfly_4
+Yumiko Kinoshita,W,Japan,,tokyo,9531,2018,,vaporfly_4
+Haruka Yamaguchi,W,Japan,,tokyo,9582,2018,,vaporfly_4
+Kasumi Takahama,W,Japan,,tokyo,9589,2018,,vaporfly_4
+Momoko Tanaka,W,Japan,,tokyo,9729,2018,,vaporfly_4
+Shinobu Ayabe,W,Japan,,tokyo,9751,2018,,vaporfly_4
+Minami Nakashima,W,Japan,,tokyo,9796,2018,,vaporfly_4
+Shiori Shimomura,W,Japan,,tokyo,9807,2018,,vaporfly_4
+Kazumi Nakayama,W,Japan,,tokyo,7301,2018,,vaporfly_4
+Birhanu Legese,M,Ethiopia,,tokyo,7488,2019,,vaporfly_next
+Bedan Karoki,M,Kenya,,tokyo,7608,2019,,vaporfly_next
+Dickson Chumba,M,Kenya,,tokyo,7724,2019,,vaporfly_next
+Simon Kariuki,M,Kenya,,tokyo,7781,2019,,vaporfly_next
+Kensuke Horio,M,Japan,,tokyo,7821,2019,,vaporfly_next
+Masato Imai,M,Japan,,tokyo,7830,2019,,vaporfly_next
+Takuya Fujikawa,M,Japan,,tokyo,7835,2019,,vaporfly_next
+Daichi Kamino,M,Japan,,tokyo,7865,2019,,vaporfly_next
+Ryu Takaku,M,Japan,,tokyo,7909,2019,,vaporfly_next
+Tadashi Isshiki,M,Japan,,tokyo,7941,2019,,vaporfly_next
+Shohei Otsuka,M,Japan,,tokyo,7956,2019,,vaporfly_next
+Ryo Kuchimachi,M,Japan,,tokyo,8010,2019,,vaporfly_next
+Yuki Munakata,M,Japan,,tokyo,8027,2019,,vaporfly_next
+Keita Shitara,M,Japan,,tokyo,8081,2019,,vaporfly_next
+Shogo Nakamura,M,Japan,,tokyo,8092,2019,,vaporfly_next
+Yuki Sato,M,Japan,,tokyo,8107,2019,,vaporfly_next
+Hiroto Kanamuri,M,Japan,,tokyo,8137,2019,,vaporfly_next
+Toshiki Sadakata,M,Japan,,tokyo,8153,2019,,vaporfly_next
+Hiroto Kunishi,M,Japan,,tokyo,8159,2019,,vaporfly_next
+Hidenori Nagai,M,Japan,,tokyo,8168,2019,,vaporfly_next
+Ruti Aga,W,Ethiopia,,tokyo,8440,2019,,vaporfly_next
+Helen Tola,W,Ethiopia,,tokyo,8461,2019,,vaporfly_next
+Shure Demise,W,Ethiopia,,tokyo,8465,2019,,vaporfly_next
+Florence Kiplagat,W,Kenya,,tokyo,8510,2019,,vaporfly_next
+Bedatu Hirpa,W,Ethiopia,,tokyo,8623,2019,,vaporfly_next
+Ababel Yeshaneh,W,Ethiopia,,tokyo,8642,2019,,vaporfly_next
+Mao Ichiyama,W,Japan,,tokyo,8673,2019,,vaporfly_next
+Joan Chelimo,W,Kenya,,tokyo,8784,2019,,vaporfly_next
+Rose Chelimo,W,Bahrain,,tokyo,9035,2019,,vaporfly_next
+Ruth Chebitok,W,Kenya,,tokyo,9079,2019,,vaporfly_next
+Yebrgual Melese,W,Ethiopia,,tokyo,9100,2019,,vaporfly_next
+Honami Maeda,W,Japan,,tokyo,9102,2019,,vaporfly_next
+Hiroko Yoshitomi,W,Japan,,tokyo,9150,2019,,vaporfly_next
+Mao Kiyota,W,Japan,,tokyo,9184,2019,,vaporfly_next
+Haruka Yamaguchi,W,Japan,,tokyo,9221,2019,,vaporfly_next
+Mimi Belete,W,Bahrain,,tokyo,9304,2019,,vaporfly_next
+Yoshiko Sakamoto,W,Japan,,tokyo,9376,2019,,vaporfly_next
+Shiho Satonaka,W,Japan,,tokyo,9397,2019,,vaporfly_next
+Keiko Nogami,W,Japan,,tokyo,9503,2019,,vaporfly_next
+Kazumi Nakayama,W,Japan,,tokyo,7420,2019,,vaporfly_next
+Eliud Kipchoge,M,Kenya,,tokyo,7360,2021,,super_shoe_unknown_brand
+Amos Kipruto,M,Kenya,,tokyo,7393,2021,,super_shoe_unknown_brand
+Tamirat Tola,M,Ethiopia,,tokyo,7454,2021,,super_shoe_unknown_brand
+Kengo Suzuki,M,Japan,,tokyo,7528,2021,,super_shoe_unknown_brand
+Shura Kitata,M,Ethiopia,,tokyo,7572,2021,,super_shoe_unknown_brand
+Laban Korir,M,Kenya,,tokyo,7597,2021,,super_shoe_unknown_brand
+Kenya Sonata,M,Japan,,tokyo,7643,2021,,super_shoe_unknown_brand
+Shun Yuzawa,M,Japan,,tokyo,7651,2021,,super_shoe_unknown_brand
+Kento Kikutani,M,Japan,,tokyo,7675,2021,,super_shoe_unknown_brand
+Michael Githae,M,Kenya,,tokyo,7675,2021,,super_shoe_unknown_brand
+Brigid Kosgei,W,Kenya,,tokyo,8162,2021,,super_shoe_unknown_brand
+Ashete Bekere,W,Ethiopia,,tokyo,8278,2021,,super_shoe_unknown_brand
+Gotytom Gebreslase,W,Ethiopia,,tokyo,8298,2021,,super_shoe_unknown_brand
+Angela Tanui,W,Kenya,,tokyo,8322,2021,,super_shoe_unknown_brand
+Hiwot Gebrekidan,W,Ethiopia,,tokyo,8350,2021,,super_shoe_unknown_brand
+Mao Ichiyama,W,Japan,,tokyo,8462,2021,,super_shoe_unknown_brand
+Hitomi Niiya,W,Japan,,tokyo,8477,2021,,super_shoe_unknown_brand
+Sara Hall,W,United States,,tokyo,8576,2021,,super_shoe_unknown_brand
+Helen Bekele Tola,W,Ethiopia,,tokyo,8673,2021,,super_shoe_unknown_brand
+Kaori Morita,W,Japan,,tokyo,8858,2021,,super_shoe_unknown_brand
+Eliud Kipchoge,M,Kenya,,tokyo,7360,2022,,super_shoe_unknown_brand
+Amos Kipruto,M,Kenya,,tokyo,7393,2022,,super_shoe_unknown_brand
+Tamirat Tola,M,Ethiopia,,tokyo,7454,2022,,super_shoe_unknown_brand
+Kengo Suzuki,M,Japan,,tokyo,7528,2022,,super_shoe_unknown_brand
+Shura Kitata,M,Ethiopia,,tokyo,7572,2022,,super_shoe_unknown_brand
+Laban Korir,M,Kenya,,tokyo,7597,2022,,super_shoe_unknown_brand
+Kenya Sonata,M,Japan,,tokyo,7643,2022,,super_shoe_unknown_brand
+Shun Yuzawa,M,Japan,,tokyo,7651,2022,,super_shoe_unknown_brand
+Kento Kikutani,M,Japan,,tokyo,7675,2022,,super_shoe_unknown_brand
+Michael Githae,M,Kenya,,tokyo,7675,2022,,super_shoe_unknown_brand
+Brigid Kosgei,W,Kenya,,tokyo,8162,2022,,super_shoe_unknown_brand
+Ashete Bekere,W,Ethiopia,,tokyo,8278,2022,,super_shoe_unknown_brand
+Gotytom Gebreslase,W,Ethiopia,,tokyo,8298,2022,,super_shoe_unknown_brand
+Angela Tanui,W,Kenya,,tokyo,8322,2022,,super_shoe_unknown_brand
+Hiwot Gebrekidan,W,Ethiopia,,tokyo,8350,2022,,super_shoe_unknown_brand
+Mao Ichiyama,W,Japan,,tokyo,8462,2022,,super_shoe_unknown_brand
+Hitomi Niiya,W,Japan,,tokyo,8477,2022,,super_shoe_unknown_brand
+Sara Hall,W,United States,,tokyo,8576,2022,,super_shoe_unknown_brand
+Helen Bekele Tola,W,Ethiopia,,tokyo,8673,2022,,super_shoe_unknown_brand
+Kaori Morita,W,Japan,,tokyo,8858,2022,,super_shoe_unknown_brand
+Deso Gelmisa,M,Ethiopia,,tokyo,7522,2023,,super_shoe_unknown_brand
+Mohamed Esa,M,Ethiopia,,tokyo,7522,2023,,super_shoe_unknown_brand
+Tsegaye Getachew,M,Ethiopia,,tokyo,7525,2023,,super_shoe_unknown_brand
+Titus Kipruto,M,Kenya,,tokyo,7532,2023,,super_shoe_unknown_brand
+Cameron Levins,M,Canada,,tokyo,7536,2023,,super_shoe_unknown_brand
+Tadu Abate,M,Ethiopia,,tokyo,7538,2023,,super_shoe_unknown_brand
+Ichitaka Yamashita,M,Japan,,tokyo,7551,2023,,super_shoe_unknown_brand
+Kenya Sonota,M,Japan,,tokyo,7559,2023,,super_shoe_unknown_brand
+Suguru Osako,M,Japan,,tokyo,7573,2023,,super_shoe_unknown_brand
+Hiroto Inoue,M,Japan,,tokyo,7629,2023,,super_shoe_unknown_brand
+Rosemary Wanjiru,W,Kenya,,tokyo,8188,2023,,super_shoe_unknown_brand
+Tsehay Gemechu,W,Ethiopia,,tokyo,8216,2023,,super_shoe_unknown_brand
+Ashete Bekere,W,Ethiopia,,tokyo,8351,2023,,super_shoe_unknown_brand
+Workenesh Edesa,W,Ethiopia,,tokyo,8413,2023,,super_shoe_unknown_brand
+Betsy Saina,W,United States,,tokyo,8500,2023,,super_shoe_unknown_brand
+Mizuki Matsuda,W,Japan,,tokyo,8504,2023,,super_shoe_unknown_brand
+Ai Hosoda,W,Japan,,tokyo,8528,2023,,super_shoe_unknown_brand
+Lindsay Flanagan,W,United States,,tokyo,8768,2023,,super_shoe_unknown_brand
+Kaori Morita,W,Japan,,tokyo,8791,2023,,super_shoe_unknown_brand
+Yukari Abe,W,Japan,,tokyo,8900,2023,,super_shoe_unknown_brand
+Benson Kipruto,M,Kenya,,tokyo,7336,2024,,super_shoe_unknown_brand
+Timothy Kiplagat,M,Kenya,,tokyo,7375,2024,,super_shoe_unknown_brand
+Vincent Kipkemoi,M,Kenya,,tokyo,7458,2024,,super_shoe_unknown_brand
+Hailemaryam Kiros,M,Ethiopia,,tokyo,7543,2024,,super_shoe_unknown_brand
+Tsegaye Getachew,M,Ethiopia,,tokyo,7585,2024,,super_shoe_unknown_brand
+Bethwel Kibet,M,Kenya,,tokyo,7586,2024,,super_shoe_unknown_brand
+Haimro Alame,M,Israel,,tokyo,7587,2024,,super_shoe_unknown_brand
+Simon Kariuki,M,Kenya,,tokyo,7589,2024,,super_shoe_unknown_brand
+Yusuke Nishiyama,M,Japan,,tokyo,7591,2024,,super_shoe_unknown_brand
+Eliud Kipchoge,M,Kenya,,tokyo,7610,2024,,super_shoe_unknown_brand
+Sutume Asefa Kebede,W,Ethiopia,,tokyo,8155,2024,,super_shoe_unknown_brand
+Rosemary Wanjiru,W,Kenya,,tokyo,8174,2024,,super_shoe_unknown_brand
+Amane Beriso,W,Ethiopia,,tokyo,8218,2024,,super_shoe_unknown_brand
+Sifan Hassan,W,Netherlands,,tokyo,8285,2024,,super_shoe_unknown_brand
+Betsy Saina,W,United States,,tokyo,8357,2024,,super_shoe_unknown_brand
+Hitomi Niiya,W,Japan,,tokyo,8510,2024,,super_shoe_unknown_brand
+Meseret Abebayahau,W,Ethiopia,,tokyo,8588,2024,,super_shoe_unknown_brand
+Khishigsaikhan Galbadrakh,W,Mongolia,,tokyo,8792,2024,,super_shoe_unknown_brand
+Tigist Abayechew,W,Ethiopia,,tokyo,8933,2024,,super_shoe_unknown_brand
+Ayumi Morita,W,Japan,,tokyo,9098,2024,,super_shoe_unknown_brand
+Gebregziabher Gebremariam,M,Ethiopia,,nyc,7694,2010,,pre_vaporfly
+Emmanuel Kipchirchir Mutai,M,Kenya,,nyc,7758,2010,,pre_vaporfly
+Moses Kigen Kipkosgei,M,Kenya,,nyc,7839,2010,,pre_vaporfly
+James Kwambai,M,Kenya,,nyc,7891,2010,,pre_vaporfly
+Meb Keflezighi,M,United States,,nyc,7898,2010,,pre_vaporfly
+Marílson Gomes dos Santos,M,Brazil,,nyc,7911,2010,,pre_vaporfly
+Dathan Ritzenhein,M,United States,,nyc,7953,2010,,pre_vaporfly
+Abel Kirui,M,Kenya,,nyc,7981,2010,,pre_vaporfly
+Abderrahime Bouramdane,M,Morocco,,nyc,8047,2010,,pre_vaporfly
+Jorge Torres,M,United States,,nyc,8097,2010,,pre_vaporfly
+Peter Kamais,M,Kenya,,nyc,8098,2010,,pre_vaporfly
+Tim Nelson,M,United States,,nyc,8106,2010,,pre_vaporfly
+Abdelkabir Saji,M,Morocco,,nyc,8195,2010,,pre_vaporfly
+Dereje Hailegeorgis,M,Ethiopia,,nyc,8350,2010,,pre_vaporfly
+Teklu Deneke,M,Ethiopia,,nyc,8363,2010,,pre_vaporfly
+Matthew Downin,M,United States,,nyc,8441,2010,,pre_vaporfly
+Fikadu Lemma,M,Ethiopia,,nyc,8447,2010,,pre_vaporfly
+Bazu Worku,M,Ethiopia,,nyc,8537,2010,,pre_vaporfly
+Filippo Lo Piccolo,M,Italy,,nyc,8590,2010,,pre_vaporfly
+Odilon Cuautle,M,Mexico,,nyc,8643,2010,,pre_vaporfly
+Edna Kiplagat,W,Kenya,,nyc,8900,2010,,pre_vaporfly
+Shalane Flanagan,W,United States,,nyc,8920,2010,,pre_vaporfly
+Mary Jepkosgei Keitany,W,Kenya,,nyc,8941,2010,,pre_vaporfly
+Kim Smith,W,New Zealand,,nyc,8968,2010,,pre_vaporfly
+Christelle Daunay,W,France,,nyc,8969,2010,,pre_vaporfly
+Lyudmila Petrova,W,Russia,,nyc,8981,2010,,pre_vaporfly
+Caroline Rotich,W,Kenya,,nyc,8986,2010,,pre_vaporfly
+Madaí Pérez,W,Mexico,,nyc,8993,2010,,pre_vaporfly
+Bizunesh Deba,W,Ethiopia,,nyc,8995,2010,,pre_vaporfly
+Katie McGregor,W,United States,,nyc,9061,2010,,pre_vaporfly
+Teyba Erkesso,W,Ethiopia,,nyc,9066,2010,,pre_vaporfly
+Mara Yamauchi,W,United Kingdom,,nyc,9098,2010,,pre_vaporfly
+Derartu Tulu,W,Ethiopia,,nyc,9166,2010,,pre_vaporfly
+Tatyana Pushkareva,W,Russia,,nyc,9245,2010,,pre_vaporfly
+Salina Kosgei,W,Kenya,,nyc,9254,2010,,pre_vaporfly
+Kathy Newberry,W,United States,,nyc,9323,2010,,pre_vaporfly
+Claire Hallissey,W,United Kingdom,,nyc,9373,2010,,pre_vaporfly
+Serena Burla,W,United States,,nyc,9426,2010,,pre_vaporfly
+Alissa McKaig,W,United States,,nyc,9449,2010,,pre_vaporfly
+Misiker Mekonen,W,Ethiopia,,nyc,9459,2010,,pre_vaporfly
+Tatyana McFadden,W,United States,,nyc,7342,2010,,pre_vaporfly
+Christina Ripp,W,United States,,nyc,7685,2010,,pre_vaporfly
+Amanda McGrory,W,United States,,nyc,7782,2010,,pre_vaporfly
+Diane Roy,W,Canada,,nyc,7910,2010,,pre_vaporfly
+Sandra Graf,W,Switzerland,,nyc,7983,2010,,pre_vaporfly
+Francesca Porcellato,W,Italy,,nyc,8123,2010,,pre_vaporfly
+Shelly Woods,W,United Kingdom,,nyc,8125,2010,,pre_vaporfly
+Sandra Hager,W,Switzerland,,nyc,8952,2010,,pre_vaporfly
+Chantal Petitclerc,W,Canada,,nyc,9354,2010,,pre_vaporfly
+Helene Hines,W,United States,,nyc,7336,2010,,pre_vaporfly
+Minda Dentler,W,United States,,nyc,7768,2010,,pre_vaporfly
+Jacqui Kapinowski,W,United States,,nyc,8044,2010,,pre_vaporfly
+Margaret Sprouse,W,United States,,nyc,8549,2010,,pre_vaporfly
+Geoffrey Mutai,M,Kenya,,nyc,7506,2011,,pre_vaporfly
+Emmanuel Kipchirchir Mutai,M,Kenya,,nyc,7588,2011,,pre_vaporfly
+Tsegaye Kebede,M,Ethiopia,,nyc,7634,2011,,pre_vaporfly
+Gebregziabher Gebremariam,M,Ethiopia,,nyc,7680,2011,,pre_vaporfly
+Jaouad Gharib,M,Morocco,,nyc,7706,2011,,pre_vaporfly
+Meb Keflezighi,M,United States,,nyc,7753,2011,,pre_vaporfly
+Abdellah Falil,M,Morocco,,nyc,7835,2011,,pre_vaporfly
+Mathew Kisorio,M,Kenya,,nyc,7858,2011,,pre_vaporfly
+Ed Moran,M,United States,,nyc,7907,2011,,pre_vaporfly
+Viktor Röthlin,M,Switzerland,,nyc,7946,2011,,pre_vaporfly
+Abdelkabir Saji,M,Morocco,,nyc,8027,2011,,pre_vaporfly
+Juan Luis Barrios,M,Mexico,,nyc,8050,2011,,pre_vaporfly
+Teklu Deneke,M,Ethiopia,,nyc,8180,2011,,pre_vaporfly
+Bobby Curtis,M,United States,,nyc,8204,2011,,pre_vaporfly
+Tesfaye Assefa,M,Ethiopia,,nyc,8364,2011,,pre_vaporfly
+Abdelaziz Atmani,M,United States,,nyc,8376,2011,,pre_vaporfly
+Bazu Worku,M,Ethiopia,,nyc,8422,2011,,pre_vaporfly
+Fikadu Lemma,M,Ethiopia,,nyc,8441,2011,,pre_vaporfly
+Rens Dekkers,M,Netherlands,,nyc,8568,2011,,pre_vaporfly
+John Beattie,M,United Kingdom,,nyc,8623,2011,,pre_vaporfly
+Firehiwot Dado,W,Ethiopia,,nyc,8595,2011,,pre_vaporfly
+Bizunesh Deba,W,Ethiopia,,nyc,8599,2011,,pre_vaporfly
+Mary Jepkosgei Keitany,W,Kenya,,nyc,8618,2011,,pre_vaporfly
+Ana Dulce Félix,W,Portugal,,nyc,8740,2011,,pre_vaporfly
+Kim Smith,W,New Zealand,,nyc,8746,2011,,pre_vaporfly
+Caroline Kilel,W,Kenya,,nyc,8757,2011,,pre_vaporfly
+Caroline Rotich,W,Kenya,,nyc,8826,2011,,pre_vaporfly
+Isabellah Andersson,W,Sweden,,nyc,8909,2011,,pre_vaporfly
+Jo Pavey,W,United Kingdom,,nyc,8922,2011,,pre_vaporfly
+Galina Bogomolova,W,Russia,,nyc,8943,2011,,pre_vaporfly
+Misiker Mekonen,W,Ethiopia,,nyc,9100,2011,,pre_vaporfly
+Molly Pritz,W,United States,,nyc,9112,2011,,pre_vaporfly
+Werknesh Kidane,W,Ethiopia,,nyc,9188,2011,,pre_vaporfly
+Alessandra Aguilar,W,Spain,,nyc,9188,2011,,pre_vaporfly
+Serkalem Biset,W,Ethiopia,,nyc,9202,2011,,pre_vaporfly
+Lauren Fleshman,W,United States,,nyc,9442,2011,,pre_vaporfly
+Aziza Aliyu,W,Ethiopia,,nyc,9512,2011,,pre_vaporfly
+Camille Herron,W,United States,,nyc,9606,2011,,pre_vaporfly
+Jennifer Houck,W,United States,,nyc,9660,2011,,pre_vaporfly
+Diane Nukuri,W,Burundi,,nyc,9681,2011,,pre_vaporfly
+Edith Wolf,W,Switzerland,,nyc,7264,2011,,pre_vaporfly
+Francesca Porcellato,W,Italy,,nyc,7749,2011,,pre_vaporfly
+Christina Schwab,W,United States,,nyc,7855,2011,,pre_vaporfly
+Sandra Hager,W,Switzerland,,nyc,8294,2011,,pre_vaporfly
+Ashley Cooper,W,United States,,nyc,7708,2011,,pre_vaporfly
+Geoffrey Mutai,M,Kenya,,nyc,7704,2013,,pre_vaporfly
+Tsegaye Kebede,M,Ethiopia,,nyc,7755,2013,,pre_vaporfly
+Lusapho April,M,South Africa,,nyc,7785,2013,,pre_vaporfly
+Julius Arile,M,Kenya,,nyc,7803,2013,,pre_vaporfly
+Stanley Biwott,M,Kenya,,nyc,7841,2013,,pre_vaporfly
+Masato Imai,M,Japan,,nyc,7845,2013,,pre_vaporfly
+Jackson Kiprop,M,Uganda,,nyc,7856,2013,,pre_vaporfly
+Peter Cheruiyot Kirui,M,Kenya,,nyc,7883,2013,,pre_vaporfly
+Wesley Korir,M,Kenya,,nyc,7894,2013,,pre_vaporfly
+Daniele Meucci,M,Italy,,nyc,7923,2013,,pre_vaporfly
+Yuki Kawauchi,M,Japan,,nyc,7949,2013,,pre_vaporfly
+Stephen Kiprotich,M,Uganda,,nyc,7985,2013,,pre_vaporfly
+Ryan Vail,M,United States,,nyc,8003,2013,,pre_vaporfly
+Jeffrey Eggleston,M,United States,,nyc,8195,2013,,pre_vaporfly
+Bouabdellah Tahri,M,France,,nyc,8296,2013,,pre_vaporfly
+Khalid En Guady,M,Morocco,,nyc,8523,2013,,pre_vaporfly
+Radosław Dudycz,M,Poland,,nyc,8527,2013,,pre_vaporfly
+Junior Jovadir,M,Brazil,,nyc,8555,2013,,pre_vaporfly
+Tesfaye Assefa,M,Ethiopia,,nyc,8558,2013,,pre_vaporfly
+Christian Thompson,M,United States,,nyc,8568,2013,,pre_vaporfly
+Priscah Jeptoo,W,Kenya,,nyc,8707,2013,,pre_vaporfly
+Bizunesh Deba,W,Ethiopia,,nyc,8756,2013,,pre_vaporfly
+Jeļena Prokopčuka,W,Latvia,,nyc,8867,2013,,pre_vaporfly
+Christelle Daunay,W,France,,nyc,8894,2013,,pre_vaporfly
+Valeria Straneo,W,Italy,,nyc,8902,2013,,pre_vaporfly
+Kim Smith,W,New Zealand,,nyc,8929,2013,,pre_vaporfly
+Sabrina Mockenhaupt,W,Germany,,nyc,8950,2013,,pre_vaporfly
+Tigist Tufa,W,Ethiopia,,nyc,8964,2013,,pre_vaporfly
+Edna Kiplagat,W,Kenya,,nyc,9004,2013,,pre_vaporfly
+Diane Nukuri,W,Burundi,,nyc,9009,2013,,pre_vaporfly
+Risa Shigetomo,W,Japan,,nyc,9114,2013,,pre_vaporfly
+Lisa Nemec,W,Croatia,,nyc,9289,2013,,pre_vaporfly
+Adriana Nelson,W,United States,,nyc,9305,2013,,pre_vaporfly
+Firehiwot Dado,W,Ethiopia,,nyc,9486,2013,,pre_vaporfly
+Kathleen DiCamillo,W,United States,,nyc,9603,2013,,pre_vaporfly
+Aziza Aliyu,W,Ethiopia,,nyc,9627,2013,,pre_vaporfly
+Vera Monica Nunes †,W,Portugal,,nyc,9676,2013,,pre_vaporfly
+Mattie Suver,W,United States,,nyc,9678,2013,,pre_vaporfly
+Yolanda Caballero,W,Colombia,,nyc,9683,2013,,pre_vaporfly
+Amy Cragg,W,United States,,nyc,9770,2013,,pre_vaporfly
+Wakako Tsuchida,W,Japan,,nyc,7374,2013,,pre_vaporfly
+Manuela Schär,W,Switzerland,,nyc,7433,2013,,pre_vaporfly
+Amanda McGrory,W,United States,,nyc,7506,2013,,pre_vaporfly
+Susannah Scaroni,W,United States,,nyc,7507,2013,,pre_vaporfly
+Christie Dawes,W,Australia,,nyc,7577,2013,,pre_vaporfly
+Shirley Reilly,W,United States,,nyc,7870,2013,,pre_vaporfly
+Shelly Woods,W,United States,,nyc,8071,2013,,pre_vaporfly
+Chelsea McClammer,W,United States,,nyc,8455,2013,,pre_vaporfly
+Diane Roy,W,Canada,,nyc,8740,2013,,pre_vaporfly
+Minda Dentler,W,United States,,nyc,7548,2013,,pre_vaporfly
+Helene Hines,W,United States,,nyc,8041,2013,,pre_vaporfly
+Ashli Molinero,W,United States,,nyc,8075,2013,,pre_vaporfly
+Kerstin Abele,W,Germany,,nyc,9376,2013,,pre_vaporfly
+Wilson Kipsang Kiprotich,M,Kenya,,nyc,7859,2014,,pre_vaporfly
+Lelisa Desisa,M,Ethiopia,,nyc,7866,2014,,pre_vaporfly
+Gebregziabher Gebremariam,M,Ethiopia,,nyc,7933,2014,,pre_vaporfly
+Meb Keflezighi,M,United States,,nyc,7998,2014,,pre_vaporfly
+Stephen Kiprotich,M,Uganda,,nyc,8005,2014,,pre_vaporfly
+Geoffrey Mutai,M,Kenya,,nyc,8024,2014,,pre_vaporfly
+Masato Imai,M,Japan,,nyc,8076,2014,,pre_vaporfly
+Peter Cheruiyot Kirui,M,Kenya,,nyc,8091,2014,,pre_vaporfly
+Ryan Vail,M,United States,,nyc,8108,2014,,pre_vaporfly
+Nicholas Arciniaga,M,United States,,nyc,8139,2014,,pre_vaporfly
+Yuki Kawauchi,M,Japan,,nyc,8201,2014,,pre_vaporfly
+Lusapho April,M,South Africa,,nyc,8210,2014,,pre_vaporfly
+Birhanu Dare,M,Ethiopia,,nyc,8304,2014,,pre_vaporfly
+Micah Kogo,M,Kenya,,nyc,8316,2014,,pre_vaporfly
+Danilo Goffi,M,Italy,,nyc,8384,2014,,pre_vaporfly
+Stephen Shay,M,United States,,nyc,8387,2014,,pre_vaporfly
+Michael Kipyego,M,Kenya,,nyc,8400,2014,,pre_vaporfly
+Abebe Negash,M,Ethiopia,,nyc,8415,2014,,pre_vaporfly
+Harbert Okuti,M,Uganda,,nyc,8554,2014,,pre_vaporfly
+Aron Rono,M,United States,,nyc,8610,2014,,pre_vaporfly
+Mary Jepkosgei Keitany,W,Kenya,,nyc,8707,2014,,pre_vaporfly
+Jemima Sumgong,W,Kenya,,nyc,8710,2014,,pre_vaporfly
+Sara Moreira,W,Portugal,,nyc,8760,2014,,pre_vaporfly
+Jeļena Prokopčuka,W,Latvia,,nyc,8775,2014,,pre_vaporfly
+Desiree Linden,W,United States,,nyc,8891,2014,,pre_vaporfly
+Firehiwot Dado,W,Ethiopia,,nyc,8916,2014,,pre_vaporfly
+Valeria Straneo,W,Italy,,nyc,8964,2014,,pre_vaporfly
+Bizunesh Deba,W,Ethiopia,,nyc,9100,2014,,pre_vaporfly
+Annie Bersagel,W,United States,,nyc,9182,2014,,pre_vaporfly
+Deena Kastor,W,United States,,nyc,9198,2014,,pre_vaporfly
+Ana Dulce Félix,W,Portugal,,nyc,9333,2014,,pre_vaporfly
+Edna Kiplagat,W,Kenya,,nyc,9384,2014,,pre_vaporfly
+Kara Goucher,W,United States,,nyc,9423,2014,,pre_vaporfly
+Lauren Kleppin,W,United States,,nyc,9553,2014,,pre_vaporfly
+Alia Gray,W,United States,,nyc,9583,2014,,pre_vaporfly
+Marcella Klimek,W,United States,,nyc,9600,2014,,pre_vaporfly
+Hilary Dionne,W,United States,,nyc,9654,2014,,pre_vaporfly
+Shelly Woods,W,United States,,nyc,7395,2014,,pre_vaporfly
+Chelsea McClammer,W,United States,,nyc,7397,2014,,pre_vaporfly
+Arielle Rausin,W,United States,,nyc,7927,2014,,pre_vaporfly
+Helene Hines,W,United States,,nyc,7485,2014,,pre_vaporfly
+Ashli Molinero,W,United States,,nyc,7650,2014,,pre_vaporfly
+Stanley Biwott,M,Kenya,,nyc,7834,2015,,pre_vaporfly
+Geoffrey Kamworor,M,Kenya,,nyc,7848,2015,,pre_vaporfly
+Lelisa Desisa,M,Ethiopia,,nyc,7930,2015,,pre_vaporfly
+Wilson Kipsang Kiprotich,M,Kenya,,nyc,7965,2015,,pre_vaporfly
+Yemane Tsegay,M,Ethiopia,,nyc,8004,2015,,pre_vaporfly
+Yuki Kawauchi,M,Japan,,nyc,8009,2015,,pre_vaporfly
+Meb Keflezighi,M,United States,,nyc,8012,2015,,pre_vaporfly
+Craig Leon,M,United States,,nyc,8116,2015,,pre_vaporfly
+Birhanu Dare,M,Ethiopia,,nyc,8140,2015,,pre_vaporfly
+Kevin Chelimo,M,Kenya,,nyc,8149,2015,,pre_vaporfly
+Andrea Lalli,M,Italy,,nyc,8232,2015,,pre_vaporfly
+Juan Luis Barrios,M,Mexico,,nyc,8286,2015,,pre_vaporfly
+Diriba Yigezu,M,Ethiopia,,nyc,8362,2015,,pre_vaporfly
+Abebe Negash,M,Ethiopia,,nyc,8430,2015,,pre_vaporfly
+Tim Chichester,M,United States,,nyc,8487,2015,,pre_vaporfly
+Nicholas Arciniaga,M,United States,,nyc,8527,2015,,pre_vaporfly
+Khalid En Guady,M,Morocco,,nyc,8593,2015,,pre_vaporfly
+Carmine Buccilli,M,Italy,,nyc,8628,2015,,pre_vaporfly
+Abu Diriba,M,Ethiopia,,nyc,8670,2015,,pre_vaporfly
+Kojo Kyereme,M,United Kingdom,,nyc,8777,2015,,pre_vaporfly
+Mary Jepkosgei Keitany,W,Kenya,,nyc,8665,2015,,pre_vaporfly
+Aselefech Mergia,W,Ethiopia,,nyc,8732,2015,,pre_vaporfly
+Tigist Tufa,W,Ethiopia,,nyc,8750,2015,,pre_vaporfly
+Sara Moreira,W,Portugal,,nyc,8753,2015,,pre_vaporfly
+Christelle Daunay,W,France,,nyc,8817,2015,,pre_vaporfly
+Priscah Jeptoo,W,Kenya,,nyc,8823,2015,,pre_vaporfly
+Laura Thweatt,W,United States,,nyc,8903,2015,,pre_vaporfly
+Jeļena Prokopčuka,W,Latvia,,nyc,8926,2015,,pre_vaporfly
+Anna Incerti,W,Italy,,nyc,9193,2015,,pre_vaporfly
+Caroline Rotich,W,Kenya,,nyc,9199,2015,,pre_vaporfly
+Rocío Cántara †,W,Peru,,nyc,9425,2015,,pre_vaporfly
+Cassie Fien,W,Australia,,nyc,9533,2015,,pre_vaporfly
+Teresa McWalters,W,United States,,nyc,9637,2015,,pre_vaporfly
+Marisol Romero,W,Mexico,,nyc,9710,2015,,pre_vaporfly
+Beverly Ramos,W,Puerto Rico,,nyc,9716,2015,,pre_vaporfly
+Emma Nordling †,W,Sweden,,nyc,9809,2015,,pre_vaporfly
+Ding Changqin,W,China,,nyc,9842,2015,,pre_vaporfly
+Caroline Wöstmann,W,South Africa,,nyc,9866,2015,,pre_vaporfly
+Diane Roy,W,Canada,,nyc,7213,2015,,pre_vaporfly
+Arielle Rausin,W,United States,,nyc,7481,2015,,pre_vaporfly
+Hannah Babalola,W,Nigeria,,nyc,8291,2015,,pre_vaporfly
+Helene Hines,W,United States,,nyc,7332,2015,,pre_vaporfly
+Ashli Molinero,W,United States,,nyc,7616,2015,,pre_vaporfly
+Ghirmay Ghebreslassie,M,Eritrea,,nyc,7671,2016,,pre_vaporfly
+Lucas Rotich,M,Kenya,,nyc,7733,2016,,pre_vaporfly
+Abdihakem Abdirahman,M,United States,,nyc,7883,2016,,pre_vaporfly
+Hiroyuki Yamamoto,M,Japan,,nyc,7909,2016,,pre_vaporfly
+Shadrack Kiptoo Biwott,M,United States,,nyc,7921,2016,,pre_vaporfly
+Tadesse Yae Dabi,M,Ethiopia,,nyc,7986,2016,,pre_vaporfly
+Moses Ndiema Kipsiro,M,Uganda,,nyc,8058,2016,,pre_vaporfly
+Tyler Pennell,M,United States,,nyc,8109,2016,,pre_vaporfly
+Benjamin Payne,M,United States,,nyc,8146,2016,,pre_vaporfly
+Patrick Smyth,M,United States,,nyc,8194,2016,,pre_vaporfly
+Craig Leon,M,United States,,nyc,8234,2016,,pre_vaporfly
+Bado Musa Ido,M,Ethiopia,,nyc,8277,2016,,pre_vaporfly
+Christo Landry,M,United States,,nyc,8354,2016,,pre_vaporfly
+Brendan Martin,M,United States,,nyc,8374,2016,,pre_vaporfly
+Guteta Senbeto,M,Ethiopia,,nyc,8401,2016,,pre_vaporfly
+Mariano Mastromarino,M,Argentina,,nyc,8408,2016,,pre_vaporfly
+Matthew Llano,M,United States,,nyc,8415,2016,,pre_vaporfly
+Worknesh Seyoum,M,Ethiopia,,nyc,8454,2016,,pre_vaporfly
+Timothy Ritchie,M,United States,,nyc,8469,2016,,pre_vaporfly
+Harbert Okuti,M,Uganda,,nyc,8487,2016,,pre_vaporfly
+Mary Jepkosgei Keitany,W,Kenya,,nyc,8666,2016,,pre_vaporfly
+Sally Kipyego,W,Kenya,,nyc,8881,2016,,pre_vaporfly
+Molly Huddle,W,United States,,nyc,8893,2016,,pre_vaporfly
+Joyce Chepkirui,W,Kenya,,nyc,8948,2016,,pre_vaporfly
+Diane Nukuri,W,Burundi,,nyc,9184,2016,,pre_vaporfly
+Aselefech Mergia,W,Ethiopia,,nyc,9208,2016,,pre_vaporfly
+Lanni Marchant,W,Canada,,nyc,9230,2016,,pre_vaporfly
+Neely Spence Gracey,W,United States,,nyc,9295,2016,,pre_vaporfly
+Sara Hall,W,United States,,nyc,9372,2016,,pre_vaporfly
+Ayantu Dakebo Hailemaryam,W,Ethiopia,,nyc,9427,2016,,pre_vaporfly
+Esther Atkins,W,United States,,nyc,9431,2016,,pre_vaporfly
+Dorothy McMahon,W,United States,,nyc,9526,2016,,pre_vaporfly
+Kellys Arias,W,Colombia,,nyc,9554,2016,,pre_vaporfly
+Gwen Jorgensen,W,United States,,nyc,9661,2016,,pre_vaporfly
+Laura Manninen,W,Finland,,nyc,9668,2016,,pre_vaporfly
+Kimberly Conley,W,United States,,nyc,9698,2016,,pre_vaporfly
+Kelly Calway †,W,United States,,nyc,9759,2016,,pre_vaporfly
+Katrina Gerhard,W,United States,,nyc,7382,2016,,pre_vaporfly
+Jade Jones-Hall,W,United Kingdom,,nyc,7396,2016,,pre_vaporfly
+Arielle Rausin,W,United States,,nyc,7987,2016,,pre_vaporfly
+Mel Nicholls,W,United Kingdom,,nyc,7990,2016,,pre_vaporfly
+Tiffiney Perry,W,New Zealand,,nyc,7438,2016,,pre_vaporfly
+Helene Hines,W,United States,,nyc,8646,2016,,pre_vaporfly
+Geoffrey Kamworor,M,Kenya,,nyc,7853,2017,,vaporfly_4
+Wilson Kipsang Kiprotich,M,Kenya,,nyc,7856,2017,,vaporfly_4
+Lelisa Desisa,M,Ethiopia,,nyc,7892,2017,,vaporfly_4
+Lemi Berhanu Hayle,M,Ethiopia,,nyc,7912,2017,,vaporfly_4
+Tadesse Abraham,M,Switzerland,,nyc,7921,2017,,vaporfly_4
+Michel Butter,M,Netherlands,,nyc,7959,2017,,vaporfly_4
+Abdihakem Abdirahman,M,United States,,nyc,7968,2017,,vaporfly_4
+Koen Naert,M,Belgium,,nyc,8001,2017,,vaporfly_4
+Fikadu Girma,M,Ethiopia,,nyc,8038,2017,,vaporfly_4
+Shadrack Kiptoo Biwott,M,United States,,nyc,8097,2017,,vaporfly_4
+Meb Keflezighi,M,United States,,nyc,8129,2017,,vaporfly_4
+Jared Ward,M,United States,,nyc,8319,2017,,vaporfly_4
+Guteta Senbeto,M,Ethiopia,,nyc,8429,2017,,vaporfly_4
+Birhanu Dare,M,Ethiopia,,nyc,8490,2017,,vaporfly_4
+Brendan Martin,M,United States,,nyc,8556,2017,,vaporfly_4
+Harbert Okuti,M,Uganda,,nyc,8566,2017,,vaporfly_4
+John Metui,M,Kenya,,nyc,8620,2017,,vaporfly_4
+Girma Segni,M,Ethiopia,,nyc,8631,2017,,vaporfly_4
+Francesco Puppi,M,Italy,,nyc,8735,2017,,vaporfly_4
+Shalane Flanagan,W,United States,,nyc,8813,2017,,vaporfly_4
+Mary Jepkosgei Keitany,W,Kenya,,nyc,8874,2017,,vaporfly_4
+Mamitu Daska,W,Ethiopia,,nyc,8888,2017,,vaporfly_4
+Edna Kiplagat,W,Kenya,,nyc,8976,2017,,vaporfly_4
+Allie Kieffer,W,United States,,nyc,8979,2017,,vaporfly_4
+Sara Dossena,W,Italy,,nyc,8979,2017,,vaporfly_4
+Eva Vrabcová-Nývltová,W,Czech Republic,,nyc,8981,2017,,vaporfly_4
+Kellyn Taylor,W,United States,,nyc,8996,2017,,vaporfly_4
+Diane Nukuri,W,United States,,nyc,9081,2017,,vaporfly_4
+Stephanie Bruce,W,United States,,nyc,9104,2017,,vaporfly_4
+Bizunesh Deba,W,Ethiopia,,nyc,9121,2017,,vaporfly_4
+Christelle Daunay,W,France,,nyc,9129,2017,,vaporfly_4
+Aliphine Tuliamuk,W,United States,,nyc,9198,2017,,vaporfly_4
+Emma Quaglia,W,Italy,,nyc,9250,2017,,vaporfly_4
+Serkalem Biset,W,Ethiopia,,nyc,9263,2017,,vaporfly_4
+Askale Merachi,W,Ethiopia,,nyc,9398,2017,,vaporfly_4
+Adriana Aparecida da Silva,W,Brazil,,nyc,9442,2017,,vaporfly_4
+Jéssica Augusto,W,Portugal,,nyc,9453,2017,,vaporfly_4
+Belaynesh Fikadu,W,Ethiopia,,nyc,9541,2017,,vaporfly_4
+Lauren Knowles,W,United States,,nyc,9609,2017,,vaporfly_4
+Angela Ortiz †,W,United States,,nyc,9772,2017,,vaporfly_4
+Kaoru Nagao,W,Japan,,nyc,9866,2017,,vaporfly_4
+Kate Pallardy,W,United States,,nyc,9888,2017,,vaporfly_4
+Zou Lihong,W,China,,nyc,7400,2017,,vaporfly_4
+Madison de Rozario,W,Australia,,nyc,7468,2017,,vaporfly_4
+Annika Zeyen,W,Germany,,nyc,7643,2017,,vaporfly_4
+Katrina Gerhard,W,United States,,nyc,7647,2017,,vaporfly_4
+Jade Jones-Hall,W,United Kingdom,,nyc,7713,2017,,vaporfly_4
+Susannah Scaroni,W,United States,,nyc,7903,2017,,vaporfly_4
+Arielle Rausin,W,United States,,nyc,7949,2017,,vaporfly_4
+Devann Murphy,W,United States,,nyc,8459,2017,,vaporfly_4
+Beth Sanden,W,United States,,nyc,9782,2017,,vaporfly_4
+Geoffrey Kamworor,M,Kenya,,nyc,7693,2019,,vaporfly_next
+Albert Korir,M,Kenya,,nyc,7716,2019,,vaporfly_next
+Girma Bekele Gebre,M,Ethiopia,,nyc,7718,2019,,vaporfly_next
+Tamirat Tola,M,Ethiopia,,nyc,7760,2019,,vaporfly_next
+Shura Kitata,M,Ethiopia,,nyc,7839,2019,,vaporfly_next
+Jared Ward,M,United States,,nyc,7845,2019,,vaporfly_next
+Stephen Sambu,M,Kenya,,nyc,7871,2019,,vaporfly_next
+Yoshiki Takenouchi,M,Japan,,nyc,7878,2019,,vaporfly_next
+Abdihakem Abdirahman,M,United States,,nyc,7894,2019,,vaporfly_next
+Connor McMillan,M,United States,,nyc,7927,2019,,vaporfly_next
+Joyciline Jepkosgei,W,Kenya,,nyc,8558,2019,,vaporfly_next
+Mary Keitany,W,Kenya,,nyc,8612,2019,,vaporfly_next
+Ruti Aga,W,Ethiopia,,nyc,8751,2019,,vaporfly_next
+Nancy Kiprop,W,Kenya,,nyc,8781,2019,,vaporfly_next
+Sinead Diver,W,Australia,,nyc,8783,2019,,vaporfly_next
+Des Linden,W,United States,,nyc,8806,2019,,vaporfly_next
+Kellyn Taylor,W,United States,,nyc,8812,2019,,vaporfly_next
+Ellie Pashley,W,Australia,,nyc,8827,2019,,vaporfly_next
+Belaynesh Fikadu,W,Ethiopia,,nyc,8847,2019,,vaporfly_next
+Mary Wacera Ngugi,W,Kenya,,nyc,8856,2019,,vaporfly_next
+Christie Dawes,W,Australia,,nyc,7211,2019,,vaporfly_next
+Vanessa De Souza,W,Brazil,,nyc,7215,2019,,vaporfly_next
+Jenna Fesemyer,W,United States,,nyc,7230,2019,,vaporfly_next
+Shelly Woods,W,United Kingdom,,nyc,7484,2019,,vaporfly_next
+Michelle Wheeler,W,United States,,nyc,7565,2019,,vaporfly_next
+Arielle Rausin,W,United States,,nyc,7568,2019,,vaporfly_next
+Devann Murphy,W,United States,,nyc,8361,2019,,vaporfly_next
+Corey Peterson,W,United States,,nyc,8866,2019,,vaporfly_next
+Adessa Ellis,W,United States,,nyc,9271,2019,,vaporfly_next
+Beth Sanden,W,United States,,nyc,9465,2019,,vaporfly_next
+Katherine Valdez,W,Ecuador,,nyc,9631,2019,,vaporfly_next
+Albert Korir,M,Kenya,,nyc,7702,2021,,super_shoe_unknown_brand
+Mohamed El Araby,M,Morocco,,nyc,7746,2021,,super_shoe_unknown_brand
+Eyob Faniel,M,Italy,,nyc,7792,2021,,super_shoe_unknown_brand
+Elkanah Kibet,M,United States,,nyc,7875,2021,,super_shoe_unknown_brand
+Abdi Nageeye,M,Netherlands,,nyc,7899,2021,,super_shoe_unknown_brand
+Kenenisa Bekele,M,Ethiopia,,nyc,7972,2021,,super_shoe_unknown_brand
+Ben True,M,United States,,nyc,7973,2021,,super_shoe_unknown_brand
+Nathan Martin,M,United States,,nyc,7977,2021,,super_shoe_unknown_brand
+Kibiwott Kandie,M,Kenya,,nyc,8023,2021,,super_shoe_unknown_brand
+Jared Ward,M,United States,,nyc,8023,2021,,super_shoe_unknown_brand
+Peres Jepchirchir,W,Kenya,,nyc,8559,2021,,super_shoe_unknown_brand
+Viola Cheptoo,W,Kenya,,nyc,8564,2021,,super_shoe_unknown_brand
+Ababel Yeshaneh,W,Ethiopia,,nyc,8572,2021,,super_shoe_unknown_brand
+Molly Seidel,W,United States,,nyc,8682,2021,,super_shoe_unknown_brand
+Helalia Johannes,W,Namibia,,nyc,8769,2021,,super_shoe_unknown_brand
+Kellyn Taylor,W,United States,,nyc,8770,2021,,super_shoe_unknown_brand
+Annie Frisbie,W,United States,,nyc,8778,2021,,super_shoe_unknown_brand
+Laura Thweatt,W,United States,,nyc,8820,2021,,super_shoe_unknown_brand
+Grace Kahura,W,Kenya,,nyc,9032,2021,,super_shoe_unknown_brand
+Stephanie Bruce,W,United States,,nyc,9065,2021,,super_shoe_unknown_brand
+Yen Hoang,W,United States,,nyc,7358,2021,,super_shoe_unknown_brand
+Shelly Woods,W,United Kingdom,,nyc,7782,2021,,super_shoe_unknown_brand
+Michelle Wheeler,W,United States,,nyc,8293,2021,,super_shoe_unknown_brand
+Arielle Rausin,W,United States,,nyc,8721,2021,,super_shoe_unknown_brand
+Margriet van den Broek,W,Netherlands,,nyc,8890,2021,,super_shoe_unknown_brand
+Devann Murphy,W,United States,,nyc,7775,2021,,super_shoe_unknown_brand
+Jessica Hayon,W,United States,,nyc,8234,2021,,super_shoe_unknown_brand
+Corey Petersen,W,United States,,nyc,8808,2021,,super_shoe_unknown_brand
+Evans Chebet,M,Kenya,,nyc,7721,2022,,super_shoe_unknown_brand
+Shura Kitata,M,Ethiopia,,nyc,7734,2022,,super_shoe_unknown_brand
+Abdi Nageeye,M,Netherlands,,nyc,7831,2022,,super_shoe_unknown_brand
+Mohamed Reda El Aaraby,M,Morocco,,nyc,7860,2022,,super_shoe_unknown_brand
+Suguru Osako,M,Japan,,nyc,7891,2022,,super_shoe_unknown_brand
+Tetsuya Yoroizaka,M,Japan,,nyc,7932,2022,,super_shoe_unknown_brand
+Albert Korir,M,Kenya,,nyc,8007,2022,,super_shoe_unknown_brand
+Daniele Meucci,M,Italy,,nyc,8009,2022,,super_shoe_unknown_brand
+Scott Fauble,M,United States,,nyc,8015,2022,,super_shoe_unknown_brand
+Reed Fischer,M,United States,,nyc,8123,2022,,super_shoe_unknown_brand
+Sharon Lokedi,W,Kenya,,nyc,8603,2022,,super_shoe_unknown_brand
+Lonah Chemtai Salpeter,W,Israel,,nyc,8610,2022,,super_shoe_unknown_brand
+Gotytom Gebreslase,W,Ethiopia,,nyc,8619,2022,,super_shoe_unknown_brand
+Edna Kiplagat,W,Kenya,,nyc,8656,2022,,super_shoe_unknown_brand
+Viola Cheptoo Lagat,W,Kenya,,nyc,8734,2022,,super_shoe_unknown_brand
+Hellen Obiri,W,Kenya,,nyc,8749,2022,,super_shoe_unknown_brand
+Aliphine Tuliamuk,W,United States,,nyc,8778,2022,,super_shoe_unknown_brand
+Emma Bates,W,United States,,nyc,8813,2022,,super_shoe_unknown_brand
+Jessica Stenson,W,Australia,,nyc,8847,2022,,super_shoe_unknown_brand
+Nell Rojas,W,United States,,nyc,8912,2022,,super_shoe_unknown_brand
+Jessica Hayon,W,United States,,nyc,7819,2022,,super_shoe_unknown_brand
+Albert Korir,M,Kenya,,nyc,7617,2023,,super_shoe_unknown_brand
+Shura Kitata,M,Ethiopia,,nyc,7631,2023,,super_shoe_unknown_brand
+Abdi Nageeye,M,Netherlands,,nyc,7821,2023,,super_shoe_unknown_brand
+Koen Naert,M,Belgium,,nyc,7825,2023,,super_shoe_unknown_brand
+Maru Teferi,M,Israel,,nyc,7828,2023,,super_shoe_unknown_brand
+Iliass Aouani,M,Italy,,nyc,7854,2023,,super_shoe_unknown_brand
+Edward Cheserek,M,Kenya,,nyc,7867,2023,,super_shoe_unknown_brand
+Jemal Yimer Mekonnen,M,Ethiopia,,nyc,7891,2023,,super_shoe_unknown_brand
+Futsum Zienasellassie,M,United States,,nyc,7929,2023,,super_shoe_unknown_brand
+Hellen Obiri,W,Kenya,,nyc,8843,2023,,super_shoe_unknown_brand
+Letesenbet Gidey,W,Ethiopia,,nyc,8849,2023,,super_shoe_unknown_brand
+Sharon Lokedi,W,Kenya,,nyc,8853,2023,,super_shoe_unknown_brand
+Brigid Kosgei,W,Kenya,,nyc,8865,2023,,super_shoe_unknown_brand
+Mary Ngugi,W,Kenya,,nyc,8873,2023,,super_shoe_unknown_brand
+Viola Cheptoo,W,Kenya,,nyc,8891,2023,,super_shoe_unknown_brand
+Edna Kiplagat,W,Kenya,,nyc,8980,2023,,super_shoe_unknown_brand
+Kellyn Taylor,W,United States,,nyc,8988,2023,,super_shoe_unknown_brand
+Molly Huddle,W,United States,,nyc,9122,2023,,super_shoe_unknown_brand
+Fantu Zewude Jifar,W,Ethiopia,,nyc,9250,2023,,super_shoe_unknown_brand
+Abdi Nageeye,M,Netherlands,,nyc,7659,2024,,super_shoe_unknown_brand
+Evans Chebet,M,Kenya,,nyc,7665,2024,,super_shoe_unknown_brand
+Albert Korir,M,Kenya,,nyc,7680,2024,,super_shoe_unknown_brand
+Tamirat Tola,M,Ethiopia,,nyc,7692,2024,,super_shoe_unknown_brand
+Geoffrey Kamworor,M,Kenya,,nyc,7730,2024,,super_shoe_unknown_brand
+Conner Mantz,M,United States,,nyc,7740,2024,,super_shoe_unknown_brand
+Clayton Young,M,United States,,nyc,7761,2024,,super_shoe_unknown_brand
+Abel Kipchumba,M,Kenya,,nyc,7839,2024,,super_shoe_unknown_brand
+Bashir Abdi,M,Belgium,,nyc,7839,2024,,super_shoe_unknown_brand
+CJ Albertson,M,United States,,nyc,7857,2024,,super_shoe_unknown_brand
+Sheila Chepkirui,W,Kenya,,nyc,8675,2024,,super_shoe_unknown_brand
+Hellen Obiri,W,Kenya,,nyc,8689,2024,,super_shoe_unknown_brand
+Vivian Cheruiyot,W,Kenya,,nyc,8721,2024,,super_shoe_unknown_brand
+Eunice Chumba,W,Bahrain,,nyc,8758,2024,,super_shoe_unknown_brand
+Fabienne Schlumpf,W,Switzerland,,nyc,8791,2024,,super_shoe_unknown_brand
+Sara Vaughn,W,United States,,nyc,8816,2024,,super_shoe_unknown_brand
+Senbere Teferi,W,Ethiopia,,nyc,8834,2024,,super_shoe_unknown_brand
+Jessica McClain,W,United States,,nyc,8839,2024,,super_shoe_unknown_brand
+Sharon Lokedi,W,Kenya,,nyc,8865,2024,,super_shoe_unknown_brand
+Kellyn Taylor,W,United States,,nyc,8879,2024,,super_shoe_unknown_brand
+Addisu Gobena,M,Ethiopia,,dubai,7501,2024,,super_shoe_unknown_brand
+Lemi Dumecha,M,Ethiopia,,dubai,7520,2024,,super_shoe_unknown_brand
+Dejene Megersa,M,Ethiopia,,dubai,7542,2024,,super_shoe_unknown_brand
+Abdi Fufa,M,Ethiopia,,dubai,7583,2024,,super_shoe_unknown_brand
+Samuel Fitwi,M,Germany,,dubai,7587,2024,,super_shoe_unknown_brand
+Antenayehu Dagnachew,M,Ethiopia,,dubai,7615,2024,,super_shoe_unknown_brand
+Douglas Kipsanai Chebii,M,Kenya,,dubai,7695,2024,,super_shoe_unknown_brand
+Lencho Tesfaye,M,Ethiopia,,dubai,7705,2024,,super_shoe_unknown_brand
+Bayelign Teshager,M,Ethiopia,,dubai,7736,2024,,super_shoe_unknown_brand
+Abebaw Dessie,M,Ethiopia,,dubai,7749,2024,,super_shoe_unknown_brand
+Abebaw Desalew,M,Ethiopia,,dubai,7751,2024,,super_shoe_unknown_brand
+Asefa Tefera,M,Ethiopia,,dubai,7775,2024,,super_shoe_unknown_brand
+Gossa Ambelu,M,Ethiopia,,dubai,7822,2024,,super_shoe_unknown_brand
+Samuel Tsegay Tesfamariam,M,Sweden,,dubai,7902,2024,,super_shoe_unknown_brand
+Polat Kemboi Arıkan,M,Turkey,,dubai,7957,2024,,super_shoe_unknown_brand
+Tigist Ketema,W,Ethiopia,,dubai,8167,2024,,super_shoe_unknown_brand
+Ruti Aga,W,Ethiopia,,dubai,8289,2024,,super_shoe_unknown_brand
+Dera Dida,W,Ethiopia,,dubai,8369,2024,,super_shoe_unknown_brand
+Melat Yisak Kejeta,W,Germany,,dubai,8507,2024,,super_shoe_unknown_brand
+Fozya Jemal,W,Ethiopia,,dubai,8513,2024,,super_shoe_unknown_brand
+Shitaye Eshete,W,Ethiopia,,dubai,8515,2024,,super_shoe_unknown_brand
+Atalel Anmut,W,Ethiopia,,dubai,8543,2024,,super_shoe_unknown_brand
+Betelihem Agenugus,W,Ethiopia,,dubai,8757,2024,,super_shoe_unknown_brand
+Emebet Niguse,W,Ethiopia,,dubai,8832,2024,,super_shoe_unknown_brand
+Nurit Shimels,W,Ethiopia,,dubai,8908,2024,,super_shoe_unknown_brand
+Chernet Misganaw,W,Ethiopia,,dubai,9130,2024,,super_shoe_unknown_brand
