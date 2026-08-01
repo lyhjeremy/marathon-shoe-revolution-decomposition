@@ -1,5 +1,7 @@
 # How Much of the Post-2017 Marathon Revolution Is the Shoe?
 
+> 📖 **In depth:** https://lyhjeremy.github.io/marathon-shoe-revolution-decomposition/overview/
+
 A three-framework decomposition of elite marathon performance improvement from 2010–2024, isolating the contribution of carbon-plated "super shoes."
 
 📊 **[Read the full writeup →](writeup.md)** &nbsp;·&nbsp; 📝 [Narrative article](article.md) &nbsp;·&nbsp; 📄 [PDF report](reports/Marathon_Shoe_Revolution_Decomposition_Report.pdf) &nbsp;·&nbsp; 📘 [Word doc](reports/Marathon_Shoe_Revolution_Decomposition_Report.docx) &nbsp;·&nbsp; 📓 [Notebook](notebooks/shoe_revolution_decomposition.ipynb) &nbsp;·&nbsp; 🌐 [HTML article](web/index.html)

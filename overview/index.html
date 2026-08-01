@@ -1,0 +1,470 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<title>How much of the marathon revolution is the shoe? — 67 seconds</title>
+<meta name="description" content="Three independent decomposition frameworks over ~1,900 elite marathon performances, 2010–2024. Pooled shoe contribution: 67 seconds, 95% CI 36–99, about 0.9% of a 2:05 marathon." />
+<meta name="theme-color" content="#FBF8F1" />
+<meta property="og:title" content="How much of it is the shoe?" />
+<meta property="og:description" content="Difference-in-differences, within-athlete pairing and cohort survival, applied to the super-shoe era. The answer is 67 seconds." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://lyhjeremy.github.io/marathon-shoe-revolution-decomposition/overview/" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600;700;800&family=IBM+Plex+Mono:wght@400;600&display=swap" rel="stylesheet" />
+<style>
+  :root {
+    --paper: #FBF8F1;
+    --card: #FFFFFF;
+    --plate: #FFFFFF;
+    --ink: #1a1a2e;
+    --ink2: #3d3d55;
+    --muted: #6B7280;
+    --rule: #E5DCC7;
+    --accent: #C2410C;
+    --accent2: #0E7490;
+    --link: #7a1f2b;
+    --serif: Georgia, 'Iowan Old Style', 'Times New Roman', serif;
+    --sans: 'Source Sans 3', -apple-system, system-ui, sans-serif;
+    --mono: 'IBM Plex Mono', ui-monospace, 'SF Mono', monospace;
+    --shadow: 0 1px 2px rgba(26,26,46,.05), 0 10px 34px rgba(26,26,46,.07);
+    --spine:  92px;
+    --col:    min(100% - 2.6rem, 62rem);
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --paper: #14141f;
+      --card: #1c1c2a;
+      --plate: #f7f4ec;
+      --ink: #F2EFE6;
+      --ink2: #C9C4B6;
+      --muted: #918B7D;
+      --rule: #33313f;
+      --accent: #FB923C;
+      --accent2: #22D3EE;
+      --link: #E0899A;
+      --shadow: 0 1px 2px rgba(0,0,0,.32), 0 10px 34px rgba(0,0,0,.4);
+    }
+  }
+
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    margin: 0; background: var(--paper); color: var(--ink);
+    font-family: var(--serif); font-size: clamp(17px, 0.55rem + 0.6vw, 19.5px);
+    line-height: 1.68; -webkit-font-smoothing: antialiased; overflow-x: hidden;
+  }
+  img { max-width: 100%; height: auto; display: block; }
+  a { color: var(--link); }
+  :focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 2px; }
+  strong { font-weight: 700; color: var(--ink); }
+  code { font-family: var(--mono); font-size: .86em;
+         background: color-mix(in srgb, var(--ink) 7%, transparent);
+         padding: .12em .38em; border-radius: 4px; }
+  .wrap { width: var(--col); margin: 0 auto; }
+
+  .eyebrow { font-family: var(--mono); font-weight: 600; font-size: 11.5px;
+             letter-spacing: .17em; text-transform: uppercase; color: var(--muted);
+             margin: 0 0 14px; }
+
+  .masthead { display: flex; align-items: baseline; gap: 14px; flex-wrap: wrap; padding: 30px 0 0; }
+  .logo { font-family: var(--sans); font-weight: 800; font-size: 21px;
+          letter-spacing: -.02em; display: flex; align-items: center; gap: 9px; }
+  .dot { width: 9px; height: 9px; border-radius: 50%; background: var(--accent); flex: none; }
+  .tagline { font-size: 15px; color: var(--ink2); font-family: var(--sans); }
+
+  .hero { padding: 44px 0 54px; }
+  .kicker { font-family: var(--sans); font-size: clamp(18px, 2.1vw, 23px); font-weight: 600;
+            color: var(--muted); margin: 0 0 8px; letter-spacing: -.01em; }
+  .hero h1 { font-family: var(--sans); font-size: clamp(37px, 6vw, 72px); font-weight: 800;
+             letter-spacing: -.035em; line-height: 1.04; margin: 0; max-width: 17ch; }
+  .hero-sub { margin: 24px 0 0; font-size: 1.06em; color: var(--ink2); max-width: 60ch; }
+
+  .cta-row { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 30px; align-items: center; }
+  .btn { display: inline-block; padding: 13px 26px; border-radius: 8px;
+         font-family: var(--sans); font-weight: 700; font-size: 16px;
+         text-decoration: none; border: 1px solid var(--ink); transition: transform .15s ease; }
+  .btn:hover { transform: translateY(-1px); }
+  .btn-primary { background: var(--ink); color: var(--paper); }
+  .textlink { font-family: var(--sans); font-size: 16px; font-weight: 600; color: var(--ink2);
+              text-decoration: underline; text-underline-offset: 4px;
+              text-decoration-thickness: 1px; }
+  .textlink:hover { color: var(--ink); }
+
+  .claims { display: grid; grid-template-columns: 1fr; gap: 0 52px; margin: 50px 0 0; }
+  @media (min-width: 760px) { .claims { grid-template-columns: 1fr 1fr; } }
+  .claim { padding: 18px 0 20px; border-top: 1px solid var(--rule); }
+  .claim:first-child, .claim:nth-child(2) { border-top: 2px solid var(--ink); }
+  @media (max-width: 759px) { .claim:nth-child(2) { border-top: 1px solid var(--rule); } }
+  .claim .n { font-family: var(--sans); font-weight: 800; font-size: 40px; line-height: 1.05;
+              color: var(--accent); letter-spacing: -.03em; font-variant-numeric: tabular-nums; }
+  .claim h3 { margin: 0 0 6px; }
+  .claim p { margin: 9px 0 0; font-size: 15.5px; color: var(--ink2); line-height: 1.5;
+             font-family: var(--sans); }
+
+  .route { position: relative; padding-bottom: 30px; }
+  .route::before { content: ""; position: absolute; left: calc(var(--spine) / 2); top: 8px;
+                   bottom: 80px; width: 2px; background: var(--rule); }
+  .stop { position: relative; padding: 0 0 76px var(--spine); }
+  .stop::before { content: ""; position: absolute; left: calc(var(--spine) / 2 - 7px); top: 7px;
+                  width: 16px; height: 16px; border-radius: 50%;
+                  background: var(--paper); border: 2px solid var(--ink); box-sizing: border-box; }
+  .stop--key::before { background: var(--accent); border-color: var(--accent); }
+  .stop--warn::before { background: var(--accent2); border-color: var(--accent2); }
+  .stop--end::before { background: var(--ink); }
+
+  h2 { font-family: var(--sans); font-size: clamp(27px, 3.7vw, 38px); font-weight: 800;
+       letter-spacing: -.027em; line-height: 1.13; margin: 12px 0 16px; max-width: 19ch; }
+  h3 { font-family: var(--sans); font-size: 17px; font-weight: 700; margin: 0 0 7px;
+       letter-spacing: -.012em; }
+  .stop p { margin: 0 0 17px; max-width: 60ch; color: var(--ink2); }
+
+  .bignum { font-family: var(--sans); font-weight: 800; font-size: clamp(74px, 10vw, 128px);
+            line-height: .86; letter-spacing: -.05em; margin: 6px 0 4px; color: var(--accent);
+            font-variant-numeric: tabular-nums; }
+  .bignum-note { font-family: var(--sans); font-size: 16px; color: var(--muted); margin: 0 0 20px; }
+
+  /* A white-background chart would glow in dark mode; the plate makes it read
+     as a deliberately printed page instead. */
+  figure { margin: 28px 0 0; }
+  .plate { background: var(--plate); border: 1px solid var(--rule); border-radius: 10px;
+           padding: 14px; box-shadow: var(--shadow); overflow: hidden; }
+  .plate img { border-radius: 4px; }
+  .plate--flush { padding: 0; }
+  .shot { border-radius: 10px; border: 1px solid var(--rule); box-shadow: var(--shadow);
+          overflow: hidden; background: var(--card); }
+  /* min() so the cap never exceeds the column on a phone */
+  .shot--narrow { max-width: min(430px, 100%); }
+  figcaption { margin-top: 11px; font-family: var(--sans); font-size: 14.5px;
+               color: var(--muted); line-height: 1.5; }
+  .panels { display: grid; grid-template-columns: repeat(auto-fit, minmax(258px, 1fr));
+            gap: 22px; margin-top: 28px; }
+  .panels figure { margin: 0; }
+
+  .pull { margin: 30px 0 0; padding: 20px 25px; border-left: 3px solid var(--accent);
+          background: color-mix(in srgb, var(--accent) 7%, transparent);
+          border-radius: 0 8px 8px 0; }
+  .pull p { margin: 0 0 9px; color: var(--ink); max-width: none; }
+  .pull p:last-of-type { margin: 0; }
+  .pull .who { font-family: var(--mono); font-size: 11px; letter-spacing: .12em;
+               text-transform: uppercase; color: var(--muted); display: block; margin-top: 9px; }
+
+  .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(238px, 1fr));
+          gap: 1px; margin-top: 28px; background: var(--rule);
+          border: 1px solid var(--rule); border-radius: 10px; overflow: hidden; }
+  .cell { background: var(--paper); padding: 22px 20px; }
+  .cell p { font-size: 15px; margin: 0; color: var(--ink2); max-width: none;
+            line-height: 1.55; font-family: var(--sans); }
+
+  /* results tables: scroll inside their own box, never the page */
+  .tablewrap { margin-top: 26px; overflow-x: auto; border: 1px solid var(--rule);
+               border-radius: 10px; background: var(--card); }
+  table { border-collapse: collapse; width: 100%; min-width: 480px;
+          font-family: var(--sans); font-size: 15.5px; }
+  th, td { padding: 12px 16px; text-align: left; border-bottom: 1px solid var(--rule); }
+  th { font-family: var(--mono); font-size: 11px; letter-spacing: .1em;
+       text-transform: uppercase; color: var(--muted); font-weight: 600; }
+  td { color: var(--ink2); font-variant-numeric: tabular-nums; }
+  tr:last-child td { border-bottom: 0; }
+  .win td { color: var(--ink); font-weight: 700;
+            background: color-mix(in srgb, var(--accent) 8%, transparent); }
+
+  /* real terminal output, quoted verbatim */
+  .term { margin-top: 26px; background: #14141f; color: #e6e3da; border-radius: 10px;
+          padding: 18px 20px; overflow-x: auto; box-shadow: var(--shadow);
+          border: 1px solid #2a2a3a; }
+  .term pre { margin: 0; font-family: var(--mono); font-size: 13px; line-height: 1.62;
+              white-space: pre; }
+  .term .c { color: #9aa08f; }
+  .term .g { color: #7fd18f; }
+  .term .y { color: #E3BC5E; }
+
+  .specs { margin-top: 26px; border-top: 1px solid var(--rule); }
+  .spec { display: grid; grid-template-columns: 1fr; gap: 2px;
+          padding: 14px 0; border-bottom: 1px solid var(--rule); }
+  @media (min-width: 700px) { .spec { grid-template-columns: 178px 1fr; gap: 24px; } }
+  .spec dt { font-family: var(--mono); font-size: 11.5px; letter-spacing: .1em;
+             text-transform: uppercase; color: var(--muted); padding-top: 4px; }
+  .spec dd { margin: 0; font-size: 16px; color: var(--ink2); font-family: var(--sans); }
+
+  .close { padding: 6px 0 80px var(--spine); position: relative; }
+  .close h2 { max-width: 20ch; }
+  footer { border-top: 1px solid var(--rule); padding: 28px 0 60px;
+           font-family: var(--sans); font-size: 14.5px; color: var(--muted); }
+  footer a { color: var(--ink2); }
+  footer p { margin: 0 0 8px; }
+
+  @media (max-width: 640px) {
+    :root { --spine: 38px; }
+    .hero { padding: 36px 0 46px; }
+    .stop { padding-bottom: 58px; }
+    .plate { padding: 9px; }
+    .term { padding: 14px 14px; }
+    .term pre { font-size: 11.5px; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    .btn { transition: none; }
+  }
+
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="masthead">
+    <div class="logo"><span class="dot" aria-hidden="true"></span>The Shoe Decomposition</div>
+    <div class="tagline">~1,900 elite marathons, 2010–2024</div>
+  </header>
+
+  <section class="hero">
+    <p class="kicker">Nobody still argues that super shoes do nothing.</p>
+    <h1>The open question is how much of the gain is actually the shoe.</h1>
+
+    <p class="hero-sub">
+      When the Vaporfly 4% reached commercial release in mid-2017, elite marathon
+      times started falling fast enough to unsettle people who follow the sport
+      closely. Three independent decomposition frameworks over about
+      <strong>1,900 elite performances</strong> put the pooled shoe contribution at
+      <strong>67 seconds</strong> (95% CI <strong>36–99</strong>) of median elite
+      marathon time. That is roughly <strong>0.9%</strong> of a 2:05 marathon —
+      large, real, and considerably smaller than the running press implies.
+    </p>
+
+    <div class="cta-row">
+      <a class="btn btn-primary" href="../writeup.md">Read the full writeup</a>
+      <a class="textlink" href="https://github.com/lyhjeremy/marathon-shoe-revolution-decomposition">or the code and data</a>
+    </div>
+
+    <div class="claims">
+      <div class="claim">
+        <div class="n">67 s</div>
+        <p>pooled shoe contribution to median elite marathon time, 95% CI 36–99
+           seconds.</p>
+      </div>
+      <div class="claim">
+        <div class="n">0.9%</div>
+        <p>of a 2:05 marathon. Enough to decide any major championship, not enough
+           to explain the whole era.</p>
+      </div>
+      <div class="claim">
+        <div class="n">1.25–1.4×</div>
+        <p>the rise in sub-2:10 and sub-2:25 frequency after 2017 — against the
+           3–5× the popular press reports.</p>
+      </div>
+      <div class="claim">
+        <div class="n">1.6% vs 0.3%</div>
+        <p>road marathon improvement against track 10,000 m over the same window.
+           The control moved much less.</p>
+      </div>
+    </div>
+  </section>
+</div>
+
+<div class="wrap">
+<div class="route">
+
+  <section class="stop">
+    <p class="eyebrow">Start · the identification problem</p>
+    <h2>Everything improved at once</h2>
+    <p>
+      The difficulty is that the shoe did not arrive alone. Pacing technology,
+      course selection, prize money, training methods and the depth of East African
+      recruitment all moved over the same fifteen years. Any before-and-after
+      comparison hands the shoe credit for all of it.
+    </p>
+    <p>
+      Three frameworks, each with a different way of holding the rest constant:
+    </p>
+    <div class="grid">
+      <div class="cell">
+        <h3>1 · Difference-in-differences</h3>
+        <p>Road marathon against track 10,000 m, a less shoe-affected control.
+           Anything that lifted both is differenced away.</p>
+      </div>
+      <div class="cell">
+        <h3>2 · Within-athlete paired</h3>
+        <p>The same athlete before and after the era, controlling for genetics,
+           training and physiology. The most conservative of the three.</p>
+      </div>
+      <div class="cell">
+        <h3>3 · Cohort survival</h3>
+        <p>The distributional shift of the top-30 elite cohort, with a 55%
+           shoe-attribution share applied.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="stop stop--key">
+    <p class="eyebrow">↓ the answer</p>
+    <h2>Three methods, one order of magnitude</h2>
+
+    <div class="bignum">67 s</div>
+    <p class="bignum-note">pooled across all three frameworks. 95% CI 36–99 seconds.</p>
+
+    <p>
+      The frameworks bracket the answer rather than converging on it. The
+      <strong>within-athlete</strong> route is the most conservative at
+      <strong>47 seconds</strong> with a wide interval. The
+      <strong>difference-in-differences</strong> route is the highest at
+      <strong>111 seconds</strong>, though its pre-period is women-only, which is a
+      real weakness and is flagged as one. Cohort survival sits between them.
+    </p>
+    <p>
+      They agree on magnitude, which is the claim worth making. A minute or so, not
+      five minutes.
+    </p>
+    <figure>
+      <div class="plate">
+        <img width="4119" height="2306" src="../outputs/figures/fig5_framework_comparison.png" fetchpriority="high"
+          alt="Comparison of the three frameworks' estimated shoe contributions with confidence intervals, spanning roughly 47 to 111 seconds and overlapping around the pooled estimate." />
+      </div>
+      <figcaption>Three estimates with intervals. They overlap; the pooled figure sits inside all of them.</figcaption>
+    </figure>
+    <figure>
+      <div class="plate">
+        <img width="3381" height="2718" src="../outputs/figures/fig6_decomposition_pie.png" loading="lazy"
+          alt="Decomposition of total elite marathon improvement into the shoe-attributed share and the remainder attributed to other factors." />
+      </div>
+      <figcaption>The shoe's share of the total improvement, and what is left over.</figcaption>
+    </figure>
+  </section>
+
+  <section class="stop">
+    <p class="eyebrow">↓ the control</p>
+    <h2>The track improved too, just far less</h2>
+    <p>
+      This is the part that makes the difference-in-differences credible. Track
+      10,000 m performances did improve over the same window, by about
+      <strong>0.3%</strong>. Road marathon improved by about <strong>1.6%</strong>.
+      If a general era effect were driving everything, those two numbers would be
+      much closer.
+    </p>
+    <p>
+      The gap between them is the shoe's fingerprint, and it points the right way:
+      the event where the technology matters most improved five times as much as
+      the event where it matters least.
+    </p>
+    <figure>
+      <div class="plate">
+        <img width="4105" height="2304" src="../outputs/figures/fig2_did_track_vs_road.png" loading="lazy"
+          alt="Difference-in-differences chart with road marathon and track 10,000 metre improvement trajectories diverging after 2017." />
+      </div>
+      <figcaption>Road against track. The divergence after 2017 is the estimate.</figcaption>
+    </figure>
+    <figure>
+      <div class="plate">
+        <img width="4084" height="2504" src="../outputs/figures/fig3_within_athlete_paired.png" loading="lazy"
+          alt="Within-athlete paired comparison showing each of seventeen athletes' pre-era and post-era elite marathon times connected by lines, mostly improving." />
+      </div>
+      <figcaption>Seventeen athletes with enough races on both sides of the line.</figcaption>
+    </figure>
+  </section>
+
+  <section class="stop">
+    <p class="eyebrow">↓ against the popular claim</p>
+    <h2>1.3×, not 5×</h2>
+    <p>
+      Sub-2:10 for men and sub-2:25 for women became more common after 2017, by a
+      factor of <strong>1.25 to 1.4</strong>. The figure commonly quoted in running
+      media is three to five times. Both describe a real increase; only one of them
+      is what the results tables show.
+    </p>
+    <p>
+      Changepoint detection puts the structural break in the cohort-survival
+      framework at <strong>2020</strong>, not 2017. That is consistent with elites
+      adopting first and the broader field following two to three years later,
+      which is also when the brand adoption timeline fills in.
+    </p>
+    <div class="panels">
+      <figure>
+        <div class="plate">
+          <img width="4105" height="2955" src="../outputs/figures/fig1_sub210_frequency_by_year.png" loading="lazy"
+            alt="Count of sub-2:10 marathon performances by year from 2010 to 2024, rising after 2017 by a factor of roughly 1.3." />
+        </div>
+        <figcaption><strong>Sub-2:10 frequency</strong> — a real rise, a modest one.</figcaption>
+      </figure>
+      <figure>
+        <div class="plate">
+          <img width="4054" height="2300" src="../outputs/figures/fig8_brand_adoption_timeline.png" loading="lazy"
+            alt="Timeline of super-shoe brand releases and adoption milestones from 2016 to 2024." />
+        </div>
+        <figcaption><strong>Adoption</strong> — elites first, the field behind them.</figcaption>
+      </figure>
+    </div>
+    <figure>
+      <div class="plate">
+        <img width="4105" height="2304" src="../outputs/figures/fig4_cohort_survival.png" loading="lazy"
+          alt="Cohort survival curves for the top-30 elite marathon cohort before and after the super-shoe era, showing a distributional shift." />
+      </div>
+      <figcaption>The top-30 cohort's distribution, shifted.</figcaption>
+    </figure>
+  </section>
+
+  <section class="stop stop--warn">
+    <p class="eyebrow">↓ what this cannot tell you</p>
+    <h2>The weakest joint, named</h2>
+    <p>
+      The track control is <strong>27 rows</strong>. That is thin, and it is the
+      input to the framework producing the highest estimate. The
+      difference-in-differences pre-period being women-only compounds it. Framework
+      1 should be read as the upper bracket rather than the answer, which is why
+      the pooled figure sits well below it.
+    </p>
+    <p>
+      Nobody's shoes were recorded. Era membership is a proxy for shoe use, so an
+      athlete racing in 2019 in older shoes is counted as treated. That biases the
+      estimate <em>down</em>, not up.
+    </p>
+    <p>
+      Four robustness scenarios re-run everything under alternative assumptions,
+      and the order of magnitude holds across all of them.
+    </p>
+    <figure>
+      <div class="plate">
+        <img width="4119" height="2304" src="../outputs/figures/fig7_sensitivity.png" loading="lazy"
+          alt="Sensitivity analysis across four alternative scenarios, with the pooled shoe contribution estimate remaining within a similar range in each." />
+      </div>
+      <figcaption>Four scenarios. The headline survives all of them.</figcaption>
+    </figure>
+  </section>
+
+  <section class="stop stop--end">
+    <p class="eyebrow">Finish · how it was built</p>
+    <h2>Where the numbers come from</h2>
+    <dl class="specs">
+      <div class="spec"><dt>Elite times</dt><dd>1,908 rows scraped from six major-marathon Wikipedia result tables, 2010–2024</dd></div>
+      <div class="spec"><dt>Control</dt><dd>27 track 10,000 m performances, 2016–2024 — thin, and flagged as such in the writeup</dd></div>
+      <div class="spec"><dt>Shoe timeline</dt><dd>Hand-compiled from manufacturer announcements and race archives</dd></div>
+      <div class="spec"><dt>Paired athletes</dt><dd>17 athletes with at least two pre-era and two post-era elite marathons</dd></div>
+      <div class="spec"><dt>Biomechanics</dt><dd><a href="https://doi.org/10.1007/s40279-017-0811-2">Hoogkamer et al. 2018</a>, Senefeld et al. 2023</dd></div>
+      <div class="spec"><dt>Reproduce</dt><dd><code>python src/analysis.py</code> — under 60 seconds, regenerates all 8 figures and the JSON summary</dd></div>
+      <div class="spec"><dt>Related</dt><dd>The marathon record's high fall probability in <a href="https://lyhjeremy.github.io/world-record-half-lives/">World-Record Half-Lives</a> is this era showing up in a survival model</dd></div>
+    </dl>
+  </section>
+
+</div>
+</div>
+
+<div class="wrap">
+  <section class="close">
+    <h2>About a minute of it is the shoe</h2>
+    <div class="cta-row">
+      <a class="btn btn-primary" href="../writeup.md">Read the full writeup</a>
+      <a class="textlink" href="https://github.com/lyhjeremy/marathon-shoe-revolution-decomposition">or the code and data</a>
+    </div>
+  </section>
+
+  <footer>
+    <p>
+      Marathon Shoe Revolution Decomposition ·
+      <a href="../writeup.md">Writeup</a> ·
+      <a href="../article.md">Narrative version</a> ·
+      <a href="https://github.com/lyhjeremy/marathon-shoe-revolution-decomposition">Source</a> ·
+      MIT © 2026 Jeremy Lee
+    </p>
+    <p>Analytical figures are CC-BY 4.0.</p>
+  </footer>
+</div>
+</body>
+</html>
