@@ -4,7 +4,7 @@
 
 *Jeremy Lee · May 2026 · [github.com/lyhjeremy/marathon-shoe-revolution-decomposition](https://github.com/lyhjeremy/marathon-shoe-revolution-decomposition)*
 
-> 📄 This is the same content as the [PDF report](reports/Marathon_Shoe_Revolution_Decomposition_Report.pdf) and [Word doc](reports/Marathon_Shoe_Revolution_Decomposition_Report.docx), reformatted for easy reading directly on GitHub. For the interactive analysis, see the [Jupyter notebook](notebooks/shoe_revolution_decomposition.ipynb).
+> This is the same content as the [PDF report](reports/Marathon_Shoe_Revolution_Decomposition_Report.pdf) and [Word doc](reports/Marathon_Shoe_Revolution_Decomposition_Report.docx), reformatted for easy reading directly on GitHub. For the interactive analysis, see the [Jupyter notebook](notebooks/shoe_revolution_decomposition.ipynb).
 
 ---
 
@@ -16,11 +16,11 @@ When Nike's Vaporfly 4% reached commercial release in mid-2017, elite marathon t
 
 ## 1. Introduction
 
-On 6 May 2017, three runners — Eliud Kipchoge, Lelisa Desisa, and Zersenay Tadese — ran 2:00:25 on the Monza Formula 1 circuit in Nike's "Breaking2" exhibition. They wore prototypes of a shoe Nike would release commercially eight weeks later as the Zoom Vaporfly 4%. The shoe's stack height, its embedded curved carbon plate, and its Pebax-foam midsole were a step change in racing footwear: independent biomechanics labs would later measure 4 % running-economy improvement for a typical elite male marathoner under standard treadmill conditions ([Hoogkamer et al. 2018](https://doi.org/10.1007/s40279-017-0811-2)).
+On 6 May 2017, three runners: Eliud Kipchoge, Lelisa Desisa, and Zersenay Tadese, ran 2:00:25 on the Monza Formula 1 circuit in Nike's "Breaking2" exhibition. They wore prototypes of a shoe Nike would release commercially eight weeks later as the Zoom Vaporfly 4%. The shoe's stack height, its embedded curved carbon plate, and its Pebax-foam midsole were a step change in racing footwear: independent biomechanics labs would later measure 4 % running-economy improvement for a typical elite male marathoner under standard treadmill conditions ([Hoogkamer et al. 2018](https://doi.org/10.1007/s40279-017-0811-2)).
 
-Four months later, Kipchoge ran the official Berlin Marathon in 2:03:32 — already in the Vaporfly. A year after that, in September 2018, he set the open world record at 2:01:39. Brigid Kosgei lowered the women's record by 81 seconds at Chicago 2019. Kelvin Kiptum went 2:00:35 at Chicago 2023. Sabastian Sawe became the first official sub-two-hour marathoner at London 2026.
+Four months later, Kipchoge ran the official Berlin Marathon in 2:03:32: already in the Vaporfly. A year after that, in September 2018, he set the open world record at 2:01:39. Brigid Kosgei lowered the women's record by 81 seconds at Chicago 2019. Kelvin Kiptum went 2:00:35 at Chicago 2023. Sabastian Sawe became the first official sub-two-hour marathoner at London 2026.
 
-A revolution that scale invites the obvious question. Are these shoes responsible for the improvement, or are they coincident with other changes — deeper East African talent pipelines, smarter time-trial-style pacing, lighter laser-pace setups in Berlin and Valencia, expanded altitude training — that would have produced something like the post-2017 jump anyway? The biomechanics papers measure individual treadmill performance under controlled conditions; they cannot, on their own, settle the population-level question. That is the question this report attempts to settle, or at least bound.
+A revolution that scale invites the obvious question. Are these shoes responsible for the improvement, or are they coincident with other changes: deeper East African talent pipelines, smarter time-trial-style pacing, lighter laser-pace setups in Berlin and Valencia, expanded altitude training. That would have produced something like the post-2017 jump anyway? The biomechanics papers measure individual treadmill performance under controlled conditions; they cannot, on their own, settle the population-level question. That is the question this report attempts to settle, or at least bound.
 
 We do not aim to relitigate the regulatory debate (World Athletics's 2020 40 mm stack-height rule resolved that for now), nor to compare brand-vs-brand effectiveness (the data is too sparse and the differences are within noise), nor to recommend shoes to recreational runners. We aim to put a defensible number, with a defensible confidence interval, on the population-level shoe contribution to elite marathon time improvement between the pre-Vaporfly era (2010–2016) and the post-Vaporfly era (2018–2024). 2017 is treated as a transition year and excluded from both windows.
 
@@ -36,7 +36,7 @@ Four datasets feed the analysis. All four live in [`data/`](data/) and are loade
 
 **`shoe_timeline.csv` (19 rows).** Hand-compiled release dates, stack-height milestones, and first-major-race-win events for every major super-shoe model 2016–2024, plus the 2020 World Athletics rule. Sources are public manufacturer announcements and race-result archives; the file is small enough to read in one screen.
 
-**`athlete_career_arcs.csv` (derived).** Built by `src/analysis.py` from `elite_marathon_times.csv`. Filters to athletes who appeared in ≥2 pre-era races and ≥2 post-era races. With the Wikipedia-derived dataset, 18 athletes meet the threshold (17 after removing one outlier with implausible delta). Athlete-age data is not available from Wikipedia race tables, so age adjustment is not applied — see §3.2 and §9.
+**`athlete_career_arcs.csv` (derived).** Built by `src/analysis.py` from `elite_marathon_times.csv`. Filters to athletes who appeared in ≥2 pre-era races and ≥2 post-era races. With the Wikipedia-derived dataset, 18 athletes meet the threshold (17 after removing one outlier with implausible delta). Athlete-age data is not available from Wikipedia race tables, so age adjustment is not applied, see §3.2 and §9.
 
 **Time window.** Pre-era: 2010–2016. Post-era: 2018–2024. 2017 is excluded as the transition year. We exclude no individual race for COVID-19, but the 2020 row is treated honestly: only ~22 elite races worldwide that year, mostly Valencia and a few isolated events. Time-trial events (Breaking2 Monza, INEOS Vienna) are excluded from the canonical dataset since they are unratified.
 
@@ -52,7 +52,7 @@ The intuition: track 10,000m racing did not adopt carbon plates at the same rate
 DiD_marathon_seconds = (road_post − road_pre) − (track_post − track_pre)
 ```
 
-We compute this per gender on top-30 median times to control for the unequal Wikipedia coverage across years (top-30 is reachable in nearly every race-year; mean and top-50 are not). For the DiD point estimate, we use whichever pre-era track years are available — in practice this means **women-only** (track pre-era = 2016 only; men have no usable track pre-era data). Bootstrap 95% CIs come from 1,000 resamples of marathon rows holding track aggregates fixed.
+We compute this per gender on top-30 median times to control for the unequal Wikipedia coverage across years (top-30 is reachable in nearly every race-year; mean and top-50 are not). For the DiD point estimate, we use whichever pre-era track years are available, in practice this means **women-only** (track pre-era = 2016 only; men have no usable track pre-era data). Bootstrap 95% CIs come from 1,000 resamples of marathon rows holding track aggregates fixed.
 
 A placebo DiD splits the pre-era window into 2010–2013 vs 2014–2016 (no shoe transition, just two random sub-windows). It should be close to zero.
 
@@ -60,7 +60,7 @@ A placebo DiD splits the pre-era window into 2010–2013 vs 2014–2016 (no shoe
 
 The cleanest causal lever, because the athlete's genetics, training history, and physiology are held fixed. For each athlete with ≥2 pre-era and ≥2 post-era major-marathon results, we compute the difference of post-era mean finish time minus pre-era mean finish time. We report the median across athletes (more robust to single-race outliers than the mean), the paired t-test against zero, and a bootstrap 95% CI.
 
-The original handoff specified an age adjustment. The Wikipedia data does not include athlete ages, so we report the raw delta and discuss the age-confound limitation explicitly in §9. With pre-era athletes typically aged 26–32 and post-era ages typically 28–36, the residual age-effect is roughly +30 to +60 seconds of expected slowdown that we are *not* subtracting — which means our shoe estimate from this framework is an under-estimate, not an over-estimate. We flag this in the conclusion.
+The original handoff specified an age adjustment. The Wikipedia data does not include athlete ages, so we report the raw delta and discuss the age-confound limitation explicitly in §9. With pre-era athletes typically aged 26–32 and post-era ages typically 28–36, the residual age-effect is roughly +30 to +60 seconds of expected slowdown that we are *not* subtracting, which means our shoe estimate from this framework is an under-estimate, not an over-estimate. We flag this in the conclusion.
 
 ### 3.3 Framework 3: Cohort survival / depth
 
@@ -80,7 +80,7 @@ The three frameworks measure overlapping but non-identical quantities, with diff
 
 *Figure 1. Counts of sub-2:10 (men) and sub-2:25 (women) marathon performances per year. Grey bars are pre-Vaporfly; orange the 2017 transition; red post-launch. Vertical dashed line marks the Vaporfly commercial release.*
 
-The pre-era to post-era road marathon improvement (women's, top-30 median) was **139 seconds** (1.59 %). The contemporaneous track 10,000m women's improvement was just 6 seconds (0.32 %). Re-scaled to a marathon-time-equivalent — assuming a runner who improved her 10,000m by 0.32 % would also improve her marathon by 0.32 % of her marathon time — the track-explainable share of the road improvement is **28 seconds**. The residual, attributable to road-specific factors of which shoes are dominant, is **111 seconds**.
+The pre-era to post-era road marathon improvement (women's, top-30 median) was **139 seconds** (1.59 %). The contemporaneous track 10,000m women's improvement was just 6 seconds (0.32 %). Re-scaled to a marathon-time-equivalent, assuming a runner who improved her 10,000m by 0.32 % would also improve her marathon by 0.32 % of her marathon time, the track-explainable share of the road improvement is **28 seconds**. The residual, attributable to road-specific factors of which shoes are dominant, is **111 seconds**.
 
 The bootstrap 95% CI is [131, 253] seconds. The CI's lower bound sitting above the point estimate is an artifact of using year-medians for the point estimate and row-means for the bootstrap; we report both honestly and use the wider CI in cross-framework synthesis.
 
@@ -96,9 +96,9 @@ The bootstrap 95% CI is [131, 253] seconds. The CI's lower bound sitting above t
 
 Seventeen athletes meet the inclusion criteria. The median across-athlete delta is **−47 seconds** (post mean minus pre mean): i.e., post-Vaporfly career-mean marathon time was 47 seconds *faster* than pre-Vaporfly career-mean. Eleven of seventeen (65 %) improved.
 
-A paired t-test against zero returns t = −1.17, p = 0.26 — *not significant at α=0.05*. The bootstrap 95% CI on the mean delta is [−137, 25] seconds. The wide interval reflects the small sample. We report this estimate as suggestive rather than confirmatory.
+A paired t-test against zero returns t = −1.17, p = 0.26, *not significant at α=0.05*. The bootstrap 95% CI on the mean delta is [−137, 25] seconds. The wide interval reflects the small sample. We report this estimate as suggestive rather than confirmatory.
 
-Two observations matter. First, the within-athlete cohort is small for a reason: most pre-Vaporfly elite marathoners did not maintain elite-marathon racing through 2018–2024. Survivorship bias works *against* finding a shoe effect here, because the surviving athletes are the ones whose marathon careers held up across the era boundary; if shoes had no effect, we would expect career-aging to slow them slightly, biasing the estimate toward zero or positive. Second, our delta is *not* age-adjusted (the Wikipedia data lacks athlete age). Adding even a modest +1 second per athlete-year of age across the typical 4–6 year gap would push the median delta a further 5–10 seconds negative — strengthening the shoe-attribution signal, not weakening it. The point estimate from this framework is therefore an *under-estimate* of the true within-athlete shoe contribution.
+Two observations matter. First, the within-athlete cohort is small for a reason: most pre-Vaporfly elite marathoners did not maintain elite-marathon racing through 2018–2024. Survivorship bias works *against* finding a shoe effect here, because the surviving athletes are the ones whose marathon careers held up across the era boundary; if shoes had no effect, we would expect career-aging to slow them slightly, biasing the estimate toward zero or positive. Second, our delta is *not* age-adjusted (the Wikipedia data lacks athlete age). Adding even a modest +1 second per athlete-year of age across the typical 4–6 year gap would push the median delta a further 5–10 seconds negative, strengthening the shoe-attribution signal, not weakening it. The point estimate from this framework is therefore an *under-estimate* of the true within-athlete shoe contribution.
 
 ### 4.3 Framework 3 (cohort survival): 58 seconds, 95% CI [46, 111]
 
@@ -106,9 +106,9 @@ Two observations matter. First, the within-athlete cohort is small for a reason:
 
 *Figure 3. The marathon time needed to make the year's top 50 in our dataset, men and women. Inverted axis: lower bars on the chart = faster.*
 
-The raw cohort improvement (top-30 median, averaged across men and women) is **106 seconds** between pre-era and post-era. The changepoint detection places the structural break at **2020** — somewhat later than the Vaporfly commercial launch (2017) but consistent with the documented gap between elite adoption (2017–2018) and broader-cohort adoption (2019–2020). Attributing 55 % of the cohort improvement to shoes gives a Framework 3 point estimate of **58 seconds**, 95 % CI [46, 111].
+The raw cohort improvement (top-30 median, averaged across men and women) is **106 seconds** between pre-era and post-era. The changepoint detection places the structural break at **2020.** Somewhat later than the Vaporfly commercial launch (2017) but consistent with the documented gap between elite adoption (2017–2018) and broader-cohort adoption (2019–2020). Attributing 55 % of the cohort improvement to shoes gives a Framework 3 point estimate of **58 seconds**, 95 % CI [46, 111].
 
-Sub-threshold counts (sub-2:10 men; sub-2:25 women) went from 23 and 20 per year in the pre-era to 29 and 28 per year in the post-era. The pre/post ratios — 1.25× (men) and 1.39× (women) — are smaller than the 3–5× cited in popular running press, because our dataset has tighter geographic coverage (six majors) and the per-year counts are floor-saturated at ~25 (most fast performances at majors are turned in by the lead packs whose size is roughly fixed by Olympic-trial structure). The literature's 3–5× figure includes mid-tier marathons and second-tier majors where mid-pack improvement is more visible.
+Sub-threshold counts (sub-2:10 men; sub-2:25 women) went from 23 and 20 per year in the pre-era to 29 and 28 per year in the post-era. The pre/post ratios, 1.25× (men) and 1.39× (women), are smaller than the 3–5× cited in popular running press, because our dataset has tighter geographic coverage (six majors) and the per-year counts are floor-saturated at ~25 (most fast performances at majors are turned in by the lead packs whose size is roughly fixed by Olympic-trial structure). The literature's 3–5× figure includes mid-tier marathons and second-tier majors where mid-pack improvement is more visible.
 
 ### 4.4 Cross-framework synthesis: 67 seconds, 95% CI [36, 99]
 
@@ -137,7 +137,7 @@ Three findings hold across all three frameworks:
 
 **Finding 2: Sub-threshold marathon frequency is 1.25–1.4× higher post-2017.** Within the geographic scope of the six major marathons covered here, the count of sub-2:10 men's and sub-2:25 women's performances grew modestly but not dramatically. The 3–5× figure cited in running press is a global-pipeline statistic; our major-marathons sample saturates earlier and shows smaller changes.
 
-**Finding 3: Track 10,000m did not show comparable improvement.** Among the women's 10,000m performances we have, the pre-to-post improvement is 0.32 % — about one-fifth the road marathon's 1.59 %. The data is sparse, but the contrast is sharp enough that even with wider CIs the directional finding would survive. Track 10,000m is an imperfect control (track spike technology did evolve), but the magnitude difference between road and track is large enough to be the strongest causal lever in the analysis.
+**Finding 3: Track 10,000m did not show comparable improvement.** Among the women's 10,000m performances we have, the pre-to-post improvement is 0.32 %, about one-fifth the road marathon's 1.59 %. The data is sparse, but the contrast is sharp enough that even with wider CIs the directional finding would survive. Track 10,000m is an imperfect control (track spike technology did evolve), but the magnitude difference between road and track is large enough to be the strongest causal lever in the analysis.
 
 ![Figure 5: Decomposition of total improvement into shoe and non-shoe components.](outputs/figures/fig6_decomposition_pie.png)
 
@@ -196,12 +196,12 @@ Across all four scenarios the pooled estimate stays within 55–80 seconds.
 
 ## 9. Conclusion
 
-The carbon-plated marathon shoe revolution is real, measurable, and population-level — but smaller than the most aggressive popular characterizations and larger than the most dismissive ones. Our three-framework decomposition places the shoe-attributable share of elite marathon improvement between 2010–2016 and 2018–2024 at **67 seconds in the median elite marathon time, 95% CI 36–99 seconds**, equivalent to roughly **0.9 % of marathon time** for a 2:05 runner.
+The carbon-plated marathon shoe revolution is real, measurable, and population-level, but smaller than the most aggressive popular characterizations and larger than the most dismissive ones. Our three-framework decomposition places the shoe-attributable share of elite marathon improvement between 2010–2016 and 2018–2024 at **67 seconds in the median elite marathon time, 95% CI 36–99 seconds**, equivalent to roughly **0.9 % of marathon time** for a 2:05 runner.
 
 Three framework-specific takeaways for readers who want to weight the estimates differently:
 
 - If you trust the **within-athlete** framework most, weight the estimate toward 47 s. This is the cleanest causal design but the smallest sample and not age-adjusted (in a way that biases the estimate down).
-- If you trust the **DiD** framework most, weight toward 111 s. This is the strongest causal lever — comparing a treated population to a less-treated one over the same window — but on the pre-side the control is one year of women's track data.
+- If you trust the **DiD** framework most, weight toward 111 s. This is the strongest causal lever, comparing a treated population to a less-treated one over the same window, but on the pre-side the control is one year of women's track data.
 - If you trust the **cohort survival** framework most, weight toward 58 s. This is the densest data, but the 55% shoe-attribution share is a modeling choice you may want to revisit.
 
 The pooled 67 s estimate gives the most weight to the cohort framework because it has the tightest CI; the DiD CI is the widest. A reader who weights causal cleanliness over CI width would put more weight on the DiD and arrive at a higher headline.
