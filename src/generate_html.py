@@ -1,6 +1,6 @@
 """
-Generate a self-contained HTML article at web/index.html with all figures
-embedded as base64 data URIs. Drop-in deployable (no external assets).
+Generate the short HTML report at web/index.html with all figures
+embedded as base64 data URIs. Fonts and color tokens come from ../assets/family.css.
 """
 import base64
 import json
@@ -12,6 +12,59 @@ FIG_DIR = os.path.join(PROJECT_DIR, 'outputs', 'figures')
 IMG_DIR = os.path.join(PROJECT_DIR, 'data', 'images')
 SUMMARY_PATH = os.path.join(PROJECT_DIR, 'outputs', 'analysis_summary.json')
 OUT_PATH = os.path.join(PROJECT_DIR, 'web', 'index.html')
+
+# Ledger "road" family. Tokens and fonts come from ../assets/family.css.
+REPORT_CSS = """
+* { box-sizing:border-box; border-radius:0; }
+body { margin:0; background:var(--paper); color:var(--ink); font-family:var(--font-head); line-height:1.65;
+       border-top:6px solid var(--signal-2); }
+a { color:var(--signal); }
+a:hover { color:var(--ink); }
+:focus-visible { outline:2px solid var(--signal); outline-offset:3px; }
+.bar { display:block; background:var(--ink); color:var(--paper); text-align:center; padding:10px 18px;
+       font:600 14.5px/1.45 var(--font-body); text-decoration:none; }
+.bar:hover { color:var(--paper); text-decoration:underline; }
+.container { max-width:760px; margin:0 auto; padding:30px 22px 80px; }
+.crumb { font:400 12.5px/1.4 var(--font-mono); text-transform:uppercase; letter-spacing:.08em; color:var(--ink-2);
+         border-bottom:1px solid var(--rule); padding-bottom:10px; margin:0 0 26px; }
+.crumb a { color:var(--ink-2); }
+h1 { font:700 clamp(40px,7vw,68px)/.95 var(--font-display); text-transform:uppercase; letter-spacing:-.005em; margin:0 0 14px; }
+.sub { font-family:var(--font-body); color:var(--ink-2); font-size:16px; margin:0 0 6px; }
+h2 { font:700 clamp(28px,4.2vw,38px)/1.02 var(--font-display); text-transform:uppercase; margin:52px 0 14px; }
+h3 { font:600 22px/1.1 var(--font-display); text-transform:uppercase; letter-spacing:.02em; color:var(--signal-2); margin:28px 0 6px; }
+p { font-size:17.5px; margin:0 0 16px; }
+p.small { font-family:var(--font-body); font-size:14px; color:var(--ink-2); }
+.lead { font-size:19.5px; margin:26px 0 0; }
+ul { padding-left:1.2em; } li { margin:0 0 8px; font-size:17px; }
+figure { margin:30px 0; }
+figure img { width:100%; height:auto; display:block; border:1px solid var(--rule); background:var(--panel); }
+figure.photo img { border:0; }
+figcaption { font-family:var(--font-body); font-size:14px; color:var(--ink-2); margin-top:9px; }
+table { width:100%; border-collapse:collapse; }
+b, strong { color:var(--ink); }
+code { font-family:var(--font-mono); font-size:.86em; background:var(--panel); padding:.1em .35em; border:1px solid var(--rule); }
+pre { background:var(--panel); color:var(--ink); border:1px solid var(--rule); padding:16px 18px; overflow-x:auto;
+      font-family:var(--font-mono); font-size:13.5px; line-height:1.55; }
+.headline { border-top:2px solid var(--ink); border-bottom:2px solid var(--ink); padding:18px 0; margin:30px 0; }
+.headline .label { font:400 12.5px/1.4 var(--font-mono); text-transform:uppercase; letter-spacing:.1em; color:var(--ink-2); }
+.headline .big { font:700 clamp(56px,10vw,88px)/1 var(--font-display); color:var(--signal); text-transform:uppercase; }
+.headline .ci { font:400 14.5px/1.4 var(--font-mono); color:var(--ink-2); margin-top:6px; }
+.framework-row { display:grid; grid-template-columns:1fr 90px 120px; gap:14px; align-items:baseline;
+                 padding:12px 0; border-bottom:1px solid var(--rule); font-family:var(--font-body); }
+.framework-row .label-cell { font-size:15px; }
+.framework-row .est { font:700 24px/1 var(--font-display); text-align:right; }
+.framework-row .ci { font:400 14px/1.3 var(--font-mono); color:var(--ink-2); text-align:right; }
+.framework-row.pooled { border-bottom:2px solid var(--ink); }
+.framework-row.pooled .est { color:var(--signal); }
+.footer { margin-top:56px; padding-top:22px; border-top:1px solid var(--rule); font-family:var(--font-body); }
+.footer p { font-size:14px; color:var(--ink-2); }
+.footer a { color:var(--ink-2); }
+@media (max-width:640px) {
+  .framework-row { grid-template-columns:1fr 1fr; }
+  .framework-row .label-cell { grid-column:1 / -1; }
+  .framework-row .est { text-align:left; }
+}
+"""
 
 
 def img_data_uri(path):
@@ -53,202 +106,125 @@ def main():
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>How Much of the Post-2017 Marathon Revolution Is the Shoe?</title>
+<title>How much of the post-2017 marathon speed-up is the shoe? Short report</title>
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="description" content="A three-framework decomposition of elite marathon improvement, 2010–2024.">
-<style>
-:root {{
-    --text:#1a1a2e; --soft:#555; --muted:#888;
-    --men:#2563eb; --women:#dc2626; --alt:#059669;
-    --bg:#fafaf7; --card:#fff; --rule:#e5e2da;
-}}
-* {{ box-sizing:border-box; }}
-body {{
-    margin:0; padding:0; font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;
-    background:var(--bg); color:var(--text); line-height:1.6;
-}}
-.hero {{
-    width:100%; height:380px; background:#222 center/cover no-repeat;
-    background-image:url('{hero}');
-    position:relative;
-}}
-.hero::after {{
-    content:""; position:absolute; inset:0;
-    background:linear-gradient(180deg,rgba(0,0,0,.35) 0%,rgba(0,0,0,.7) 100%);
-}}
-.hero-text {{
-    position:relative; z-index:1; height:100%;
-    max-width:880px; margin:0 auto; padding:0 28px;
-    display:flex; flex-direction:column; justify-content:flex-end; padding-bottom:34px;
-    color:#fff;
-}}
-.hero-text h1 {{ font-family:Georgia,serif; font-size:38px; line-height:1.15; margin:0 0 12px 0; }}
-.hero-text .sub {{ font-size:17px; opacity:.92; max-width:640px; }}
-.hero-text .byline {{ margin-top:14px; font-size:14px; opacity:.85; font-style:italic; }}
-.container {{ max-width:760px; margin:0 auto; padding:48px 28px 80px; }}
-h2 {{ font-family:Georgia,serif; font-size:26px; margin:48px 0 12px; color:var(--text); }}
-h3 {{ font-family:Georgia,serif; font-size:18px; margin:32px 0 8px; color:var(--text); }}
-p {{ font-size:17px; margin:0 0 16px; }}
-.lead {{ font-size:19px; color:var(--soft); margin-bottom:28px; }}
-figure {{ margin:36px 0; }}
-figure img {{ width:100%; height:auto; border-radius:8px; box-shadow:0 1px 3px rgba(0,0,0,.06); }}
-figcaption {{ font-size:14px; color:var(--muted); font-style:italic; text-align:center; margin-top:10px; }}
-blockquote {{
-    border-left:4px solid var(--women); margin:24px 0; padding:14px 22px;
-    background:var(--card); border-radius:0 8px 8px 0; font-size:18px; font-style:italic;
-}}
-table {{
-    width:100%; border-collapse:collapse; margin:28px 0; font-size:15px;
-    background:var(--card); border-radius:8px; overflow:hidden;
-    box-shadow:0 1px 3px rgba(0,0,0,.05);
-}}
-th {{ background:var(--text); color:#fff; padding:11px 14px; text-align:left; font-weight:600; }}
-td {{ padding:10px 14px; border-bottom:1px solid var(--rule); }}
-tr:last-child td {{ border-bottom:none; }}
-tr:nth-child(even) td {{ background:#f8f6f0; }}
-b, strong {{ color:var(--text); }}
-.code, code {{
-    background:#f3eee3; padding:2px 6px; border-radius:4px; font-family:"SF Mono",Consolas,monospace; font-size:14px;
-}}
-pre {{
-    background:var(--text); color:#f8f8f2; padding:18px 22px; border-radius:8px; overflow-x:auto;
-    font-family:"SF Mono",Consolas,monospace; font-size:14px; line-height:1.5;
-}}
-.headline {{
-    background:var(--card); border-left:6px solid var(--women); padding:22px 26px;
-    margin:32px 0; border-radius:0 8px 8px 0;
-    box-shadow:0 1px 3px rgba(0,0,0,.05);
-}}
-.headline .big {{ font-size:34px; font-weight:bold; font-family:Georgia,serif; color:var(--women); }}
-.headline .label {{ color:var(--soft); font-size:14px; text-transform:uppercase; letter-spacing:.05em; margin-bottom:6px; }}
-.headline .ci {{ color:var(--soft); font-size:15px; margin-top:6px; }}
-.framework-row {{
-    display:grid; grid-template-columns:1fr 110px 160px; gap:16px;
-    padding:14px 0; border-bottom:1px solid var(--rule);
-}}
-.framework-row:last-child {{ border-bottom:none; }}
-.framework-row .est {{ font-weight:bold; font-size:18px; color:var(--text); text-align:right; }}
-.framework-row .ci {{ color:var(--muted); font-size:14px; text-align:right; }}
-.framework-row .label-cell {{ font-size:15px; }}
-.framework-row.pooled {{ background:#f8f6f0; padding:18px 14px; border-radius:6px; border-bottom:none; }}
-.framework-row.pooled .est {{ color:var(--women); }}
-.footer {{
-    margin-top:60px; padding-top:30px; border-top:2px solid var(--rule);
-    font-size:14px; color:var(--muted);
-}}
-.footer a {{ color:var(--soft); }}
-@media (max-width:640px) {{
-    .hero {{ height:280px; }}
-    .hero-text h1 {{ font-size:28px; }}
-    .container {{ padding:32px 20px 60px; }}
-    .framework-row {{ grid-template-columns:1fr 1fr; }}
-}}
-</style>
+<meta name="description" content="A three-framework decomposition of elite marathon improvement, 2010 to 2024. Pooled shoe contribution: {pool['pooled_estimate_seconds']:.0f} seconds.">
+<link rel="stylesheet" href="../assets/family.css">
+<style>{REPORT_CSS}</style>
 </head>
 <body>
-
-<div class="hero">
-  <div class="hero-text">
-    <h1>How Much of the Post-2017 Marathon Revolution Is the Shoe?</h1>
-    <div class="sub">A three-framework decomposition of elite marathon improvement, 2010–2024.</div>
-    <div class="byline">Jeremy Lee · May 2026</div>
-  </div>
-</div>
+<a class="bar" href="../overview/" data-overview-link>Read the full writeup&nbsp;&rarr;</a>
 
 <div class="container">
+<p class="crumb"><a href="../">The shoe decomposition</a> &middot; short report</p>
+<h1>How much of the post-2017 marathon speed-up is the shoe?</h1>
+<p class="sub">A three-framework decomposition of elite marathon improvement, 2010&ndash;2024. Jeremy Lee, May 2026.</p>
 
-<p class="lead">When Nike's Vaporfly 4% reached commercial release in mid-2017, elite marathon times began falling at a pace that startled even close observers of the sport. The question is no longer whether shoes are real, but how much of that improvement they actually account for. Three frameworks, 1,908 elite races, one stubborn question.</p>
+<figure class="photo">
+  <img src="{hero}" alt="The lead pack of runners on the road at the 2011 Berlin Marathon">
+  <figcaption>Berlin Marathon 2011, before the carbon-plated era. Photo by Mr.choppers, CC-BY-SA 3.0, Wikimedia Commons.</figcaption>
+</figure>
+
+<p class="lead">Nike&rsquo;s Vaporfly 4% went on general sale in 2017, and elite marathon times dropped quickly after it. This report asks how many seconds of that drop the shoe accounts for, using 1,908 elite performances and three methods that control for different things.</p>
 
 <div class="headline">
   <div class="label">Pooled shoe contribution</div>
   <div class="big">{pool['pooled_estimate_seconds']:.0f} seconds</div>
-  <div class="ci">95% CI {pool['pooled_ci_low']:.0f}–{pool['pooled_ci_high']:.0f} s · roughly 0.9% of a 2:05 marathon</div>
+  <div class="ci">95% CI {pool['pooled_ci_low']:.0f}&ndash;{pool['pooled_ci_high']:.0f} s &middot; about 0.9% of a 2:05 marathon</div>
 </div>
 
-<h2>What I was actually trying to answer</h2>
+<h2>The question</h2>
 
-<p>The question I picked is empirical and bounded: <b>of the total elite marathon time improvement between the pre-Vaporfly era (2010–2016) and the post-Vaporfly era (2018–2024), how much, in seconds, is attributable to the shoe?</b></p>
+<p>Of the elite marathon improvement between the pre-Vaporfly era (2010&ndash;2016) and the post-Vaporfly era (2018&ndash;2024), how much, in seconds, comes from the shoe? 2017 is a transition year and sits in neither window.</p>
 
-<p>I refused to pick one framework. Instead I built three independent decompositions and asked whether they agreed.</p>
+<p>No single method answers that cleanly, so the analysis runs three and compares them.</p>
 
-<h3>Framework 1 — Difference-in-Differences</h3>
-<p>Compare road marathon improvement to track 10,000m improvement over the same window. Track racing did not adopt carbon plates at the same rate. If shoes are the dominant cause of road improvement, road should have improved faster than track. The difference is the shoe-attributable share.</p>
+<h3>Framework 1: difference-in-differences</h3>
+<p>Road marathon improvement minus track 10,000 m improvement over the same window, with the track change rescaled to marathon time. Track racing did not take up carbon plates at the same rate, so anything that sped up both events cancels out.</p>
 
-<h3>Framework 2 — Within-athlete paired</h3>
-<p>Find athletes who raced elites in both eras. The same person's pre-vs-post delta cancels genetics, training history, physiology. Whatever's left is non-genetic, mostly the shoe.</p>
+<h3>Framework 2: within-athlete paired</h3>
+<p>Athletes with at least two elite marathons in each era. Comparing a runner with themselves holds genetics and training history fixed. The race tables carry no ages, so the change is not age-adjusted.</p>
 
-<h3>Framework 3 — Cohort survival</h3>
-<p>Count sub-2:10 (men) and sub-2:25 (women) performances per year. Find the changepoint. Attribute a share of the cohort improvement to shoes.</p>
+<h3>Framework 3: cohort survival</h3>
+<p>Counts of sub-2:10 (men) and sub-2:25 (women) performances per year, a changepoint search on those counts, and the shift in the top-30 median between eras, of which 55% is attributed to shoes.</p>
 
 <h2>The three estimates</h2>
 
 <figure>
-  <img src="{figs['fig5']}" alt="Forest plot comparing the three framework estimates and the pooled value">
-  <figcaption>Three frameworks plotted on the same x-axis (seconds of shoe-attributable marathon improvement). The within-athlete is the most conservative; the DiD is the highest. The pooled estimate sits between them.</figcaption>
+  <img src="{figs['fig5']}" alt="Forest plot of the three framework estimates and the pooled value, with the within-athlete interval crossing zero and the difference-in-differences interval far to the right">
+  <figcaption>The three frameworks and the pooled value on one axis. This image comes from an earlier run of the script and labels the difference-in-differences at 117 s and the pooled value at 69 s [34, 104]; the current summary file, used everywhere else, gives 111 s and 67 s [36, 99].</figcaption>
 </figure>
 
 <div class="framework-row">
-  <div class="label-cell"><b>Framework 1.</b> Difference-in-Differences (track vs road)</div>
+  <div class="label-cell"><b>Framework 1.</b> Difference-in-differences (road vs track, women-only pre-era)</div>
   <div class="est">{f1['shoe_contribution_seconds']:.0f} s</div>
   <div class="ci">[{f1['ci_low']:.0f}, {f1['ci_high']:.0f}]</div>
 </div>
 <div class="framework-row">
   <div class="label-cell"><b>Framework 2.</b> Within-athlete paired (n={f2['n_athletes']}, p={f2['paired_p']:.2f})</div>
   <div class="est">{f2['shoe_contribution_seconds']:.0f} s</div>
-  <div class="ci">[{-f2['ci_high']:.0f}, {-f2['ci_low']:.0f}]</div>
+  <div class="ci">[{f2['ci_low']:.0f}, {f2['ci_high']:.0f}]</div>
 </div>
 <div class="framework-row">
-  <div class="label-cell"><b>Framework 3.</b> Cohort survival (changepoint = {f3['changepoint_year']})</div>
+  <div class="label-cell"><b>Framework 3.</b> Cohort survival (changepoint {f3['changepoint_year']})</div>
   <div class="est">{f3['shoe_contribution_seconds']:.0f} s</div>
   <div class="ci">[{f3['ci_low']:.0f}, {f3['ci_high']:.0f}]</div>
 </div>
 <div class="framework-row pooled">
-  <div class="label-cell"><b>Pooled estimate</b> (inverse-CI-width weighted)</div>
+  <div class="label-cell"><b>Pooled</b> (weighted by inverse squared CI width)</div>
   <div class="est">{pool['pooled_estimate_seconds']:.0f} s</div>
   <div class="ci">[{pool['pooled_ci_low']:.0f}, {pool['pooled_ci_high']:.0f}]</div>
 </div>
 
-<h2>The frequency story</h2>
+<p class="small">The difference-in-differences interval lies above its point estimate because the point uses year medians and the bootstrap resamples row means. Both are reported as computed.</p>
+
+<h2>Sub-2:10 became more common, but not five times more</h2>
 
 <figure>
-  <img src="{figs['fig1']}" alt="Sub-2:10 (men) and sub-2:25 (women) marathon performance counts per year">
-  <figcaption>Sub-2:10 (men) and sub-2:25 (women) marathon performances per year. Grey is pre-Vaporfly, red is post. The 2017 transition year is orange. The Vaporfly launch is the dashed line.</figcaption>
+  <img src="{figs['fig1']}" alt="Bar charts of sub-2:10 men's and sub-2:25 women's marathon performances per year, 2010 to 2024, higher after 2017">
+  <figcaption>Sub-2:10 (men) and sub-2:25 (women) performances per year in the dataset. The dashed line is the Vaporfly&rsquo;s commercial release.</figcaption>
 </figure>
 
-<p>The pre-era averaged <b>23 sub-2:10 men's performances per year</b> across our six-major dataset; the post-era averaged <b>29</b>. That's a 1.25× increase, not the 3–5× quoted in popular running press. The difference between my number and the popular figure isn't disagreement — it's scope. The 3–5× figure comes from including mid-tier marathons where shoe-driven improvement is more visible in the middle ranks.</p>
+<p>The pre-era averaged <b>23 sub-2:10 men&rsquo;s performances per year</b> across the major-marathon dataset and the post-era averaged <b>29</b>, a 1.25&times; rise (1.39&times; for women under 2:25). Running media often quotes three to five times. That figure covers a wider set of races, including second-tier marathons, where the middle of the field has more room to move.</p>
 
-<h2>Track 10,000m didn't move the same way</h2>
+<h2>Track 10,000 m improved far less</h2>
 
 <figure>
-  <img src="{figs['fig2']}" alt="Road marathon and track 10,000m improvements 2010-2024">
-  <figcaption>Road marathon top-50 mean time vs track 10,000m top-50 mean time, normalized to 2010 baseline. The road curve diverges sharply after 2017; the track curve doesn't.</figcaption>
+  <img src="{figs['fig2']}" alt="Road marathon and track 10,000 metre times normalized to 2010, with the road line falling further after 2017">
+  <figcaption>Road marathon top-50 mean against track 10,000 m top-50 mean, each normalized to 2010.</figcaption>
 </figure>
 
-<p>Track 10,000m did improve — Cheptegei's 26:11 in 2020, Chebet's 28:54 in 2024. Just less than the road marathon did. The post-era times improved <b>~0.3%</b>. The road marathon top-30 median improved <b>~1.6%</b> over the same window. That ratio — roughly 5× — is the cleanest causal lever in the analysis.</p>
+<p>Track times did improve: Cheptegei ran 26:11 in 2020 and Chebet 28:54 in 2024. Across the eras the women&rsquo;s track numbers moved about <b>0.3%</b> while the women&rsquo;s road marathon top-30 median moved about <b>1.6%</b>. That gap, roughly five to one, is the main evidence for something road-specific, and the shoe is the most obvious road-specific change. The track control is thin, though: 27 performances, and only 2016 on the pre-era side.</p>
 
-<h2>What this means</h2>
+<h2>What it adds up to</h2>
+
+<p>The shoe accounts for about a minute of elite marathon time, close to 1% and well short of the 4% running-economy gain measured on treadmills. Running economy is not race time, and deeper East African fields, pace-controlled races and altitude training changed over the same years. The shoe gets most of the credit in public argument partly because it has a release date.</p>
 
 <figure>
-  <img src="{figs['fig6']}" alt="Decomposition of total 2016 to 2023 elite improvement">
-  <figcaption>Indicative decomposition of the ~240 seconds of total elite improvement between 2016 and 2023. The shoe slice is grounded in this study's pooled estimate; the other slices are post-hoc carve-ups based on running-stats literature.</figcaption>
+  <img src="{figs['fig6']}" alt="Ring chart splitting an assumed 240 seconds of improvement into the shoe estimate and four other slices">
+  <figcaption>Only the shoe slice comes from this study. The 240-second total and the split of the remainder are fixed assumptions in the plotting code, for illustration.</figcaption>
 </figure>
 
-<p>Shoes account for measurable, statistically credible improvement in elite marathon times. The contribution is real but smaller than headline framings suggest — <b>around 1% of marathon time, not 4%</b>. The remaining improvement comes from deeper African talent pipelines, pacing improvements, altitude training, and race-craft. Shoes are the most-cited cause because they are the most discrete and dateable, not because they are the largest cause.</p>
+<h2>Limits</h2>
+<ul>
+  <li>The track control has 27 rows, and its pre-era side is one year of women&rsquo;s results. Framework 1 is the weakest of the three for that reason.</li>
+  <li>The within-athlete sample is 17 runners and the paired t-test is not significant (p = {f2['paired_p']:.2f}).</li>
+  <li>The 55% shoe share in Framework 3 is a modeling choice, not an estimate.</li>
+  <li>Era stands in for shoe use. Nobody&rsquo;s footwear is recorded per race.</li>
+</ul>
 
-<blockquote>Shoes are the most-cited cause not because they are the largest single cause, but because they are the most discrete and dateable one.</blockquote>
-
-<h2>Reproducing this</h2>
+<h2>Reproduce</h2>
 
 <pre>git clone https://github.com/lyhjeremy/marathon-shoe-revolution-decomposition.git
 cd marathon-shoe-revolution-decomposition
 pip install -r requirements.txt
 python src/analysis.py</pre>
 
-<p>Wall-clock time: under 60 seconds on an M1 MacBook. The full PDF report (with sensitivity analysis and limitations) is in <code>reports/</code>. The Jupyter notebook reproduces every number cell-by-cell.</p>
+<p>Under a minute on an M1 MacBook. The <a href="../reports/Marathon_Shoe_Revolution_Decomposition_Report.pdf">PDF report</a> has the sensitivity analysis and full limitations; the notebook in <code>notebooks/</code> reproduces every number cell by cell.</p>
 
 <div class="footer">
-  <p>Full code, data, and methodology at <a href="https://github.com/lyhjeremy/marathon-shoe-revolution-decomposition">github.com/lyhjeremy/marathon-shoe-revolution-decomposition</a></p>
-  <p>Hero photograph: Berlin Marathon 2011 by Mr.choppers, CC-BY-SA 3.0 via Wikimedia Commons. All analytical figures are original to this work and CC-BY 4.0.</p>
+  <p>Code, data and method: <a href="https://github.com/lyhjeremy/marathon-shoe-revolution-decomposition">github.com/lyhjeremy/marathon-shoe-revolution-decomposition</a> &middot; <a href="../">project page</a> &middot; <a href="../overview/">full write-up</a></p>
+  <p>Photo: Berlin Marathon 2011 by Mr.choppers, CC-BY-SA 3.0 via Wikimedia Commons. Analytical figures are original to this work and CC-BY 4.0. Code MIT &copy; 2026 Jeremy Lee.</p>
 </div>
 
 </div>

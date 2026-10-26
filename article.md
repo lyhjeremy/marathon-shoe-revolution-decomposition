@@ -1,91 +1,89 @@
 ---
-title: "I tried to figure out how much of the marathon revolution is actually the shoe"
-description: "Three frameworks, 1,908 elite races, one stubborn question. What I found when I actually did the math."
+title: "I tried to work out how much of the marathon revolution is the shoe"
+description: "Three frameworks, 1,908 elite races and one long-running argument. The answer came out at about a minute."
 author: "Jeremy Lee"
 date: 2026-05-20
 tags: [marathon, super-shoes, vaporfly, running, data-analysis, python, side-project]
 ---
 
 ![A pack of elite marathon runners on the road](./data/images/hero_marathon_runners.jpg)
-*Hero photo: the lead pack mid-race. Credit: Wikimedia Commons, CC-BY-SA, see image credits at the end for source.*
+*Berlin Marathon 2011. Photo by Mr.choppers, CC-BY-SA 3.0, Wikimedia Commons; full credits at the end.*
 
-## The fight that won't end
+## The argument that never ends
 
-If you spend any time around running people, you eventually watch the same argument play out.
+Spend enough time around runners and you will watch the same thread play out.
 
-Someone posts that Kelvin Kiptum ran 2:00:35. Someone else replies that it doesn't count, the shoes did it. A third person counters that the shoes are only worth 1%, the rest is training. A fourth links to a 2019 paper that measured 4% running-economy improvement on a treadmill. Someone says yeah, but treadmills aren't races. Someone says shoes aren't doping. Someone says of course they are. Nobody ever lands the plane.
+Someone posts that Kelvin Kiptum ran 2:00:35. Someone replies that it doesn't count because the shoes did it. A third person says the shoes are worth 1% and the rest is training. A fourth links a paper that measured a 4% running-economy gain on a treadmill. Someone points out that treadmills aren't races. Someone says shoes aren't doping, someone else says of course they are, and the thread dies without an answer.
 
-I had the same question myself, mostly because I'd been watching road marathon records fall at a pace that didn't match anything in the sport's history. World records had been improving roughly one second a year through the 1990s and 2000s. From 2017 to 2024 the men's record dropped 111 seconds. Was that the shoe?
+I had the same question. Road marathon records were falling faster than I could remember them falling, and I wanted to know how much of that was the shoe.
 
-The honest answer is that nobody had really tried to bound the question with data instead of opinion. The biomechanics papers measured individual athletes on treadmills. The running press cited a 3–5× increase in sub-2:10 performances and said *probably mostly shoes*. The athletes themselves said various things depending on what they were sponsored to say. There wasn't a number you could point at and say: this is what the shoe accounted for in the population.
+As far as I could find, nobody had tried to bound it with population data. The biomechanics papers tested individual runners on treadmills. The running press quoted a three-to-five-fold rise in sub-2:10 performances and said it was probably mostly shoes. Athletes said different things depending, in part, on who sponsored them. There was no number for the shoe's share across the elite field.
 
-So I sat down with the data.
+So I collected the data.
 
-## What I was actually trying to answer
+## The question
 
-The question I wanted to answer is: **of the total elite marathon time improvement between the pre-Vaporfly era (2010–2016) and the post-Vaporfly era (2018–2024), how much, in seconds, is attributable to the shoe?**
+**Of the elite marathon improvement between the pre-Vaporfly era (2010–2016) and the post-Vaporfly era (2018–2024), how many seconds come from the shoe?**
 
-That's not the same question as "do shoes work?" (yes. The lab evidence is solid) or "should they be banned?" (a values question, not a data one). The question I picked is empirical and bounded: pre-vs-post, in seconds, with a confidence interval.
+That is narrower than "do shoes work?" (the lab evidence says yes) or "should they be banned?" (a question about values). It has a before, an after, a unit and room for a confidence interval.
 
-I refused to pick one framework. Instead I built three:
+I didn't want to rest the answer on one method, so I built three:
 
-- **Framework 1, Difference-in-Differences:** compare road marathon improvement to track 10,000m improvement over the same window. Track racing did not adopt carbon plates at the same rate or with the same effect. If shoes are the dominant cause of road improvement, road should have improved faster than track. The difference is the shoe-attributable share.
+- **Difference-in-differences.** Compare road marathon improvement with track 10,000 m improvement over the same years. Track racing took up carbon plates later and with smaller claimed gains. If shoes drove the road improvement, road should have improved faster than track, and the gap is the shoe's share.
+- **Within-athlete paired.** Find runners who raced elite marathons in both eras. Comparing a runner with themselves cancels genetics, training history and physiology.
+- **Cohort survival.** Count sub-2:10 (men) and sub-2:25 (women) performances per year, find the year the trend breaks, and attribute a share of the change in the top-30 median to shoes.
 
-- **Framework 2, Within-athlete paired:** find athletes who raced elites in both eras. The same person's pre-vs-post delta cancels genetics, training history, and physiology. Whatever's left is non-genetic, mostly the shoe.
-
-- **Framework 3, Cohort survival:** count sub-2:10 (men) and sub-2:25 (women) performances per year. Find the changepoint. Attribute a share of the cohort improvement to shoes.
-
-Each framework would give a different answer. The interesting question wasn't which one was right. It was whether they agreed.
+I expected three different answers. What I wanted to know was whether they would be in the same range.
 
 ## What I found
 
-The short version: **shoes account for about 67 seconds of elite marathon improvement, 95% CI 36–99 seconds.** That's roughly 0.9% of a 2:05 marathon. The three frameworks individually returned 47, 58, and 111 seconds. They disagree, but they disagree in the same direction and roughly the same order of magnitude.
+**Shoes account for about 67 seconds of elite marathon improvement, 95% CI 36–99 seconds**, roughly 0.9% of a 2:05 marathon. The three frameworks gave 47, 58 and 111 seconds. They disagree, but all of them land at about one to two minutes rather than five.
 
 ![Forest plot of three framework estimates](./outputs/figures/fig5_framework_comparison.png)
-*All three frameworks plotted on the same x-axis (seconds of shoe-attributable marathon improvement). The within-athlete is the most conservative; the DiD is the highest. The pooled estimate sits between them.*
+*The three frameworks on one axis, in seconds of shoe-attributable improvement. This image is from an earlier run of the script and labels the difference-in-differences at 117 s and the pooled value at 69 s; the current results are 111 s and 67 s.*
 
 Three things surprised me.
 
-**The number is lower than the popular framing.** If you read running press through 2020–2022, you'd come away thinking shoes were worth 3–5%, maybe 6 minutes off a 2-hour runner. The biomechanics labs gave 4% running-economy gains, which most readers interpret as 4% time gains. But running economy ≠ time. The translation from lab to race is rough, and at the elite level a 4% economy gain probably yields 1–2% race-time gain at best. My pooled estimate of 0.9% lands at the conservative end of that range. The remaining 2–3% of total post-2017 elite improvement is coming from somewhere else: deeper African talent pipelines, pacing improvements, altitude training, race-craft.
+**The number is lower than the popular version.** Reading the running press in 2020–2022, you would think shoes were worth 3–5%, several minutes for a two-hour runner. The labs reported 4% running-economy gains, and many readers took that to mean 4% faster races. Economy is not race time. At the elite level a 4% economy gain probably yields 1–2% in race time at most, and my pooled 0.9% is at the low end of that. The rest of the post-2017 improvement comes from deeper East African fields, better pacing, altitude training and race craft.
 
-**The track control wasn't as clean as I hoped.** Track 10,000m did improve: Cheptegei's 26:11 in 2020, Chebet's 28:54 in 2024. Just less than the road marathon did. The pre-era track top times barely changed. The post-era times improved ~0.3%. The road marathon top-30 median improved ~1.6% over the same window. That ratio, roughly 5×, is the cleanest causal lever in the analysis. Road improved more than track, in a way that's hard to explain except by something road-specific. Shoes are the most discrete road-specific thing that changed.
+**The track control was messier than I hoped.** Track 10,000 m times did improve: Cheptegei ran 26:11 in 2020 and Chebet 28:54 in 2024. They improved much less than the road marathon, though. Women's track improved about 0.3% between eras; the women's road marathon top-30 median improved about 1.6%. That five-to-one gap is the strongest single piece of evidence in the project. Something road-specific changed, and the shoe is the most obvious road-specific change.
 
-**The within-athlete cohort is brutally small.** I expected ~80–150 athletes who raced majors in both 2010–2016 and 2018–2024. The actual number, after filtering to ≥2 races each side, is 17. Most pre-Vaporfly elites just didn't race elite marathons in 2018–2024. They retired, moved to ultras, or got hurt. The 17 who *did* show up are heavily survivorship-biased toward consistent careers. Their median delta is −47 seconds (faster post-Vaporfly), but the paired t-test isn't significant at α=0.05 (p=0.26). That's a small sample, not a small effect. With proper age adjustment (which I couldn't do. Wikipedia race tables don't include athlete ages), the estimate would probably move ~20–40 seconds further negative because the post-era athletes are 4–6 years older on average.
+**The within-athlete group is tiny.** I expected 80 to 150 runners who raced majors in both 2010–2016 and 2018–2024. After requiring at least two races on each side, there were 17. Most pre-Vaporfly elites had retired, moved to ultras or been injured by 2018. The ones who stayed are a survivor group with unusually durable careers. Their median change is 47 seconds faster after the Vaporfly, but the paired t-test gives p = 0.26. The sample is small, so the result is weak, not necessarily the effect. The race tables carry no ages, so I couldn't correct for these runners being several years older in the second era. An age correction would make the shoe estimate larger, not smaller.
 
 ![Within-athlete paired pre vs post](./outputs/figures/fig3_within_athlete_paired.png)
-*Each line is one of 17 athletes who raced elites in both eras. Red lines went faster; grey didn't. Most went faster, but not all, and the average delta of −47 seconds has a wide confidence interval.*
+*Each line is one of the 17 runners who raced elite marathons in both eras. Red lines got faster, grey didn't. Most got faster, and the interval on the average is wide.*
 
 ## The frequency story
 
-The clearest visual is just the count of sub-2:10 performances per year.
+The plainest chart is the count of fast performances per year.
 
 ![Sub-2:10 and sub-2:25 marathon performances per year, 2010–2024](./outputs/figures/fig1_sub210_frequency_by_year.png)
-*Top: men's sub-2:10. Bottom: women's sub-2:25. Grey is pre-Vaporfly, red is post. The 2017 transition year is orange. The Vaporfly launch is the dashed line.*
+*Top: men's sub-2:10. Bottom: women's sub-2:25. Grey is pre-Vaporfly, orange the 2017 transition, red post. The dashed line is the Vaporfly launch.*
 
-The pre-era averaged 23 sub-2:10 men's performances per year across our six-major dataset; the post-era averaged 29. That's a 1.25× increase, not the 3–5× you see quoted. The difference between my number and the popular figure isn't disagreement. It's scope. The 3–5× figure comes from including mid-tier marathons and second-tier majors where shoe-driven improvement is more visible in the middle ranks. My dataset is six top-tier majors where the lead pack saturates at ~25 sub-2:10 finishers per race regardless of the shoe era; the marginal effect shows up at slot 26–35.
+Before the Vaporfly, my six-major dataset averaged 23 sub-2:10 men's performances a year. Afterwards it averaged 29, a 1.25× rise and nowhere near the three to five times usually quoted. The gap comes from scope. The bigger figure counts mid-tier marathons and second-tier majors, where the middle of the field had room to improve. At the six majors the number of fast finishers is limited by the size of the lead packs, so the extra fast times show up further down the field.
 
-What changed dramatically in the post-era is not the count at the absolute top but the *median* of the top-30. That median dropped 100–140 seconds per gender across the era boundary. That's the number Framework 3 is built on.
+What moved a lot was the median of the top 30, which dropped by 100 to 140 seconds between eras depending on gender. Framework 3 is built on that number.
 
-## The data is real, but it's not perfect
+## The data is real, and limited
 
-Honestly: this would have been a better project with proper data. The plan was to scrape ARRS (Association of Road Racing Statisticians) and World Athletics for verified top-100 rankings per year per gender. ARRS started blocking after one request. World Athletics's pages are JavaScript-rendered and require headless-browser scraping that I couldn't do in the time budget. So I fell back to Wikipedia race-result tables for six major marathons.
+The original plan was to use ARRS (Association of Road Racing Statisticians) and World Athletics for verified top-100 lists per year. ARRS blocked me after one request, and the World Athletics pages are rendered in JavaScript and needed headless-browser scraping I didn't have time for. I fell back to Wikipedia race-result tables for six major marathons.
 
-That gave me 1,908 real performances. Real names, real times, real races. But the depth varies year to year. 2011 has 113 finishers across the dataset; 2017 has 168; 2020 has 22 (COVID). The track 10,000m data is worse: 27 rows, all from 2016 onward. The DiD comparison on the pre-side is effectively a one-year (2016) vs seven-year (2018–2024) thing for women, and we have no men's pre-side at all.
+That gave 1,908 real performances, with names, times and races. Depth varies by year: 113 finishers across the dataset in 2011, 168 in 2017 and 22 in 2020. The track 10,000 m data is worse, 27 rows, all from 2016 on. The difference-in-differences is in effect one pre-era year (2016) against seven post-era years, for women only. There is no men's pre-era track data at all.
 
-I noted this in the writeup. A future revision with proper ARRS or Tilastopaja data would tighten the confidence intervals substantially, but probably not move the headline number more than 10–20 seconds in either direction.
+The [full report](https://github.com/lyhjeremy/marathon-shoe-revolution-decomposition/blob/main/writeup.md) documents all of this. Better data from ARRS or Tilastopaja would tighten the intervals, and I don't know how far it would move the headline.
 
-## What this means if you're a runner
+## What this means for a recreational runner
 
-Probably less than you think. The lab evidence on recreational runners is mixed: forefoot strikers at faster paces benefit more; heel strikers at moderate paces benefit less. If you're running a 4-hour marathon and reading articles that promise 12 minutes off, the realistic figure is more like 3–6 minutes. The mechanism (carbon plate + foam spring) is tuned for elite biomechanics and elite paces.
+Probably less than you'd hope. The lab evidence for recreational runners is mixed: forefoot strikers at faster paces gain more, heel strikers at moderate paces gain less. If you run four-hour marathons and read that the shoes are worth 12 minutes, I'd discount that heavily. The plate and foam are tuned for elite mechanics and elite speeds.
 
-What this *does* mean: when you watch the 2026 London Marathon and someone runs 1:59:30, the shoes contributed about a minute of that. The rest is everything else. The four other things in the decomposition pie. Don't let the shoe debate make you think the rest doesn't matter.
+For elite racing, the shoe is about a minute of a two-hour marathon. The rest comes from everything else that changed over the same years.
 
-![Decomposition of total 2016→2023 improvement](./outputs/figures/fig6_decomposition_pie.png)
-*Indicative decomposition of the ~240 seconds of total elite improvement between 2016 and 2023. The shoe slice is grounded in this study's pooled estimate; the other slices are post-hoc carve-ups based on running-stats literature.*
+![Shoe estimate against an assumed 240-second total](./outputs/figures/fig6_decomposition_pie.png)
+*An illustration, not a result. The shoe slice is this study's pooled estimate. The 240-second total for 2016–2023 and the split of the remainder are fixed assumptions in the plotting code.*
 
 ## Reproducibility
 
-The full repo is at [github.com/lyhjeremy/marathon-shoe-revolution-decomposition](https://github.com/lyhjeremy/marathon-shoe-revolution-decomposition). Reproducing the analysis:
+The repo is [github.com/lyhjeremy/marathon-shoe-revolution-decomposition](https://github.com/lyhjeremy/marathon-shoe-revolution-decomposition).
 
 ```bash
 git clone https://github.com/lyhjeremy/marathon-shoe-revolution-decomposition.git
@@ -94,15 +92,13 @@ pip install -r requirements.txt
 python src/analysis.py
 ```
 
-Takes under a minute. The notebook in `notebooks/` walks through the same numbers with prose between cells.
-
-The formal writeup with all the statistical detail is in [`writeup.md`](writeup.md). The PDF version is in [`reports/`](reports/). If you find a bug, open an issue or a PR.
+It runs in under a minute. The notebook in `notebooks/` walks through the same numbers with notes between cells, the [full report](https://github.com/lyhjeremy/marathon-shoe-revolution-decomposition/blob/main/writeup.md) has the statistical detail, and the PDF is in [`reports/`](reports/). If you find a bug, open an issue or a pull request.
 
 ## Image credits
 
 - **Hero image:** Berlin Marathon 2011 by [Mr.choppers](https://commons.wikimedia.org/wiki/File:Berlin_Marathon_2011.JPG), CC-BY-SA 3.0
 - **Vaporfly cutaway:** [User:Hpvpzgrpv](https://commons.wikimedia.org/wiki/File:Nike_Vaporfly_Cut_in_Half.png), CC-BY-SA 4.0
 - **Vaporfly Next:** [User:ChoyByHK](https://commons.wikimedia.org/wiki/File:HK_clothing_NIKE_brand_Vaporfly_Next_sneakers_white_n_silver_shoes_October_2022_Px3_05.jpg), CC-BY-SA 4.0
-- **Athlete photograph:** Berlin-Marathon 2015 Runners by Wikimedia Commons contributor, CC-BY-SA
+- **Athlete photograph:** Berlin-Marathon 2015 Runners by a Wikimedia Commons contributor, CC-BY-SA
 
-All eight analytical figures are original to this work and CC-BY 4.0.
+The eight analytical figures are original to this work and CC-BY 4.0.

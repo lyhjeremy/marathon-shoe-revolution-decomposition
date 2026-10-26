@@ -3,12 +3,186 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta http-equiv="refresh" content="0; url=web/index.html">
-<link rel="canonical" href="web/index.html">
-<title>Marathon Shoe Revolution Decomposition</title>
+<title>How much of the marathon revolution is the shoe? 67 seconds</title>
+<meta name="description" content="Three decomposition frameworks over 1,908 elite marathon performances, 2010 to 2024. Pooled super-shoe contribution: 67 seconds, 95% CI 36 to 99, about 0.9% of a 2:05 marathon.">
+<meta property="og:title" content="How much of it is the shoe? 67 seconds">
+<meta property="og:description" content="Difference-in-differences, within-athlete pairing and cohort survival, applied to the super-shoe era.">
+<meta property="og:type" content="website">
+<link rel="stylesheet" href="assets/family.css">
+<style>
+  * { box-sizing: border-box; border-radius: 0; }
+  html { -webkit-text-size-adjust: 100%; }
+  body { margin: 0; background: var(--paper); color: var(--ink); font-family: var(--font-body);
+         font-size: 17px; line-height: 1.6; border-top: 6px solid var(--signal-2); }
+  a { color: var(--signal); }
+  a:hover { color: var(--ink); }
+  :focus-visible { outline: 2px solid var(--signal); outline-offset: 3px; }
+  .bar { display: block; background: var(--ink); color: var(--paper); text-align: center; padding: 10px 18px;
+         font: 600 14.5px/1.45 var(--font-body); text-decoration: none; letter-spacing: .01em; }
+  .bar:hover { color: var(--paper); text-decoration: underline; }
+  .wrap { width: min(100% - 2.4rem, 60rem); margin: 0 auto; }
+
+  .bib { display: flex; flex-wrap: wrap; gap: 6px 18px; align-items: baseline; justify-content: space-between;
+         border-bottom: 1px solid var(--rule); padding: 26px 0 12px; }
+  .bib .name { font: 700 22px/1 var(--font-display); text-transform: uppercase; letter-spacing: .02em; }
+  .bib .meta { font: 400 12.5px/1.4 var(--font-mono); letter-spacing: .08em; text-transform: uppercase; color: var(--ink-2); }
+
+  .lead { padding: 40px 0 8px; }
+  .lead .q { font: 600 clamp(20px, 2.6vw, 26px)/1.2 var(--font-display); text-transform: uppercase;
+             letter-spacing: .03em; color: var(--ink-2); margin: 0 0 6px; }
+  .big { font: 700 clamp(110px, 24vw, 250px)/.82 var(--font-display); letter-spacing: -.02em; margin: 0;
+         color: var(--signal); font-variant-numeric: tabular-nums; }
+  .big span { font-size: .3em; letter-spacing: .01em; text-transform: uppercase; color: var(--ink); margin-left: .12em; }
+  .ci { font: 400 15px/1.5 var(--font-mono); color: var(--ink-2); margin: 16px 0 0; }
+  .ci b { color: var(--ink); font-weight: 400; }
+  .deck { font-family: var(--font-head); font-size: clamp(18px, 2vw, 21px); line-height: 1.5; max-width: 40em; margin: 22px 0 0; }
+
+  /* Forest plot: positions are percentages of a -40 to 260 second axis. */
+  .forest { margin: 40px 0 0; border-top: 2px solid var(--ink); }
+  .forest h2 { font: 600 15px/1.3 var(--font-mono); text-transform: uppercase; letter-spacing: .1em;
+               color: var(--ink-2); margin: 14px 0 6px; }
+  .row { display: grid; grid-template-columns: 15rem minmax(0, 1fr) 8.5rem; gap: 0 18px; align-items: center;
+         padding: 12px 0; border-bottom: 1px solid var(--rule); }
+  .row .lab { font-size: 15px; line-height: 1.35; }
+  .row .lab small { display: block; color: var(--ink-2); font-size: 13px; }
+  .row .val { font: 400 14px/1.3 var(--font-mono); text-align: right; color: var(--ink-2); }
+  .row .val b { font: 700 22px/1 var(--font-display); color: var(--ink); display: block; }
+  .track { position: relative; height: 26px; }
+  .track .zero { position: absolute; top: -12px; bottom: -12px; width: 0; border-left: 1px dashed var(--edge); }
+  .track .ci-line { position: absolute; top: 11px; height: 4px; background: var(--ink-2); }
+  .track .pt { position: absolute; top: 5px; width: 16px; height: 16px; margin-left: -8px;
+               background: var(--paper); border: 3px solid var(--ink); }
+  .row--pool { border-bottom: 2px solid var(--ink); }
+  .row--pool .ci-line { background: var(--signal); height: 6px; top: 10px; }
+  .row--pool .pt { background: var(--signal); border-color: var(--signal); width: 20px; height: 20px; margin-left: -10px; top: 3px; }
+  .row--pool .val b { color: var(--signal); }
+  .axis { display: grid; grid-template-columns: 15rem minmax(0, 1fr) 8.5rem; gap: 0 18px; padding: 6px 0 0; }
+  .axis .scale { position: relative; height: 22px; font: 400 12px/1 var(--font-mono); color: var(--ink-2); }
+  .axis .scale span { position: absolute; transform: translateX(-50%); top: 4px; }
+  .axis .unit { grid-column: 2; font: 400 12px/1.4 var(--font-mono); color: var(--ink-2); padding-top: 2px; }
+  .note { font-size: 14.5px; color: var(--ink-2); max-width: 44em; margin: 14px 0 0; }
+  @media (max-width: 700px) {
+    .row, .axis { grid-template-columns: minmax(0, 1fr) 6.5rem; }
+    .row .lab { grid-column: 1 / -1; margin-bottom: 6px; }
+    .axis > div:first-child { display: none; }
+    .axis .unit { grid-column: 1; }
+    .facts div { grid-template-columns: minmax(0, 1fr); gap: 2px; }
+  }
+
+  h2.sec { font: 700 clamp(28px, 4vw, 40px)/1 var(--font-display); text-transform: uppercase; letter-spacing: .005em; margin: 0 0 14px; }
+  .course { position: relative; margin: 56px 0 0; padding-left: 34px; }
+  .course::before { content: ""; position: absolute; left: 8px; top: 6px; bottom: 6px; border-left: 3px dashed var(--signal-2); }
+  .course section { position: relative; padding-bottom: 40px; }
+  .course section::before { content: ""; position: absolute; left: -34px; top: 8px; width: 19px; height: 19px;
+                            background: var(--paper); border: 3px solid var(--signal-2); box-sizing: border-box; }
+  .course p { max-width: 40em; margin: 0 0 14px; }
+  .course ol { margin: 0; padding-left: 1.3em; max-width: 42em; }
+  .course li { margin: 0 0 12px; }
+  .course li b { font-family: var(--font-display); font-size: 1.15em; text-transform: uppercase; letter-spacing: .02em; }
+  .facts { margin: 0; border-top: 1px solid var(--rule); max-width: 46em; }
+  .facts div { display: grid; grid-template-columns: 9rem minmax(0, 1fr); gap: 16px; padding: 10px 0; border-bottom: 1px solid var(--rule); }
+  .facts dt { font: 700 24px/1.1 var(--font-display); color: var(--signal-2); }
+  .facts dd { margin: 0; font-size: 15.5px; }
+  .links { display: flex; flex-wrap: wrap; gap: 10px; margin: 6px 0 0; padding: 0; list-style: none; }
+  .links a { display: inline-block; padding: 9px 16px; border: 1px solid var(--ink); color: var(--ink);
+             text-decoration: none; font-weight: 600; font-size: 15px; }
+  .links a:hover { background: var(--ink); color: var(--paper); }
+  .links li:first-child a { background: var(--ink); color: var(--paper); }
+  .links li:first-child a:hover { background: var(--signal); border-color: var(--signal); }
+  footer { border-top: 1px solid var(--rule); margin-top: 24px; padding: 22px 0 56px; font-size: 14px; color: var(--ink-2); }
+  footer a { color: var(--ink-2); }
+</style>
 </head>
-<body style="font-family:"Source Serif 4", "Iowan Old Style", "Palatino Linotype", Palatino, serif;background:#EDEDE7;color:#1C1E1B;text-align:center;padding:60px">
-<p>Loading the report… If it doesn't open automatically,
-<a href="web/index.html">click here</a>.</p>
+<body>
+<a class="bar" href="overview/" data-overview-link>Read the full writeup&nbsp;&rarr;</a>
+
+<div class="wrap">
+  <header class="bib">
+    <div class="name">The shoe decomposition</div>
+    <div class="meta">1,908 elite marathons &middot; 2010&ndash;2024 &middot; Jeremy Lee</div>
+  </header>
+
+  <section class="lead">
+    <p class="q">How much of the post-2017 marathon speed-up is the shoe?</p>
+    <p class="big">67<span>seconds</span></p>
+    <p class="ci">95% CI <b>36&ndash;99 s</b> &middot; about <b>0.9%</b> of a 2:05 marathon</p>
+    <p class="deck">Three separate methods estimate how much carbon-plated shoes took off median elite
+      marathon time between 2010&ndash;2016 and 2018&ndash;2024. They land between 47 and 111 seconds.
+      Pooled, the answer is about a minute: real, and far less than the 3&ndash;5% often quoted.</p>
+  </section>
+
+  <section class="forest" aria-labelledby="fp">
+    <h2 id="fp">Shoe contribution by framework, seconds, with 95% intervals</h2>
+
+    <div class="row">
+      <div class="lab">Difference-in-differences<small>road marathon vs track 10,000 m, women-only pre-era</small></div>
+      <div class="track" aria-hidden="true"><i class="zero" style="left:13.33%"></i><i class="ci-line" style="left:57%;width:40.67%"></i><i class="pt" style="left:50.33%"></i></div>
+      <div class="val"><b>111 s</b>[131, 253]</div>
+    </div>
+    <div class="row">
+      <div class="lab">Within-athlete paired<small>17 athletes in both eras, p = 0.26</small></div>
+      <div class="track" aria-hidden="true"><i class="zero" style="left:13.33%"></i><i class="ci-line" style="left:5%;width:54%"></i><i class="pt" style="left:29%"></i></div>
+      <div class="val"><b>47 s</b>[&minus;25, 137]</div>
+    </div>
+    <div class="row">
+      <div class="lab">Cohort survival<small>55% of the top-30 shift, break at 2020</small></div>
+      <div class="track" aria-hidden="true"><i class="zero" style="left:13.33%"></i><i class="ci-line" style="left:28.67%;width:21.67%"></i><i class="pt" style="left:32.67%"></i></div>
+      <div class="val"><b>58 s</b>[46, 111]</div>
+    </div>
+    <div class="row row--pool">
+      <div class="lab"><strong>Pooled</strong><small>weighted by inverse squared CI width</small></div>
+      <div class="track" aria-hidden="true"><i class="zero" style="left:13.33%"></i><i class="ci-line" style="left:25.33%;width:21%"></i><i class="pt" style="left:35.67%"></i></div>
+      <div class="val"><b>67 s</b>[36, 99]</div>
+    </div>
+    <div class="axis" aria-hidden="true">
+      <div></div>
+      <div class="scale"><span style="left:13.33%">0</span><span style="left:30%">50</span><span style="left:46.67%">100</span><span style="left:63.33%">150</span><span style="left:80%">200</span><span style="left:96.67%">250</span></div>
+    </div>
+    <p class="note">Values from <code>outputs/analysis_summary.json</code>. The difference-in-differences interval
+      sits entirely above its own point estimate: the point uses year medians and the bootstrap resamples
+      row means. The page reports both as the script writes them.</p>
+  </section>
+
+  <div class="course">
+    <section>
+      <h2 class="sec">Three ways to hold the rest constant</h2>
+      <p>The shoe arrived alongside better pacing, deeper East African fields and faster courses, so a plain
+        before-and-after comparison credits the shoe with all of it. Each framework removes a different part.</p>
+      <ol>
+        <li><b>Difference-in-differences.</b> Road marathon improvement minus track 10,000 m improvement over the
+          same window, rescaled to marathon time. Anything that lifted both events cancels.</li>
+        <li><b>Within-athlete paired.</b> The same runner&rsquo;s career-mean time before and after 2017, which holds
+          genetics and training history fixed. Not age-adjusted, because the race tables carry no ages.</li>
+        <li><b>Cohort survival.</b> The shift in the top-30 median between eras, with 55% attributed to shoes,
+          plus a changepoint search on sub-2:10 and sub-2:25 counts.</li>
+      </ol>
+    </section>
+    <section>
+      <h2 class="sec">Other numbers from the run</h2>
+      <dl class="facts">
+        <div><dt>1.6% / 0.3%</dt><dd>Women&rsquo;s road marathon top-30 median improved 139 s (1.59%); track 10,000 m improved 0.32%.</dd></div>
+        <div><dt>1.25&ndash;1.39&times;</dt><dd>Rise in sub-2:10 (men) and sub-2:25 (women) performances per year after 2017, in six major marathons.</dd></div>
+        <div><dt>2020</dt><dd>Changepoint in the sub-threshold counts, three years after the Vaporfly&rsquo;s commercial release.</dd></div>
+        <div><dt>11 of 17</dt><dd>Paired athletes who were faster in the post-Vaporfly era. Median change: 47 s faster.</dd></div>
+      </dl>
+    </section>
+    <section>
+      <h2 class="sec">Read more</h2>
+      <ul class="links">
+        <li><a href="overview/">Full write-up</a></li>
+        <li><a href="web/index.html">Short illustrated report</a></li>
+        <li><a href="reports/Marathon_Shoe_Revolution_Decomposition_Report.pdf">PDF report</a></li>
+        <li><a href="reports/Marathon_Shoe_Revolution_Decomposition_Report.docx">Word report</a></li>
+        <li><a href="https://github.com/lyhjeremy/marathon-shoe-revolution-decomposition">Code and data</a></li>
+      </ul>
+    </section>
+  </div>
+
+  <footer>
+    <p>Data: elite results from six major-marathon Wikipedia result tables and 27 track 10,000 m performances,
+      2010&ndash;2024. Python, pandas, SciPy, matplotlib. Analytical figures CC-BY 4.0.
+      Code MIT &copy; 2026 Jeremy Lee &middot; <a href="https://github.com/lyhjeremy/marathon-shoe-revolution-decomposition">source on GitHub</a></p>
+  </footer>
+</div>
 </body>
 </html>

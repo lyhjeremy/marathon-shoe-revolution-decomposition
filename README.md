@@ -1,99 +1,96 @@
-# How Much of the Post-2017 Marathon Revolution Is the Shoe?
+# How much of the marathon revolution is the shoe?
+
+Three decomposition methods applied to 1,908 elite marathon performances (2010 to 2024) to estimate how many seconds carbon-plated "super shoes" took off elite marathon times.
+
+[Live site](https://lyhjeremy.github.io/marathon-shoe-revolution-decomposition/) · [Write-up](https://lyhjeremy.github.io/marathon-shoe-revolution-decomposition/overview/) · [Full report](writeup.md) · [Narrative article](https://lyhjeremy.github.io/marathon-shoe-revolution-decomposition/article.html) · [PDF](reports/Marathon_Shoe_Revolution_Decomposition_Report.pdf)
 
 Design and copy follow [these standards](https://github.com/lyhjeremy/lyhjeremy/blob/main/DESIGN_STANDARDS.md).
 
-> **In depth:** https://lyhjeremy.github.io/marathon-shoe-revolution-decomposition/overview/
+## Results
 
-A three-framework decomposition of elite marathon performance improvement from 2010–2024, isolating the contribution of carbon-plated "super shoes."
+| Framework | Shoe contribution | 95% CI |
+|---|---:|---|
+| Difference-in-differences (road vs track 10,000 m) | 111 s | [131, 253] |
+| Within-athlete paired (n = 17) | 47 s | [−25, 137] |
+| Cohort survival (55% attribution share) | 58 s | [46, 111] |
+| **Pooled** | **67 s** | **[36, 99]** |
 
-**[Read the full writeup →](writeup.md)** &nbsp;·&nbsp; [Narrative article](article.md) &nbsp;·&nbsp; [PDF report](reports/Marathon_Shoe_Revolution_Decomposition_Report.pdf) &nbsp;·&nbsp; [Word doc](reports/Marathon_Shoe_Revolution_Decomposition_Report.docx) &nbsp;·&nbsp; [Notebook](notebooks/shoe_revolution_decomposition.ipynb) &nbsp;·&nbsp; [HTML article](web/index.html)
+- 67 seconds is about 0.9% of a 2:05 marathon.
+- Sub-2:10 (men) and sub-2:25 (women) performances per year rose 1.25× and 1.39× after 2017 in this dataset, against the three to five times often quoted.
+- Women's road marathon top-30 median improved 1.59% between eras; women's track 10,000 m improved 0.32%.
 
----
+Values come from [`outputs/analysis_summary.json`](outputs/analysis_summary.json).
 
-## What this is
+![Sub-2:10 men's and sub-2:25 women's marathon performances per year, 2010 to 2024, modestly higher after 2017](outputs/figures/fig1_sub210_frequency_by_year.png)
 
-When Nike's Vaporfly 4% reached commercial release in mid-2017, elite marathon times began falling at a pace that startled even close observers of the sport. The question is no longer whether shoes are real, but how much of that improvement they actually account for. This project applies three independent decomposition frameworks to ~1,900 elite marathon performances 2010–2024:
+## Method
 
-1. **Difference-in-Differences (DiD).** Road marathon improvement vs track 10,000m as a less-affected control
-2. **Within-athlete paired.** Same-athlete pre/post-era delta, controlling for genetics, training, physiology
-3. **Cohort survival.** Distributional shift in the top-30 elite cohort, with a 55% shoe-attribution share
+The comparison is the pre-Vaporfly era (2010–2016) against the post-Vaporfly era (2018–2024), with 2017 left out as a transition year.
 
-Plus historical comparison, four robustness scenarios, and an honest accounting of limitations.
+1. **Difference-in-differences.** Road marathon improvement in the top-30 median minus track 10,000 m improvement, rescaled to marathon time. Bootstrap CI from 1,000 resamples, plus a placebo split inside the pre-era (32 s).
+2. **Within-athlete paired.** Runners with at least two elite marathons in each era; median change in career-mean time, paired t-test (t = −1.17, p = 0.26) and bootstrap CI. Not age-adjusted, because the source tables have no ages.
+3. **Cohort survival.** Yearly counts of sub-2:10 and sub-2:25 performances, a slope-change changepoint search (break at 2020), and the shift in the top-30 median between eras with 55% attributed to shoes.
 
-## Headline findings
+The pooled estimate weights each framework by the inverse square of its CI width. Its interval is the pooled value ± 1.96 × the standard deviation of the three estimates / √3.
 
-- **Pooled shoe contribution: 67 seconds (95% CI 36–99 s)** in median elite marathon time, equivalent to **~0.9% of a 2:05 marathon**
-- The within-athlete framework is the most conservative (47 s, wide CI). The DiD is the highest (111 s, women-only on pre-side). All three frameworks agree on order of magnitude.
-- **Sub-2:10 (men) and sub-2:25 (women) frequencies rose 1.25–1.4× post-2017.** Substantial but smaller than the 3–5× cited in popular running press
-- **Track 10,000m did improve too (~0.3%) but markedly less than road marathon (~1.6%)**, supporting the shoe story
-- Changepoint detection places the cohort-survival structural break at **2020**, consistent with broad-cohort adoption following elite adoption in 2017–2018
+Stack: Python, pandas, NumPy, SciPy, matplotlib, seaborn; ReportLab and python-docx for the reports.
 
-Full methodology, statistical tests, sensitivity analysis, and limitations in [`writeup.md`](writeup.md).
-
-## Repository structure
-
-```
-marathon-shoe-revolution-decomposition/
-├── data/                              # Four source CSVs + image assets
-│   ├── elite_marathon_times.csv       # 1,908 rows scraped from 6 major-marathon Wikipedia tables, 2010–2024
-│   ├── track_records_control.csv      # 27 rows of 10,000m performances 2016–2024 (sparse, see writeup §9)
-│   ├── shoe_timeline.csv              # Hand-compiled super-shoe release dates and milestones
-│   ├── athlete_career_arcs.csv        # Derived: 17 athletes with ≥2 pre and ≥2 post elite marathons
-│   └── images/                        # CC-BY-SA reference photos
-├── notebooks/                         # Jupyter notebook reproducing the analysis end-to-end
-├── src/                               # Python source for analysis, PDF, DOCX, HTML
-├── outputs/                           # Generated 400-DPI figures and results CSV
-├── reports/                           # PDF and Word versions of the formal writeup
-├── web/                               # Self-contained HTML article + matching short-form PDF/DOCX
-├── writeup.md                         # Full report in markdown, renders on GitHub
-├── article.md                         # Narrative blog version, looser voice
-├── README.md                          # This file
-├── LICENSE                            # MIT
-└── requirements.txt
-```
-
-## Reproducing the analysis
+## How to run
 
 ```bash
 git clone https://github.com/lyhjeremy/marathon-shoe-revolution-decomposition.git
 cd marathon-shoe-revolution-decomposition
 pip install -r requirements.txt
-python src/analysis.py
+python src/analysis.py        # figures, results CSV and JSON summary, under a minute
 ```
 
-Wall-clock time: under 60 seconds on an M1 MacBook. The analysis script regenerates all 8 figures, both writeup-supporting CSVs, and the full JSON results summary.
-
-To rebuild the PDF/DOCX/HTML deliverables:
+Rebuild the reports and notebook:
 
 ```bash
 python src/generate_pdf.py
 python src/generate_docx.py
-python src/generate_html.py
+python src/generate_html.py   # short report at web/index.html
 python src/build_notebook.py
 ```
 
-To re-scrape the source data (idempotent, takes ~3 minutes):
+Re-scrape the source data (about three minutes):
 
 ```bash
 python scripts/scrape_marathons.py
 python scripts/scrape_track.py
 ```
 
-Or open [`notebooks/shoe_revolution_decomposition.ipynb`](notebooks/shoe_revolution_decomposition.ipynb) in Jupyter / VS Code and run all cells.
+## Repository layout
+
+| Path | Contents |
+|---|---|
+| `data/` | `elite_marathon_times.csv` (1,908 rows), `track_records_control.csv` (27 rows), `shoe_timeline.csv` (19 hand-compiled rows), `athlete_career_arcs.csv` (derived), CC-BY-SA photos |
+| `scripts/` | Wikipedia scrapers for marathon and track results |
+| `src/` | Analysis, plus PDF, DOCX, HTML and notebook builders |
+| `outputs/` | Eight figures, `analysis_results.csv`, `analysis_summary.json` |
+| `notebooks/` | The analysis cell by cell |
+| `reports/` | Full PDF and Word report |
+| `web/` | Short HTML report with matching PDF and DOCX |
+| `overview/` | Write-up page on the live site |
 
 ## Data sources
 
 | Dataset | Source | Coverage |
-|---------|--------|----------|
-| Elite marathon times | Wikipedia race-result tables (Berlin, London, Chicago, Boston, Tokyo, NYC, Dubai) | 2010–2024, 1,908 rows |
-| 10,000m track | [Wikipedia 10,000 metres](https://en.wikipedia.org/wiki/10,000_metres) + record progression pages | 2016–2024, 27 rows |
-| Shoe release timeline | Manufacturer announcements + race archives | 2016–2024, hand-compiled |
-| Vaporfly biomechanics | [Hoogkamer et al. 2018](https://doi.org/10.1007/s40279-017-0811-2), Senefeld et al. 2023 | Lab/literature |
+|---|---|---|
+| Elite marathon times | Wikipedia race-result tables: Berlin, London, Chicago, Boston, Tokyo, New York, some Dubai | 2010–2024, 1,908 rows |
+| 10,000 m track | [Wikipedia 10,000 metres](https://en.wikipedia.org/wiki/10,000_metres) and record-progression pages | 2016–2024, 27 rows |
+| Shoe timeline | Manufacturer announcements and race archives | 2016–2024, hand-compiled |
+| Biomechanics | [Hoogkamer et al. 2018](https://doi.org/10.1007/s40279-017-0811-2), Senefeld et al. 2023 | Literature |
+
+## Limitations
+
+- The track control is thin: 27 rows, with one pre-era year (2016) for women and none for men. The difference-in-differences estimate rests on it.
+- The difference-in-differences CI lies entirely above its point estimate, because the point uses year medians and the bootstrap resamples row means.
+- The within-athlete sample is 17 runners, the result is not significant, and there is no age adjustment.
+- The 55% shoe share in the cohort framework is an assumption. At 40% and 70% the cohort estimate is 42 s and 74 s, and the pooled value about 51 s and 80 s (recomputed from the summary file; the script has no switch for it).
+- No race records which shoe anyone wore, so era stands in for shoe use.
+- `outputs/figures/fig5_framework_comparison.png` is from an earlier run and shows 117 s for the difference-in-differences and 69 s pooled; the JSON summary and every page use 111 s and 67 s.
 
 ## License
 
-MIT, see [LICENSE](LICENSE). Image attributions are listed in [`article.md`](article.md#image-credits). All eight analytical figures (`outputs/figures/`) are CC-BY 4.0.
-
-## Author
-
-Jeremy Lee, [github.com/lyhjeremy](https://github.com/lyhjeremy)
+[MIT](LICENSE) © 2026 Jeremy Lee. The eight analytical figures are CC-BY 4.0; photo credits are in [`article.md`](article.md#image-credits).
