@@ -54,7 +54,7 @@ plt.rcParams['savefig.dpi'] = 200  # screen-friendly; src/analysis.py uses 400 f
 
     cells.append(md("""## 2. Load the four source CSVs
 
-- `data/elite_marathon_times.csv` (1,908 rows scraped from major-marathon Wikipedia tables)
+- `data/elite_marathon_times.csv` (1,908 rows scraped from major-marathon Wikipedia tables; 106 wheelchair and handcycle rows are dropped on load)
 - `data/track_records_control.csv` (27 rows, sparse — see writeup §9)
 - `data/shoe_timeline.csv` (hand-compiled, 19 rows)
 - `data/athlete_career_arcs.csv` (derived)"""))
@@ -90,9 +90,9 @@ med[['M','W','M_str','W_str']].round(0)
 
     cells.append(md("""## 4. Framework 1 — Difference-in-Differences
 
-Road marathon improvement minus track 10,000m improvement, computed per gender on top-30 medians. Bootstrap CI from 1,000 marathon-row resamples."""))
+Road marathon improvement minus track 10,000m improvement, computed per gender on top-50 medians. Bootstrap CI from 1,000 marathon-row resamples."""))
 
-    cells.append(code("""s1, ctx1 = framework1_did(marathon, track, n=30)
+    cells.append(code("""s1, ctx1 = framework1_did(marathon, track, n=50)  # same n as main() in analysis.py
 print(f"Shoe contribution (DiD): {s1['shoe_contribution_seconds']:.0f} s")
 print(f"95% CI: [{s1['ci_low']:.0f}, {s1['ci_high']:.0f}]")
 print(f"Placebo DiD: {s1['placebo_did_seconds']:.1f} s (should be near zero)")
@@ -106,7 +106,7 @@ print(f"\\nNote: {s1['note']}")
 
     cells.append(md("""## 5. Framework 2 — Within-athlete paired pre/post
 
-Median of per-athlete (post mean minus pre mean) across the n=17 cohort that raced ≥2 elites in both eras."""))
+Median of per-athlete (post mean minus pre mean) across the n=16 cohort (wheelchair athletes excluded) that raced ≥2 elites in both eras."""))
 
     cells.append(code("""s2, arcs_used = framework2_within_athlete(arcs)
 print(f"n athletes: {s2['n_athletes']}")

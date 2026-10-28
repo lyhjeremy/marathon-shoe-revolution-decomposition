@@ -78,6 +78,33 @@ RESULTS_PATH = os.path.join(PROJECT_DIR, 'outputs', 'analysis_results.csv')
 os.makedirs(OUTPUT_DIR, exist_ok=True)
 
 
+# Wheelchair and handcycle athletes (excluded 2026-10-28).
+# The scraper assigns gender from the nearest heading above each Wikipedia
+# results table, so tables headed "Wheelchair women" and "Handcycle women"
+# were read as women's running results. Men's wheelchair times fall below
+# the scraper's 2:00 floor and never entered the data. This list is every
+# athlete whose rows sit under a wheelchair or handcycle heading on the
+# source pages (106 rows, 54 names, all women, 2010-2022); none of them
+# also appears in a running table.
+WHEELCHAIR_HANDCYCLE_ATHLETES = {
+    'Adessa Ellis', 'Amanda McGrory', 'Annika Zeyen', 'Arielle Rausin',
+    'Ashley Cooper', 'Ashli Molinero', 'Beth Sanden', 'Chantal Petitclerc',
+    'Chelsea McClammer', 'Christie Dawes', 'Christina Ripp',
+    'Christina Schwab', 'Corey Petersen', 'Corey Peterson', 'Devann Murphy',
+    'Diane Roy', 'Edith Wolf', 'Eva Houston', 'Francesca Porcellato',
+    'Hannah Babalola', 'Helene Hines', 'Jacqui Kapinowski',
+    'Jade Jones-Hall', 'Jenna Fesemyer', 'Jessica Hayon', 'Katherine Valdez',
+    'Katrina Gerhard', 'Kazumi Nakayama', 'Kerstin Abele', 'Koki Mizuki',
+    'Madison de Rozario', 'Manuela Schär', 'Margaret Sprouse',
+    'Margriet van den Broek', 'Martyna Snopek', 'Meggan Dawson-Farrell',
+    'Mel Nicholls', 'Michelle Wheeler', 'Minda Dentler', 'Nikki Emerson',
+    'Nikki Emmerson', 'Patricia Eachus', 'Sandra Graf', 'Sandra Hager',
+    'Sarah Piercy', 'Shelly Woods', 'Shirley Reilly', 'Susannah Scaroni',
+    'Tatyana McFadden', 'Tiffiney Perry', 'Vanessa De Souza',
+    'Wakako Tsuchida', 'Yen Hoang', 'Zou Lihong',
+}
+
+
 def time_str(seconds):
     h = int(seconds // 3600)
     m = int((seconds % 3600) // 60)
@@ -98,12 +125,16 @@ def load_data():
     # Career arcs is derived; load if present, otherwise build downstream
     arcs_path = os.path.join(DATA_DIR, 'athlete_career_arcs.csv')
     arcs = pd.read_csv(arcs_path) if os.path.exists(arcs_path) else None
+    if arcs is not None:
+        arcs = arcs[~arcs['athlete_name'].isin(WHEELCHAIR_HANDCYCLE_ATHLETES)]
 
     # Coerce types
     marathon['year'] = marathon['year'].astype(int)
     marathon['finish_time_seconds'] = pd.to_numeric(
         marathon['finish_time_seconds'], errors='coerce')
     marathon = marathon.dropna(subset=['finish_time_seconds'])
+    # Running results only: drop wheelchair and handcycle entries (see list above)
+    marathon = marathon[~marathon['athlete_name'].isin(WHEELCHAIR_HANDCYCLE_ATHLETES)]
     marathon['finish_time_seconds'] = marathon['finish_time_seconds'].astype(int)
 
     track['year'] = track['year'].astype(int)
@@ -360,10 +391,9 @@ def framework2_within_athlete(arcs):
     age, so age data is typically unavailable here — the writeup
     discusses this limitation.
 
-    Excludes wheelchair athletes by simple name pattern (none have
-    "Rausin" surname patterns) and any athlete with raw |delta| > 600s
-    (likely indicates a course-change confound or different race
-    distance miscategorized).
+    Wheelchair and handcycle athletes are removed in load_data(). Also
+    drops any athlete with raw |delta| > 600s (likely indicates a
+    course-change confound or different race distance miscategorized).
     """
     if arcs is None or len(arcs) == 0:
         return {
@@ -377,11 +407,6 @@ def framework2_within_athlete(arcs):
         }, None
 
     arcs = arcs.copy()
-
-    # Hard filter: drop wheelchair-style or paralympic athletes if any slipped in
-    arcs = arcs[~arcs['athlete_name'].str.contains(
-        r'Rausin|wheelchair|para',
-        case=False, na=False, regex=True)]
 
     # Drop extreme deltas (>10 min change is implausible for elite running, suggests data issue)
     arcs = arcs[arcs['delta_raw_seconds'].abs() <= 600]

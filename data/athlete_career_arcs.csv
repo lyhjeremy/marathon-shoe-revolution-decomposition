@@ -1,6 +1,5 @@
 athlete_name,gender,n_pre,n_post,mean_pre_seconds,mean_post_seconds,mean_age_pre,mean_age_post,delta_raw_seconds,delta_age_adjusted_seconds
 Abel Kirui,M,6,2,7775.666666666667,7649.5,,,-126.16666666666697,
-Arielle Rausin,W,3,3,7798.333333333333,7980.333333333333,,,182.0,
 Atsede Baysa,W,6,2,8856.833333333334,8949.0,,,92.16666666666606,
 Birhane Dibaba,W,5,2,8663.0,8547.5,,,-115.5,
 Dickson Chumba,M,5,2,7674.2,7627.0,,,-47.19999999999982,
@@ -15,5 +14,4 @@ Hiroko Yoshitomi,W,2,2,9123.0,9083.0,,,-40.0,
 Kenenisa Bekele,M,3,4,7510.0,7678.25,,,168.25,
 Mary Jepkosgei Keitany,W,9,2,8644.777777777777,8562.5,,,-82.27777777777737,
 Sara Hall,W,3,5,9150.666666666666,8659.8,,,-490.8666666666668,
-Shelly Woods,W,3,2,7863.666666666667,7633.0,,,-230.66666666666697,
 Sisay Lemma,M,2,4,7730.5,7552.25,,,-178.25,
