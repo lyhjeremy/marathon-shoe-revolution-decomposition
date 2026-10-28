@@ -127,10 +127,10 @@ def build_full_report(out_path):
       "less-affected control event; (2) a within-athlete paired pre/post analysis on the "
       "subset of athletes who raced elites in both eras; and (3) a cohort-depth analysis "
       "that compares observed post-era top-30 medians against the linearly-extrapolated "
-      "pre-era trend. The three estimates converge on a pooled shoe contribution of "
+      "pre-era trend. The three estimates pool to a shoe contribution of "
       f"<b>{pool['pooled_estimate_seconds']:.0f} seconds (95% CI {pool['pooled_ci_low']:.0f}–"
       f"{pool['pooled_ci_high']:.0f} s)</b> in median elite marathon time, equivalent to "
-      "roughly 0.9% of a 2:05 marathon. We discuss data limitations (sparse pre-era "
+      "roughly 1.1% of a 2:05 marathon. We discuss data limitations (sparse pre-era "
       "track coverage, Wikipedia-derived top-N lists rather than verified global "
       "rankings, absent athlete-age data), the placebo DiD result, and three robustness "
       "checks.")
@@ -164,7 +164,7 @@ def build_full_report(out_path):
     # 2. Data
     section(story, "2. Data Sources")
     p(story,
-      "Four datasets feed the analysis. <b>elite_marathon_times.csv</b> (1,908 rows): "
+      "Four datasets feed the analysis. <b>elite_marathon_times.csv</b> (1,908 rows, of which 106 wheelchair and handcycle results are excluded since 28 October 2026): "
       "top-N finishers from per-race Wikipedia articles for six major marathons "
       "(Berlin, London, Chicago, Boston, Tokyo, New York City, plus a handful of Dubai "
       "entries), 2010–2024. <b>track_records_control.csv</b> (27 rows): top 10,000m "
@@ -175,7 +175,7 @@ def build_full_report(out_path):
       "rows): hand-compiled release dates and stack-height milestones for every major "
       "super-shoe model 2016–2024. <b>athlete_career_arcs.csv</b> (derived): athletes "
       "with ≥2 pre-era and ≥2 post-era major-marathon races. With the Wikipedia-derived "
-      "dataset, 17 athletes meet the threshold after one extreme-delta filter.")
+      "dataset, 16 athletes meet the threshold once wheelchair athletes are excluded.")
     p(story,
       "Pre-era is 2010–2016; post-era is 2018–2024; 2017 is excluded as the transition "
       "year. We exclude no individual race for COVID-19, but the 2020 row is treated "
@@ -232,9 +232,9 @@ def build_full_report(out_path):
     story.append(PageBreak())
     section(story, "4. Results")
 
-    sub(story, "4.1 Framework 1 (DiD): 111 seconds, 95% CI [131, 253]")
+    sub(story, f"4.1 Framework 1 (DiD): {f1['shoe_contribution_seconds']:.0f} seconds, 95% CI [{f1['ci_low']:.0f}, {f1['ci_high']:.0f}]")
     p(story,
-      f"The pre-era to post-era road marathon improvement (women's, top-30 median) was "
+      f"The pre-era to post-era road marathon improvement (women's, top-50 median) was "
       f"<b>{abs(f1['by_gender']['W']['road_delta']):.0f} seconds "
       f"({f1['by_gender']['W']['road_pct']:.2f}%)</b>. The contemporaneous track 10,000m "
       f"women's improvement was just {abs(f1['by_gender']['W']['trk_delta']):.0f} seconds "
@@ -243,8 +243,8 @@ def build_full_report(out_path):
       f"{f1['by_gender']['W']['track_explainable_marathon_seconds']:.0f} seconds. The "
       f"residual, attributable to road-specific factors of which shoes are dominant, is "
       f"<b>{f1['shoe_contribution_seconds']:.0f} seconds</b>. Placebo DiD on pre-era "
-      f"splits returns {f1['placebo_did_seconds']:.0f} seconds — an order of magnitude "
-      f"smaller than the main effect.")
+      f"splits returns {f1['placebo_did_seconds']:.0f} seconds, about a fifth "
+      f"of the main effect.")
 
     figure(story, 'fig2_did_track_vs_road.png',
            "Figure 2. Road marathon top-50 mean time vs track 10,000m top-50 mean time, "
@@ -288,22 +288,20 @@ def build_full_report(out_path):
     story.append(PageBreak())
     section(story, "5. Cross-Framework Findings")
     p(story,
-      f"<b>Finding 1: All three frameworks place shoe contribution in the 47–111 second "
+      f"<b>Finding 1: All three frameworks place shoe contribution in the 44–199 second "
       f"range.</b> The frameworks measure different things with different assumptions, "
-      f"but they agree on order of magnitude. The pooled estimate of "
+      f"and the DiD sits well above the other two. The pooled estimate of "
       f"<b>{pool['pooled_estimate_seconds']:.0f} seconds (95% CI {pool['pooled_ci_low']:.0f}–"
-      f"{pool['pooled_ci_high']:.0f})</b> sits closer to the conservative end because the "
-      f"within-athlete and cohort frameworks have tighter CIs and therefore higher weight "
+      f"{pool['pooled_ci_high']:.0f})</b> sits near the lower two because the "
+      f"cohort framework has the tightest CI and therefore most of the weight "
       f"in the inverse-CI-width-weighted pool.")
     p(story,
-      "<b>Finding 2: Sub-threshold marathon frequency is 1.25–1.4× higher post-2017.</b> "
+      "<b>Finding 2: Sub-threshold marathon frequency is 1.25× (men) and 2.0× (women) higher post-2017.</b> "
       "Within the scope of the six major marathons covered here, the count of sub-2:10 "
-      "men's and sub-2:25 women's performances grew modestly but not dramatically. The "
-      "3–5× figure cited in running press is a global-pipeline statistic; our majors "
-      "sample saturates earlier.")
+      "men's and sub-2:25 women's performances grew, the women's most.")
     p(story,
       "<b>Finding 3: Track 10,000m did not show comparable improvement.</b> Pre-to-post "
-      "improvement was 0.32% — about one-fifth the road marathon's 1.59%. The data is "
+      "improvement was 0.32%, about one-eighth of the road marathon's 2.57%. The data is "
       "sparse, but the contrast is sharp enough that even with wider CIs the directional "
       "finding survives. Track 10,000m is an imperfect control (track spike technology "
       "did evolve), but the magnitude difference is large enough to be the strongest "
@@ -341,12 +339,11 @@ def build_full_report(out_path):
     section(story, "7. Sensitivity Analysis")
     p(story,
       "We stress-tested the headline DiD finding against four robustness scenarios. "
-      "<b>Scenario A:</b> Restrict to top-25 per year — DiD essentially unchanged. "
-      "<b>Scenario B:</b> Exclude Eliud Kipchoge — estimate unchanged within bootstrap "
-      "noise. <b>Scenario C:</b> Exclude time-trial-style events — change &lt; 5 seconds. "
-      "<b>Scenario D:</b> 55% shoe-attribution share replaced with 40%/70% — pooled "
-      "moves to 64 s / 73 s respectively. Across all four scenarios the pooled estimate "
-      "stays within 55–80 seconds.")
+      "<b>Scenario A:</b> Restrict to top-25 per year: DiD 183 s against 199 s. "
+      "<b>Scenario B:</b> Exclude Eliud Kipchoge: unchanged, since the DiD point estimate "
+      "is women-only. <b>Scenario C:</b> Exclude time-trial-style events: unchanged. "
+      "<b>Scenario D:</b> 55% shoe-attribution share replaced with 40%/70%: pooled "
+      "moves to 60 s / 102 s respectively.")
 
     figure(story, 'fig7_sensitivity.png',
            "Figure 8. DiD shoe-contribution estimate under each robustness scenario.",
@@ -385,8 +382,8 @@ def build_full_report(out_path):
       "this into the 'pacing / time-trial' slice of the decomposition pie and explicitly "
       "do not claim it for shoes.")
     p(story,
-      "<b>Statistical power.</b> The within-athlete sample is n=17. The paired t-test "
-      "against zero is not significant (p = 0.26). The finding from that framework should "
+      "<b>Statistical power.</b> The within-athlete sample is n=16. The paired t-test "
+      "against zero is not significant (p = 0.39). The finding from that framework should "
       "be interpreted as suggestive rather than confirmatory.")
 
     # 9. Conclusion
@@ -398,13 +395,13 @@ def build_full_report(out_path):
       f"share of elite marathon improvement between 2010–2016 and 2018–2024 at "
       f"<b>{pool['pooled_estimate_seconds']:.0f} seconds in the median elite marathon time, "
       f"95% CI {pool['pooled_ci_low']:.0f}–{pool['pooled_ci_high']:.0f} seconds</b>, "
-      f"equivalent to roughly 0.9% of marathon time for a 2:05 runner.")
+      f"equivalent to roughly 1.1% of marathon time for a 2:05 runner.")
     p(story,
       "Three framework-specific takeaways. If you trust the within-athlete framework "
-      "most, weight the estimate toward 47 s — the cleanest causal design but the smallest "
+      "most, weight the estimate toward 44 s: the cleanest causal design but the smallest "
       "sample and not age-adjusted. If you trust the DiD framework most, weight toward "
-      "111 s — the strongest causal lever, but the pre-side control is one year of women's "
-      "track data. If you trust the cohort survival framework most, weight toward 58 s — "
+      "199 s: the strongest causal lever, but the pre-side control is one year of women's "
+      "track data. If you trust the cohort survival framework most, weight toward 71 s: "
       "the densest data, but the 55% shoe-attribution share is a modeling choice.")
     p(story,
       "Shoes are the most-cited cause of the post-2017 marathon revolution not because "
@@ -479,7 +476,7 @@ def build_short_report(out_path):
     p(story,
       f"<b>Pooled shoe contribution: {pool['pooled_estimate_seconds']:.0f} seconds, "
       f"95% CI {pool['pooled_ci_low']:.0f}–{pool['pooled_ci_high']:.0f} s</b>, equivalent "
-      f"to roughly 0.9% of a 2:05 marathon.")
+      f"to roughly 1.1% of a 2:05 marathon.")
     p(story,
       f"Framework 1 (DiD): {f1['shoe_contribution_seconds']:.0f} s, "
       f"95% CI [{f1['ci_low']:.0f}, {f1['ci_high']:.0f}]<br/>"

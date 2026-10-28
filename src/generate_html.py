@@ -118,19 +118,19 @@ def main():
 <div class="container">
 <p class="crumb"><a href="../">The shoe decomposition</a> &middot; short report</p>
 <h1>How much of the post-2017 marathon speed-up is the shoe?</h1>
-<p class="sub">A three-framework decomposition of elite marathon improvement, 2010&ndash;2024. Jeremy Lee, May 2026.</p>
+<p class="sub">A three-framework decomposition of elite marathon improvement, 2010&ndash;2024. Jeremy Lee, May 2026. Updated 28 October 2026: 106 wheelchair and handcycle results the scraper had read as running times are now excluded, which moved the pooled estimate from 67 s to {pool['pooled_estimate_seconds']:.0f} s.</p>
 
 <figure class="photo">
   <img src="{hero}" alt="The lead pack of runners on the road at the 2011 Berlin Marathon">
   <figcaption>Berlin Marathon 2011, before the carbon-plated era. Photo by Mr.choppers, CC-BY-SA 3.0, Wikimedia Commons.</figcaption>
 </figure>
 
-<p class="lead">Nike&rsquo;s Vaporfly 4% went on general sale in 2017, and elite marathon times dropped quickly after it. This report asks how many seconds of that drop the shoe accounts for, using 1,908 elite performances and three methods that control for different things.</p>
+<p class="lead">Nike&rsquo;s Vaporfly 4% went on general sale in 2017, and elite marathon times dropped quickly after it. This report asks how many seconds of that drop the shoe accounts for, using 1,802 elite running performances and three methods that control for different things.</p>
 
 <div class="headline">
   <div class="label">Pooled shoe contribution</div>
   <div class="big">{pool['pooled_estimate_seconds']:.0f} seconds</div>
-  <div class="ci">95% CI {pool['pooled_ci_low']:.0f}&ndash;{pool['pooled_ci_high']:.0f} s &middot; about 0.9% of a 2:05 marathon</div>
+  <div class="ci">95% CI {pool['pooled_ci_low']:.0f}&ndash;{pool['pooled_ci_high']:.0f} s &middot; about {pool['pooled_estimate_seconds'] / 75:.1f}% of a 2:05 marathon</div>
 </div>
 
 <h2>The question</h2>
@@ -152,7 +152,7 @@ def main():
 
 <figure>
   <img src="{figs['fig5']}" alt="Forest plot of the three framework estimates and the pooled value, with the within-athlete interval crossing zero and the difference-in-differences interval far to the right">
-  <figcaption>The three frameworks and the pooled value on one axis. This image comes from an earlier run of the script and labels the difference-in-differences at 117 s and the pooled value at 69 s [34, 104]; the current summary file, used everywhere else, gives 111 s and 67 s [36, 99].</figcaption>
+  <figcaption>The three frameworks and the pooled value on one axis. Pooled: {pool['pooled_estimate_seconds']:.0f} s [{pool['pooled_ci_low']:.0f}, {pool['pooled_ci_high']:.0f}].</figcaption>
 </figure>
 
 <div class="framework-row">
@@ -176,16 +176,16 @@ def main():
   <div class="ci">[{pool['pooled_ci_low']:.0f}, {pool['pooled_ci_high']:.0f}]</div>
 </div>
 
-<p class="small">The difference-in-differences interval lies above its point estimate because the point uses year medians and the bootstrap resamples row means. Both are reported as computed.</p>
+<p class="small">The cohort-survival interval lies just above its point estimate because the point uses year medians and the bootstrap resamples row means. Both are reported as computed.</p>
 
-<h2>Sub-2:10 became more common, but not five times more</h2>
+<h2>Fast times became more common, women&rsquo;s most of all</h2>
 
 <figure>
   <img src="{figs['fig1']}" alt="Bar charts of sub-2:10 men's and sub-2:25 women's marathon performances per year, 2010 to 2024, higher after 2017">
   <figcaption>Sub-2:10 (men) and sub-2:25 (women) performances per year in the dataset. The dashed line is the Vaporfly&rsquo;s commercial release.</figcaption>
 </figure>
 
-<p>The pre-era averaged <b>23 sub-2:10 men&rsquo;s performances per year</b> across the major-marathon dataset and the post-era averaged <b>29</b>, a 1.25&times; rise (1.39&times; for women under 2:25). Running media often quotes three to five times. That figure covers a wider set of races, including second-tier marathons, where the middle of the field has more room to move.</p>
+<p>The pre-era averaged <b>{f3['sub_m_pre_mean']:.0f} sub-2:10 men&rsquo;s performances per year</b> across the major-marathon dataset and the post-era averaged <b>{f3['sub_m_post_mean']:.0f}</b>, a {f3['sub_m_post_mean'] / f3['sub_m_pre_mean']:.2f}&times; rise. Women under 2:25 went from {f3['sub_w_pre_mean']:.0f} a year to {f3['sub_w_post_mean']:.0f}, {f3['sub_w_post_mean'] / f3['sub_w_pre_mean']:.1f}&times;. At the majors the count is capped by the size of the lead packs, so these ratios understate the change across the sport.</p>
 
 <h2>Track 10,000 m improved far less</h2>
 
@@ -194,11 +194,11 @@ def main():
   <figcaption>Road marathon top-50 mean against track 10,000 m top-50 mean, each normalized to 2010.</figcaption>
 </figure>
 
-<p>Track times did improve: Cheptegei ran 26:11 in 2020 and Chebet 28:54 in 2024. Across the eras the women&rsquo;s track numbers moved about <b>0.3%</b> while the women&rsquo;s road marathon top-30 median moved about <b>1.6%</b>. That gap, roughly five to one, is the main evidence for something road-specific, and the shoe is the most obvious road-specific change. The track control is thin, though: 27 performances, and only 2016 on the pre-era side.</p>
+<p>Track times did improve: Cheptegei ran 26:11 in 2020 and Chebet 28:54 in 2024. Across the eras the women&rsquo;s track numbers moved about <b>{f1['by_gender']['W']['trk_pct']:.1f}%</b> while the women&rsquo;s road marathon top-50 median moved about <b>{f1['by_gender']['W']['road_pct']:.1f}%</b>. That gap, roughly eight to one, is the main evidence for something road-specific, and the shoe is the most obvious road-specific change. The track control is thin, though: 27 performances, and only 2016 on the pre-era side.</p>
 
 <h2>What it adds up to</h2>
 
-<p>The shoe accounts for about a minute of elite marathon time, close to 1% and well short of the 4% running-economy gain measured on treadmills. Running economy is not race time, and deeper East African fields, pace-controlled races and altitude training changed over the same years. The shoe gets most of the credit in public argument partly because it has a release date.</p>
+<p>The shoe accounts for about a minute and a half of elite marathon time, close to 1%, with a wide interval. That is well short of the 4% running-economy gain measured on a treadmill (<a href="https://doi.org/10.1007/s40279-017-0811-2">Hoogkamer et al. 2018</a>). Running economy is not race time: at elite marathon pace an economy gain buys about two-thirds as much speed (<a href="https://doi.org/10.3389/fphys.2019.00079">Kipp et al. 2019</a>). Deeper East African fields, pace-controlled races and altitude training also changed over the same years. The shoe gets most of the credit in public argument partly because it has a release date.</p>
 
 <figure>
   <img src="{figs['fig6']}" alt="Ring chart splitting an assumed 240 seconds of improvement into the shoe estimate and four other slices">
@@ -208,7 +208,7 @@ def main():
 <h2>Limits</h2>
 <ul>
   <li>The track control has 27 rows, and its pre-era side is one year of women&rsquo;s results. Framework 1 is the weakest of the three for that reason.</li>
-  <li>The within-athlete sample is 17 runners and the paired t-test is not significant (p = {f2['paired_p']:.2f}).</li>
+  <li>The within-athlete sample is {f2['n_athletes']} runners and the paired t-test is not significant (p = {f2['paired_p']:.2f}).</li>
   <li>The 55% shoe share in Framework 3 is a modeling choice, not an estimate.</li>
   <li>Era stands in for shoe use. Nobody&rsquo;s footwear is recorded per race.</li>
 </ul>
