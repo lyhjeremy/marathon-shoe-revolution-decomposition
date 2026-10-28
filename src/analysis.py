@@ -1,5 +1,5 @@
 """
-Marathon Shoe Revolution Decomposition — Three-Framework Approach
+Marathon Shoe Revolution Decomposition: Three-Framework Approach
 =================================================================
 Author: Jeremy Lee (lyhjeremy)
 Date: May 2026
@@ -10,7 +10,7 @@ much to other factors (deeper fields, training/pacing, course/race
 selection)?
 
 Three independent decomposition frameworks:
-  1. Difference-in-Differences (DiD) — road marathon vs track 10,000m
+  1. Difference-in-Differences (DiD): road marathon vs track 10,000m
   2. Within-athlete paired pre/post analysis
   3. Cohort survival / depth analysis (changepoint detection)
 
@@ -230,6 +230,25 @@ def top_n_per_year(df, n, year_col='year', time_col='finish_time_seconds'):
         lambda g: g.nsmallest(n, time_col))
 
 
+def resample_within_year(df, rng, year_col='year'):
+    """Bootstrap resample of result rows, stratified by year.
+
+    Each year keeps its own number of results, and results are drawn
+    with replacement only from that year. The point estimates are built
+    from per-year top-N medians, so the year is the stratum and the
+    individual result is the resampling unit: a year with 69 results
+    still has 69 after resampling, and a pre-era result can never land
+    in a post-era year. Races (course-years) were not used as the unit
+    because there are only 1 to 6 per year, too few to resample.
+    """
+    pieces = []
+    for _, pos in df.groupby(year_col).indices.items():
+        pieces.append(pos[rng.integers(0, len(pos), size=len(pos))])
+    if not pieces:
+        return df.iloc[0:0]
+    return df.iloc[np.concatenate(pieces)]
+
+
 def framework1_did(marathon, track, n=30):
     """
     Difference-in-differences: road marathon improvement minus
@@ -250,9 +269,11 @@ def framework1_did(marathon, track, n=30):
     # Per-gender estimates. We want stable cohorts: top-N median per
     # year per gender.
 
-    def gendered_did(g):
-        road_g = marathon[marathon['gender'].str.upper() == g].copy()
-        trk_g = track[track['gender'].str.upper() == g].copy()
+    def gendered_did(g, road_g=None, trk_g=None):
+        if road_g is None:
+            road_g = marathon[marathon['gender'].str.upper() == g].copy()
+        if trk_g is None:
+            trk_g = track[track['gender'].str.upper() == g].copy()
         if len(road_g) == 0 or len(trk_g) == 0:
             return None
         # Per-year top-N median (median is more robust than mean to coverage variation)
@@ -326,26 +347,29 @@ def framework1_did(marathon, track, n=30):
     # Pooled point estimate: simple average of per-gender shoe contributions
     pooled_shoe = float(np.mean([r['shoe_contribution_seconds'] for r in valid]))
 
-    # Bootstrap CI by resampling marathon rows
+    # Bootstrap CI. Each replicate recomputes the same statistic as the
+    # point estimate (gendered_did: per-year top-N medians, averaged over
+    # the pre and post eras, for both road and track) on data resampled
+    # with resample_within_year: result rows drawn with replacement
+    # within each year, separately for road and track and for each
+    # gender. Until 2026-10-28 the bootstrap took all-row era medians
+    # with fixed track means, a different statistic, so its interval
+    # did not center on the estimate.
     rng_random = np.random.default_rng(42)
     n_boot = 1000
+    road_by_g = {g: marathon[marathon['gender'].str.upper() == g] for g in by_gender}
+    trk_by_g = {g: track[track['gender'].str.upper() == g] for g in by_gender}
 
     def boot_one():
         pieces = []
         for g, r in by_gender.items():
             if r is None:
                 continue
-            road_g = marathon[marathon['gender'].str.upper() == g]
-            trk_g = track[track['gender'].str.upper() == g]
-            # Bootstrap-resample the marathon rows
-            samp_idx = rng_random.integers(0, len(road_g), size=len(road_g))
-            road_b = road_g.iloc[samp_idx]
-            rpy = road_b[(road_b['year'] >= PRE_ERA[0]) & (road_b['year'] <= PRE_ERA[1])]['finish_time_seconds'].median()
-            rpoy = road_b[(road_b['year'] >= POST_ERA[0]) & (road_b['year'] <= POST_ERA[1])]['finish_time_seconds'].median()
-            trk_pct = (r['trk_pre_mean'] - r['trk_post_mean']) / r['trk_pre_mean'] if r['trk_pre_mean'] else 0
-            te = trk_pct * rpy
-            shoe = (rpy - rpoy) - te
-            pieces.append(shoe)
+            road_b = resample_within_year(road_by_g[g], rng_random)
+            trk_b = resample_within_year(trk_by_g[g], rng_random)
+            rb = gendered_did(g, road_b, trk_b)
+            if rb is not None:
+                pieces.append(rb['shoe_contribution_seconds'])
         return float(np.mean(pieces)) if pieces else float('nan')
 
     boots = [boot_one() for _ in range(n_boot)]
@@ -388,7 +412,7 @@ def framework2_within_athlete(arcs):
 
     Uses age-adjusted delta when age data is available; falls back to
     raw delta otherwise. Wikipedia race pages do not report athlete
-    age, so age data is typically unavailable here — the writeup
+    age, so age data is typically unavailable here; the writeup
     discusses this limitation.
 
     Wheelchair and handcycle athletes are removed in load_data(). Also
@@ -425,11 +449,14 @@ def framework2_within_athlete(arcs):
     mean_delta = deltas.mean()
     median_delta = deltas.median()
 
-    # Bootstrap CI
+    # Bootstrap CI. The unit is the athlete: each replicate draws
+    # athletes with replacement and takes the median delta, the same
+    # statistic as the point estimate. Until 2026-10-28 the bootstrap
+    # resampled the mean instead of the median.
     rng_random = np.random.default_rng(43)
     arr = deltas.values
     n_boot = 1000
-    boots = [rng_random.choice(arr, size=len(arr), replace=True).mean() for _ in range(n_boot)]
+    boots = [np.median(rng_random.choice(arr, size=len(arr), replace=True)) for _ in range(n_boot)]
     ci_low_mean, ci_high_mean = np.percentile(boots, [2.5, 97.5])
 
     # Paired t-test against zero
@@ -531,6 +558,8 @@ def framework3_cohort_survival(marathon):
     post_years = [y for y in yrs_arr if POST_ERA[0] <= y <= POST_ERA[1]]
 
     def gender_pre_post(g_df):
+        if len(g_df) == 0:
+            return np.nan, np.nan
         med = g_df.groupby('year').apply(
             lambda g: g.nsmallest(min(30, len(g)), 'finish_time_seconds')['finish_time_seconds'].median()
             if len(g) > 0 else np.nan
@@ -555,30 +584,20 @@ def framework3_cohort_survival(marathon):
     valid = [x for x in [m_improvement, w_improvement] if not np.isnan(x)]
     raw_cohort_improvement = float(np.mean(valid)) if valid else float('nan')
 
-    # Bootstrap CI on the cohort improvement
+    # Bootstrap CI on the cohort improvement. Each replicate recomputes
+    # the point estimate (per-year top-30 medians, era means, averaged
+    # over genders) on result rows resampled with replacement within
+    # each year and gender (resample_within_year). Until 2026-10-28 the
+    # bootstrap compared means of up to 200 rows pooled across each era,
+    # a different statistic, so its interval did not center on the
+    # estimate.
     rng_random = np.random.default_rng(44)
     n_boot = 1000
     boots = []
-    men_arr = men['finish_time_seconds'].values
-    men_yrs = men['year'].values
-    women_arr = women['finish_time_seconds'].values
-    women_yrs = women['year'].values
-
-    pre_mask_m = (men_yrs >= PRE_ERA[0]) & (men_yrs <= PRE_ERA[1])
-    post_mask_m = (men_yrs >= POST_ERA[0]) & (men_yrs <= POST_ERA[1])
-    pre_mask_w = (women_yrs >= PRE_ERA[0]) & (women_yrs <= PRE_ERA[1])
-    post_mask_w = (women_yrs >= POST_ERA[0]) & (women_yrs <= POST_ERA[1])
-
     for _ in range(n_boot):
-        bs = []
-        if pre_mask_m.sum() and post_mask_m.sum():
-            mp = rng_random.choice(men_arr[pre_mask_m], size=min(200, pre_mask_m.sum()), replace=True).mean()
-            mpo = rng_random.choice(men_arr[post_mask_m], size=min(200, post_mask_m.sum()), replace=True).mean()
-            bs.append(mp - mpo)
-        if pre_mask_w.sum() and post_mask_w.sum():
-            wp = rng_random.choice(women_arr[pre_mask_w], size=min(200, pre_mask_w.sum()), replace=True).mean()
-            wpo = rng_random.choice(women_arr[post_mask_w], size=min(200, post_mask_w.sum()), replace=True).mean()
-            bs.append(wp - wpo)
+        bm_pre, bm_post = gender_pre_post(resample_within_year(men, rng_random))
+        bw_pre, bw_post = gender_pre_post(resample_within_year(women, rng_random))
+        bs = [x for x in [bm_pre - bm_post, bw_pre - bw_post] if not np.isnan(x)]
         if bs:
             boots.append(np.mean(bs))
 
@@ -693,7 +712,7 @@ def fig1_sub210_frequency(marathon, save_path):
         ax.bar(years, [series.get(y, 0) for y in years], color=colors,
                edgecolor='#555', linewidth=0.6)
         ax.axvline(VAPORFLY_LAUNCH_YEAR, ls='--', color='#222', lw=1, alpha=0.7)
-        ax.set_title(f'Performances faster than {threshold_label} per year — {gender}', loc='left')
+        ax.set_title(f'Performances faster than {threshold_label} per year, {gender}', loc='left')
         ax.set_ylabel('Count')
         ax.set_axisbelow(True)
 
@@ -914,7 +933,7 @@ def fig6_decomposition(pooled, save_path):
     total = 240.0
     shoe = min(max(shoe, 30), 200)  # clamp visually for the pie
 
-    # Remaining buckets (post-hoc carve-up — disclose as estimate in caption)
+    # Remaining buckets (post-hoc carve-up; disclose as estimate in caption)
     remaining = total - shoe
     deeper_fields = remaining * 0.40
     pacing = remaining * 0.20
@@ -952,7 +971,7 @@ def fig6_decomposition(pooled, save_path):
 
 
 def fig7_sensitivity(marathon, track, arcs, save_path):
-    """Multi-panel — shoe contribution under each robustness test."""
+    """Multi-panel: shoe contribution under each robustness test."""
     scenarios = []
 
     # Baseline DiD (top-50)
@@ -997,7 +1016,7 @@ def fig7_sensitivity(marathon, track, arcs, save_path):
     ax.set_yticklabels([s[0] for s in scenarios], fontsize=10)
     ax.axvline(0, ls=':', color='#777', lw=1)
     ax.set_xlabel('Estimated shoe contribution (seconds)')
-    ax.set_title('Sensitivity analysis — shoe contribution robust across specifications',
+    ax.set_title('Sensitivity analysis: shoe contribution robust across specifications',
                  loc='left', pad=14)
     ax.spines['top'].set_visible(False)
     ax.spines['right'].set_visible(False)

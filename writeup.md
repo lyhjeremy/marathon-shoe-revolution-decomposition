@@ -4,13 +4,13 @@
 
 *Jeremy Lee · May 2026, revised October 2026 (wheelchair results removed 28 October 2026) · [github.com/lyhjeremy/marathon-shoe-revolution-decomposition](https://github.com/lyhjeremy/marathon-shoe-revolution-decomposition)*
 
-> This is the GitHub-readable version of the [PDF report](reports/Marathon_Shoe_Revolution_Decomposition_Report.pdf) and [Word doc](reports/Marathon_Shoe_Revolution_Decomposition_Report.docx). The [Jupyter notebook](notebooks/shoe_revolution_decomposition.ipynb) runs the same analysis cell by cell. The October 2026 revision corrects several numbers against `outputs/analysis_summary.json` and the code; they are listed in the last section. On 28 October 2026 the 106 wheelchair and handcycle results the scraper had picked up were removed and the analysis rerun, which changed every estimate below.
+> This is the GitHub-readable version of the [PDF report](reports/Marathon_Shoe_Revolution_Decomposition_Report.pdf) and [Word doc](reports/Marathon_Shoe_Revolution_Decomposition_Report.docx). The [Jupyter notebook](notebooks/shoe_revolution_decomposition.ipynb) runs the same analysis cell by cell. The October 2026 revision corrects several numbers against `outputs/analysis_summary.json` and the code; they are listed in the last section. On 28 October 2026 the 106 wheelchair and handcycle results the scraper had picked up were removed and the analysis rerun, which changed every estimate below, and later that day the bootstrap intervals were recomputed.
 
 ---
 
 ## Abstract
 
-The short answer is about 80 seconds. Nike's Vaporfly 4% went on general sale in mid-2017, elite marathon times fell quickly over the following years (Kelvin Kiptum ran 2:00:35 at Chicago in 2023), and this report estimates how much of that drop belongs to the shoe. It applies three decomposition frameworks to 1,802 elite marathon running performances taken from major-race Wikipedia tables for 2010–2024: (1) a difference-in-differences (DiD) comparison against track 10,000 m, an event less affected by the shoe; (2) a within-athlete paired comparison of runners who raced at the elite level in both eras; and (3) a cohort analysis of the top-30 median and of yearly sub-2:10 and sub-2:25 counts. The three estimates are 199, 44 and 71 seconds; pooled, the shoe contribution is **82 seconds (95% CI 6–159 s)** of median elite marathon time, about **1.1% of a 2:05 marathon**. That is below what treadmill running-economy studies would suggest, and the interval is wide: its lower end is close to zero. The main weaknesses are thin pre-era track data, results taken from Wikipedia where verified global rankings would be better, and the absence of athlete ages.
+The short answer is about 70 seconds. Nike's Vaporfly 4% went on general sale in mid-2017, elite marathon times fell quickly over the following years (Kelvin Kiptum ran 2:00:35 at Chicago in 2023), and this report estimates how much of that drop belongs to the shoe. It applies three decomposition frameworks to 1,802 elite marathon running performances taken from major-race Wikipedia tables for 2010–2024: (1) a difference-in-differences (DiD) comparison against track 10,000 m, an event less affected by the shoe; (2) a within-athlete paired comparison of runners who raced at the elite level in both eras; and (3) a cohort analysis of the top-30 median and of yearly sub-2:10 and sub-2:25 counts. The three estimates are 199, 44 and 71 seconds; pooled, the shoe contribution is **73 seconds (95% CI −4 to 150 s)** of median elite marathon time, about **1.0% of a 2:05 marathon**. That is below what treadmill running-economy studies would suggest, and the interval is wide: its lower end is just below zero. The main weaknesses are thin pre-era track data, results taken from Wikipedia where verified global rankings would be better, and the absence of athlete ages.
 
 ---
 
@@ -52,13 +52,13 @@ Track 10,000 m racing did not take up carbon plates at the same rate or with the
 DiD_marathon_seconds = (road_post − road_pre) − (track_post − track_pre)
 ```
 
-The track change is converted to marathon-time terms by applying its percentage change to the marathon time. The point estimate uses top-50 year medians per gender (`main()` calls the function with n = 50; where a race-year has fewer rows, all of them are used). Only women have pre-era track data (2016), so the point estimate is women-only. The bootstrap CI draws 1,000 resamples of marathon rows with the track aggregates held fixed.
+The track change is converted to marathon-time terms by applying its percentage change to the marathon time. The point estimate uses top-50 year medians per gender (`main()` calls the function with n = 50; where a race-year has fewer rows, all of them are used). Only women have pre-era track data (2016), so the point estimate is women-only. The bootstrap CI draws 1,000 resamples. Each one redraws the road and track results within each year, with replacement, and recomputes the same top-50 statistic as the point estimate.
 
 A placebo DiD splits the pre-era into 2010–2013 and 2014–2016, a window with no shoe change. It should be near zero.
 
 ### 3.2 Framework 2: within-athlete paired
 
-Comparing a runner with themselves holds genetics, training history and physiology fixed. For each athlete with at least two pre-era and two post-era major-marathon results, the change is post-era mean time minus pre-era mean time. The report gives the median across athletes (less sensitive to a single bad race than the mean), a paired t-test against zero, and a bootstrap 95% CI on the mean.
+Comparing a runner with themselves holds genetics, training history and physiology fixed. For each athlete with at least two pre-era and two post-era major-marathon results, the change is post-era mean time minus pre-era mean time. The report gives the median across athletes (less sensitive to a single bad race than the mean), a paired t-test against zero, and a bootstrap 95% CI on the median, resampling athletes.
 
 The original plan included an age adjustment. The race tables carry no ages, so the change is raw. Runners in the paired group were typically four to six years older in the post-era, and an aging penalty is not subtracted. That pushes this estimate toward zero.
 
@@ -74,7 +74,7 @@ The three frameworks measure overlapping but different things. The pooled estima
 
 ## 4. Results
 
-### 4.1 Framework 1 (DiD): 199 seconds, 95% CI [161, 303]
+### 4.1 Framework 1 (DiD): 199 seconds, 95% CI [83, 338]
 
 ![Figure 1: Road marathon and track 10,000 m top-50 times normalized to 2010.](outputs/figures/fig2_did_track_vs_road.png)
 
@@ -82,21 +82,21 @@ The three frameworks measure overlapping but different things. The pooled estima
 
 The women's road marathon top-50 median improved **228 seconds** (2.57%) between eras. Women's track 10,000 m improved **0.32%**, about 6 seconds on a 10,000 m time. Applying 0.32% to the marathon time gives **29 seconds** that a general speed-up would explain. The residual, **199 seconds**, is attributed to road-specific causes, of which the shoe is the most obvious.
 
-The bootstrap 95% CI is [161, 303]. The point estimate and the interval measure slightly different things: the point estimate averages top-50 medians per year, while each bootstrap draw takes the median of all resampled rows in each era. Before the wheelchair rows were removed the interval sat entirely above the point estimate; now it contains it. Both are reported as the script produces them.
+The bootstrap 95% CI is [83, 338].
 
 The **placebo DiD** (2010–2013 against 2014–2016, marathon only) is **40 seconds** (39.5). With no shoe change inside that window it should be close to zero; it comes out at about a fifth of the main estimate, which says how much noise the DiD carries.
 
-### 4.2 Framework 2 (within-athlete paired): 44 seconds, 95% CI [−37, 131]
+### 4.2 Framework 2 (within-athlete paired): 44 seconds, 95% CI [−62, 121]
 
 ![Figure 2: Within-athlete pre vs post marathon times. Each line is one athlete.](outputs/figures/fig3_within_athlete_paired.png)
 
 *Figure 2. Pre-era and post-era mean finish time for each of the 16 athletes with at least two elite marathons in each era. Red lines improved, grey did not.*
 
-The median change is **−44 seconds** (post-era career-mean time was 44 seconds faster), and 10 of the 16 runners (62.5%) improved. The paired t-test gives t = −0.88, p = 0.39, which is far from significance at 0.05. The bootstrap 95% CI on the mean change is [−131, 37] seconds, which is [−37, 131] when expressed as a shoe contribution. With 16 runners, this estimate is suggestive at best.
+The median change is **−44 seconds** (post-era career-mean time was 44 seconds faster), and 10 of the 16 runners (62.5%) improved. The paired t-test gives t = −0.88, p = 0.39, which is far from significance at 0.05. The bootstrap 95% CI on the median change is [−121, 62] seconds, which is [−62, 121] when expressed as a shoe contribution. With 16 runners, this estimate is suggestive at best.
 
 Two biases both push it toward zero. Most pre-era elites stopped racing elite marathons before 2018, so the survivors are runners whose careers held up across the boundary, and aging would slow them slightly without any shoe effect. The missing age adjustment works in the same direction.
 
-### 4.3 Framework 3 (cohort survival): 71 seconds, 95% CI [73, 124]
+### 4.3 Framework 3 (cohort survival): 71 seconds, 95% CI [58, 98]
 
 ![Figure 3: Time needed to make the dataset's top 50 each year, men and women.](outputs/figures/fig4_cohort_survival.png)
 
@@ -106,11 +106,11 @@ Two biases both push it toward zero. Most pre-era elites stopped racing elite ma
 
 *Figure 4. Sub-2:10 (men) and sub-2:25 (women) performances per year. Grey bars are pre-era, orange the 2017 transition, red post-era. The dashed line marks the Vaporfly's commercial release.*
 
-The top-30 median, averaged over men (66 s) and women (192 s), improved **129 seconds** between eras (bootstrap CI 132–225). The changepoint search puts the break at **2020**, three years after the commercial launch, which fits elites adopting the shoe in 2017–2018 and the wider field following in 2019–2020. Attributing 55% to shoes gives **71 seconds**, 95% CI [73, 124]. The interval sits just above the point estimate for the same kind of reason as the DiD's used to: the point estimate uses yearly top-30 medians, while the bootstrap compares means of 200 resampled rows from each era.
+The top-30 median, averaged over men (66 s) and women (192 s), improved **129 seconds** between eras (bootstrap CI 105–177). The changepoint search puts the break at **2020**, three years after the commercial launch, which fits elites adopting the shoe in 2017–2018 and the wider field following in 2019–2020. Attributing 55% to shoes gives **71 seconds**, 95% CI [58, 98].
 
 Sub-2:10 men's performances averaged 23 a year before and 29 after; sub-2:25 women's went from 13 to 25. The ratios are 1.25× and 2.0×. This dataset covers six majors, where the number of fast times is limited by the size of the lead packs, so these counts say little about the sport as a whole.
 
-### 4.4 Pooled: 82 seconds, 95% CI [6, 159]
+### 4.4 Pooled: 73 seconds, 95% CI [−4, 150]
 
 ![Figure 5: Forest plot of the three framework estimates and the pooled estimate.](outputs/figures/fig5_framework_comparison.png)
 
@@ -118,12 +118,14 @@ Sub-2:10 men's performances averaged 23 a year before and 29 after; sub-2:25 wom
 
 | Framework | Point estimate | 95% CI | Notes |
 |---|---:|---|---|
-| 1. DiD (track-controlled) | 199 s | [161, 303] | Women-only pre-era |
-| 2. Within-athlete paired | 44 s | [−37, 131] | n = 16, not age-adjusted |
-| 3. Cohort survival | 71 s | [73, 124] | 55% of cohort improvement |
-| **Pooled** | **82 s** | **[6, 159]** | Inverse squared CI width weights |
+| 1. DiD (track-controlled) | 199 s | [83, 338] | Women-only pre-era |
+| 2. Within-athlete paired | 44 s | [−62, 121] | n = 16, not age-adjusted |
+| 3. Cohort survival | 71 s | [58, 98] | 55% of cohort improvement |
+| **Pooled** | **73 s** | **[−4, 150]** | Inverse squared CI width weights |
 
-Cohort survival has the narrowest interval and carries about 82% of the pooled weight; the DiD carries about 11% and the within-athlete framework, with the widest interval, about 8%. As a share of a 2:05 marathon, 82 seconds is **1.1%**, 95% CI [0.1%, 2.1%]. The pooled interval is wide because it is built from the spread of the three estimates, and the DiD now sits far from the other two.
+28 October 2026: the bootstrap now resamples the same statistic as the estimate.
+
+Cohort survival has the narrowest interval and carries about 93% of the pooled weight; the within-athlete framework carries about 4% and the DiD, with the widest interval, about 2%. As a share of a 2:05 marathon, 73 seconds is **1.0%**, 95% CI [−0.1%, 2.0%]. The pooled interval is wide because it is built from the spread of the three estimates, and the DiD now sits far from the other two.
 
 ---
 
@@ -161,13 +163,13 @@ The 2017–2020 change is easier to study because adoption was fast. Elite runne
 
 The sensitivity code in `fig7_sensitivity()` reruns the DiD with a top-50 baseline:
 
-- **Top 25 per year instead of top 50:** 183 s. Thinner coverage in early years moves the estimate by about 16 seconds.
+- **Top 25 per year instead of top 50:** 183 s [74, 327]. Thinner coverage in early years moves the estimate by about 16 seconds.
 - **Excluding Eliud Kipchoge:** 199 s, unchanged. The point estimate is women-only, so removing a man cannot move it; this check tests nothing.
 - **Excluding time-trial events** (any course matching Vienna, Monza, INEOS or Breaking2): 199 s, unchanged. None were in the canonical dataset to begin with.
 
-The bootstrap interval is [161, 303] in every setting, which suggests the CI calculation does not respond to these filters.
+The two exclusion checks remove no women's results, so their bootstrap intervals are the baseline's [83, 338].
 
-**Changing the 55% share.** The script has no option for this, so the numbers were recomputed from `analysis_summary.json` with the same pooling formula. At 40% the cohort estimate falls to 52 s and the pooled value to about 60 s. At 70% they rise to 90 s and about 102 s. The pooled estimate moves roughly in step with this assumption, because cohort survival carries most of the weight.
+**Changing the 55% share.** The script has no option for this, so the numbers were recomputed from `analysis_summary.json` with the same pooling formula. At 40% the cohort estimate falls to 52 s and the pooled value to about 53 s. At 70% they rise to 90 s and about 91 s. The pooled estimate moves roughly in step with this assumption, because cohort survival carries most of the weight.
 
 ---
 
@@ -189,7 +191,7 @@ Finally, the design cannot rule out unobserved performance enhancement, legal or
 
 ## 9. Conclusion
 
-The three frameworks put the shoe-attributable share of elite marathon improvement between 2010–2016 and 2018–2024 at **82 seconds of median elite marathon time, 95% CI 6–159 seconds**, about **1.1%** for a 2:05 runner. The interval is wide; its low end is close to zero and its high end is over two and a half minutes.
+The three frameworks put the shoe-attributable share of elite marathon improvement between 2010–2016 and 2018–2024 at **73 seconds of median elite marathon time, 95% CI −4 to 150 seconds**, about **1.0%** for a 2:05 runner. The interval is wide; its low end is just below zero and its high end is two and a half minutes.
 
 For readers who trust one framework more than the others:
 
@@ -227,5 +229,6 @@ The script regenerates the figures, `outputs/analysis_results.csv` and `outputs/
 - Figure 5 in `outputs/figures/` predated the current summary file and showed 117 s and 69 s. It was redrawn from a re-run of `src/analysis.py` whose JSON and CSV outputs matched the committed files exactly.
 - The DiD was described as using top-30 medians; `main()` runs it on the top 50.
 - 28 October 2026: 106 wheelchair and handcycle rows (54 women, among them Shelly Woods and Arielle Rausin) were removed and the analysis rerun. Pooled 67 s [36, 99] became 82 s [6, 159]; DiD 111 → 199 s, within-athlete 47 → 44 s (n 17 → 16), cohort 58 → 71 s. The "three to five times" figure for the rise in fast times was cut because no source for it could be found.
+- 28 October 2026: each bootstrap now recomputes the same statistic as its point estimate (results resampled within year for the DiD and cohort frameworks, athletes for the within-athlete median). The old DiD and cohort intervals, [161, 303] and [73, 124], came from all-row era medians and pooled-row means and sat high. New intervals: DiD [83, 338], within-athlete [−62, 121], cohort [58, 98]. Because the pooling weights use interval widths, the pooled estimate moved from 82 s [6, 159] to 73 s [−4, 150].
 
 Image credits: hero and athlete photographs are CC-BY-SA from Wikimedia Commons; shoe cutaway from [`File:Nike_Vaporfly_Cut_in_Half.png`](https://commons.wikimedia.org/wiki/File:Nike_Vaporfly_Cut_in_Half.png), CC-BY-SA 4.0. The eight analytical figures are original to this work and CC-BY 4.0.

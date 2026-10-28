@@ -55,7 +55,7 @@ plt.rcParams['savefig.dpi'] = 200  # screen-friendly; src/analysis.py uses 400 f
     cells.append(md("""## 2. Load the four source CSVs
 
 - `data/elite_marathon_times.csv` (1,908 rows scraped from major-marathon Wikipedia tables; 106 wheelchair and handcycle rows are dropped on load)
-- `data/track_records_control.csv` (27 rows, sparse — see writeup §9)
+- `data/track_records_control.csv` (27 rows, sparse; see writeup §9)
 - `data/shoe_timeline.csv` (hand-compiled, 19 rows)
 - `data/athlete_career_arcs.csv` (derived)"""))
 
@@ -69,7 +69,7 @@ print(f"Marathon: {len(marathon):,} rows ({marathon['year'].min()}–{marathon['
 print(f"Track:    {len(track):,} rows ({track['year'].min()}–{track['year'].max()})")
 print(f"Timeline: {len(timeline):,} rows")
 if arcs is None:
-    print("Career arcs: not yet derived — building now …")
+    print("Career arcs: not yet derived, building now …")
     arcs = derive_athlete_career_arcs(marathon)
 print(f"Career arcs: {len(arcs)} athletes")
 """))
@@ -83,14 +83,14 @@ Top-30 median time per year, per gender. This is the cohort signal that drives F
 
 med = (marathon.groupby(['year','gender']).apply(top30_median)
         .unstack(fill_value=np.nan))
-med['M_str'] = med['M'].apply(lambda s: time_str(s) if not np.isnan(s) else '—')
-med['W_str'] = med['W'].apply(lambda s: time_str(s) if not np.isnan(s) else '—')
+med['M_str'] = med['M'].apply(lambda s: time_str(s) if not np.isnan(s) else 'n/a')
+med['W_str'] = med['W'].apply(lambda s: time_str(s) if not np.isnan(s) else 'n/a')
 med[['M','W','M_str','W_str']].round(0)
 """))
 
-    cells.append(md("""## 4. Framework 1 — Difference-in-Differences
+    cells.append(md("""## 4. Framework 1: Difference-in-Differences
 
-Road marathon improvement minus track 10,000m improvement, computed per gender on top-50 medians. Bootstrap CI from 1,000 marathon-row resamples."""))
+Road marathon improvement minus track 10,000m improvement, computed per gender on top-50 medians. Bootstrap CI from 1,000 resamples that redraw marathon and track results within each year and recompute the same statistic."""))
 
     cells.append(code("""s1, ctx1 = framework1_did(marathon, track, n=50)  # same n as main() in analysis.py
 print(f"Shoe contribution (DiD): {s1['shoe_contribution_seconds']:.0f} s")
@@ -104,7 +104,7 @@ for g, r in s1['by_gender'].items():
 print(f"\\nNote: {s1['note']}")
 """))
 
-    cells.append(md("""## 5. Framework 2 — Within-athlete paired pre/post
+    cells.append(md("""## 5. Framework 2: Within-athlete paired pre/post
 
 Median of per-athlete (post mean minus pre mean) across the n=16 cohort (wheelchair athletes excluded) that raced ≥2 elites in both eras."""))
 
@@ -116,10 +116,10 @@ print(f"Mean delta:    {s2['mean_delta_seconds']:.0f} s")
 print(f"% improved:    {s2['pct_improved']:.0f}%")
 print(f"Paired t-test: t={s2['paired_t']:.2f}, p={s2['paired_p']:.3f}")
 print(f"Shoe contribution: {s2['shoe_contribution_seconds']:.0f} s")
-print(f"95% CI: [{-s2['ci_high']:.0f}, {-s2['ci_low']:.0f}]")
+print(f"95% CI: [{s2['ci_low']:.0f}, {s2['ci_high']:.0f}]")
 """))
 
-    cells.append(md("""## 6. Framework 3 — Cohort survival / depth
+    cells.append(md("""## 6. Framework 3: Cohort survival / depth
 
 Annual sub-2:10 (men) and sub-2:25 (women) counts; changepoint detection; cohort-improvement shoe attribution (55% share)."""))
 

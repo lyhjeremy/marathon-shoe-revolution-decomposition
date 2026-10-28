@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-<title>How much of the marathon revolution is the shoe? About 82 seconds</title>
-<meta name="description" content="Three decomposition frameworks over 1,802 elite marathon running performances, 2010 to 2024. Pooled shoe contribution: 82 seconds, 95% CI 6 to 159, about 1.1% of a 2:05 marathon." />
+<title>How much of the marathon revolution is the shoe? About 73 seconds</title>
+<meta name="description" content="Three decomposition frameworks over 1,802 elite marathon running performances, 2010 to 2024. Pooled shoe contribution: 73 seconds, 95% CI -4 to 150, about 1.0% of a 2:05 marathon." />
 <meta name="theme-color" content="#ECEBE6" />
 <meta property="og:title" content="How much of it is the shoe?" />
-<meta property="og:description" content="Difference-in-differences, within-athlete pairing and cohort survival, applied to the super-shoe era. The pooled answer is 82 seconds." />
+<meta property="og:description" content="Difference-in-differences, within-athlete pairing and cohort survival, applied to the super-shoe era. The pooled answer is 73 seconds." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://lyhjeremy.github.io/marathon-shoe-revolution-decomposition/overview/" />
 <link href="" rel="stylesheet" />
@@ -312,20 +312,21 @@
 
   <section class="hero">
     <p class="kicker">Super shoes, measured three ways</p>
-    <h1>Carbon-plated shoes took about 82 seconds off elite marathons</h1>
+    <h1>Carbon-plated shoes took about 73 seconds off elite marathons</h1>
 
     <p class="hero-sub">
       Nike&rsquo;s Vaporfly 4% went on sale in 2017, and elite marathon times fell quickly after it.
       Pacing, prize money and deeper fields changed over the same years, so the question is how much
       of the drop belongs to the shoe. Three decomposition methods, run over <strong>1,802 elite
-      running performances</strong> from 2010 to 2024, put it at <strong>82 seconds</strong> (95% CI
-      <strong>6&ndash;159</strong>) of median elite marathon time. That is about <strong>1.1%</strong>
+      running performances</strong> from 2010 to 2024, put it at <strong>73 seconds</strong> (95% CI
+      <strong>&minus;4 to 150</strong>) of median elite marathon time. That is about <strong>1.0%</strong>
       of a 2:05 marathon. The 4% in the shoe&rsquo;s name is a treadmill measure of running energy cost,
       not race time (<a href="https://doi.org/10.1007/s40279-017-0811-2">Hoogkamer et al. 2018</a>).
     </p>
     <p class="hero-sub"><small>Updated 28 October 2026: the scraped tables included 106 wheelchair and
       handcycle results, read as women&rsquo;s running times. They are now excluded and every number on this
-      page comes from the rerun. The pooled estimate was 67 seconds before.</small></p>
+      page comes from the rerun. The pooled estimate was 67 seconds before, and 82 seconds until the
+      bootstrap fix noted below.</small></p>
 
     <div class="cta-row">
       <a class="btn btn-primary" href="https://github.com/lyhjeremy/marathon-shoe-revolution-decomposition/blob/main/writeup.md">Read the full report</a>
@@ -334,8 +335,8 @@
 
     <div class="claims">
       <div class="claim">
-        <div class="n">82 s</div>
-        <p>Pooled shoe contribution to median elite marathon time, 95% CI 6&ndash;159 seconds.</p>
+        <div class="n">73 s</div>
+        <p>Pooled shoe contribution to median elite marathon time, 95% CI &minus;4 to 150 seconds.</p>
       </div>
       <div class="claim">
         <div class="n">44&ndash;199 s</div>
@@ -384,22 +385,22 @@
     <p class="eyebrow">Km 10 &middot; the answer</p>
     <h2>Three methods, a wide spread, one pooled answer</h2>
 
-    <div class="bignum">82 s</div>
-    <p class="bignum-note">Pooled across the three frameworks. 95% CI 6&ndash;159 seconds.</p>
+    <div class="bignum">73 s</div>
+    <p class="bignum-note">Pooled across the three frameworks. 95% CI &minus;4 to 150 seconds.</p>
 
-    <div class="gap" aria-label="At 2:05 marathon pace, 82 seconds is about 464 metres of road; the interval runs from about 32 to 896 metres.">
+    <div class="gap" aria-label="At 2:05 marathon pace, 73 seconds is about 409 meters of road; the interval runs from about 23 meters behind to 842 meters ahead.">
       <div class="gap-line" aria-hidden="true">
         <span class="road"></span>
-        <span class="ci" style="left:3.2%;width:86.4%"></span>
+        <span class="ci" style="left:0;width:84.2%"></span>
         <span class="r" style="left:0"></span>
-        <span class="r b" style="left:46.4%"></span>
+        <span class="r b" style="left:40.9%"></span>
         <span class="lab" style="left:3%">0 m</span>
-        <span class="lab" style="left:46.4%">464 m</span>
+        <span class="lab" style="left:40.9%">409 m</span>
         <span class="lab" style="left:94%">1 km</span>
       </div>
-      <p>At 2:05 pace (5.63 m/s), 82 seconds is about <strong>464 metres</strong> of road: a runner in
+      <p>At 2:05 pace (5.63 m/s), 73 seconds is about <strong>409 meters</strong> of road: a runner in
         2018 shoes would finish that far ahead of the same runner in 2016 shoes. The shaded band is the
-        95% interval, 32 to 896 metres.</p>
+        95% interval, which runs from 23 meters behind (drawn from the start line) to 842 meters ahead.</p>
     </div>
 
     <p style="margin-top:26px">
@@ -410,31 +411,25 @@
     </p>
     <p>
       The pooled value weights each estimate by the inverse square of its interval width, so cohort
-      survival, with the tightest interval, carries about 82% of the weight. The pooled interval comes
+      survival, with the tightest interval, carries about 93% of the weight. The pooled interval comes
       from the spread of the three estimates (the estimate &plusmn; 1.96 times their standard deviation
       over &radic;3), with no bootstrap at this step. The cohort figure depends on an assumption the
       analysis makes, that 55% of the cohort shift is the shoe. The slider changes it.
     </p>
 
     <div class="viz" id="forest">
-      <h3 id="fo-title">At a 55% shoe share, the pooled estimate is 82 seconds</h3>
+      <h3 id="fo-title">At a 55% shoe share, the pooled estimate is 73 seconds</h3>
       <p class="sub">Each framework's estimate and 95% interval in seconds of shoe-attributable improvement,
         re-pooled with the formula in <code>synthesize()</code> as the cohort share moves.</p>
       <label class="share" for="fo-s"><span>Share of the 129 s cohort shift credited to shoes</span><output id="fo-so">55%</output>
         <input id="fo-s" type="range" min="0.3" max="0.8" step="0.05" value="0.55" /></label>
-      <div class="host" id="fo-host" role="img" aria-label="Forest plot. Difference-in-differences 199 seconds with interval 161 to 303; within-athlete 44 seconds, interval minus 37 to 131; cohort survival 71 seconds, interval 73 to 124; pooled 82 seconds, interval 6 to 159."></div>
+      <div class="host" id="fo-host" role="img" aria-label="Forest plot. Difference-in-differences 199 seconds with interval 83 to 338; within-athlete 44 seconds, interval minus 62 to 121; cohort survival 71 seconds, interval 58 to 98; pooled 73 seconds, interval minus 4 to 150."></div>
       <p class="readout" id="fo-out" aria-live="polite"></p>
       <p class="vsrc">Estimates and intervals from <code>outputs/analysis_summary.json</code>. The cohort interval
         scales with the share, as in the script (<code>raw_ci_low</code> and <code>raw_ci_high</code> times the share).</p>
     </div>
 
-    <p style="margin-top:22px">
-      One oddity is in the script, not the chart: the cohort-survival interval, 73 to 124 s, lies just
-      above its own point estimate of 71 s. The point estimate uses yearly top-30 medians, while each
-      bootstrap draw compares means of resampled rows from each era, so the two measure different things.
-      The difference-in-differences is built the same way; before the wheelchair rows were removed, its
-      interval sat entirely above its point estimate. The page reports both as the script produces them.
-    </p>
+    <p style="margin-top:22px">28 October 2026: the bootstrap now resamples the same statistic as the estimate.</p>
   </section>
 
   <section class="stop">
@@ -544,14 +539,15 @@
       No race records which shoe anyone wore; era stands in for shoe use.
     </p>
     <p>
-      The 55% shoe share is an assumption. At 40% the cohort estimate is 52 s and the pooled value 60 s;
-      at 70%, 90 s and 102 s. The script has no switch for this, so those values come from re-pooling
+      The 55% shoe share is an assumption. At 40% the cohort estimate is 52 s and the pooled value 53 s;
+      at 70%, 90 s and 91 s. The script has no switch for this, so those values come from re-pooling
       the summary file with the script&rsquo;s formula, which is what the slider above does.
     </p>
     <p>
       The sensitivity runs cover only the difference-in-differences: 183 s with the top 25 per year
       instead of the top 50, and 199 s with Kipchoge or time-trial events removed (the point estimate is
-      women-only, so dropping Kipchoge cannot move it). The bootstrap interval does not change across them.
+      women-only, so dropping Kipchoge cannot move it). The interval is 74 to 327 s for the top 25 and the
+      baseline 83 to 338 s for the two exclusions, which remove no women&rsquo;s results.
     </p>
   </section>
 
@@ -614,9 +610,9 @@
   }
 
   /* ---- forest plot with cohort share (outputs/analysis_summary.json) ---- */
-  var DID = [199.3935501365898, 160.88196534026997, 302.9009912823397];
-  var WA = [43.59999999999991, -36.91783978174619, 130.6320833333334];
-  var RAW = [129.21428571428487, 132.1044999999993, 224.61099999999962];
+  var DID = [199.3935501365898, 82.80185688405773, 338.43978023588886];
+  var WA = [43.59999999999991, -61.535714285714675, 120.83333333333348];
+  var RAW = [129.21428571428487, 105.2812499999995, 177.3937500000002];
   var fHost = document.getElementById("fo-host"), fIn = document.getElementById("fo-s"), fOut = document.getElementById("fo-out");
   function pool(share) { /* synthesize() in src/analysis.py */
     var co = [RAW[0] * share, RAW[1] * share, RAW[2] * share];
@@ -633,14 +629,14 @@
     var Wd = fHost.clientWidth; if (!Wd) return;
     var share = parseFloat(fIn.value), r = pool(share), narrow = Wd < 560;
     document.getElementById("fo-so").textContent = Math.round(share * 100) + "%";
-    var L = narrow ? 0 : 190, R = 14, top = 6, rowH = narrow ? 86 : 58, lo = -40, hi = 320;
+    var L = narrow ? 0 : 190, R = 14, top = 6, rowH = narrow ? 86 : 58, lo = -100, hi = 350;
     var rows = [["Difference-in-differences", DID, ""], ["Within-athlete paired", WA, ""], ["Cohort survival, " + Math.round(share * 100) + "% share", r.co, " live"], ["Pooled", r.p, " pool"]];
     var H = top + rows.length * rowH + 24, pw = Wd - L - R;
     function X(v) { return L + (v - lo) / (hi - lo) * pw; }
     var svg = svgOf(Wd, H);
-    [0, 50, 100, 150, 200, 250, 300].forEach(function (v) {
+    (narrow ? [0, 100, 200, 300] : [-50, 0, 50, 100, 150, 200, 250, 300]).forEach(function (v) {
       svg.appendChild(el("line", { x1: X(v), x2: X(v), y1: top, y2: H - 20, "class": v === 0 ? "g-zero" : "g-grid" }));
-      svg.appendChild(el("text", { x: X(v), y: H - 4, "text-anchor": "middle", "class": "t-ax" }, v + (v === 300 ? " s" : "")));
+      svg.appendChild(el("text", { x: X(v), y: H - 4, "text-anchor": "middle", "class": "t-ax" }, (v < 0 ? "\u2212" + (-v) : v) + (v === 300 ? " s" : "")));
     });
     rows.forEach(function (row, i) {
       var d = row[1], y = top + i * rowH + (narrow ? 36 : rowH / 2 + 10);

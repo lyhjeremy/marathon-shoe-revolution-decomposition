@@ -130,7 +130,7 @@ def main():
 <div class="headline">
   <div class="label">Pooled shoe contribution</div>
   <div class="big">{pool['pooled_estimate_seconds']:.0f} seconds</div>
-  <div class="ci">95% CI {pool['pooled_ci_low']:.0f}&ndash;{pool['pooled_ci_high']:.0f} s &middot; about {pool['pooled_estimate_seconds'] / 75:.1f}% of a 2:05 marathon</div>
+  <div class="ci">95% CI {pool['pooled_ci_low']:.0f} to {pool['pooled_ci_high']:.0f} s &middot; about {pool['pooled_estimate_seconds'] / 75:.1f}% of a 2:05 marathon</div>
 </div>
 
 <h2>The question</h2>
@@ -176,7 +176,7 @@ def main():
   <div class="ci">[{pool['pooled_ci_low']:.0f}, {pool['pooled_ci_high']:.0f}]</div>
 </div>
 
-<p class="small">The cohort-survival interval lies just above its point estimate because the point uses year medians and the bootstrap resamples row means. Both are reported as computed.</p>
+<p class="small">28 October 2026: the bootstrap now resamples the same statistic as the estimate.</p>
 
 <h2>Fast times became more common, women&rsquo;s most of all</h2>
 

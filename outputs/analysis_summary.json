@@ -24,8 +24,8 @@
       }
     },
     "shoe_contribution_seconds": 199.3935501365898,
-    "ci_low": 160.88196534026997,
-    "ci_high": 302.9009912823397,
+    "ci_low": 82.80185688405773,
+    "ci_high": 338.43978023588886,
     "placebo_did_seconds": 39.5,
     "note": "Track 10,000m pre-era coverage is sparse (W: 2016 only; M: none). Pooled estimate uses women-only DiD where pre-era track data exists, and treats men as supplementary. See writeup limitations."
   },
@@ -37,8 +37,8 @@
     "median_delta_seconds": -43.59999999999991,
     "mean_raw_delta": -38.50922619047617,
     "shoe_contribution_seconds": 43.59999999999991,
-    "ci_low": -36.91783978174619,
-    "ci_high": 130.6320833333334,
+    "ci_low": -61.535714285714675,
+    "ci_high": 120.83333333333348,
     "paired_t": -0.8777394147190803,
     "paired_p": 0.39392713783052036,
     "pct_improved": 62.5
@@ -51,17 +51,17 @@
     "sub_w_pre_mean": 12.571428571428571,
     "sub_w_post_mean": 25.142857142857142,
     "raw_cohort_improvement_seconds": 129.21428571428487,
-    "raw_ci_low": 132.1044999999993,
-    "raw_ci_high": 224.61099999999962,
+    "raw_ci_low": 105.2812499999995,
+    "raw_ci_high": 177.3937500000002,
     "shoe_contribution_seconds": 71.06785714285668,
-    "ci_low": 72.65747499999962,
-    "ci_high": 123.5360499999998,
+    "ci_low": 57.90468749999973,
+    "ci_high": 97.56656250000012,
     "shoe_attribution_share": 0.55
   },
   "pooled": {
-    "pooled_estimate_seconds": 82.486472606814,
-    "pooled_ci_low": 5.650475560316551,
-    "pooled_ci_high": 159.32246965331146,
+    "pooled_estimate_seconds": 72.73839363842116,
+    "pooled_ci_low": -4.097603408076296,
+    "pooled_ci_high": 149.57439068491863,
     "n_frameworks": 3,
     "framework_estimates": {
       "did": 199.3935501365898,

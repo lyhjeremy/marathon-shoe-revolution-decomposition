@@ -200,21 +200,21 @@ def build_full_report():
         "the subset of athletes who raced elites in both eras; and (3) a cohort-depth "
         "analysis that compares observed post-era top-30 medians against the pre-era "
         f"trend. The three estimates pool to a shoe contribution of "
-        f"<b>{pool['pooled_estimate_seconds']:.0f} seconds (95% CI {pool['pooled_ci_low']:.0f}–"
+        f"<b>{pool['pooled_estimate_seconds']:.0f} seconds (95% CI {pool['pooled_ci_low']:.0f} to "
         f"{pool['pooled_ci_high']:.0f} s)</b> in median elite marathon time, equivalent "
-        f"to roughly 1.1% of a 2:05 marathon.")
+        f"to roughly {pool['pooled_estimate_seconds'] / 75:.1f}% of a 2:05 marathon.")
 
     # 1. Introduction
     add_h1(doc, "1. Introduction")
     add_body(doc,
-        "On 6 May 2017, three runners — Eliud Kipchoge, Lelisa Desisa, and Zersenay "
-        "Tadese — ran 2:00:25 on the Monza Formula 1 circuit in Nike's 'Breaking2' "
+        "On 6 May 2017, three runners (Eliud Kipchoge, Lelisa Desisa, and Zersenay "
+        "Tadese) ran 2:00:25 on the Monza Formula 1 circuit in Nike's 'Breaking2' "
         "exhibition. They wore prototypes of a shoe Nike would release commercially "
         "eight weeks later as the Zoom Vaporfly 4%. Independent biomechanics labs "
         "would later measure 4% running-economy improvement for a typical elite male "
         "marathoner under treadmill conditions.")
     add_body(doc,
-        "Four months later, Kipchoge ran the official Berlin Marathon in 2:03:32 — "
+        "Four months later, Kipchoge ran the official Berlin Marathon in 2:03:32, "
         "already in the Vaporfly. A year later, in September 2018, he set the open "
         "world record at 2:01:39. Brigid Kosgei lowered the women's record by 81 "
         "seconds at Chicago 2019. Kelvin Kiptum went 2:00:35 at Chicago 2023. "
@@ -222,9 +222,9 @@ def build_full_report():
         "London 2026.")
     add_body(doc,
         "A revolution that scale invites the obvious question. Are these shoes "
-        "responsible for the improvement, or are they coincident with other changes — "
+        "responsible for the improvement, or are they coincident with other changes ("
         "deeper East African talent pipelines, smarter time-trial-style pacing, "
-        "expanded altitude training — that would have produced something like the "
+        "expanded altitude training) that would have produced something like the "
         "post-2017 jump anyway? That is the question this report attempts to bound.")
 
     # 2. Data
@@ -234,7 +234,7 @@ def build_full_report():
         "Wikipedia articles for six major marathons (Berlin, London, Chicago, Boston, "
         "Tokyo, New York City, plus a handful of Dubai entries), 2010–2024. "
         "<b>track_records_control.csv</b> (27 rows): top 10,000m track performances "
-        "2016–2024 — the dataset's biggest weakness. <b>shoe_timeline.csv</b> (19 rows): "
+        "2016–2024: the dataset's biggest weakness. <b>shoe_timeline.csv</b> (19 rows): "
         "hand-compiled release dates for every major super-shoe model 2016–2024. "
         "<b>athlete_career_arcs.csv</b> (derived): 16 athletes with ≥2 pre-era and ≥2 "
         "post-era major-marathon races.")
@@ -257,8 +257,9 @@ def build_full_report():
         "same effect as road racing. If shoes are the dominant cause of road marathon "
         "improvement, road times should have improved faster than track times across "
         "the same window. We compute DiD = (road_post − road_pre) − (track_post − "
-        "track_pre) per gender on top-30 median times. Bootstrap 95% CIs come from "
-        "1,000 resamples of marathon rows. A placebo DiD splits the pre-era window "
+        "track_pre) per gender on top-50 median times. Bootstrap 95% CIs come from "
+        "1,000 resamples that redraw marathon and track results within each year and "
+        "recompute the same statistic. A placebo DiD splits the pre-era window "
         "into 2010–2013 vs 2014–2016, which should be close to zero.")
 
     add_h2(doc, "3.2 Framework 2: Within-Athlete Paired Pre/Post")
@@ -266,7 +267,7 @@ def build_full_report():
         "For each athlete with ≥2 pre-era and ≥2 post-era major-marathon results, we "
         "compute the difference of post-era mean finish time minus pre-era mean finish "
         "time. We report the median across athletes, the paired t-test against zero, "
-        "and a bootstrap 95% CI. The Wikipedia data does not include athlete ages, so "
+        "and a bootstrap 95% CI on the median (athletes resampled). The Wikipedia data does not include athlete ages, so "
         "we report the raw delta and discuss the age-confound limitation explicitly. "
         "With pre-era athletes typically aged 26–32 and post-era ages 28–36, not "
         "subtracting the +30 to +60 second aging penalty biases our shoe estimate "
@@ -297,8 +298,8 @@ def build_full_report():
         f"of road improvement is {f1['by_gender']['W']['track_explainable_marathon_seconds']:.0f} "
         f"seconds. The residual, attributable to road-specific factors of which shoes are "
         f"dominant, is <b>{f1['shoe_contribution_seconds']:.0f} seconds</b>. Placebo DiD "
-        f"on pre-era splits returns {f1['placebo_did_seconds']:.0f} seconds — an order of "
-        f"magnitude smaller than the main effect.")
+        f"on pre-era splits returns {f1['placebo_did_seconds']:.0f} seconds, about a fifth of "
+        f"the main effect.")
 
     add_figure(doc, 'fig2_did_track_vs_road.png',
         "Figure 2. Road marathon top-50 mean time vs track 10,000m top-50 mean time, "
@@ -306,13 +307,13 @@ def build_full_report():
 
     add_h2(doc,
         f"4.2 Framework 2 (within-athlete): {f2['shoe_contribution_seconds']:.0f} seconds, "
-        f"95% CI [{-f2['ci_high']:.0f}, {-f2['ci_low']:.0f}]")
+        f"95% CI [{f2['ci_low']:.0f}, {f2['ci_high']:.0f}]")
     add_body(doc,
         f"<b>{f2['n_athletes']} athletes</b> meet the inclusion criteria. The median "
         f"across-athlete delta is <b>{f2['median_delta_seconds']:.0f} seconds</b> (post "
         f"mean minus pre mean). <b>{f2['pct_improved']:.0f}%</b> improved. A paired "
-        f"t-test against zero returns t = {f2['paired_t']:.2f}, p = {f2['paired_p']:.2f} — "
-        f"not significant at α=0.05. The bootstrap 95% CI on the mean delta is wide; "
+        f"t-test against zero returns t = {f2['paired_t']:.2f}, p = {f2['paired_p']:.2f}, "
+        f"not significant at α=0.05. The bootstrap 95% CI on the median delta is wide; "
         f"we report this estimate as suggestive rather than confirmatory.")
 
     add_figure(doc, 'fig3_within_athlete_paired.png',
@@ -326,7 +327,7 @@ def build_full_report():
         f"The raw cohort improvement (top-30 median, averaged across men and women) is "
         f"<b>{f3['raw_cohort_improvement_seconds']:.0f} seconds</b> between pre-era and "
         f"post-era. The changepoint detection places the structural break at "
-        f"<b>{f3['changepoint_year']}</b> — consistent with broad-cohort adoption following "
+        f"<b>{f3['changepoint_year']}</b>, consistent with broad-cohort adoption following "
         f"elite adoption. Sub-threshold counts went from {f3['sub_m_pre_mean']:.0f} (men) "
         f"and {f3['sub_w_pre_mean']:.0f} (women) per year in the pre-era to "
         f"{f3['sub_m_post_mean']:.0f} and {f3['sub_w_post_mean']:.0f} in the post-era. "
@@ -345,7 +346,7 @@ def build_full_report():
         f"<b>Finding 1: All three frameworks place shoe contribution in the 44–199 "
         f"second range.</b> The pooled estimate of "
         f"<b>{pool['pooled_estimate_seconds']:.0f} seconds (95% CI "
-        f"{pool['pooled_ci_low']:.0f}–{pool['pooled_ci_high']:.0f})</b> sits near "
+        f"{pool['pooled_ci_low']:.0f} to {pool['pooled_ci_high']:.0f})</b> sits near "
         f"the lower two because the cohort framework has the "
         f"tightest CI and most of the weight in the pool.")
     add_body(doc,
@@ -430,12 +431,12 @@ def build_full_report():
     add_h1(doc, "9. Conclusion")
     add_body(doc,
         f"The carbon-plated marathon shoe revolution is real, measurable, and population-"
-        f"level — but smaller than the most aggressive popular characterizations and "
+        f"level, but smaller than the most aggressive popular characterizations and "
         f"larger than the most dismissive ones. Our three-framework decomposition places "
         f"the shoe-attributable share of elite marathon improvement between 2010–2016 and "
         f"2018–2024 at <b>{pool['pooled_estimate_seconds']:.0f} seconds in the median "
-        f"elite marathon time, 95% CI {pool['pooled_ci_low']:.0f}–"
-        f"{pool['pooled_ci_high']:.0f} seconds</b>, equivalent to roughly 1.1% of "
+        f"elite marathon time, 95% CI {pool['pooled_ci_low']:.0f} to "
+        f"{pool['pooled_ci_high']:.0f} seconds</b>, equivalent to roughly {pool['pooled_estimate_seconds'] / 75:.1f}% of "
         f"marathon time for a 2:05 runner.")
     add_body(doc,
         "If you trust the within-athlete framework most, weight toward 44 s: the cleanest "
@@ -446,8 +447,8 @@ def build_full_report():
     add_body(doc,
         "Shoes are the most-cited cause of the post-2017 marathon revolution not because "
         "they are the largest single cause, but because they are the most discrete and "
-        "dateable one. The rest — deeper African talent pipelines, pacing improvements, "
-        "altitude training, race-craft — together account for more.")
+        "dateable one. The rest (deeper African talent pipelines, pacing improvements, "
+        "altitude training, race-craft) together account for more.")
 
     # Footer note
     para = doc.add_paragraph()
@@ -514,13 +515,13 @@ def build_short_report():
     add_h1(doc, "The Answer")
     add_body(doc,
         f"<b>Pooled shoe contribution: {pool['pooled_estimate_seconds']:.0f} seconds, "
-        f"95% CI {pool['pooled_ci_low']:.0f}–{pool['pooled_ci_high']:.0f} s</b>, "
-        f"equivalent to roughly 1.1% of a 2:05 marathon.")
+        f"95% CI {pool['pooled_ci_low']:.0f} to {pool['pooled_ci_high']:.0f} s</b>, "
+        f"equivalent to roughly {pool['pooled_estimate_seconds'] / 75:.1f}% of a 2:05 marathon.")
     add_body(doc,
         f"Framework 1 (DiD): {f1['shoe_contribution_seconds']:.0f} s, 95% CI "
         f"[{f1['ci_low']:.0f}, {f1['ci_high']:.0f}]. "
         f"Framework 2 (within-athlete): {f2['shoe_contribution_seconds']:.0f} s, "
-        f"95% CI [{-f2['ci_high']:.0f}, {-f2['ci_low']:.0f}], n={f2['n_athletes']}, "
+        f"95% CI [{f2['ci_low']:.0f}, {f2['ci_high']:.0f}], n={f2['n_athletes']}, "
         f"p={f2['paired_p']:.2f}. "
         f"Framework 3 (cohort): {f3['shoe_contribution_seconds']:.0f} s, "
         f"95% CI [{f3['ci_low']:.0f}, {f3['ci_high']:.0f}], changepoint = "
@@ -534,7 +535,7 @@ def build_short_report():
     add_body(doc,
         "Carbon-plated marathon shoes account for measurable, statistically credible "
         "improvement in elite marathon times. The contribution is real but smaller than "
-        "headline framings suggest — around 1% of marathon time, not 4%. The remaining "
+        "headline framings suggest, around 1% of marathon time, not 4%. The remaining "
         "improvement comes from deeper African talent pipelines, pacing improvements, "
         "altitude training, and race-craft. Shoes are the most-cited cause because they "
         "are the most discrete and dateable, not because they are the largest cause.")

@@ -128,9 +128,9 @@ def build_full_report(out_path):
       "subset of athletes who raced elites in both eras; and (3) a cohort-depth analysis "
       "that compares observed post-era top-30 medians against the linearly-extrapolated "
       "pre-era trend. The three estimates pool to a shoe contribution of "
-      f"<b>{pool['pooled_estimate_seconds']:.0f} seconds (95% CI {pool['pooled_ci_low']:.0f}–"
+      f"<b>{pool['pooled_estimate_seconds']:.0f} seconds (95% CI {pool['pooled_ci_low']:.0f} to "
       f"{pool['pooled_ci_high']:.0f} s)</b> in median elite marathon time, equivalent to "
-      "roughly 1.1% of a 2:05 marathon. We discuss data limitations (sparse pre-era "
+      f"roughly {pool['pooled_estimate_seconds'] / 75:.1f}% of a 2:05 marathon. We discuss data limitations (sparse pre-era "
       "track coverage, Wikipedia-derived top-N lists rather than verified global "
       "rankings, absent athlete-age data), the placebo DiD result, and three robustness "
       "checks.")
@@ -138,24 +138,24 @@ def build_full_report(out_path):
     # 1. Introduction
     section(story, "1. Introduction")
     p(story,
-      "On 6 May 2017, three runners — Eliud Kipchoge, Lelisa Desisa, and Zersenay "
-      "Tadese — ran 2:00:25 on the Monza Formula 1 circuit in Nike's 'Breaking2' "
+      "On 6 May 2017, three runners (Eliud Kipchoge, Lelisa Desisa, and Zersenay "
+      "Tadese) ran 2:00:25 on the Monza Formula 1 circuit in Nike's 'Breaking2' "
       "exhibition. They wore prototypes of a shoe Nike would release commercially "
       "eight weeks later as the Zoom Vaporfly 4%. The shoe's stack height, its embedded "
       "curved carbon plate, and its Pebax-foam midsole were a step change in racing "
       "footwear: independent biomechanics labs would later measure 4% running-economy "
       "improvement for a typical elite male marathoner under standard treadmill conditions.")
     p(story,
-      "Four months later, Kipchoge ran the official Berlin Marathon in 2:03:32 — already "
+      "Four months later, Kipchoge ran the official Berlin Marathon in 2:03:32, already "
       "in the Vaporfly. A year after that, in September 2018, he set the open world "
       "record at 2:01:39. Brigid Kosgei lowered the women's record by 81 seconds at "
       "Chicago 2019. Kelvin Kiptum went 2:00:35 at Chicago 2023. Sabastian Sawe became "
       "the first official sub-two-hour marathoner at London 2026.")
     p(story,
       "A revolution that scale invites the obvious question. Are these shoes responsible "
-      "for the improvement, or are they coincident with other changes — deeper East "
+      "for the improvement, or are they coincident with other changes (deeper East "
       "African talent pipelines, smarter time-trial-style pacing, lighter laser-pace "
-      "setups in Berlin and Valencia, expanded altitude training — that would have "
+      "setups in Berlin and Valencia, expanded altitude training) that would have "
       "produced something like the post-2017 jump anyway? The biomechanics papers "
       "measure individual treadmill performance under controlled conditions; they cannot, "
       "on their own, settle the population-level question. That is the question this "
@@ -170,7 +170,7 @@ def build_full_report(out_path):
       "entries), 2010–2024. <b>track_records_control.csv</b> (27 rows): top 10,000m "
       "track performances 2016–2024, scraped from Wikipedia's '10,000 metres' main "
       "article, the men's and women's world-record progression pages, and the 2024 "
-      "Olympics 10,000m results pages. This is the dataset's biggest weakness — pre-era "
+      "Olympics 10,000m results pages. This is the dataset's biggest weakness: pre-era "
       "track coverage is one year (2016, women's-only). <b>shoe_timeline.csv</b> (19 "
       "rows): hand-compiled release dates and stack-height milestones for every major "
       "super-shoe model 2016–2024. <b>athlete_career_arcs.csv</b> (derived): athletes "
@@ -198,11 +198,11 @@ def build_full_report(out_path):
       "or to the same effect as road racing through this window. If shoes are the dominant "
       "cause of road marathon improvement, road times should have improved faster than "
       "track times across the same window. Formally: DiD = (road_post − road_pre) − "
-      "(track_post − track_pre). We compute this per gender on top-30 median times to "
+      "(track_post − track_pre). We compute this per gender on top-50 median times to "
       "control for the unequal Wikipedia coverage across years. For the DiD point estimate, "
-      "we use whichever pre-era track years are available — in practice this means "
-      "women-only. Bootstrap 95% CIs come from 1,000 resamples of marathon rows holding "
-      "track aggregates fixed. A placebo DiD splits the pre-era window into 2010–2013 "
+      "we use whichever pre-era track years are available; in practice this means "
+      "women-only. Bootstrap 95% CIs come from 1,000 resamples that redraw marathon and "
+      "track results within each year and recompute the same statistic. A placebo DiD splits the pre-era window into 2010–2013 "
       "vs 2014–2016, which should be close to zero.")
 
     sub(story, "3.2 Framework 2: Within-Athlete Paired Pre/Post")
@@ -210,11 +210,11 @@ def build_full_report(out_path):
       "For each athlete with ≥2 pre-era and ≥2 post-era major-marathon results, we "
       "compute the difference of post-era mean finish time minus pre-era mean finish time. "
       "We report the median across athletes (more robust to single-race outliers), the "
-      "paired t-test against zero, and a bootstrap 95% CI. The Wikipedia data does not "
+      "paired t-test against zero, and a bootstrap 95% CI on the median (athletes resampled). The Wikipedia data does not "
       "include athlete ages, so we report the raw delta and discuss the age-confound "
       "limitation explicitly. With pre-era athletes typically aged 26–32 and post-era "
       "ages typically 28–36, the residual age-effect is roughly +30 to +60 seconds of "
-      "expected slowdown that we are not subtracting — which means our shoe estimate "
+      "expected slowdown that we are not subtracting, which means our shoe estimate "
       "from this framework is an under-estimate, not an over-estimate.")
 
     sub(story, "3.3 Framework 3: Cohort Survival / Depth")
@@ -256,8 +256,8 @@ def build_full_report(out_path):
       f"<b>{f2['n_athletes']} athletes</b> meet the inclusion criteria. The median across-"
       f"athlete delta is <b>{f2['median_delta_seconds']:.0f} seconds</b> (post mean minus "
       f"pre mean). <b>{f2['pct_improved']:.0f}%</b> improved. A paired t-test against zero "
-      f"returns t = {f2['paired_t']:.2f}, p = {f2['paired_p']:.2f} — not significant at "
-      f"α=0.05. The bootstrap 95% CI on the mean delta is "
+      f"returns t = {f2['paired_t']:.2f}, p = {f2['paired_p']:.2f}, not significant at "
+      f"α=0.05. The bootstrap 95% CI on the median delta is "
       f"[{-f2['ci_high']:.0f}, {-f2['ci_low']:.0f}] seconds. We report this estimate as "
       f"suggestive rather than confirmatory.")
 
@@ -272,7 +272,7 @@ def build_full_report(out_path):
       f"The raw cohort improvement (top-30 median, averaged across men and women) is "
       f"<b>{f3['raw_cohort_improvement_seconds']:.0f} seconds</b> between pre-era and "
       f"post-era. The changepoint detection places the structural break at "
-      f"<b>{f3['changepoint_year']}</b> — consistent with the documented gap between elite "
+      f"<b>{f3['changepoint_year']}</b>, consistent with the documented gap between elite "
       f"adoption (2017–2018) and broader-cohort adoption (2019–2020). Sub-threshold counts "
       f"went from {f3['sub_m_pre_mean']:.0f} (men) and {f3['sub_w_pre_mean']:.0f} (women) "
       f"per year in the pre-era to {f3['sub_m_post_mean']:.0f} and {f3['sub_w_post_mean']:.0f} "
@@ -291,7 +291,7 @@ def build_full_report(out_path):
       f"<b>Finding 1: All three frameworks place shoe contribution in the 44–199 second "
       f"range.</b> The frameworks measure different things with different assumptions, "
       f"and the DiD sits well above the other two. The pooled estimate of "
-      f"<b>{pool['pooled_estimate_seconds']:.0f} seconds (95% CI {pool['pooled_ci_low']:.0f}–"
+      f"<b>{pool['pooled_estimate_seconds']:.0f} seconds (95% CI {pool['pooled_ci_low']:.0f} to "
       f"{pool['pooled_ci_high']:.0f})</b> sits near the lower two because the "
       f"cohort framework has the tightest CI and therefore most of the weight "
       f"in the inverse-CI-width-weighted pool.")
@@ -389,13 +389,13 @@ def build_full_report(out_path):
     # 9. Conclusion
     section(story, "9. Conclusion")
     p(story,
-      "The carbon-plated marathon shoe revolution is real, measurable, and population-level — "
+      "The carbon-plated marathon shoe revolution is real, measurable, and population-level: "
       "but smaller than the most aggressive popular characterizations and larger than the "
       f"most dismissive ones. Our three-framework decomposition places the shoe-attributable "
       f"share of elite marathon improvement between 2010–2016 and 2018–2024 at "
       f"<b>{pool['pooled_estimate_seconds']:.0f} seconds in the median elite marathon time, "
-      f"95% CI {pool['pooled_ci_low']:.0f}–{pool['pooled_ci_high']:.0f} seconds</b>, "
-      f"equivalent to roughly 1.1% of marathon time for a 2:05 runner.")
+      f"95% CI {pool['pooled_ci_low']:.0f} to {pool['pooled_ci_high']:.0f} seconds</b>, "
+      f"equivalent to roughly {pool['pooled_estimate_seconds'] / 75:.1f}% of marathon time for a 2:05 runner.")
     p(story,
       "Three framework-specific takeaways. If you trust the within-athlete framework "
       "most, weight the estimate toward 44 s: the cleanest causal design but the smallest "
@@ -406,8 +406,8 @@ def build_full_report(out_path):
     p(story,
       "Shoes are the most-cited cause of the post-2017 marathon revolution not because "
       "they are the largest single cause, but because they are the most discrete and "
-      "dateable one. The rest — deeper African talent pipelines, pacing improvements, "
-      "altitude training, race-craft — together account for more.")
+      "dateable one. The rest (deeper African talent pipelines, pacing improvements, "
+      "altitude training, race-craft) together account for more.")
 
     story.append(Spacer(1, 20))
     story.append(Paragraph(
@@ -475,13 +475,13 @@ def build_short_report(out_path):
     section(story, "The Answer")
     p(story,
       f"<b>Pooled shoe contribution: {pool['pooled_estimate_seconds']:.0f} seconds, "
-      f"95% CI {pool['pooled_ci_low']:.0f}–{pool['pooled_ci_high']:.0f} s</b>, equivalent "
-      f"to roughly 1.1% of a 2:05 marathon.")
+      f"95% CI {pool['pooled_ci_low']:.0f} to {pool['pooled_ci_high']:.0f} s</b>, equivalent "
+      f"to roughly {pool['pooled_estimate_seconds'] / 75:.1f}% of a 2:05 marathon.")
     p(story,
       f"Framework 1 (DiD): {f1['shoe_contribution_seconds']:.0f} s, "
       f"95% CI [{f1['ci_low']:.0f}, {f1['ci_high']:.0f}]<br/>"
       f"Framework 2 (within-athlete): {f2['shoe_contribution_seconds']:.0f} s, "
-      f"95% CI [{-f2['ci_high']:.0f}, {-f2['ci_low']:.0f}], n={f2['n_athletes']}, p={f2['paired_p']:.2f}<br/>"
+      f"95% CI [{f2['ci_low']:.0f}, {f2['ci_high']:.0f}], n={f2['n_athletes']}, p={f2['paired_p']:.2f}<br/>"
       f"Framework 3 (cohort survival): {f3['shoe_contribution_seconds']:.0f} s, "
       f"95% CI [{f3['ci_low']:.0f}, {f3['ci_high']:.0f}], changepoint = {f3['changepoint_year']}")
 
@@ -495,7 +495,7 @@ def build_short_report(out_path):
     p(story,
       "Carbon-plated marathon shoes account for measurable, statistically credible "
       "improvement in elite marathon times. The contribution is real but smaller than "
-      "headline framings suggest — around 1% of marathon time, not 4%. The remaining "
+      "headline framings suggest, around 1% of marathon time, not 4%. The remaining "
       "improvement comes from deeper African talent pipelines, pacing improvements, "
       "altitude training, and race-craft. Shoes are the most-cited cause because they "
       "are the most discrete and dateable, not because they are the largest cause.")

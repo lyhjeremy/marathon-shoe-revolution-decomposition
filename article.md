@@ -1,6 +1,6 @@
 ---
 title: "I tried to work out how much of the marathon revolution is the shoe"
-description: "Three frameworks, 1,802 elite races and one long-running argument. The answer came out at about 80 seconds."
+description: "Three frameworks, 1,802 elite races and one long-running argument. The answer came out at about 70 seconds."
 author: "Jeremy Lee"
 date: 2026-05-20
 tags: [marathon, super-shoes, vaporfly, running, data-analysis, python, side-project]
@@ -37,23 +37,23 @@ I expected three different answers. What I wanted to know was whether they would
 
 ## What I found
 
-*Updated 28 October 2026: the first version of this analysis counted 106 wheelchair and handcycle results as running times and put the answer at 67 seconds. With them removed it is 82.*
+*Updated 28 October 2026: the first version of this analysis counted 106 wheelchair and handcycle results as running times and put the answer at 67 seconds. With them removed it is 73, after a bootstrap fix the same day.*
 
-**Shoes account for about 82 seconds of elite marathon improvement, 95% CI 6–159 seconds**, roughly 1.1% of a 2:05 marathon. The three frameworks gave 44, 71 and 199 seconds. They disagree, and the interval is wide, but none of them reaches five minutes.
+**Shoes account for about 73 seconds of elite marathon improvement, 95% CI −4 to 150 seconds**, roughly 1.0% of a 2:05 marathon. The three frameworks gave 44, 71 and 199 seconds. They disagree, and the interval is wide enough to reach just below zero, but none of them reaches five minutes.
 
 ![Forest plot of three framework estimates](./outputs/figures/fig5_framework_comparison.png)
-*The three frameworks on one axis, in seconds of shoe-attributable improvement. The interval drawn for cohort survival sits just above its point estimate, because the bootstrap computes a different statistic from the point estimate (see the full report).*
+*The three frameworks on one axis, in seconds of shoe-attributable improvement. 28 October 2026: the bootstrap now resamples the same statistic as the estimate.*
 
 Three things surprised me.
 
-**The number is lower than the lab number.** The 4% in the Vaporfly's name comes from [Hoogkamer et al. 2018](https://doi.org/10.1007/s40279-017-0811-2): in 18 high-caliber male runners on a treadmill, the prototype cut the energy cost of running by 4% on average against two established racing shoes. That is economy, not race time. [Kipp, Kram and Hoogkamer 2019](https://doi.org/10.3389/fphys.2019.00079) estimate that at world-class marathon pace an economy gain buys about two-thirds as much speed, so 4% would be worth roughly 2.6% if every runner got the full lab benefit. My pooled 1.1% is well under that. The rest of the post-2017 improvement comes from deeper East African fields, better pacing, altitude training and race craft.
+**The number is lower than the lab number.** The 4% in the Vaporfly's name comes from [Hoogkamer et al. 2018](https://doi.org/10.1007/s40279-017-0811-2): in 18 high-caliber male runners on a treadmill, the prototype cut the energy cost of running by 4% on average against two established racing shoes. That is economy, not race time. [Kipp, Kram and Hoogkamer 2019](https://doi.org/10.3389/fphys.2019.00079) estimate that at world-class marathon pace an economy gain buys about two-thirds as much speed, so 4% would be worth roughly 2.6% if every runner got the full lab benefit. My pooled 1.0% is well under that. The rest of the post-2017 improvement comes from deeper East African fields, better pacing, altitude training and race craft.
 
 **The track control was messier than I hoped.** Track 10,000 m times did improve: Cheptegei ran 26:11 in 2020 and Chebet 28:54 in 2024. They improved much less than the road marathon, though. Women's track improved about 0.3% between eras; the women's road marathon top-50 median improved about 2.6%. That eight-to-one gap is the strongest single piece of evidence in the project. Something road-specific changed, and the shoe is the most obvious road-specific change.
 
 **The within-athlete group is tiny.** I expected 80 to 150 runners who raced majors in both 2010–2016 and 2018–2024. After requiring at least two races on each side and removing wheelchair racers, there were 16. Most pre-Vaporfly elites had retired, moved to ultras or been injured by 2018. The ones who stayed are a survivor group with unusually durable careers. Their median change is 44 seconds faster after the Vaporfly, but the paired t-test gives p = 0.39. With a sample that small, a weak result says more about the sample than about the effect. The race tables carry no ages, so I couldn't correct for these runners being several years older in the second era. An age correction would push the shoe estimate up.
 
 ![Within-athlete paired pre vs post](./outputs/figures/fig3_within_athlete_paired.png)
-*Each line is one of the 16 runners who raced elite marathons in both eras. Red lines got faster, grey didn't. Most got faster, and the interval on the average is wide.*
+*Each line is one of the 16 runners who raced elite marathons in both eras. Red lines got faster, grey didn't. Most got faster, and the interval on the median is wide.*
 
 ## The frequency story
 
