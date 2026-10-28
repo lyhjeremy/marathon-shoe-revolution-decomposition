@@ -82,7 +82,7 @@ The three frameworks measure overlapping but different things. The pooled estima
 
 The women's road marathon top-30 median improved **139 seconds** (1.59%) between eras. Women's track 10,000 m improved **0.32%**, about 6 seconds on a 10,000 m time. Applying 0.32% to the marathon time gives **28 seconds** that a general speed-up would explain. The residual, **111 seconds**, is attributed to road-specific causes, of which the shoe is the most obvious.
 
-The bootstrap 95% CI is [131, 253]. It sits entirely above the point estimate because the point estimate uses year medians and the bootstrap resamples row means. Both are reported as the script produces them, and the wider interval is what enters the pooling.
+The bootstrap 95% CI is [131, 253]. It sits entirely above the point estimate because the two measure different things: the point estimate averages top-30 medians per year, while each bootstrap draw takes the median of all resampled rows in each era, top 30 or not. Both are reported as the script produces them, and the wider interval is what enters the pooling.
 
 The **placebo DiD** (2010–2013 against 2014–2016, marathon only) is **32 seconds**. With no shoe change inside that window it should be close to zero; it comes out at about a third of the main estimate, which says how much noise the DiD carries.
 
@@ -114,7 +114,7 @@ Sub-2:10 men's performances averaged 23 a year before and 29 after; sub-2:25 wom
 
 ![Figure 5: Forest plot of the three framework estimates and the pooled estimate.](outputs/figures/fig5_framework_comparison.png)
 
-*Figure 5. The three frameworks and the pooled value on one axis. This image is from an earlier run of the script: it labels the DiD at 117 s and the pooled value at 69 s [34, 104]. The table below uses the current summary file.*
+*Figure 5. The three frameworks and the pooled value on one axis, redrawn in October 2026 from a re-run that reproduced `analysis_summary.json` exactly. An earlier copy of this image showed 117 s and 69 s from an older run.*
 
 | Framework | Point estimate | 95% CI | Notes |
 |---|---:|---|---|
@@ -175,7 +175,7 @@ The bootstrap interval is [131, 253] in every setting, which suggests the CI cal
 
 The weakest input is the track data. Wikipedia has no year-by-year top lists for the 10,000 m and its all-time lists lean toward recent years, so the DiD compares one pre-era year against seven post-era years, for women only. ARRS, World Athletics archives or Tilastopaja data would strengthen it.
 
-The race tables have no ages, so nothing is age-adjusted. An elite marathoner aged 28 to 33 would be expected to lose something like 30 to 60 seconds over that span; leaving it in biases the within-athlete estimate downward, which makes 47 seconds conservative. That estimate also has little statistical power (n = 17, p = 0.26): it is suggestive and no more.
+The race tables have no ages, so nothing is age-adjusted. An elite marathoner aged 28 to 33 would be expected to lose something like 30 to 60 seconds over that span; leaving it in biases the within-athlete estimate downward, which makes 47 seconds conservative. That estimate also has little statistical power (n = 17, p = 0.26): it is suggestive and no more. One of the 17 should not be there. Shelly Woods' pre-era mean is 2:11:04, faster than the women's world record of the time (2:15:25), so her rows are wheelchair-race times; the script's name filter removes Arielle Rausin for the same reason and misses Woods. Her change (231 s faster) is in the published median.
 
 Wikipedia coverage is uneven. Some race-years have full tables and others a podium and a few times. Medians of the top 30 reduce the effect, but it still widens the bootstrap intervals.
 
@@ -224,6 +224,6 @@ The script regenerates the figures, `outputs/analysis_results.csv` and `outputs/
 - Scenario D quoted pooled values of 64 s and 73 s and a 55–80 s range. Recomputing with the script's formula gives about 51 s and 80 s.
 - The placebo DiD (32 s) was called an order of magnitude smaller than the main estimate; it is about a third of it.
 - A men's DiD figure of about 160 s, built by applying the women's track rate to men, was removed because the script does not compute it.
-- Figure 5 in `outputs/figures/` predates the current summary file and shows 117 s and 69 s.
+- Figure 5 in `outputs/figures/` predated the current summary file and showed 117 s and 69 s. It was redrawn from a re-run of `src/analysis.py` whose JSON and CSV outputs matched the committed files exactly.
 
 Image credits: hero and athlete photographs are CC-BY-SA from Wikimedia Commons; shoe cutaway from [`File:Nike_Vaporfly_Cut_in_Half.png`](https://commons.wikimedia.org/wiki/File:Nike_Vaporfly_Cut_in_Half.png), CC-BY-SA 4.0. The eight analytical figures are original to this work and CC-BY 4.0.

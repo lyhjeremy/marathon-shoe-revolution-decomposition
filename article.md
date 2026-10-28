@@ -40,7 +40,7 @@ I expected three different answers. What I wanted to know was whether they would
 **Shoes account for about 67 seconds of elite marathon improvement, 95% CI 36–99 seconds**, roughly 0.9% of a 2:05 marathon. The three frameworks gave 47, 58 and 111 seconds. They disagree, but all of them land at about one to two minutes, and none near five.
 
 ![Forest plot of three framework estimates](./outputs/figures/fig5_framework_comparison.png)
-*The three frameworks on one axis, in seconds of shoe-attributable improvement. This image is from an earlier run of the script and labels the difference-in-differences at 117 s and the pooled value at 69 s; the current results are 111 s and 67 s.*
+*The three frameworks on one axis, in seconds of shoe-attributable improvement. The interval drawn for the difference-in-differences sits entirely above its point estimate, because the bootstrap computes a different statistic from the point estimate (see the full report).*
 
 Three things surprised me.
 

@@ -85,11 +85,11 @@ python scripts/scrape_track.py
 ## Limitations
 
 - The track control is thin: 27 rows, with one pre-era year (2016) for women and none for men. The difference-in-differences estimate rests on it.
-- The difference-in-differences CI lies entirely above its point estimate, because the point uses year medians and the bootstrap resamples row means.
+- The difference-in-differences CI lies entirely above its point estimate, because the point estimate averages top-30 medians per year while the bootstrap takes the median of all resampled rows in each era.
 - The within-athlete sample is 17 runners, the result is not significant, and there is no age adjustment.
 - The 55% shoe share in the cohort framework is an assumption. At 40% and 70% the cohort estimate is 42 s and 74 s, and the pooled value about 51 s and 80 s (recomputed from the summary file; the script has no switch for it).
 - No race records which shoe anyone wore, so era stands in for shoe use.
-- `outputs/figures/fig5_framework_comparison.png` is from an earlier run and shows 117 s for the difference-in-differences and 69 s pooled; the JSON summary and every page use 111 s and 67 s.
+- One of the 17 paired runners, Shelly Woods, has a pre-era mean of 2:11:04, faster than the women's world record of the time (2:15:25). Those are wheelchair-race times; the script's name filter catches Arielle Rausin but not her.
 
 ## License
 

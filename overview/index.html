@@ -256,6 +256,54 @@
 </style>
 </head>
 <body>
+<style>
+  .viz { margin-top: 30px; border: 1px solid var(--edge); background: var(--card); padding: 18px 18px 14px; font-family: var(--sans); }
+  .viz h3 { font: 600 clamp(22px, 2.6vw, 28px)/1.06 var(--display); text-transform: uppercase; letter-spacing: .01em;
+            margin: 0 0 6px; max-width: 32ch; }
+  .viz .sub { font-size: 14.5px; color: var(--muted); margin: 0 0 16px; max-width: 64ch; line-height: 1.5; }
+  .ctl { display: flex; flex-wrap: wrap; gap: 8px; margin: 0 0 14px; }
+  .ctl button { font: 600 12.5px/1 var(--mono); letter-spacing: .06em; text-transform: uppercase; padding: 9px 11px;
+                background: var(--paper); color: var(--ink); border: 1px solid var(--edge); cursor: pointer; }
+  .ctl button:hover { border-color: var(--ink); }
+  .ctl button[aria-pressed="true"] { background: var(--ink); color: var(--paper); border-color: var(--ink); }
+  .readout { font: 400 14px/1.5 var(--mono); color: var(--ink); min-height: 3em; border-top: 1px solid var(--rule);
+             padding-top: 10px; margin: 10px 0 0; }
+  .vsrc { font-size: 13px; color: var(--muted); margin: 8px 0 0; line-height: 1.45; }
+  .host { position: relative; }
+  .host svg { display: block; width: 100%; height: auto; overflow: visible; }
+  .host:focus-visible { outline: 2px solid var(--accent); outline-offset: 4px; }
+  .t-lab { font: 600 16px var(--display); text-transform: uppercase; letter-spacing: .02em; fill: var(--ink); }
+  .t-ax { font: 400 11px var(--mono); fill: var(--muted); }
+  .t-val { font: 400 12.5px var(--mono); fill: var(--ink); }
+  .t-acc { font: 600 12px var(--mono); fill: var(--accent); paint-order: stroke; stroke: var(--card); stroke-width: 4px; }
+  .g-grid { stroke: var(--rule); stroke-width: 1; }
+  .g-zero { stroke: var(--ink); stroke-width: 1; }
+  .g-ci { stroke: var(--accent2); stroke-width: 4; }
+  .g-ci.pool { stroke: var(--accent); }
+  .g-pt { fill: var(--accent2); }
+  .g-pt.pool { fill: var(--accent); }
+  .g-ci.live { stroke: var(--ink); } .g-pt.live { fill: var(--ink); }
+  .g-bar { fill: var(--accent2); } .g-bar.pre { fill: var(--muted); } .g-bar.tr { fill: var(--edge); }
+  .g-bar.on { fill: var(--ink); }
+  .g-mean { stroke: var(--accent); stroke-width: 2; }
+  .g-med { stroke: var(--accent); stroke-width: 2; stroke-dasharray: 5 4; }
+  .share { display: grid; grid-template-columns: minmax(0, 1fr) 3.4em; gap: 4px 10px; align-items: center;
+           font-size: 14px; color: var(--ink2); max-width: 30rem; margin: 0 0 12px; }
+  .share input { grid-column: 1 / -1; width: 100%; margin: 0; accent-color: var(--accent2); }
+  .share output { font: 600 15px/1 var(--mono); color: var(--ink); text-align: right; }
+
+  /* 67 seconds as distance on the road */
+  .gap { margin-top: 26px; border-top: 2px solid var(--ink); padding-top: 12px; font-family: var(--sans); }
+  .gap-line { position: relative; height: 54px; margin: 6px 0 4px; }
+  .gap-line .road { position: absolute; left: 0; right: 0; top: 26px; border-top: 3px dashed var(--accent2); }
+  .gap-line .ci { position: absolute; top: 18px; height: 19px; background: color-mix(in srgb, var(--accent) 22%, transparent); }
+  .gap-line .r { position: absolute; top: 15px; width: 14px; height: 25px; margin-left: -7px; background: var(--ink); }
+  .gap-line .r.b { background: var(--accent); }
+  .gap-line .lab { position: absolute; top: 44px; font: 400 11.5px var(--mono); color: var(--muted); transform: translateX(-50%); white-space: nowrap; }
+  .gap p { margin: 18px 0 0; font-size: 15px; color: var(--ink2); max-width: 64ch; line-height: 1.5; }
+  @media (max-width: 520px) { .viz { padding: 14px 12px 12px; } }
+</style>
+
 <div class="wrap">
   <header class="masthead">
     <div class="logo"><span class="dot" aria-hidden="true"></span>The shoe decomposition</div>
@@ -268,10 +316,11 @@
 
     <p class="hero-sub">
       Nike&rsquo;s Vaporfly 4% went on sale in 2017, and elite marathon times fell quickly after it.
-      Three separate decomposition methods, run over <strong>1,908 elite performances</strong>
-      from 2010 to 2024, put the shoe&rsquo;s share of that drop at <strong>67 seconds</strong>
-      (95% CI <strong>36&ndash;99</strong>) of median elite marathon time. That is about
-      <strong>0.9%</strong> of a 2:05 marathon, well below the 3&ndash;5% the running press tends to imply.
+      Pacing, prize money and deeper fields changed over the same years, so the question is how much
+      of the drop belongs to the shoe. Three decomposition methods, run over <strong>1,908 elite
+      performances</strong> from 2010 to 2024, put it at <strong>67 seconds</strong> (95% CI
+      <strong>36&ndash;99</strong>) of median elite marathon time. That is about <strong>0.9%</strong>
+      of a 2:05 marathon, well below the 3&ndash;5% the running press tends to imply.
     </p>
 
     <div class="cta-row">
@@ -310,11 +359,11 @@
     <p class="eyebrow">Start &middot; the problem</p>
     <h2>Everything changed at the same time</h2>
     <p>
-      Pacing, course choice, prize money, training and the depth of East African fields all moved
-      over the same fifteen years as the shoe, so a plain before-and-after comparison gives the shoe
-      credit for everything. The study compares the pre-Vaporfly era
-      (2010&ndash;2016) with the post-Vaporfly era (2018&ndash;2024) and leaves out 2017 as a
-      transition year. Each framework holds a different thing constant:
+      A plain before-and-after comparison gives the shoe credit for everything that moved over those
+      fifteen years: pacing, course choice, prize money, training and the depth of East African fields.
+      The study compares the pre-Vaporfly era (2010&ndash;2016) with the post-Vaporfly era
+      (2018&ndash;2024) and leaves out 2017 as a transition year. Each framework holds a different thing
+      constant:
     </p>
     <ol class="methods">
       <li><b>Difference-in-differences.</b> Road marathon improvement minus track 10,000 m improvement,
@@ -334,40 +383,53 @@
     <div class="bignum">67 s</div>
     <p class="bignum-note">Pooled across the three frameworks. 95% CI 36&ndash;99 seconds.</p>
 
-    <p>
+    <div class="gap" aria-label="At 2:05 marathon pace, 67 seconds is about 379 metres of road; the interval runs from about 202 to 556 metres.">
+      <div class="gap-line" aria-hidden="true">
+        <span class="road"></span>
+        <span class="ci" style="left:33.7%;width:58.9%"></span>
+        <span class="r" style="left:0"></span>
+        <span class="r b" style="left:63.1%"></span>
+        <span class="lab" style="left:3%">0 m</span>
+        <span class="lab" style="left:63.1%">379 m</span>
+        <span class="lab" style="left:96%">600 m</span>
+      </div>
+      <p>At 2:05 pace (5.63 m/s), 67 seconds is about <strong>379 metres</strong> of road: a runner in
+        2018 shoes would finish that far ahead of the same runner in 2016 shoes. The shaded band is the
+        95% interval, 202 to 556 metres.</p>
+    </div>
+
+    <p style="margin-top:26px">
       The frameworks bracket the answer. Within-athlete pairing is the lowest at
-      <strong>47 seconds</strong>, with an interval that crosses zero; difference-in-differences is the
-      highest at <strong>111 seconds</strong>, on a pre-era control of one year of women&rsquo;s track
-      results; cohort survival sits between them at <strong>58 seconds</strong>.
+      <strong>47 seconds</strong>, with an interval that crosses zero. Difference-in-differences is the
+      highest at <strong>111 seconds</strong>, built on one year of women&rsquo;s track results as the
+      pre-era control. Cohort survival sits between them at <strong>58 seconds</strong>.
     </p>
     <p>
       The pooled value weights each estimate by the inverse square of its interval width, so cohort
       survival, with the tightest interval, carries about 69% of the weight. The pooled interval comes
       from the spread of the three estimates (the estimate &plusmn; 1.96 times their standard deviation
-      over &radic;3), with no bootstrap at this step.
+      over &radic;3), with no bootstrap at this step. The cohort figure depends on an assumption the
+      analysis makes, that 55% of the cohort shift is the shoe. The slider changes it.
     </p>
 
-    <div class="tablewrap">
-      <table>
-        <thead><tr><th>Framework</th><th>Estimate</th><th>95% CI</th><th>Note</th></tr></thead>
-        <tbody>
-          <tr><td>Difference-in-differences</td><td>111 s</td><td>[131, 253]</td><td>Women-only pre-era</td></tr>
-          <tr><td>Within-athlete paired</td><td>47 s</td><td>[&minus;25, 137]</td><td>n = 17, p = 0.26</td></tr>
-          <tr><td>Cohort survival</td><td>58 s</td><td>[46, 111]</td><td>55% of a 106 s shift</td></tr>
-          <tr class="win"><td>Pooled</td><td>67 s</td><td>[36, 99]</td><td>0.9% of 2:05</td></tr>
-        </tbody>
-      </table>
+    <div class="viz" id="forest">
+      <h3 id="fo-title">At a 55% shoe share, the pooled estimate is 67 seconds</h3>
+      <p class="sub">Each framework's estimate and 95% interval in seconds of shoe-attributable improvement,
+        re-pooled with the formula in <code>synthesize()</code> as the cohort share moves.</p>
+      <label class="share" for="fo-s"><span>Share of the 106 s cohort shift credited to shoes</span><output id="fo-so">55%</output>
+        <input id="fo-s" type="range" min="0.3" max="0.8" step="0.05" value="0.55" /></label>
+      <div class="host" id="fo-host" role="img" aria-label="Forest plot. Difference-in-differences 111 seconds with interval 131 to 253; within-athlete 47 seconds, interval minus 25 to 137; cohort survival 58 seconds, interval 46 to 111; pooled 67 seconds, interval 36 to 99."></div>
+      <p class="readout" id="fo-out" aria-live="polite"></p>
+      <p class="vsrc">Estimates and intervals from <code>outputs/analysis_summary.json</code>. The cohort interval
+        scales with the share, as in the script (<code>raw_ci_low</code> and <code>raw_ci_high</code> times the share).</p>
     </div>
 
-    <figure>
-      <div class="plate">
-        <img width="4119" height="2306" src="../outputs/figures/fig5_framework_comparison.png" fetchpriority="high"
-          alt="Forest plot of the three framework estimates and the pooled value: within-athlete near 47 seconds with an interval crossing zero, cohort survival near 58, difference-in-differences far right." />
-      </div>
-      <figcaption>The committed figure is from an earlier run of the script: it labels the
-        difference-in-differences at 117 s and the pooled value at 69 s [34, 104]. The table above
-        uses the current <code>analysis_summary.json</code>.</figcaption>
-    </figure>
+    <p style="margin-top:22px">
+      One oddity is in the script, not the chart: the difference-in-differences interval, 131 to 253 s,
+      lies entirely above its own point estimate. The point estimate averages top-30 medians per year,
+      while each bootstrap draw takes the median of every resampled row in the era, so the two measure
+      different things. The page reports both as the script produces them.
+    </p>
   </section>
 
   <section class="stop">
@@ -386,17 +448,22 @@
       </div>
       <figcaption>Road against track, each normalized to 2010.</figcaption>
     </figure>
-    <p>
-      The paired runners point the same way, weakly: 11 of the 17 were faster after 2017, with a
-      median change of 47 seconds, and the paired t-test gives p = 0.26.
+
+    <div class="viz" id="ath">
+      <h3>11 of 17 runners got faster after 2017, by a median of 47 seconds</h3>
+      <p class="sub">Change in each runner's mean elite marathon time, post-era minus pre-era. Left of the line is faster.
+        Hover, tap, or focus the chart and use the arrow keys.</p>
+      <div class="host" id="ath-host" tabindex="0" role="img" aria-label="Seventeen runners' change in mean marathon time between eras, from Sara Hall at 491 seconds faster to Helah Kiprop at 226 seconds slower; median 47 seconds faster."></div>
+      <p class="readout" id="ath-out" aria-live="polite"></p>
+      <p class="vsrc">From <code>data/athlete_career_arcs.csv</code>, with Arielle Rausin removed as the script does. Raw times, no age adjustment.</p>
+    </div>
+    <p style="margin-top:22px">
+      The paired t-test gives p = 0.26, so the direction is suggestive and the size is not settled. One
+      row should not be there: Shelly Woods&rsquo; pre-era mean is 2:11:04, faster than the women&rsquo;s
+      world record of the time (2:15:25), so these are wheelchair-race times. The script&rsquo;s name
+      filter removes Arielle Rausin for that reason and misses Woods. The numbers above include her, as
+      the published estimate does.
     </p>
-    <figure>
-      <div class="plate">
-        <img width="4084" height="2504" src="../outputs/figures/fig3_within_athlete_paired.png" loading="lazy"
-          alt="Seventeen lines, one per athlete, joining pre-era and post-era mean marathon times; most slope toward faster." />
-      </div>
-      <figcaption>Seventeen athletes with at least two elite marathons on each side of 2017.</figcaption>
-    </figure>
   </section>
 
   <section class="stop">
@@ -429,28 +496,34 @@
       <p class="era-key">Release and record dates from <code>data/shoe_timeline.csv</code>. Bold rows are world records.</p>
     </div>
 
-    <p>
-      More fast times followed, but fewer than the popular figure. The six-major dataset averaged
-      <strong>23</strong> sub-2:10 men&rsquo;s performances a year before and <strong>29</strong> after
-      (1.25&times;); women under 2:25 went from 20 to 28 (1.39&times;). The three-to-five-times figure
-      covers a wider set of races, and at the majors the count is capped by the size of the lead packs.
-    </p>
-    <div class="panels">
-      <figure>
-        <div class="plate">
-          <img width="4105" height="2955" src="../outputs/figures/fig1_sub210_frequency_by_year.png" loading="lazy"
-            alt="Bar charts of sub-2:10 men's and sub-2:25 women's performances per year, 2010 to 2024, modestly higher after 2017." />
-        </div>
-        <figcaption>Sub-2:10 and sub-2:25 counts per year.</figcaption>
-      </figure>
-      <figure>
-        <div class="plate">
-          <img width="4105" height="2304" src="../outputs/figures/fig4_cohort_survival.png" loading="lazy"
-            alt="Time needed to make the dataset's top 50 each year for men and women, faster in the post-era." />
-        </div>
-        <figcaption>Time needed to make the dataset&rsquo;s top 50 each year.</figcaption>
-      </figure>
+    <div class="viz" id="cnt">
+      <h3 id="cnt-title">Men under 2:10: 23 a year before the Vaporfly, 29 after</h3>
+      <p class="sub">Performances under the threshold per year in the dataset, with each era's mean as a line.
+        2020 is the pandemic year. Hover, tap, or focus the chart and use the arrow keys.</p>
+      <div class="ctl" role="group" aria-label="Choose men or women">
+        <button type="button" data-g="M" aria-pressed="true">Men, sub-2:10</button>
+        <button type="button" data-g="W" aria-pressed="false">Women, sub-2:25</button>
+      </div>
+      <div class="host" id="cnt-host" tabindex="0" role="img" aria-label="Sub-threshold performances per year, 2010 to 2024. Men averaged 23 a year before 2017 and 29 after; women 20 and 28."></div>
+      <p class="readout" id="cnt-out" aria-live="polite"></p>
+      <p class="vsrc">Counted from <code>data/elite_marathon_times.csv</code> with the thresholds in <code>framework3_cohort_survival()</code>
+        (under 7,800 s for men, 8,700 s for women); the era means match <code>analysis_summary.json</code>.</p>
     </div>
+
+    <p style="margin-top:22px">
+      More fast times followed, though fewer than the popular figure. Sub-2:10 men went from
+      <strong>23</strong> a year to <strong>29</strong> (1.25&times;) and women under 2:25 from 20 to 28
+      (1.39&times;). The three-to-five-times figure covers a wider set of races, and at the majors the count
+      is capped by the size of the lead packs. Most of the post-era rise comes late: 2024 alone has 53 men
+      under 2:10.
+    </p>
+    <figure>
+      <div class="plate">
+        <img width="4105" height="2304" src="../outputs/figures/fig4_cohort_survival.png" loading="lazy"
+          alt="Time needed to make the dataset's top 50 each year for men and women, faster in the post-era." />
+      </div>
+      <figcaption>Time needed to make the dataset&rsquo;s top 50 each year.</figcaption>
+    </figure>
   </section>
 
   <section class="stop stop--warn">
@@ -467,23 +540,16 @@
       No race records which shoe anyone wore; era stands in for shoe use.
     </p>
     <p>
-      The 55% shoe share in the cohort framework is an assumption the analysis makes. At 40% the cohort
-      estimate is 42 s and at 70% it is 74 s. Re-pooling with the script&rsquo;s formula gives 51 s and
-      80 s. The script has no switch for this, so those pooled values are recomputed by hand from the
-      summary file; an earlier version of this write-up quoted 64 and 73 s.
+      The 55% shoe share is an assumption. At 40% the cohort estimate is 42 s and the pooled value 51 s;
+      at 70%, 74 s and 80 s. The script has no switch for this, so those values come from re-pooling
+      the summary file with the script&rsquo;s formula, which is what the slider above does. An earlier
+      version of this write-up quoted 64 and 73 s.
     </p>
     <p>
       The sensitivity runs cover only the difference-in-differences: 100 s with the top 25 per year
       instead of the top 50, and 111 s with Kipchoge or time-trial events removed. The bootstrap
       interval does not change across them.
     </p>
-    <figure>
-      <div class="plate">
-        <img width="4119" height="2304" src="../outputs/figures/fig7_sensitivity.png" loading="lazy"
-          alt="Sensitivity chart: difference-in-differences at 111 seconds baseline, 100 with top 25 only, 111 excluding Kipchoge and time trials; within-athlete 47 seconds." />
-      </div>
-      <figcaption>Difference-in-differences under each sensitivity setting, with the within-athlete estimate for comparison.</figcaption>
-    </figure>
   </section>
 
   <section class="stop stop--end">
@@ -496,7 +562,7 @@
       <div class="spec"><dt>Methods</dt><dd>Difference-in-differences with a placebo window, paired t-test and 1,000-draw bootstrap, slope-change changepoint search, inverse-CI-width pooling</dd></div>
       <div class="spec"><dt>Stack</dt><dd>Python, pandas, NumPy, SciPy, matplotlib, seaborn</dd></div>
       <div class="spec"><dt>Biomechanics</dt><dd><a href="https://doi.org/10.1007/s40279-017-0811-2">Hoogkamer et al. 2018</a>, Senefeld et al. 2023</dd></div>
-      <div class="spec"><dt>Reproduce</dt><dd><code>python src/analysis.py</code> regenerates the 8 figures and the JSON summary in under a minute</dd></div>
+      <div class="spec"><dt>Reproduce</dt><dd><code>python src/analysis.py</code> regenerates the 8 figures and the JSON summary in under a minute; a re-run in October 2026 matched the committed outputs exactly</dd></div>
       <div class="spec"><dt>Related</dt><dd><a href="https://lyhjeremy.github.io/world-record-half-lives/">World-Record Half-Lives</a> models how quickly records fall, including the marathon in this era</dd></div>
     </dl>
   </section>
@@ -526,5 +592,152 @@
     <p>Analytical figures are CC-BY 4.0.</p>
   </footer>
 </div>
+
+<script>
+(function () {
+  var NS = "http://www.w3.org/2000/svg";
+  function el(n, a, txt) { var e = document.createElementNS(NS, n); for (var k in a) e.setAttribute(k, a[k]); if (txt != null) e.textContent = txt; return e; }
+  function svgOf(w, h) { return el("svg", { viewBox: "0 0 " + w + " " + h, width: w, height: h, "aria-hidden": "true" }); }
+  function watch(host, fn) {
+    var last = host.clientWidth;
+    var f = function () { if (host.clientWidth !== last) { last = host.clientWidth; fn(); } };
+    if (window.ResizeObserver) new ResizeObserver(f).observe(host); else window.addEventListener("resize", f);
+  }
+  function keys(host, get, set, n) {
+    host.addEventListener("keydown", function (e) {
+      var d = { ArrowLeft: -1, ArrowUp: -1, ArrowRight: 1, ArrowDown: 1 }[e.key];
+      if (!d) return; e.preventDefault(); set(Math.min(n() - 1, Math.max(0, get() + d)));
+    });
+  }
+
+  /* ---- forest plot with cohort share (outputs/analysis_summary.json) ---- */
+  var DID = [110.79155953720044, 131.17625667885264, 253.45438343644543];
+  var WA = [47.19999999999982, -25.181376050420276, 137.05964869281036];
+  var RAW = [105.75000000000045, 83.07118749999978, 202.08743749999974];
+  var fHost = document.getElementById("fo-host"), fIn = document.getElementById("fo-s"), fOut = document.getElementById("fo-out");
+  function pool(share) { /* synthesize() in src/analysis.py */
+    var co = [RAW[0] * share, RAW[1] * share, RAW[2] * share];
+    var rows = [DID, WA, co], ests = rows.map(function (r) { return r[0]; });
+    var w = rows.map(function (r) { var c = r[2] - r[1]; return 1 / (c * c + 1e-6); });
+    var sw = w.reduce(function (a, b) { return a + b; }, 0);
+    var p = ests.reduce(function (a, e, i) { return a + e * w[i]; }, 0) / sw;
+    var m = ests.reduce(function (a, b) { return a + b; }, 0) / 3;
+    var sd = Math.sqrt(ests.reduce(function (a, e) { return a + (e - m) * (e - m); }, 0) / 3);
+    var h = 1.96 * sd / Math.sqrt(3);
+    return { co: co, p: [p, p - h, p + h], wco: w[2] / sw };
+  }
+  function drawForest() {
+    var Wd = fHost.clientWidth; if (!Wd) return;
+    var share = parseFloat(fIn.value), r = pool(share), narrow = Wd < 560;
+    document.getElementById("fo-so").textContent = Math.round(share * 100) + "%";
+    var L = narrow ? 0 : 190, R = 14, top = 6, rowH = narrow ? 86 : 58, lo = -40, hi = 260;
+    var rows = [["Difference-in-differences", DID, ""], ["Within-athlete paired", WA, ""], ["Cohort survival, " + Math.round(share * 100) + "% share", r.co, " live"], ["Pooled", r.p, " pool"]];
+    var H = top + rows.length * rowH + 24, pw = Wd - L - R;
+    function X(v) { return L + (v - lo) / (hi - lo) * pw; }
+    var svg = svgOf(Wd, H);
+    [0, 50, 100, 150, 200, 250].forEach(function (v) {
+      svg.appendChild(el("line", { x1: X(v), x2: X(v), y1: top, y2: H - 20, "class": v === 0 ? "g-zero" : "g-grid" }));
+      svg.appendChild(el("text", { x: X(v), y: H - 4, "text-anchor": "middle", "class": "t-ax" }, v + (v === 250 ? " s" : "")));
+    });
+    rows.forEach(function (row, i) {
+      var d = row[1], y = top + i * rowH + (narrow ? 36 : rowH / 2 + 10);
+      if (narrow) svg.appendChild(el("text", { x: 0, y: y - 18, "class": "t-lab" }, row[0]));
+      else svg.appendChild(el("text", { x: 0, y: y + 5, "class": "t-lab" }, row[0]));
+      svg.appendChild(el("line", { x1: X(d[1]), x2: X(d[2]), y1: y, y2: y, "class": "g-ci" + row[2] }));
+      svg.appendChild(el("circle", { cx: X(d[0]), cy: y, r: 7, "class": "g-pt" + row[2] }));
+      var txt = Math.round(d[0]) + " s [" + Math.round(d[1]) + ", " + Math.round(d[2]) + "]";
+      if (narrow) svg.appendChild(el("text", { x: 0, y: y + 22, "class": "t-val" }, txt));
+      else svg.appendChild(el("text", { x: Math.min(Wd - 70, Math.max(L + 70, X(d[0]))), y: y - 11, "text-anchor": "middle", "class": "t-val" }, txt));
+    });
+    fHost.innerHTML = ""; fHost.appendChild(svg);
+    document.getElementById("fo-title").textContent = "At a " + Math.round(share * 100) + "% shoe share, the pooled estimate is " + Math.round(r.p[0]) + " seconds";
+    fOut.textContent = "Cohort survival " + Math.round(r.co[0]) + " s [" + Math.round(r.co[1]) + ", " + Math.round(r.co[2]) + "], carrying "
+      + Math.round(r.wco * 100) + "% of the pooling weight. Pooled " + Math.round(r.p[0]) + " s [" + Math.round(r.p[1]) + ", " + Math.round(r.p[2]) + "], "
+      + (r.p[0] / 75).toFixed(1) + "% of a 2:05 marathon.";
+  }
+  fIn.addEventListener("input", drawForest);
+
+  /* ---- within-athlete changes (data/athlete_career_arcs.csv) ---- */
+  var A = [["Abel Kirui","M",6,2,7775.7,7649.5],["Atsede Baysa","W",6,2,8856.8,8949.0],["Birhane Dibaba","W",5,2,8663.0,8547.5],["Dickson Chumba","M",5,2,7674.2,7627.0],["Edna Kiplagat","W",10,6,8703.7,8654.0],["Eliud Kipchoge","M",4,7,7440.8,7502.3],["Elkanah Kibet","M",2,3,8044.0,7822.3],["Fernando Cabada","M",2,2,8016.0,8179.5],["Florence Kiplagat","W",9,2,8590.6,8639.0],["Geoffrey Kamworor","M",2,4,7723.5,7698.8],["Helah Kiprop","W",3,2,8670.7,8897.0],["Hiroko Yoshitomi","W",2,2,9123.0,9083.0],["Kenenisa Bekele","M",3,4,7510.0,7678.2],["Mary Jepkosgei Keitany","W",9,2,8644.8,8562.5],["Sara Hall","W",3,5,9150.7,8659.8],["Shelly Woods","W",3,2,7863.7,7633.0],["Sisay Lemma","M",2,4,7730.5,7552.2]];
+  A.forEach(function (a) { a.d = a[5] - a[4]; });
+  A.sort(function (a, b) { return a.d - b.d; });
+  var ds = A.map(function (a) { return a.d; }).slice().sort(function (a, b) { return a - b; }), MED = ds[8];
+  var aHost = document.getElementById("ath-host"), aOut = document.getElementById("ath-out"), aSel = 8;
+  function hms(s) { s = Math.round(s); var h = Math.floor(s / 3600), m = Math.floor(s % 3600 / 60), x = s % 60; return h + ":" + (m < 10 ? "0" : "") + m + ":" + (x < 10 ? "0" : "") + x; }
+  var aGeo = null;
+  function drawAth() {
+    var Wd = aHost.clientWidth; if (!Wd) return;
+    var narrow = Wd < 560, L = narrow ? 118 : 190, R = 46, top = 4, rh = 22, lo = -520, hi = 260;
+    var H = top + A.length * rh + 22, pw = Wd - L - R;
+    function X(v) { return L + (v - lo) / (hi - lo) * pw; }
+    var svg = svgOf(Wd, H);
+    (narrow ? [-400, 0] : [-400, -200, 0, 200]).forEach(function (v) {
+      svg.appendChild(el("line", { x1: X(v), x2: X(v), y1: top, y2: H - 20, "class": v === 0 ? "g-zero" : "g-grid" }));
+      svg.appendChild(el("text", { x: X(v), y: H - 4, "text-anchor": "middle", "class": "t-ax" }, (v > 0 ? "+" : v < 0 ? "−" : "") + Math.abs(v) + " s"));
+    });
+    A.forEach(function (a, i) {
+      var y = top + i * rh, on = i === aSel, x0 = X(Math.min(0, a.d)), x1 = X(Math.max(0, a.d));
+      var p = a[0].split(" "), nm = narrow ? p[0][0] + ". " + p[p.length - 1] : a[0];
+      svg.appendChild(el("text", { x: 0, y: y + 15, "class": "t-val", style: on ? "font-weight:600" : "" }, nm));
+      svg.appendChild(el("rect", { x: x0, y: y + 5, width: Math.max(1, x1 - x0), height: rh - 9, "class": "g-bar" + (a.d > 0 ? " pre" : "") + (on ? " on" : "") }));
+    });
+    svg.appendChild(el("line", { x1: X(MED), x2: X(MED), y1: top - 2, y2: H - 20, "class": "g-med" }));
+    svg.appendChild(el("text", { x: X(MED) - 4, y: top + 12, "text-anchor": "end", "class": "t-acc" }, "median"));
+    aHost.innerHTML = ""; aHost.appendChild(svg);
+    aGeo = { top: top, rh: rh };
+    var a = A[aSel];
+    aOut.textContent = a[0] + " (" + (a[1] === "M" ? "men" : "women") + "): " + hms(a[4]) + " mean over " + a[2] + " pre-era races, " + hms(a[5]) + " over " + a[3]
+      + " post-era. " + (a.d < 0 ? Math.round(-a.d) + " s faster." : Math.round(a.d) + " s slower.") + (a[0] === "Shelly Woods" ? " Wheelchair-race times; see below." : "");
+  }
+  function aPick(ev) {
+    if (!aGeo) return; var b = aHost.getBoundingClientRect(), i = Math.floor((ev.clientY - b.top - aGeo.top) / aGeo.rh);
+    if (i >= 0 && i < A.length && i !== aSel) { aSel = i; drawAth(); }
+  }
+  aHost.addEventListener("pointermove", aPick); aHost.addEventListener("pointerdown", aPick);
+  keys(aHost, function () { return aSel; }, function (v) { aSel = v; drawAth(); }, function () { return A.length; });
+
+  /* ---- sub-threshold counts (data/elite_marathon_times.csv) ---- */
+  var CNT = { M: [20, 17, 21, 30, 28, 25, 22, 24, 36, 18, 10, 20, 32, 35, 53], W: [20, 16, 13, 23, 20, 24, 27, 24, 19, 25, 7, 33, 30, 41, 43] };
+  var g = "M", cSel = 14, cHost = document.getElementById("cnt-host"), cOut = document.getElementById("cnt-out"), cGeo = null;
+  function mean(a) { return a.reduce(function (x, y) { return x + y; }, 0) / a.length; }
+  function drawCnt() {
+    var Wd = cHost.clientWidth; if (!Wd) return;
+    var v = CNT[g], pre = mean(v.slice(0, 7)), post = mean(v.slice(8)), narrow = Wd < 560;
+    var L = 28, R = narrow ? 10 : 70, top = 10, H = 230, base = H - 22, MAX = 60, pw = Wd - L - R, cw = pw / 15, bw = cw * 0.7;
+    function Y(c) { return base - c / MAX * (base - top); }
+    var svg = svgOf(Wd, H);
+    [0, 20, 40, 60].forEach(function (t) {
+      svg.appendChild(el("line", { x1: L, x2: L + pw, y1: Y(t), y2: Y(t), "class": t === 0 ? "g-zero" : "g-grid" }));
+      svg.appendChild(el("text", { x: L - 6, y: Y(t) + 4, "text-anchor": "end", "class": "t-ax" }, t));
+    });
+    v.forEach(function (c, i) {
+      var cls = "g-bar" + (i < 7 ? " pre" : i === 7 ? " tr" : "") + (i === cSel ? " on" : "");
+      svg.appendChild(el("rect", { x: L + i * cw + (cw - bw) / 2, y: Y(c), width: bw, height: base - Y(c), "class": cls }));
+      if (!narrow || i % 2 === 0) svg.appendChild(el("text", { x: L + i * cw + cw / 2, y: H - 6, "text-anchor": "middle", "class": "t-ax" }, narrow ? "'" + String(2010 + i).slice(2) : 2010 + i));
+    });
+    svg.appendChild(el("line", { x1: L, x2: L + 7 * cw, y1: Y(pre), y2: Y(pre), "class": "g-mean" }));
+    svg.appendChild(el("line", { x1: L + 8 * cw, x2: L + pw, y1: Y(post), y2: Y(post), "class": "g-mean" }));
+    svg.appendChild(el("text", { x: L + 4, y: Y(pre) - 6, "class": "t-acc" }, "mean " + pre.toFixed(1)));
+    svg.appendChild(el("text", { x: L + 8 * cw + 4, y: Y(post) - 6, "class": "t-acc" }, "mean " + post.toFixed(1)));
+    cHost.innerHTML = ""; cHost.appendChild(svg);
+    cGeo = { L: L, cw: cw };
+    var yr = 2010 + cSel, era = yr < 2017 ? "pre-era" : yr === 2017 ? "transition year, excluded" : "post-era";
+    cOut.textContent = yr + " (" + era + "): " + v[cSel] + (g === "M" ? " men under 2:10." : " women under 2:25.");
+    document.getElementById("cnt-title").textContent = (g === "M" ? "Men under 2:10: " : "Women under 2:25: ") + Math.round(pre) + " a year before the Vaporfly, " + Math.round(post) + " after";
+  }
+  function cPick(ev) {
+    if (!cGeo) return; var b = cHost.getBoundingClientRect(), i = Math.floor((ev.clientX - b.left - cGeo.L) / cGeo.cw);
+    if (i >= 0 && i < 15 && i !== cSel) { cSel = i; drawCnt(); }
+  }
+  cHost.addEventListener("pointermove", cPick); cHost.addEventListener("pointerdown", cPick);
+  keys(cHost, function () { return cSel; }, function (v) { cSel = v; drawCnt(); }, function () { return 15; });
+  [].slice.call(document.querySelectorAll("#cnt .ctl button")).forEach(function (b, _, all) {
+    b.addEventListener("click", function () { g = b.dataset.g; all.forEach(function (x) { x.setAttribute("aria-pressed", x === b ? "true" : "false"); }); drawCnt(); });
+  });
+
+  drawForest(); drawAth(); drawCnt();
+  watch(fHost, drawForest); watch(aHost, drawAth); watch(cHost, drawCnt);
+})();
+</script>
 </body>
 </html>
