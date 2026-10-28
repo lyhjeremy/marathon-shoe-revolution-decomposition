@@ -10,7 +10,7 @@
 
 ## Abstract
 
-Nike's Vaporfly 4% went on general sale in mid-2017, and elite marathon times fell quickly over the following years. Kelvin Kiptum ran 2:00:35 at Chicago in 2023. This report estimates how much of that improvement the shoe accounts for. It applies three decomposition frameworks to 1,908 elite marathon performances taken from major-race Wikipedia tables for 2010–2024: (1) a difference-in-differences (DiD) comparison against track 10,000 m, an event less affected by the shoe; (2) a within-athlete paired comparison of runners who raced at the elite level in both eras; and (3) a cohort analysis of the top-30 median and of yearly sub-2:10 and sub-2:25 counts. The three estimates are 111, 47 and 58 seconds. Pooled, the shoe contribution is **67 seconds (95% CI 36–99 s)** of median elite marathon time, about **0.9% of a 2:05 marathon**. That is below what treadmill running-economy studies would suggest and well above zero. The main weaknesses are thin pre-era track data, Wikipedia-derived results rather than verified global rankings, and the absence of athlete ages.
+The short answer is about a minute. Nike's Vaporfly 4% went on general sale in mid-2017, elite marathon times fell quickly over the following years (Kelvin Kiptum ran 2:00:35 at Chicago in 2023), and this report estimates how much of that drop belongs to the shoe. It applies three decomposition frameworks to 1,908 elite marathon performances taken from major-race Wikipedia tables for 2010–2024: (1) a difference-in-differences (DiD) comparison against track 10,000 m, an event less affected by the shoe; (2) a within-athlete paired comparison of runners who raced at the elite level in both eras; and (3) a cohort analysis of the top-30 median and of yearly sub-2:10 and sub-2:25 counts. The three estimates are 111, 47 and 58 seconds; pooled, the shoe contribution is **67 seconds (95% CI 36–99 s)** of median elite marathon time, about **0.9% of a 2:05 marathon**. That is below what treadmill running-economy studies would suggest and well above zero. The main weaknesses are thin pre-era track data, results taken from Wikipedia where verified global rankings would be better, and the absence of athlete ages.
 
 ---
 
@@ -18,9 +18,9 @@ Nike's Vaporfly 4% went on general sale in mid-2017, and elite marathon times fe
 
 On 6 May 2017 Eliud Kipchoge ran 2:00:25 on the Monza Formula 1 circuit in Nike's Breaking2 exhibition, alongside Lelisa Desisa and Zersenay Tadese. All three wore prototypes of the shoe Nike released that July as the Zoom Vaporfly 4%. It combined a tall stack, a curved carbon plate and a Pebax foam midsole. Laboratory tests later measured a 4% running-economy improvement for elite men on a treadmill ([Hoogkamer et al. 2018](https://doi.org/10.1007/s40279-017-0811-2)).
 
-In September 2018 Kipchoge set the world record at Berlin, 2:01:39. Brigid Kosgei took 81 seconds off the women's record at Chicago in 2019 (2:14:04). Kelvin Kiptum ran 2:00:35 at Chicago in 2023, and Sabastian Sawe ran the first ratified sub-two-hour marathon at London in 2026.
+The records followed. Kipchoge ran 2:01:39 at Berlin in September 2018, Brigid Kosgei took 81 seconds off the women's record at Chicago in 2019 (2:14:04), Kelvin Kiptum ran 2:00:35 at Chicago in 2023, and Sabastian Sawe ran the first ratified sub-two-hour marathon at London in 2026. I have run Berlin myself (my best of 14 marathons, 2:48, came there), and the question every runner in a start pen eventually asks is how much of this the shoe is doing.
 
-Other things changed over the same years: deeper East African talent pipelines, time-trial pacing, laser pacing lights at Berlin and Valencia, and wider use of altitude training. Any of these could have produced part of the post-2017 drop. The biomechanics papers measure individual runners under controlled conditions and cannot settle the population-level question on their own. This report tries to put a number on it.
+Plenty else changed over the same years: deeper East African talent pipelines, time-trial pacing, laser pacing lights at Berlin and Valencia, and wider use of altitude training. Any of these could have produced part of the post-2017 drop. The biomechanics papers measure individual runners under controlled conditions, which cannot settle a population-level question on their own, so this report tries to put a number on it from race results.
 
 It does not take up the regulatory argument (World Athletics' 2020 rule capped stack height at 40 mm), compare brands (the data is too sparse), or advise recreational runners. The target is one quantity: the shoe-attributable change in median elite marathon time between the pre-Vaporfly era (2010–2016) and the post-Vaporfly era (2018–2024), with a confidence interval. 2017 is a transition year and is excluded from both windows.
 
@@ -68,7 +68,7 @@ For each year the script counts performances under 2:10 (men) and 2:25 (women) a
 
 ### 3.4 Pooling
 
-The three frameworks measure overlapping but different things. The pooled estimate weights each by the inverse square of its 95% CI width, so the framework with the narrowest interval counts most. The pooled interval is the pooled value ± 1.96 × (standard deviation of the three point estimates) / √3. It is a spread-based interval, not a bootstrap.
+The three frameworks measure overlapping but different things. The pooled estimate weights each by the inverse square of its 95% CI width, so the framework with the narrowest interval counts most. The pooled interval is the pooled value ± 1.96 × (standard deviation of the three point estimates) / √3. That makes it a spread-based interval; no bootstrap is involved at this step.
 
 ---
 
@@ -84,7 +84,7 @@ The women's road marathon top-30 median improved **139 seconds** (1.59%) between
 
 The bootstrap 95% CI is [131, 253]. It sits entirely above the point estimate because the point estimate uses year medians and the bootstrap resamples row means. Both are reported as the script produces them, and the wider interval is what enters the pooling.
 
-The **placebo DiD** (2010–2013 against 2014–2016, marathon only) is **32 seconds**: not zero, but about a third of the main estimate, and with no shoe change inside the window.
+The **placebo DiD** (2010–2013 against 2014–2016, marathon only) is **32 seconds**. With no shoe change inside that window it should be close to zero; it comes out at about a third of the main estimate, which says how much noise the DiD carries.
 
 ### 4.2 Framework 2 (within-athlete paired): 47 seconds, 95% CI [−25, 137]
 
@@ -92,7 +92,7 @@ The **placebo DiD** (2010–2013 against 2014–2016, marathon only) is **32 sec
 
 *Figure 2. Pre-era and post-era mean finish time for each of the 17 athletes with at least two elite marathons in each era. Red lines improved, grey did not.*
 
-The median change is **−47 seconds**: post-era career-mean time was 47 seconds faster. Eleven of 17 (65%) improved. The paired t-test gives t = −1.17, p = 0.26, not significant at 0.05. The bootstrap 95% CI on the mean change is [−137, 25] seconds, which is [−25, 137] when expressed as a shoe contribution. With 17 runners, this estimate is suggestive at best.
+The median change is **−47 seconds** (post-era career-mean time was 47 seconds faster), and 11 of the 17 runners (65%) improved. The paired t-test gives t = −1.17, p = 0.26, which misses significance at 0.05. The bootstrap 95% CI on the mean change is [−137, 25] seconds, which is [−25, 137] when expressed as a shoe contribution. With 17 runners, this estimate is suggestive at best.
 
 Two biases both push it toward zero. Most pre-era elites stopped racing elite marathons before 2018, so the survivors are runners whose careers held up across the boundary, and aging would slow them slightly without any shoe effect. The missing age adjustment works in the same direction.
 
@@ -129,11 +129,11 @@ Cohort survival has the narrowest interval and carries about 69% of the pooled w
 
 ## 5. Findings across frameworks
 
-**All three estimates fall between 47 and 111 seconds.** The frameworks rest on different assumptions and different slices of the data, and none of them points to several minutes. The pooled value sits near the lower two because cohort survival dominates the weighting.
+All three estimates fall between 47 and 111 seconds. The frameworks rest on different assumptions and different slices of the data, and none of them points to several minutes; the pooled value sits near the lower two because cohort survival dominates the weighting.
 
-**Fast times became more common, by 1.25–1.4×.** In the six majors covered here, the count of sub-2:10 and sub-2:25 performances rose, but far less than the popular figure.
+Fast times did become more common, by 1.25–1.4×. In the six majors covered here the count of sub-2:10 and sub-2:25 performances rose, though by far less than the popular figure.
 
-**Track barely moved.** Women's 10,000 m improved 0.32% against the road marathon's 1.59%, about a fifth. The track data is thin, but the gap is large. Track is an imperfect control, since spikes changed too, and it is still the strongest comparison in the analysis.
+Track barely moved. Women's 10,000 m improved 0.32% against the road marathon's 1.59%, about a fifth as much. The track data is thin and spikes changed too, so it is an imperfect control, but the gap is large and it is still the strongest comparison in the analysis.
 
 ![Figure 6: Shoe estimate shown against an assumed 240-second total improvement.](outputs/figures/fig6_decomposition_pie.png)
 
@@ -162,7 +162,7 @@ The 2017–2020 change is easier to study because adoption was fast. Elite runne
 The sensitivity code in `fig7_sensitivity()` reruns the DiD with a top-50 baseline:
 
 - **Top 25 per year instead of top 50:** 100 s. Thinner coverage in early years moves the estimate by about 11 seconds.
-- **Excluding Eliud Kipchoge:** 111 s, unchanged. The result does not hinge on one athlete.
+- **Excluding Eliud Kipchoge:** 111 s, unchanged, so the result does not hinge on one athlete.
 - **Excluding time-trial events** (any course matching Vienna, Monza, INEOS or Breaking2): 111 s, unchanged. None were in the canonical dataset to begin with.
 
 The bootstrap interval is [131, 253] in every setting, which suggests the CI calculation does not respond to these filters.
@@ -173,29 +173,23 @@ The bootstrap interval is [131, 253] in every setting, which suggests the CI cal
 
 ## 8. Limitations
 
-**Thin track data.** Wikipedia has no year-by-year top lists for the 10,000 m, and its all-time lists lean toward recent years. The DiD compares one pre-era year against seven post-era years, for women only. ARRS, World Athletics archives or Tilastopaja data would strengthen it.
+The weakest input is the track data. Wikipedia has no year-by-year top lists for the 10,000 m and its all-time lists lean toward recent years, so the DiD compares one pre-era year against seven post-era years, for women only. ARRS, World Athletics archives or Tilastopaja data would strengthen it.
 
-**No age adjustment.** The race tables have no ages. An elite marathoner aged 28 to 33 would be expected to lose something like 30 to 60 seconds over that span. Not subtracting it biases the within-athlete estimate downward, so 47 seconds is conservative.
+The race tables have no ages, so nothing is age-adjusted. An elite marathoner aged 28 to 33 would be expected to lose something like 30 to 60 seconds over that span; leaving it in biases the within-athlete estimate downward, which makes 47 seconds conservative. That estimate also has little statistical power (n = 17, p = 0.26): it is suggestive and no more.
 
-**Uneven Wikipedia coverage.** Some race-years have full tables and others a podium and a few times. Medians of the top 30 reduce the effect, but it still widens the bootstrap intervals.
+Wikipedia coverage is uneven. Some race-years have full tables and others a podium and a few times. Medians of the top 30 reduce the effect, but it still widens the bootstrap intervals.
 
-**East African depth.** Kenyan and Ethiopian elite marathoning expanded after 2017 for reasons unrelated to shoes. The within-athlete design controls for this directly. The DiD controls for it partly, because East African runners also dominate the 10,000 m. The cohort framework does not, which is one reason it attributes only 55% to shoes.
+Several confounders are only partly handled. Kenyan and Ethiopian elite marathoning expanded after 2017 for reasons unrelated to shoes; the within-athlete design controls for this directly, the DiD partly (East African runners also dominate the 10,000 m), and the cohort framework not at all, which is one reason it attributes only 55% to shoes. Post-2017 elites increasingly chose fast, paced courses such as Berlin, Valencia and Chicago, and the dataset covers those alongside Boston, New York and Tokyo in unequal proportion, which may inflate the post-era improvement slightly. Laser pacing lights at Berlin from 2019 and structured pacing at Valencia improved times independently of shoes, and they are not credited to shoes here.
 
-**Course selection.** Post-2017 elites increasingly chose fast, paced courses such as Berlin, Valencia and Chicago. The dataset covers those courses alongside Boston, New York and Tokyo, but not in equal proportion, which may inflate the post-era improvement slightly.
+No race records which shoe each runner wore. Era stands in for shoe use, so a runner in older shoes in 2019 counts as treated.
 
-**Pacing.** Laser pacing lights at Berlin from 2019 and structured pacing at Valencia improved times independently of shoes. They are not credited to shoes here.
-
-**No shoe-level data.** No race records which shoe each runner wore. Era stands in for shoe use, so a runner in older shoes in 2019 counts as treated.
-
-**Statistical power.** The within-athlete result (n = 17, p = 0.26) is suggestive, not confirmatory.
-
-**Other enhancement.** The design cannot rule out unobserved performance enhancement, legal or not, that happened to coincide with the shoe launch. The track comparison helps only if such effects reached road and track alike.
+Finally, the design cannot rule out unobserved performance enhancement, legal or not, that happened to coincide with the shoe launch. The track comparison helps only if such effects reached road and track alike.
 
 ---
 
 ## 9. Conclusion
 
-The three frameworks put the shoe-attributable share of elite marathon improvement between 2010–2016 and 2018–2024 at **67 seconds of median elite marathon time, 95% CI 36–99 seconds**, about **0.9%** for a 2:05 runner. That is a real effect, smaller than the popular account and far from zero.
+The three frameworks put the shoe-attributable share of elite marathon improvement between 2010–2016 and 2018–2024 at **67 seconds of median elite marathon time, 95% CI 36–99 seconds**, about **0.9%** for a 2:05 runner. The effect is smaller than the popular account and far from zero.
 
 For readers who trust one framework more than the others:
 
@@ -205,7 +199,7 @@ For readers who trust one framework more than the others:
 
 The pooled value leans on the cohort framework because its interval is the narrowest. Someone who weights the DiD's design more heavily would land higher.
 
-The data does not show that shoes explain the whole 2017–2024 improvement, that one brand beats another, or that recreational runners should expect the elite effect; lab evidence suggests the benefit is smaller at slower paces and for heel strikers. What it supports is that the shoe is one of several causes, alongside deeper fields, pacing and altitude training. It is the most cited of them, partly because it has a release date.
+The data does not show that shoes explain the whole 2017–2024 improvement, that one brand beats another, or that recreational runners should expect the elite effect; lab evidence suggests the benefit is smaller at slower paces and for heel strikers. What it supports is that the shoe is one of several causes, alongside deeper fields, pacing and altitude training, and the most cited of them, partly because it has a release date.
 
 ---
 

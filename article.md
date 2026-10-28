@@ -15,7 +15,7 @@ Spend enough time around runners and you will watch the same thread play out.
 
 Someone posts that Kelvin Kiptum ran 2:00:35. Someone replies that it doesn't count because the shoes did it. A third person says the shoes are worth 1% and the rest is training. A fourth links a paper that measured a 4% running-economy gain on a treadmill. Someone points out that treadmills aren't races. Someone says shoes aren't doping, someone else says of course they are, and the thread dies without an answer.
 
-I had the same question. Road marathon records were falling faster than I could remember them falling, and I wanted to know how much of that was the shoe.
+I had the same question. I have run 14 marathons, the fastest a 2:48 at Berlin, and over those years road marathon records were falling faster than I could remember them falling. I wanted to know how much of that was the shoe.
 
 As far as I could find, nobody had tried to bound it with population data. The biomechanics papers tested individual runners on treadmills. The running press quoted a three-to-five-fold rise in sub-2:10 performances and said it was probably mostly shoes. Athletes said different things depending, in part, on who sponsored them. There was no number for the shoe's share across the elite field.
 
@@ -37,18 +37,18 @@ I expected three different answers. What I wanted to know was whether they would
 
 ## What I found
 
-**Shoes account for about 67 seconds of elite marathon improvement, 95% CI 36–99 seconds**, roughly 0.9% of a 2:05 marathon. The three frameworks gave 47, 58 and 111 seconds. They disagree, but all of them land at about one to two minutes rather than five.
+**Shoes account for about 67 seconds of elite marathon improvement, 95% CI 36–99 seconds**, roughly 0.9% of a 2:05 marathon. The three frameworks gave 47, 58 and 111 seconds. They disagree, but all of them land at about one to two minutes, and none near five.
 
 ![Forest plot of three framework estimates](./outputs/figures/fig5_framework_comparison.png)
 *The three frameworks on one axis, in seconds of shoe-attributable improvement. This image is from an earlier run of the script and labels the difference-in-differences at 117 s and the pooled value at 69 s; the current results are 111 s and 67 s.*
 
 Three things surprised me.
 
-**The number is lower than the popular version.** Reading the running press in 2020–2022, you would think shoes were worth 3–5%, several minutes for a two-hour runner. The labs reported 4% running-economy gains, and many readers took that to mean 4% faster races. Economy is not race time. At the elite level a 4% economy gain probably yields 1–2% in race time at most, and my pooled 0.9% is at the low end of that. The rest of the post-2017 improvement comes from deeper East African fields, better pacing, altitude training and race craft.
+**The number is lower than the popular version.** Reading the running press in 2020–2022, you would think shoes were worth 3–5%, several minutes for a two-hour runner. The labs reported 4% running-economy gains, and many readers took that to mean 4% faster races. Economy and race time are different quantities. At the elite level a 4% economy gain probably yields 1–2% in race time at most, and my pooled 0.9% is at the low end of that. The rest of the post-2017 improvement comes from deeper East African fields, better pacing, altitude training and race craft.
 
 **The track control was messier than I hoped.** Track 10,000 m times did improve: Cheptegei ran 26:11 in 2020 and Chebet 28:54 in 2024. They improved much less than the road marathon, though. Women's track improved about 0.3% between eras; the women's road marathon top-30 median improved about 1.6%. That five-to-one gap is the strongest single piece of evidence in the project. Something road-specific changed, and the shoe is the most obvious road-specific change.
 
-**The within-athlete group is tiny.** I expected 80 to 150 runners who raced majors in both 2010–2016 and 2018–2024. After requiring at least two races on each side, there were 17. Most pre-Vaporfly elites had retired, moved to ultras or been injured by 2018. The ones who stayed are a survivor group with unusually durable careers. Their median change is 47 seconds faster after the Vaporfly, but the paired t-test gives p = 0.26. The sample is small, so the result is weak, not necessarily the effect. The race tables carry no ages, so I couldn't correct for these runners being several years older in the second era. An age correction would make the shoe estimate larger, not smaller.
+**The within-athlete group is tiny.** I expected 80 to 150 runners who raced majors in both 2010–2016 and 2018–2024. After requiring at least two races on each side, there were 17. Most pre-Vaporfly elites had retired, moved to ultras or been injured by 2018. The ones who stayed are a survivor group with unusually durable careers. Their median change is 47 seconds faster after the Vaporfly, but the paired t-test gives p = 0.26. With a sample that small, a weak result says more about the sample than about the effect. The race tables carry no ages, so I couldn't correct for these runners being several years older in the second era. An age correction would push the shoe estimate up.
 
 ![Within-athlete paired pre vs post](./outputs/figures/fig3_within_athlete_paired.png)
 *Each line is one of the 17 runners who raced elite marathons in both eras. Red lines got faster, grey didn't. Most got faster, and the interval on the average is wide.*
@@ -64,11 +64,11 @@ Before the Vaporfly, my six-major dataset averaged 23 sub-2:10 men's performance
 
 What moved a lot was the median of the top 30, which dropped by 100 to 140 seconds between eras depending on gender. Framework 3 is built on that number.
 
-## The data is real, and limited
+## The data, and its limits
 
 The original plan was to use ARRS (Association of Road Racing Statisticians) and World Athletics for verified top-100 lists per year. ARRS blocked me after one request, and the World Athletics pages are rendered in JavaScript and needed headless-browser scraping I didn't have time for. I fell back to Wikipedia race-result tables for six major marathons.
 
-That gave 1,908 real performances, with names, times and races. Depth varies by year: 113 finishers across the dataset in 2011, 168 in 2017 and 22 in 2020. The track 10,000 m data is worse, 27 rows, all from 2016 on. The difference-in-differences is in effect one pre-era year (2016) against seven post-era years, for women only. There is no men's pre-era track data at all.
+That gave 1,908 performances, with names, times and races. Depth varies by year: 113 finishers across the dataset in 2011, 168 in 2017 and 22 in 2020. The track 10,000 m data is worse, 27 rows, all from 2016 on. The difference-in-differences is in effect one pre-era year (2016) against seven post-era years, for women only. There is no men's pre-era track data at all.
 
 The [full report](https://github.com/lyhjeremy/marathon-shoe-revolution-decomposition/blob/main/writeup.md) documents all of this. Better data from ARRS or Tilastopaja would tighten the intervals, and I don't know how far it would move the headline.
 

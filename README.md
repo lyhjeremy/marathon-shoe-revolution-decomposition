@@ -1,6 +1,6 @@
 # How much of the marathon revolution is the shoe?
 
-Three decomposition methods applied to 1,908 elite marathon performances (2010 to 2024) to estimate how many seconds carbon-plated "super shoes" took off elite marathon times.
+Carbon-plated "super shoes" took about a minute off median elite marathon time. This repo reaches that figure three separate ways, from 1,908 elite marathon performances between 2010 and 2024, and pools the three.
 
 [Live site](https://lyhjeremy.github.io/marathon-shoe-revolution-decomposition/) · [Write-up](https://lyhjeremy.github.io/marathon-shoe-revolution-decomposition/overview/) · [Full report](writeup.md) · [Narrative article](https://lyhjeremy.github.io/marathon-shoe-revolution-decomposition/article.html) · [PDF](reports/Marathon_Shoe_Revolution_Decomposition_Report.pdf)
 
